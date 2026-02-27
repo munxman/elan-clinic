@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <Link to="/" className="flex items-center">
-              <img src={logoFooter} alt="Élan Kliinik" className="h-14" />
+              <img src={logoFooter} alt="Élan Kliinik" className="h-16 md:h-20" />
             </Link>
             <p className="font-body text-sm text-elan-offwhite/50 mt-4 max-w-xs">
               Elan Clinic OÜ

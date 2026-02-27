@@ -22,7 +22,7 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-elan-offwhite/60 border-b border-elan-slate/10">
       <nav className="container mx-auto flex items-center justify-between h-20 px-6">
         <Link to="/" className="flex items-center">
-          <img src={logoHeader} alt="Élan Kliinik" className="h-12" />
+          <img src={logoHeader} alt="Élan Kliinik" className="h-10 md:h-14" />
         </Link>
 
         {/* Desktop nav */}
