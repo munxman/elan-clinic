@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu } from "lucide-react";
-import logoLightBg from "@/assets/logo-light-bg.png";
+import logoHeader from "@/assets/logo-header.svg";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -22,7 +22,7 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-elan-offwhite/60 border-b border-elan-slate/10">
       <nav className="container mx-auto flex items-center justify-between h-20 px-6">
         <Link to="/" className="flex items-center">
-          <img src={logoLightBg} alt="Élan Kliinik" className="h-14" />
+          <img src={logoHeader} alt="Élan Kliinik" className="h-12" />
         </Link>
 
         {/* Desktop nav */}

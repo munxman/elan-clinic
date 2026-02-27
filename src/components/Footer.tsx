@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logoDarkBg from "@/assets/logo-dark-bg.png";
+import logoFooter from "@/assets/logo-footer.svg";
 import textureSlate from "@/assets/texture-slate-stone.jpg";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <Link to="/" className="flex items-center">
-              <img src={logoDarkBg} alt="Élan Kliinik" className="h-16" />
+              <img src={logoFooter} alt="Élan Kliinik" className="h-14" />
             </Link>
             <p className="font-body text-sm text-elan-offwhite/50 mt-4 max-w-xs">
               Elan Clinic OÜ
