@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 195 16% 96%;
+    --foreground: 195 22% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 195 22% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 195 22% 14%;
+
+    --primary: 195 22% 14%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 195 22% 14%;
+
+    --muted: 210 20% 92%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 37 37% 45%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 37 37% 45%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 37 37% 45%;
+  }
+
+  .dark {
+    --background: 195 22% 14%;
+    --foreground: 0 0% 98%;
+
+    --card: 195 20% 17%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 195 20% 17%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 195 22% 14%;
+
+    --secondary: 195 18% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 195 18% 20%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 37 37% 45%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 195 18% 20%;
+    --input: 195 18% 20%;
+    --ring: 37 37% 45%;
+
+    --sidebar-background: 195 22% 10%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 37 37% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 195 18% 16%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 195 18% 16%;
+    --sidebar-ring: 37 37% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight font-semibold;
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+    -webkit-text-stroke: 0.3px currentColor;
+  }
+
+  h1, h2 {
+    font-style: italic;
+  }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-150%); }
+  100% { transform: translateX(450%); }
+}

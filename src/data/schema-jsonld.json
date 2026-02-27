@@ -1,0 +1,149 @@
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "@id": "https://elanclinic.ee/#clinic",
+  "name": "Élan Clinic",
+  "legalName": "ELAN CLINIC OÜ",
+  "alternateName": "Élan Weight Loss & Medical Longevity Clinic",
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "Estonian Business Registry Code",
+    "value": "17338832"
+  },
+  "description": "Physician-led weight loss and medical longevity clinic in Tallinn, Estonia. Evidence-based metabolic health optimization, medically supervised weight management, and preventive medicine.",
+  "url": "https://elanclinic.ee",
+  "logo": "https://elanclinic.ee/logo.png",
+  "image": "https://elanclinic.ee/og-image.jpg",
+  "telephone": "+372 5803 0033",
+  "email": "evamaria@valvekliinik.ee",
+  "medicalSpecialty": [
+    "http://schema.org/PreventiveMedicine",
+    "http://schema.org/PublicHealth"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Sepapaja 12/1",
+    "addressLocality": "Tallinn",
+    "postalCode": "11415",
+    "addressRegion": "Harju maakond",
+    "addressCountry": "EE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 59.4214,
+    "longitude": 24.8065
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Sentifoli & Lindström OÜ",
+    "url": "https://sentifoli.ee"
+  },
+  "availableService": [
+    {
+      "@type": "MedicalProcedure",
+      "@id": "https://elanclinic.ee/#weight-management",
+      "name": "Physician-Supervised Weight Management",
+      "procedureType": "http://schema.org/TherapeuticProcedure",
+      "description": "Medically supervised weight loss program with pharmacotherapy, nutritional programming, and longitudinal metabolic monitoring.",
+      "bodyLocation": "Whole body",
+      "howPerformed": "Clinical consultation, pharmacotherapy, behavioral intervention"
+    },
+    {
+      "@type": "MedicalTest",
+      "@id": "https://elanclinic.ee/#dexa-scan",
+      "name": "DEXA Body Composition Scan",
+      "description": "Dual-energy X-ray absorptiometry for precise body composition analysis including visceral fat quantification, lean mass distribution, and bone mineral density.",
+      "usedToDiagnose": "Obesity, sarcopenia, osteopenia"
+    },
+    {
+      "@type": "MedicalTest",
+      "@id": "https://elanclinic.ee/#metabolic-assessment",
+      "name": "Comprehensive Metabolic Assessment",
+      "description": "Full metabolic profiling including fasting panels, HbA1c, lipid profile, inflammatory markers, hormonal panels, and resting metabolic rate measurement.",
+      "usedToDiagnose": "Metabolic syndrome, prediabetes, dyslipidemia"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "@id": "https://elanclinic.ee/#concierge-medicine",
+      "name": "Concierge Physician Services",
+      "procedureType": "http://schema.org/TherapeuticProcedure",
+      "description": "Direct-access primary care with extended consultations, same-day availability, and comprehensive care coordination on a retainer basis."
+    },
+    {
+      "@type": "MedicalProcedure",
+      "@id": "https://elanclinic.ee/#longevity-program",
+      "name": "Medical Longevity Program",
+      "procedureType": "http://schema.org/TherapeuticProcedure",
+      "description": "Structured longevity protocol integrating cardiovascular risk assessment, metabolic optimization, body composition management, and age-related biomarker tracking."
+    }
+  ],
+  "employee": [
+    {
+      "@type": "Physician",
+      "@id": "https://elanclinic.ee/#dr-lindstrom",
+      "name": "Dr. Ingmar Lindström",
+      "jobTitle": "Medical Director",
+      "description": "Family medicine specialist with 20+ years of cross-border clinical experience in Estonia and Finland. Focus on preventive medicine, metabolic health, and longevity medicine.",
+      "medicalSpecialty": "http://schema.org/PreventiveMedicine",
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "University of Tartu",
+        "department": "Faculty of Medicine"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Medical Degree",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "University of Tartu"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Family Medicine Specialization",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Terviseamet"
+          }
+        }
+      ],
+      "knowsLanguage": ["et", "fi", "en", "ru"],
+      "worksFor": {
+        "@id": "https://elanclinic.ee/#clinic"
+      }
+    }
+  ],
+  "sameAs": [],
+  "isAcceptingNewPatients": true,
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "Healthcare License",
+    "name": "Eriarstiabi teenus (Specialist Medical Service)",
+    "identifier": "L07470",
+    "recognizedBy": {
+      "@type": "Organization",
+      "name": "Terviseamet (Estonian Health Board)",
+      "url": "https://www.terviseamet.ee"
+    }
+  },
+  "healthPlanNetworkId": "",
+  "areaServed": [
+    {
+      "@type": "Country",
+      "name": "Estonia"
+    },
+    {
+      "@type": "Country",
+      "name": "Finland"
+    }
+  ]
+}
