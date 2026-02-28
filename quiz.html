@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Am I Ready to Stop GLP-1? | Tapering Readiness Quiz — Élan Clinic</title>
+  <meta name="description" content="Take our free GLP-1 tapering readiness quiz. Answer 10 questions and find out if you're ready to safely discuss stopping Ozempic, Wegovy, or Mounjaro with your physician." />
+  <link rel="canonical" href="https://elan.clinic/quiz.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elan.clinic/quiz.html" />
+  <meta property="og:title" content="Am I Ready to Stop GLP-1? Take the 2-Minute Quiz" />
+  <meta property="og:description" content="67% of people who stop GLP-1 medications regain most of their weight. Find out if your foundations are strong enough — free quiz by physician Dr. Ingmar Lindström." />
+  <meta property="og:image" content="https://elan.clinic/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Am I Ready to Stop GLP-1? Take the 2-Minute Quiz" />
+  <meta name="twitter:description" content="67% of people who stop GLP-1 medications regain most of their weight. Find out if your foundations are strong enough." />
+
+  <!-- Schema.org Quiz -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Quiz",
+    "name": "Am I Ready to Stop GLP-1? Tapering Readiness Assessment",
+    "description": "A 10-question physician-designed quiz to assess whether you have the metabolic and lifestyle foundations needed to safely taper off GLP-1 medications like Ozempic, Wegovy, or Mounjaro without high risk of weight regain.",
+    "url": "https://elan.clinic/quiz.html",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Ingmar Lindström",
+      "jobTitle": "Physician"
+    },
+    "publisher": {
+      "@type": "MedicalClinic",
+      "name": "Élan Clinic",
+      "url": "https://elan.clinic"
+    },
+    "educationalLevel": "General Public",
+    "about": {
+      "@type": "MedicalCondition",
+      "name": "Obesity"
+    }
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── Reset & Base ─────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0D1B2A;
+      color: rgba(232, 228, 222, 0.75);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    /* ─── Nav ──────────────────────────────────────────────────────── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 32px;
+      background: rgba(13, 27, 42, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(197, 165, 90, 0.12);
+    }
+    .nav__logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem; font-weight: 500; letter-spacing: 0.04em;
+      color: #E8E4DE; text-decoration: none;
+    }
+    .nav__logo span { color: #C5A55A; }
+    .nav__links { display: flex; align-items: center; gap: 24px; }
+    .nav__links a {
+      font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: rgba(232,228,222,0.65);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .nav__links a:hover { color: #C5A55A; }
+    .nav__links a.active { color: #C5A55A; }
+    .nav__divider { border-left: 1px solid rgba(197,165,90,0.25); height: 16px; margin: 0 4px; }
+    .nav__lang { font-size: 0.72rem !important; color: rgba(232,228,222,0.5) !important; }
+    .btn-nav {
+      padding: 10px 20px; font-size: 0.72rem;
+      background: linear-gradient(135deg, #C5A55A, #a8883d);
+      color: #0D1B2A; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; text-decoration: none;
+      border-radius: 3px; transition: opacity 0.2s;
+    }
+    .btn-nav:hover { opacity: 0.85; }
+
+    /* ─── Quiz Shell ───────────────────────────────────────────────── */
+    .quiz-shell {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 24px 60px;
+    }
+
+    .quiz-card {
+      width: 100%;
+      max-width: 640px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(197,165,90,0.2);
+      border-radius: 16px;
+      padding: 48px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .quiz-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, #C5A55A, transparent);
+    }
+
+    /* ─── Progress ─────────────────────────────────────────────────── */
+    .progress-bar-wrap {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 36px;
+    }
+    .progress-bar-track {
+      flex: 1; height: 3px;
+      background: rgba(197,165,90,0.15);
+      border-radius: 2px; overflow: hidden;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #C5A55A, #e8c87a);
+      border-radius: 2px;
+      transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .progress-label {
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em;
+      color: rgba(197,165,90,0.8); text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    /* ─── Screens ──────────────────────────────────────────────────── */
+    .screen {
+      display: none;
+      animation: fadeInUp 0.4s ease both;
+    }
+    .screen.active { display: block; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInScale {
+      from { opacity: 0; transform: scale(0.97); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    /* ─── Intro Screen ─────────────────────────────────────────────── */
+    .intro-eyebrow {
+      display: inline-block;
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em;
+      text-transform: uppercase; color: #C5A55A;
+      border: 1px solid rgba(197,165,90,0.4);
+      padding: 4px 12px; border-radius: 20px;
+      margin-bottom: 24px;
+    }
+    .quiz-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 600; color: #E8E4DE;
+      line-height: 1.2; margin-bottom: 20px;
+    }
+    .quiz-subtitle {
+      font-size: 1rem; color: rgba(232,228,222,0.65);
+      margin-bottom: 32px; line-height: 1.7;
+    }
+    .stat-row {
+      display: flex; gap: 24px; margin-bottom: 36px;
+      padding: 20px; background: rgba(197,165,90,0.06);
+      border-radius: 10px; border: 1px solid rgba(197,165,90,0.12);
+    }
+    .stat-item { flex: 1; text-align: center; }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem; font-weight: 600; color: #C5A55A;
+      line-height: 1;
+    }
+    .stat-desc { font-size: 0.72rem; color: rgba(232,228,222,0.5); margin-top: 4px; }
+
+    /* ─── Question Screen ──────────────────────────────────────────── */
+    .question-category {
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: rgba(197,165,90,0.7);
+      margin-bottom: 12px;
+    }
+    .question-text {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      font-weight: 500; color: #E8E4DE;
+      line-height: 1.35; margin-bottom: 8px;
+    }
+    .question-sub {
+      font-size: 0.85rem; color: rgba(232,228,222,0.45);
+      margin-bottom: 28px; line-height: 1.5;
+    }
+
+    .options { display: flex; flex-direction: column; gap: 12px; }
+
+    .option-btn {
+      display: flex; align-items: center; gap: 16px;
+      padding: 16px 20px;
+      background: rgba(255,255,255,0.03);
+      border: 1.5px solid rgba(197,165,90,0.2);
+      border-radius: 10px; cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: left; color: inherit; width: 100%;
+      font-family: 'Inter', sans-serif; font-size: 0.95rem;
+    }
+    .option-btn:hover {
+      border-color: rgba(197,165,90,0.6);
+      background: rgba(197,165,90,0.07);
+      transform: translateX(3px);
+    }
+    .option-btn.selected {
+      border-color: #C5A55A;
+      background: rgba(197,165,90,0.12);
+    }
+    .option-dot {
+      width: 18px; height: 18px; flex-shrink: 0;
+      border-radius: 50%;
+      border: 1.5px solid rgba(197,165,90,0.4);
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s;
+    }
+    .option-btn.selected .option-dot {
+      background: #C5A55A; border-color: #C5A55A;
+    }
+    .option-dot::after {
+      content: '';
+      width: 7px; height: 7px; border-radius: 50%;
+      background: #0D1B2A; opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .option-btn.selected .option-dot::after { opacity: 1; }
+    .option-label { color: #E8E4DE; font-weight: 400; line-height: 1.4; }
+    .option-sublabel { font-size: 0.78rem; color: rgba(232,228,222,0.45); }
+
+    /* ─── Buttons ──────────────────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 14px 32px;
+      background: linear-gradient(135deg, #C5A55A, #a8883d);
+      color: #0D1B2A; font-weight: 600; font-size: 0.9rem;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      border: none; border-radius: 5px; cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.2s; text-decoration: none;
+    }
+    .btn:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn:active { transform: translateY(0); }
+    .btn--full { width: 100%; margin-top: 28px; }
+    .btn--outline {
+      background: transparent;
+      border: 1.5px solid rgba(197,165,90,0.5);
+      color: #C5A55A;
+    }
+    .btn--outline:hover {
+      background: rgba(197,165,90,0.08);
+      border-color: #C5A55A;
+    }
+
+    .nav-row {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-top: 28px;
+    }
+    .back-btn {
+      background: none; border: none; cursor: pointer;
+      color: rgba(232,228,222,0.4); font-size: 0.82rem;
+      font-family: 'Inter', sans-serif;
+      display: flex; align-items: center; gap: 6px;
+      transition: color 0.2s; padding: 4px;
+    }
+    .back-btn:hover { color: rgba(232,228,222,0.75); }
+    .back-btn svg { width: 14px; height: 14px; }
+
+    /* ─── Result Screen ────────────────────────────────────────────── */
+    .result-screen { animation: fadeInScale 0.5s ease both; }
+
+    .result-badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 8px 18px; border-radius: 30px;
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; margin-bottom: 24px;
+    }
+    .result-badge--green { background: rgba(74,222,128,0.12); color: #4ade80; border: 1px solid rgba(74,222,128,0.3); }
+    .result-badge--yellow { background: rgba(251,191,36,0.12); color: #fbbf24; border: 1px solid rgba(251,191,36,0.3); }
+    .result-badge--red { background: rgba(248,113,113,0.12); color: #f87171; border: 1px solid rgba(248,113,113,0.3); }
+
+    .result-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+    }
+    .result-badge--green .result-dot { background: #4ade80; }
+    .result-badge--yellow .result-dot { background: #fbbf24; }
+    .result-badge--red .result-dot { background: #f87171; }
+
+    .result-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
+      font-weight: 600; color: #E8E4DE;
+      line-height: 1.25; margin-bottom: 16px;
+    }
+    .result-text {
+      font-size: 0.95rem; color: rgba(232,228,222,0.65);
+      line-height: 1.75; margin-bottom: 24px;
+    }
+
+    .score-meter {
+      background: rgba(197,165,90,0.07);
+      border: 1px solid rgba(197,165,90,0.15);
+      border-radius: 10px; padding: 20px 24px;
+      margin-bottom: 28px;
+    }
+    .score-meter-label {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: rgba(197,165,90,0.7);
+      margin-bottom: 10px;
+    }
+    .score-meter-track {
+      height: 6px; background: rgba(255,255,255,0.06);
+      border-radius: 3px; overflow: hidden; margin-bottom: 8px;
+    }
+    .score-meter-fill {
+      height: 100%; border-radius: 3px;
+      transition: width 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+    }
+    .score-meter-fill--green { background: linear-gradient(90deg, #4ade80, #22c55e); }
+    .score-meter-fill--yellow { background: linear-gradient(90deg, #fbbf24, #f59e0b); }
+    .score-meter-fill--red { background: linear-gradient(90deg, #f87171, #ef4444); }
+    .score-meter-note { font-size: 0.78rem; color: rgba(232,228,222,0.45); }
+
+    .focus-areas {
+      background: rgba(197,165,90,0.05);
+      border: 1px solid rgba(197,165,90,0.12);
+      border-radius: 10px; padding: 20px 24px;
+      margin-bottom: 28px;
+    }
+    .focus-areas h4 {
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: rgba(197,165,90,0.8);
+      margin-bottom: 14px;
+    }
+    .focus-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(197,165,90,0.08);
+      font-size: 0.88rem; color: rgba(232,228,222,0.7);
+    }
+    .focus-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .focus-icon { color: #C5A55A; flex-shrink: 0; margin-top: 2px; }
+
+    /* ─── Email Capture ────────────────────────────────────────────── */
+    .email-capture {
+      background: rgba(197,165,90,0.06);
+      border: 1px solid rgba(197,165,90,0.2);
+      border-radius: 12px;
+      padding: 28px 24px;
+      margin-bottom: 24px;
+    }
+    .email-capture__eyebrow {
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: #C5A55A;
+      margin-bottom: 8px;
+    }
+    .email-capture h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem; font-weight: 500; color: #E8E4DE;
+      margin-bottom: 8px; line-height: 1.3;
+    }
+    .email-capture p {
+      font-size: 0.82rem; color: rgba(232,228,222,0.55);
+      margin-bottom: 20px; line-height: 1.6;
+    }
+    .form-row { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+    .form-input {
+      padding: 13px 16px;
+      background: rgba(13, 27, 42, 0.8);
+      border: 1.5px solid rgba(197,165,90,0.25);
+      border-radius: 7px; color: #E8E4DE;
+      font-family: 'Inter', sans-serif; font-size: 0.9rem;
+      transition: border-color 0.2s; width: 100%;
+    }
+    .form-input:focus {
+      outline: none;
+      border-color: rgba(197,165,90,0.7);
+    }
+    .form-input::placeholder { color: rgba(232,228,222,0.3); }
+    .form-submit {
+      width: 100%; padding: 13px;
+      background: linear-gradient(135deg, #C5A55A, #a8883d);
+      border: none; border-radius: 7px;
+      color: #0D1B2A; font-weight: 600; font-size: 0.88rem;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      cursor: pointer; font-family: 'Inter', sans-serif;
+      transition: all 0.2s;
+    }
+    .form-submit:hover { opacity: 0.88; transform: translateY(-1px); }
+    .form-privacy { font-size: 0.72rem; color: rgba(232,228,222,0.35); text-align: center; }
+
+    /* ─── CTA Block ────────────────────────────────────────────────── */
+    .cta-block {
+      text-align: center;
+      padding: 24px;
+      border: 1px solid rgba(197,165,90,0.15);
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .cta-block p {
+      font-size: 0.88rem; color: rgba(232,228,222,0.55);
+      margin-bottom: 16px; line-height: 1.6;
+    }
+    .cta-block strong { color: rgba(232,228,222,0.8); }
+
+    .restart-link {
+      text-align: center; margin-top: 16px;
+    }
+    .restart-link button {
+      background: none; border: none; cursor: pointer;
+      color: rgba(232,228,222,0.35); font-size: 0.78rem;
+      font-family: 'Inter', sans-serif; text-decoration: underline;
+      transition: color 0.2s;
+    }
+    .restart-link button:hover { color: rgba(232,228,222,0.6); }
+
+    /* ─── Thank You (post email) ───────────────────────────────────── */
+    .thankyou-msg {
+      display: none;
+      text-align: center; padding: 16px;
+      background: rgba(74,222,128,0.07);
+      border: 1px solid rgba(74,222,128,0.2);
+      border-radius: 8px;
+      font-size: 0.88rem; color: #4ade80;
+    }
+
+    /* ─── Disclaimer ───────────────────────────────────────────────── */
+    .disclaimer {
+      font-size: 0.72rem;
+      color: rgba(232,228,222,0.28);
+      line-height: 1.6; text-align: center;
+      margin-top: 20px;
+      max-width: 580px;
+    }
+
+    /* ─── Mobile ───────────────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .quiz-card { padding: 32px 24px; }
+      .nav__links { gap: 14px; }
+      .nav__links a.nav__lang-link { display: none; }
+      .nav__divider { display: none; }
+      .stat-row { flex-direction: column; gap: 12px; }
+      .stat-item { display: flex; align-items: center; gap: 12px; text-align: left; }
+      .stat-num { font-size: 1.4rem; flex-shrink: 0; }
+    }
+    @media (max-width: 420px) {
+      .nav { padding: 16px 20px; }
+      .quiz-card { padding: 28px 18px; }
+      .quiz-shell { padding: 88px 16px 48px; }
+      .btn-nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── Navigation ─────────────────────────────────────────────── -->
+  <nav class="nav">
+    <a href="/" class="nav__logo">Élan<span>.</span></a>
+    <div class="nav__links">
+      <a href="/regain-shield.html">Regain Shield</a>
+      <a href="/quiz.html" class="active">Quiz</a>
+      <a href="/blog.html">Articles</a>
+      <a href="/faq.html">FAQ</a>
+      <span class="nav__divider"></span>
+      <a href="/et.html" class="nav__lang nav__lang-link">EST</a>
+      <a href="/fi.html" class="nav__lang nav__lang-link">FIN</a>
+      <a href="/ru.html" class="nav__lang nav__lang-link">RUS</a>
+      <a href="/index.html#consultation" class="btn-nav">Book a Consultation</a>
+    </div>
+  </nav>
+
+  <!-- ─── Quiz Shell ──────────────────────────────────────────────── -->
+  <main class="quiz-shell">
+    <div class="quiz-card">
+
+      <!-- Progress Bar (hidden on intro + result) -->
+      <div class="progress-bar-wrap" id="progressWrap" style="display:none;">
+        <div class="progress-bar-track">
+          <div class="progress-bar-fill" id="progressFill" style="width:10%"></div>
+        </div>
+        <span class="progress-label" id="progressLabel">1 / 10</span>
+      </div>
+
+      <!-- ─── SCREEN 0: Intro ─────────────────────────────────────── -->
+      <div class="screen active" id="screen-intro">
+        <div class="intro-eyebrow">Free Assessment · 2 Minutes</div>
+        <h1 class="quiz-title">Am I Ready to Stop GLP-1?</h1>
+        <p class="quiz-subtitle">
+          Thinking about stopping Ozempic, Wegovy, or Mounjaro? Before you do,
+          find out if your metabolic foundations are strong enough to keep the weight off — or whether stopping now puts you at high risk of regain.
+        </p>
+        <div class="stat-row">
+          <div class="stat-item">
+            <div class="stat-num">67%</div>
+            <div class="stat-desc">regain most of their weight within 1 year of stopping</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">2 min</div>
+            <div class="stat-desc">to assess your readiness</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">Free</div>
+            <div class="stat-desc">physician-designed, no obligation</div>
+          </div>
+        </div>
+        <button class="btn btn--full" onclick="startQuiz()">Start the Assessment →</button>
+        <p style="text-align:center;margin-top:14px;font-size:0.75rem;color:rgba(232,228,222,0.3);">
+          Designed by Dr. Ingmar Lindström, Family Medicine Physician
+        </p>
+      </div>
+
+      <!-- ─── SCREENS 1–10: Questions ─────────────────────────────── -->
+
+      <!-- Q1 -->
+      <div class="screen" id="screen-q1">
+        <div class="question-category">GLP-1 Duration</div>
+        <h2 class="question-text">How long have you been on a GLP-1 medication?</h2>
+        <p class="question-sub">Ozempic, Wegovy, Mounjaro, Saxenda, or similar</p>
+        <div class="options">
+          <button class="option-btn" onclick="selectOption(1, 0, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">Less than 6 months</span></span>
+          </button>
+          <button class="option-btn" onclick="selectOption(1, 1, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">6 – 12 months</span></span>
+          </button>
+          <button class="option-btn" onclick="selectOption(1, 2, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">More than 12 months</span></span>
+          </button>
+        </div>
+        <div class="nav-row">
+          <button class="back-btn" onclick="goBack()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back
+          </button>
+          <button class="btn" id="next-q1" disabled onclick="goNext(1)">Next →</button>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="screen" id="screen-q2">
+        <div class="question-category">Exercise Habit</div>
+        <h2 class="question-text">Have you built a regular aerobic exercise habit?</h2>
+        <p class="question-sub">Walking, cycling, swimming, running — any sustained cardio</p>
+        <div class="options">
+          <button class="option-btn" onclick="selectOption(2, 0, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">Rarely or never</span><br><span class="option-sublabel">Exercise is not a regular part of my week</span></span>
+          </button>
+          <button class="option-btn" onclick="selectOption(2, 1, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">Sometimes (1–2x per week)</span><br><span class="option-sublabel">I exercise, but inconsistently</span></span>
+          </button>
+          <button class="option-btn" onclick="selectOption(2, 2, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">3 or more times per week</span><br><span class="option-sublabel">It's a consistent, established habit</span></span>
+          </button>
+        </div>
+        <div class="nav-row">
+          <button class="back-btn" onclick="goBack()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back
+          </button>
+          <button class="btn" id="next-q2" disabled onclick="goNext(2)">Next →</button>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="screen" id="screen-q3">
+        <div class="question-category">Strength Training</div>
+        <h2 class="question-text">Do you do resistance or strength training?</h2>
+        <p class="question-sub">Preserving muscle mass is critical for long-term weight maintenance</p>
+        <div class="options">
+          <button class="option-btn" onclick="selectOption(3, 0, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">No — I don't lift or do resistance work</span></span>
+          </button>
+          <button class="option-btn" onclick="selectOption(3, 1, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">Occasionally — 1x a week or less</span></span>
+          </button>
+          <button class="option-btn" onclick="selectOption(3, 2, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">Regularly — 2 or more sessions per week</span></span>
+          </button>
+        </div>
+        <div class="nav-row">
+          <button class="back-btn" onclick="goBack()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back
+          </button>
+          <button class="btn" id="next-q3" disabled onclick="goNext(3)">Next →</button>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="screen" id="screen-q4">
+        <div class="question-category">Nutrition</div>
+        <h2 class="question-text">How would you describe your daily protein intake?</h2>
+        <p class="question-sub">Adequate protein (~1.2–1.6g per kg body weight) protects muscle during weight maintenance</p>
+        <div class="options">
+          <button class="option-btn" onclick="selectOption(4, 0, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">Low — I don't really track it</span><br><span class="option-sublabel">Protein is not something I actively prioritise</span></span>
+          </button>
+          <button class="option-btn" onclick="selectOption(4, 1, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">Moderate — I try to eat protein at most meals</span><br><span class="option-sublabel">Chicken, fish, eggs, dairy — but not measured</span></span>
+          </button>
+          <button class="option-btn" onclick="selectOption(4, 2, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">High — I actively hit my protein targets</span><br><span class="option-sublabel">I know my numbers and hit them consistently</span></span>
+          </button>
+        </div>
+        <div class="nav-row">
+          <button class="back-btn" onclick="goBack()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back
+          </button>
+          <button class="btn" id="next-q4" disabled onclick="goNext(4)">Next →</button>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="screen" id="screen-q5">
+        <div class="question-category">Weight Goal</div>
+        <h2 class="question-text">Where are you in relation to your target weight?</h2>
+        <p class="question-sub">Tapering works best when you're at or near goal — not still losing</p>
+        <div class="options">
+          <button class="option-btn" onclick="selectOption(5, 0, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">Not there yet — still losing</span></span>
+          </button>
+          <button class="option-btn" onclick="selectOption(5, 1, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">Close — within 5–10% of my goal</span></span>
+          </button>
+          <button class="option-btn" onclick="selectOption(5, 2, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">Yes — I've reached my goal weight</span></span>
+          </button>
+          <button class="option-btn" onclick="selectOption(5, 3, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">Maintained for 6+ months</span><br><span class="option-sublabel">I've been stable at my target for half a year or more</span></span>
+          </button>
+        </div>
+        <div class="nav-row">
+          <button class="back-btn" onclick="goBack()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back
+          </button>
+          <button class="btn" id="next-q5" disabled onclick="goNext(5)">Next →</button>
+        </div>
+      </div>
+
+      <!-- Q6 -->
+      <div class="screen" id="screen-q6">
+        <div class="question-category">Sleep</div>
+        <h2 class="question-text">How is your sleep quality?</h2>
+        <p class="question-sub">Poor sleep elevates ghrelin (the hunger hormone) and dramatically increases regain risk</p>
+        <div class="options">
+          <button class="option-btn" onclick="selectOption(6, 0, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">Poor — I struggle to sleep or feel unrefreshed</span></span>
+          </button>
+          <button class="option-btn" onclick="selectOption(6, 1, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">OK — mostly fine, occasional bad nights</span></span>
+          </button>
+          <button class="option-btn" onclick="selectOption(6, 2, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">Good — I consistently get 7–9 hours and wake rested</span></span>
+          </button>
+        </div>
+        <div class="nav-row">
+          <button class="back-btn" onclick="goBack()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back
+          </button>
+          <button class="btn" id="next-q6" disabled onclick="goNext(6)">Next →</button>
+        </div>
+      </div>
+
+      <!-- Q7 -->
+      <div class="screen" id="screen-q7">
+        <div class="question-category">Stress</div>
+        <h2 class="question-text">How do you manage stress?</h2>
+        <p class="question-sub">Chronic cortisol drives hunger, fat storage, and erodes willpower — the classic regain recipe</p>
+        <div class="options">
+          <button class="option-btn" onclick="selectOption(7, 0, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">No real strategy</span><br><span class="option-sublabel">I cope, but stress is often high and unmanaged</span></span>
+          </button>
+          <button class="option-btn" onclick="selectOption(7, 1, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">Some strategies</span><br><span class="option-sublabel">I try to decompress but it's not structured</span></span>
+          </button>
+          <button class="option-btn" onclick="selectOption(7, 2, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">Structured approach</span><br><span class="option-sublabel">Regular practice — meditation, exercise, therapy, etc.</span></span>
+          </button>
+        </div>
+        <div class="nav-row">
+          <button class="back-btn" onclick="goBack()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back
+          </button>
+          <button class="btn" id="next-q7" disabled onclick="goNext(7)">Next →</button>
+        </div>
+      </div>
+
+      <!-- Q8 -->
+      <div class="screen" id="screen-q8">
+        <div class="question-category">History</div>
+        <h2 class="question-text">What is your weight regain history before this medication?</h2>
+        <p class="question-sub">Past patterns predict future patterns — this is about biological risk, not willpower</p>
+        <div class="options">
+          <button class="option-btn" onclick="selectOption(8, 0, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">Multiple yo-yo cycles</span><br><span class="option-sublabel">Lost and regained weight several times over the years</span></span>
+          </button>
+          <button class="option-btn" onclick="selectOption(8, 1, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">Once before</span><br><span class="option-sublabel">I regained after one previous attempt</span></span>
+          </button>
+          <button class="option-btn" onclick="selectOption(8, 2, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">First time</span><br><span class="option-sublabel">This is my first significant weight loss journey</span></span>
+          </button>
+        </div>
+        <div class="nav-row">
+          <button class="back-btn" onclick="goBack()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back
+          </button>
+          <button class="btn" id="next-q8" disabled onclick="goNext(8)">Next →</button>
+        </div>
+      </div>
+
+      <!-- Q9 -->
+      <div class="screen" id="screen-q9">
+        <div class="question-category">Medical Factors</div>
+        <h2 class="question-text">Do you have PCOS, insulin resistance, or metabolic syndrome?</h2>
+        <p class="question-sub">These conditions alter how your metabolism responds to GLP-1 withdrawal</p>
+        <div class="options">
+          <button class="option-btn" onclick="selectOption(9, 0, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">Yes — diagnosed</span><br><span class="option-sublabel">Confirmed by a physician or blood tests</span></span>
+          </button>
+          <button class="option-btn" onclick="selectOption(9, 1, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">Unsure — possibly</span><br><span class="option-sublabel">I've never been formally tested</span></span>
+          </button>
+          <button class="option-btn" onclick="selectOption(9, 2, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">No — my metabolic labs are normal</span></span>
+          </button>
+        </div>
+        <div class="nav-row">
+          <button class="back-btn" onclick="goBack()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back
+          </button>
+          <button class="btn" id="next-q9" disabled onclick="goNext(9)">Next →</button>
+        </div>
+      </div>
+
+      <!-- Q10 -->
+      <div class="screen" id="screen-q10">
+        <div class="question-category">Support System</div>
+        <h2 class="question-text">What kind of support do you have for weight maintenance?</h2>
+        <p class="question-sub">Accountability structures are one of the strongest predictors of long-term success</p>
+        <div class="options">
+          <button class="option-btn" onclick="selectOption(10, 0, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">None — I'm doing this on my own</span></span>
+          </button>
+          <button class="option-btn" onclick="selectOption(10, 1, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">Some — friends, family, or a fitness app</span></span>
+          </button>
+          <button class="option-btn" onclick="selectOption(10, 2, this)">
+            <span class="option-dot"></span>
+            <span><span class="option-label">Structured programme</span><br><span class="option-sublabel">Working with a physician, dietitian, or coach</span></span>
+          </button>
+        </div>
+        <div class="nav-row">
+          <button class="back-btn" onclick="goBack()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back
+          </button>
+          <button class="btn" id="next-q10" disabled onclick="showResult()">See My Results →</button>
+        </div>
+      </div>
+
+      <!-- ─── RESULT SCREEN ───────────────────────────────────────── -->
+      <div class="screen" id="screen-result">
+
+        <div id="result-badge-wrap"></div>
+        <h2 class="result-headline" id="result-headline"></h2>
+        <p class="result-text" id="result-text"></p>
+
+        <div class="score-meter">
+          <div class="score-meter-label">Your Readiness Score</div>
+          <div class="score-meter-track">
+            <div class="score-meter-fill" id="score-meter-fill" style="width: 0%"></div>
+          </div>
+          <div class="score-meter-note" id="score-meter-note"></div>
+        </div>
+
+        <div class="focus-areas" id="focus-areas-wrap" style="display:none">
+          <h4>Areas to strengthen before tapering</h4>
+          <div id="focus-list"></div>
+        </div>
+
+        <!-- Email Capture -->
+        <div class="email-capture">
+          <div class="email-capture__eyebrow">Free Personalised Report</div>
+          <h3>Get your full tapering readiness report</h3>
+          <p>We'll send you a detailed breakdown of your results, what they mean, and an action plan tailored to your answers — written by Dr. Lindström.</p>
+          <form id="capture-form" onsubmit="submitCapture(event)">
+            <div class="form-row">
+              <input type="text" class="form-input" name="name" placeholder="Your first name" required autocomplete="given-name" />
+              <input type="email" class="form-input" name="email" placeholder="Your email address" required autocomplete="email" />
+            </div>
+            <button type="submit" class="form-submit">Send Me the Report →</button>
+          </form>
+          <div class="thankyou-msg" id="thankyou-msg">
+            ✓ Thank you! Your report is on its way.
+          </div>
+          <p class="form-privacy" style="margin-top:10px;margin-bottom:0;">No spam. Unsubscribe at any time.</p>
+        </div>
+
+        <!-- Soft CTA -->
+        <div class="cta-block">
+          <p>Want to discuss your results with a physician? <strong>Dr. Lindström offers a structured tapering consultation</strong> — including lab review, personalised protocol, and ongoing support.</p>
+          <a href="/index.html#consultation" class="btn">Book a Consultation →</a>
+        </div>
+
+        <div class="restart-link">
+          <button onclick="restartQuiz()">Retake the quiz</button>
+        </div>
+
+      </div>
+      <!-- /screen-result -->
+
+    </div><!-- /quiz-card -->
+
+    <p class="disclaimer">
+      This quiz is for educational purposes only and does not constitute medical advice.
+      Always consult a qualified physician before making changes to your medication.
+      © 2025 Élan Clinic · Elan Clinic OÜ · Sepapaja 12/1, Tallinn
+    </p>
+  </main>
+
+  <script>
+    // ─── State ─────────────────────────────────────────────────────
+    const TOTAL = 10;
+    let current = 0; // 0 = intro
+    const answers = {}; // { qNum: scoreValue }
+
+    // Score weights per question, per option index
+    // Each answer returns a value 0–2 (or 0–3 for Q5)
+    // We'll normalise to 0–100 at the end
+    const WEIGHTS = {
+      1: [0, 1, 2],        // duration: <6mo, 6-12mo, >12mo
+      2: [0, 1, 2],        // cardio
+      3: [0, 1, 2],        // resistance
+      4: [0, 1, 2],        // protein
+      5: [0, 1, 2, 3],     // weight goal (0=not there, 3=maintained 6mo)
+      6: [0, 1, 2],        // sleep
+      7: [0, 1, 2],        // stress
+      8: [0, 1, 2],        // regain history
+      9: [0, 1, 2],        // PCOS/IR
+      10: [0, 1, 2],       // support
+    };
+
+    // Max possible score: 2+2+2+2+3+2+2+2+2+2 = 23
+    const MAX_SCORE = 23;
+
+    // Which questions are high-importance (flag if scored 0)
+    const HIGH_IMPORTANCE = [2, 3, 4, 8, 10]; // exercise, resistance, protein, history, support
+
+    const LABELS = {
+      2: { 0: 'Build a regular aerobic exercise habit (3+ times/week)', 1: null },
+      3: { 0: 'Add resistance training (at least 2x/week) to protect muscle mass', 1: 'Increase resistance training frequency' },
+      4: { 0: 'Prioritise protein at every meal (aim for 1.2–1.6g/kg body weight)', 1: 'Increase daily protein intake' },
+      6: { 0: 'Address sleep quality — poor sleep significantly raises regain risk', 1: null },
+      7: { 0: 'Develop a structured stress management practice', 1: null },
+      8: { 0: 'Multiple regain cycles = high biological risk; consider longer medication duration', 1: null },
+      10: { 0: 'Get a structured support programme — solo maintenance is the hardest path', 1: 'Formalise your support system' },
+    };
+
+    // ─── Navigation ────────────────────────────────────────────────
+    function showScreen(id) {
+      document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+      const el = document.getElementById(id);
+      el.classList.add('active');
+    }
+
+    function updateProgress(q) {
+      const wrap = document.getElementById('progressWrap');
+      if (q === 0 || q === 'result') {
+        wrap.style.display = 'none';
+        return;
+      }
+      wrap.style.display = 'flex';
+      const pct = (q / TOTAL) * 100;
+      document.getElementById('progressFill').style.width = pct + '%';
+      document.getElementById('progressLabel').textContent = q + ' / ' + TOTAL;
+    }
+
+    function startQuiz() {
+      current = 1;
+      updateProgress(1);
+      showScreen('screen-q1');
+    }
+
+    function goNext(q) {
+      if (answers[q] === undefined) return;
+      current = q + 1;
+      if (current > TOTAL) {
+        showResult();
+        return;
+      }
+      updateProgress(current);
+      showScreen('screen-q' + current);
+    }
+
+    function goBack() {
+      if (current <= 1) {
+        current = 0;
+        updateProgress(0);
+        showScreen('screen-intro');
+        return;
+      }
+      current--;
+      updateProgress(current);
+      showScreen('screen-q' + current);
+    }
+
+    function restartQuiz() {
+      for (let k in answers) delete answers[k];
+      // Reset all option selections
+      document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+      // Reset all next buttons
+      for (let i = 1; i <= TOTAL; i++) {
+        const nb = document.getElementById('next-q' + i);
+        if (nb) nb.disabled = true;
+      }
+      // Reset email form
+      document.getElementById('capture-form').reset();
+      document.getElementById('capture-form').style.display = 'block';
+      document.getElementById('thankyou-msg').style.display = 'none';
+
+      current = 0;
+      updateProgress(0);
+      showScreen('screen-intro');
+    }
+
+    // ─── Option Selection ──────────────────────────────────────────
+    function selectOption(qNum, optionIndex, el) {
+      // Deselect siblings
+      el.closest('.options').querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+      el.classList.add('selected');
+
+      // Store score
+      answers[qNum] = WEIGHTS[qNum][optionIndex];
+
+      // Enable next button
+      const nb = document.getElementById('next-q' + qNum);
+      if (nb) nb.disabled = false;
+    }
+
+    // ─── Result Calculation ────────────────────────────────────────
+    function showResult() {
+      updateProgress('result');
+
+      // Calculate total score
+      let total = 0;
+      for (let q = 1; q <= TOTAL; q++) {
+        total += (answers[q] !== undefined ? answers[q] : 0);
+      }
+
+      const pct = Math.round((total / MAX_SCORE) * 100);
+
+      // Determine tier
+      // Also check critical flags
+      const hasMultipleCycles = answers[8] === 0;
+      const noExercise = answers[2] === 0 && answers[3] === 0;
+      const notAtGoal = answers[5] === 0;
+
+      let tier;
+      if (pct >= 70 && !hasMultipleCycles && !notAtGoal) {
+        tier = 'green';
+      } else if (pct >= 40 || (!hasMultipleCycles && !noExercise)) {
+        tier = 'yellow';
+      } else {
+        tier = 'red';
+      }
+
+      // Override to red if severe flags
+      if (pct < 30 || (hasMultipleCycles && noExercise && notAtGoal)) {
+        tier = 'red';
+      }
+
+      const config = {
+        green: {
+          badgeClass: 'result-badge--green',
+          badgeText: '✦ Ready to Discuss Tapering',
+          headline: 'Your foundations look strong.',
+          text: `Your score suggests you've built meaningful lifestyle habits that could support weight maintenance without medication. You're not out of the woods — the biology of regain is real — but you're in a much stronger position than most. The next step is a structured, physician-supervised taper plan, not a sudden stop. A supervised taper with metabolic monitoring significantly increases your chances of staying off medication for good.`,
+          meterClass: 'score-meter-fill--green',
+          meterNote: `Score: ${pct}/100 — Strong readiness. A supervised taper discussion is appropriate.`,
+        },
+        yellow: {
+          badgeClass: 'result-badge--yellow',
+          badgeText: '◈ Some Foundations Missing',
+          headline: 'You're not quite ready — but you're close.',
+          text: `Your score shows meaningful progress, but there are gaps in your lifestyle foundations that increase regain risk. The good news: these are fixable. Addressing the areas below over the next 3–6 months before tapering will meaningfully improve your long-term outcome. Stopping medication now — without strengthening these foundations — is how most people end up back at square one.`,
+          meterClass: 'score-meter-fill--yellow',
+          meterNote: `Score: ${pct}/100 — Build the areas below before tapering.`,
+        },
+        red: {
+          badgeClass: 'result-badge--red',
+          badgeText: '⚠ High Regain Risk',
+          headline: 'Stopping now carries significant risk.',
+          text: `Your results suggest that your metabolic and lifestyle foundations aren't yet strong enough to maintain your weight without medication support. This isn't a failure — it reflects real biology. GLP-1 medications work with your body's hormonal systems, and abrupt or premature withdrawal without solid foundations leads to regain in the majority of cases. Continue your medication while actively building the foundations listed below. When they're in place, a supervised taper becomes much safer.`,
+          meterClass: 'score-meter-fill--red',
+          meterNote: `Score: ${pct}/100 — Continue medication and build foundations first.`,
+        },
+      };
+
+      const c = config[tier];
+
+      // Badge
+      document.getElementById('result-badge-wrap').innerHTML = `
+        <div class="result-badge ${c.badgeClass}">
+          <span class="result-dot"></span>${c.badgeText}
+        </div>`;
+
+      document.getElementById('result-headline').textContent = c.headline;
+      document.getElementById('result-text').textContent = c.text;
+
+      // Score meter
+      document.getElementById('score-meter-fill').className = 'score-meter-fill ' + c.meterClass;
+      document.getElementById('score-meter-note').textContent = c.meterNote;
+
+      // Focus areas
+      const focusItems = [];
+      for (let q = 2; q <= TOTAL; q++) {
+        const score = answers[q] !== undefined ? answers[q] : 0;
+        const maxForQ = WEIGHTS[q] ? Math.max(...WEIGHTS[q]) : 2;
+        if (score < maxForQ && LABELS[q] && LABELS[q][score]) {
+          focusItems.push(LABELS[q][score]);
+        }
+      }
+
+      const focusWrap = document.getElementById('focus-areas-wrap');
+      const focusList = document.getElementById('focus-list');
+
+      if (focusItems.length > 0 && tier !== 'green') {
+        focusList.innerHTML = focusItems.map(f => `
+          <div class="focus-item">
+            <span class="focus-icon">→</span>
+            <span>${f}</span>
+          </div>`).join('');
+        focusWrap.style.display = 'block';
+      } else {
+        focusWrap.style.display = 'none';
+      }
+
+      showScreen('screen-result');
+
+      // Animate meter after paint
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          document.getElementById('score-meter-fill').style.width = pct + '%';
+        }, 50);
+      });
+    }
+
+    // ─── Email Capture ─────────────────────────────────────────────
+    function submitCapture(e) {
+      e.preventDefault();
+      const form = document.getElementById('capture-form');
+      const name = form.querySelector('[name="name"]').value;
+      const email = form.querySelector('[name="email"]').value;
+
+      // In production: POST to backend or form service
+      // For now: store in console + show thank you
+      console.log('Lead captured:', { name, email, score: answers, timestamp: new Date().toISOString() });
+
+      form.style.display = 'none';
+      document.getElementById('thankyou-msg').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
