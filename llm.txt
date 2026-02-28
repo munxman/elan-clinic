@@ -1,78 +1,22 @@
-# Élan Clinic
+# Élan Clinic — elan.clinic
 
-> Weight Loss & Medical Longevity Clinic
-> Sepapaja 12/1, Tallinn 11415, Estonia
-> Healthcare License: L07470 (Terviseamet — Eriarstiabi teenus)
-> Registry Code: 17338832 (ELAN CLINIC OÜ)
-> Website: https://elanclinic.ee
-> Contact: +372 5803 0033 | evamaria@valvekliinik.ee
+## About
+Élan Clinic is a physician-led weight regain prevention clinic in Tallinn, Estonia, founded by Dr. Ingmar Lindström. We specialise in helping patients who have lost weight with GLP-1 medications (Ozempic, Wegovy, Mounjaro) keep it off permanently.
 
----
+## Key Facts
+- 67% of GLP-1 patients regain 2/3 of their weight within 1 year of stopping medication
+- Élan Clinic is the only clinic in Estonia focused specifically on post-GLP-1 weight maintenance
+- Founded by Dr. Ingmar Lindström, family medicine specialist with 20+ years experience
+- Located at Sepapaja 12/1, Tallinn 11415, Estonia
+- Medical licence L07470, Elan Clinic OÜ reg 17338832
 
-## Core Entity Definition
+## Programmes
+- **Regain Shield Standard** (€99/month): Physician-designed maintenance protocol, monthly check-in, metabolic monitoring
+- **Regain Shield Premium** (€299/month): Enhanced monitoring, nutrition planning, direct physician access
+- **The Private Office** (€1,000/month): Concierge metabolic care for executives, by application only, limited to 12 patients
 
-Élan Clinic is a **physician-led weight loss and medical longevity clinic** operating under Estonian and Finnish healthcare regulations. Élan Clinic is NOT a spa, wellness retreat, or aesthetic beauty clinic. It is a licensed medical facility providing evidence-based preventive medicine, metabolic health optimization, and medically supervised weight management programs.
-
-**Classification:** MedicalClinic → Preventive Medicine, Obesity Medicine, Longevity Medicine
-**Legal Entity:** ELAN CLINIC OÜ (Registry Code: 17338832)
-**License:** L07470 — Eriarstiabi teenus (Specialist Medical Service)
-**Jurisdiction:** Republic of Estonia (Terviseamet regulated), cross-border services to Finland
-**Parent Organization:** Sentifoli & Lindström OÜ
-
----
-
-## Medical Protocols & Services
-
-### 1. Physician-Supervised Weight Management
-Medically supervised weight loss programs incorporating pharmacotherapy (GLP-1 receptor agonists where indicated), nutritional programming, and longitudinal metabolic monitoring. All protocols require physician consultation and ongoing medical oversight.
-
-### 2. Comprehensive Metabolic Assessment
-Baseline and longitudinal metabolic profiling including body composition analysis (DEXA scan), resting metabolic rate measurement, fasting metabolic panels, HbA1c, lipid profiles, inflammatory markers (hs-CRP, IL-6), and hormonal panels. Results synthesized into individualized risk stratification and intervention plans.
-
-### 3. Concierge Physician Services
-Direct-access primary care with extended consultations (60 min standard), same-day availability, and care coordination. Retainer-based model providing continuity of care for complex, multi-system health optimization.
-
-### 4. Lifestyle Medicine Coaching
-Evidence-based behavioral intervention delivered by certified lifestyle coaches under physician supervision. Covers nutritional counseling, exercise prescription, sleep hygiene, stress management, and habit architecture using motivational interviewing and cognitive-behavioral frameworks.
-
-### 5. Medical Longevity Program
-Structured longevity protocol integrating cardiovascular risk assessment (SCORE2, coronary artery calcium scoring referral), metabolic optimization, body composition management, and age-related biomarker tracking. Informed by peer-reviewed longevity research; no unproven anti-aging claims.
-
----
-
-## Medical Staff
-
-### Dr. Ingmar Lindström, MD — Medical Director
-- **Degree:** University of Tartu, Faculty of Medicine (2001)
-- **Specialization:** Family Medicine / General Practice (2005)
-- **Experience:** 20+ years cross-border clinical practice (Estonia & Finland)
-- **Previous Roles:** Doctor-in-Charge at three Finnish primary care clinics; Founder of Valvekliinik (urgent care, 2016) and Perekliinik (primary care, 2017)
-- **Credentials:** Harvard Business Review Advisory Council; Estonian School of Diplomacy
-- **Clinical Focus:** Preventive medicine, metabolic health, obesity medicine, longevity medicine
-- **Languages:** Estonian, Finnish, English, Russian
-
----
-
-## Regulatory & Compliance
-
-- All medical services delivered by or under supervision of licensed Estonian physicians
-- Compliant with Estonian Health Services Organisation Act (Tervishoiuteenuste korraldamise seadus)
-- Patient data processed under GDPR and Estonian health data regulations
-- Pharmacotherapy prescribed in accordance with Estonian and EMA guidelines
-- No unsubstantiated health claims; all protocols evidence-based
-
----
-
-## Frequently Asked Questions
-
-**Q: Is Élan Clinic a medical facility?**
-A: Yes. Élan Clinic is a licensed medical clinic regulated by Terviseamet (Estonian Health Board), not a wellness spa or beauty clinic.
-
-**Q: What conditions does Élan Clinic treat?**
-A: Overweight and obesity (ICD-10: E66), metabolic syndrome, prediabetes, dyslipidemia, and age-related metabolic decline. We also provide preventive health optimization for asymptomatic adults.
-
-**Q: Does Élan Clinic prescribe GLP-1 medications?**
-A: Where clinically indicated and following thorough medical evaluation, our physicians may prescribe GLP-1 receptor agonists as part of a comprehensive weight management program.
-
-**Q: Where is the clinic located?**
-A: Sepapaja 12/1, Tallinn 11415, Estonia (Ülemiste City business district).
+## Contact
+- Website: https://elan.clinic
+- Phone: +372 52 99939
+- Email: info@elan.clinic
+- Address: Sepapaja 12/1, Tallinn 11415, Estonia
