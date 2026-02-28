@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lasku / Faktura – Élan Clinic</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 18mm 18mm 20mm 18mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 10.5pt;
+      color: #1a1a1a;
+      background: #fff;
+      line-height: 1.5;
+    }
+
+    /* ── Header ─────────────────────────────────────────────── */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 3px solid #2c5f6e;
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+    }
+
+    .clinic-block h1 {
+      font-size: 22pt;
+      font-weight: 700;
+      color: #2c5f6e;
+      letter-spacing: -0.5px;
+    }
+
+    .clinic-block .tagline {
+      font-size: 9pt;
+      color: #6b8e9a;
+      margin-top: 2px;
+      font-style: italic;
+    }
+
+    .clinic-meta {
+      font-size: 8.5pt;
+      color: #444;
+      margin-top: 8px;
+      line-height: 1.7;
+    }
+
+    .clinic-meta span {
+      display: block;
+    }
+
+    .doc-title-block {
+      text-align: right;
+    }
+
+    .doc-title-block .doc-title {
+      font-size: 16pt;
+      font-weight: 700;
+      color: #2c5f6e;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .doc-title-block .kela-note {
+      font-size: 8pt;
+      color: #888;
+      margin-top: 4px;
+    }
+
+    /* ── Meta grid ──────────────────────────────────────────── */
+    .meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .meta-box {
+      border: 1px solid #d0dde1;
+      border-radius: 5px;
+      padding: 10px 13px;
+      background: #f7fbfc;
+    }
+
+    .meta-box h3 {
+      font-size: 7.5pt;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #2c5f6e;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .field-row {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .field-label {
+      font-size: 8pt;
+      color: #666;
+      min-width: 130px;
+      flex-shrink: 0;
+    }
+
+    .field-value {
+      font-size: 9.5pt;
+      font-weight: 600;
+      color: #1a1a1a;
+      border-bottom: 1px solid #b0c4cc;
+      flex: 1;
+      min-height: 18px;
+      padding-bottom: 1px;
+    }
+
+    .field-value.blank {
+      font-weight: 400;
+      color: #aaa;
+      font-style: italic;
+      font-size: 8pt;
+    }
+
+    /* ── Invoice number / date row ──────────────────────────── */
+    .invoice-ref {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 18px;
+    }
+
+    .ref-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .ref-item .ref-label {
+      font-size: 8.5pt;
+      color: #555;
+      white-space: nowrap;
+    }
+
+    .ref-item .ref-val {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #2c5f6e;
+      border-bottom: 2px solid #2c5f6e;
+      min-width: 100px;
+      padding-bottom: 1px;
+    }
+
+    /* ── Diagnosis ──────────────────────────────────────────── */
+    .diagnosis-box {
+      border: 1px solid #d0dde1;
+      border-radius: 5px;
+      padding: 10px 13px;
+      background: #f7fbfc;
+      margin-bottom: 18px;
+    }
+
+    .diagnosis-box h3 {
+      font-size: 7.5pt;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #2c5f6e;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .diag-fields {
+      display: flex;
+      gap: 20px;
+    }
+
+    .diag-fields .field-row {
+      flex: 1;
+    }
+
+    /* ── Services table ─────────────────────────────────────── */
+    .section-title {
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #2c5f6e;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    table.services {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 6px;
+      font-size: 9.5pt;
+    }
+
+    table.services thead tr {
+      background: #2c5f6e;
+      color: #fff;
+    }
+
+    table.services thead th {
+      padding: 7px 10px;
+      text-align: left;
+      font-size: 8pt;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    table.services thead th.right {
+      text-align: right;
+    }
+
+    table.services tbody tr {
+      border-bottom: 1px solid #dde7ea;
+    }
+
+    table.services tbody tr:nth-child(even) {
+      background: #f7fbfc;
+    }
+
+    table.services tbody td {
+      padding: 7px 10px;
+      vertical-align: top;
+    }
+
+    table.services tbody td.right {
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    table.services tbody td.code {
+      font-family: monospace;
+      font-size: 9pt;
+      color: #555;
+    }
+
+    /* empty service rows for manual fill-in */
+    table.services tbody tr.empty-row td {
+      height: 26px;
+      border-bottom: 1px dashed #c8d8dc;
+      background: #fff;
+    }
+
+    /* ── Totals ─────────────────────────────────────────────── */
+    .totals-wrap {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 18px;
+    }
+
+    .totals-table {
+      width: 260px;
+    }
+
+    .totals-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .totals-table table td {
+      padding: 4px 10px;
+      font-size: 9.5pt;
+    }
+
+    .totals-table table td.label {
+      color: #555;
+    }
+
+    .totals-table table td.amount {
+      text-align: right;
+      font-weight: 600;
+    }
+
+    .totals-table table tr.total-row {
+      background: #2c5f6e;
+      color: #fff;
+    }
+
+    .totals-table table tr.total-row td {
+      font-size: 11pt;
+      font-weight: 700;
+      padding: 7px 10px;
+    }
+
+    .totals-table table tr.total-row td.amount {
+      font-size: 12pt;
+    }
+
+    /* ── VAT note ───────────────────────────────────────────── */
+    .vat-note {
+      background: #eef5f7;
+      border-left: 3px solid #2c5f6e;
+      padding: 8px 12px;
+      font-size: 8.5pt;
+      color: #444;
+      border-radius: 0 4px 4px 0;
+      margin-bottom: 18px;
+    }
+
+    .vat-note strong {
+      color: #2c5f6e;
+    }
+
+    /* ── Kela instructions ──────────────────────────────────── */
+    .kela-box {
+      border: 1px solid #b8d4dc;
+      border-radius: 5px;
+      padding: 10px 13px;
+      background: #eef8fb;
+      margin-bottom: 18px;
+      font-size: 8.5pt;
+      color: #2c4a55;
+    }
+
+    .kela-box h3 {
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #1d3f4a;
+    }
+
+    .kela-box ul {
+      padding-left: 16px;
+      line-height: 1.8;
+    }
+
+    /* ── Physician & Signature ──────────────────────────────── */
+    .bottom-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 6px;
+    }
+
+    .physician-box {
+      border: 1px solid #d0dde1;
+      border-radius: 5px;
+      padding: 10px 13px;
+      background: #f7fbfc;
+    }
+
+    .physician-box h3 {
+      font-size: 7.5pt;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #2c5f6e;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .stamp-box {
+      border: 1px dashed #9ab5be;
+      border-radius: 5px;
+      padding: 10px 13px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .stamp-box h3 {
+      font-size: 7.5pt;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #2c5f6e;
+      font-weight: 700;
+      align-self: flex-start;
+    }
+
+    .stamp-circle {
+      width: 80px;
+      height: 80px;
+      border: 2px dashed #9ab5be;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #b0c8d0;
+      font-size: 7.5pt;
+      text-align: center;
+      margin: 6px auto;
+    }
+
+    .sig-line {
+      border-top: 1px solid #9ab5be;
+      width: 100%;
+      padding-top: 4px;
+      font-size: 7.5pt;
+      color: #999;
+      text-align: center;
+    }
+
+    /* ── Footer ─────────────────────────────────────────────── */
+    .footer {
+      border-top: 1px solid #dde7ea;
+      padding-top: 8px;
+      margin-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 7.5pt;
+      color: #999;
+    }
+
+    /* ── Print tweaks ────────────────────────────────────────── */
+    @media print {
+      body { font-size: 10pt; }
+      .no-print { display: none !important; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════════
+     HEADER
+════════════════════════════════════════════════════════════ -->
+<div class="header">
+  <div class="clinic-block">
+    <h1>Élan Clinic</h1>
+    <div class="tagline">Tervis ja esteetika / Terveys ja estetiikka</div>
+    <div class="clinic-meta">
+      <span>Sepapaja 12/1, Tallinn 11415, Eesti</span>
+      <span>Tel: +372 52 99939 &nbsp;|&nbsp; info@elan.clinic</span>
+      <span>Reg-nr: 17338832 &nbsp;|&nbsp; Tegevusluba / Toimilupa: L07470</span>
+      <span>Tervishoiuteenuse osutaja / Terveydenhuollon palveluntuottaja</span>
+    </div>
+  </div>
+  <div class="doc-title-block">
+    <div class="doc-title">Lasku</div>
+    <div class="kela-note">Kela-korvauksen hakemista varten<br>(Rajat ylittävä terveydenhuolto)</div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     INVOICE REFERENCE
+════════════════════════════════════════════════════════════ -->
+<div class="invoice-ref">
+  <div class="ref-item">
+    <span class="ref-label">Laskunumero:</span>
+    <span class="ref-val">{{INVOICE_NUMBER}}</span>
+  </div>
+  <div class="ref-item">
+    <span class="ref-label">Laskupäivä:</span>
+    <span class="ref-val">{{INVOICE_DATE}}</span>
+  </div>
+  <div class="ref-item">
+    <span class="ref-label">Eräpäivä:</span>
+    <span class="ref-val">{{DUE_DATE}}</span>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PATIENT & VISIT INFO
+════════════════════════════════════════════════════════════ -->
+<div class="meta-grid">
+  <!-- Patient -->
+  <div class="meta-box">
+    <h3>Potilastiedot / Patsiendi andmed</h3>
+
+    <div class="field-row">
+      <span class="field-label">Sukunimi ja etunimi:</span>
+      <span class="field-value">{{PATIENT_FULL_NAME}}</span>
+    </div>
+    <div class="field-row">
+      <span class="field-label">Henkilötunnus (HETU):</span>
+      <span class="field-value">{{PATIENT_HETU}}</span>
+    </div>
+    <div class="field-row">
+      <span class="field-label">Osoite:</span>
+      <span class="field-value">{{PATIENT_ADDRESS}}</span>
+    </div>
+    <div class="field-row">
+      <span class="field-label">Kotikunta / Kela-alue:</span>
+      <span class="field-value">{{PATIENT_MUNICIPALITY}}</span>
+    </div>
+  </div>
+
+  <!-- Visit -->
+  <div class="meta-box">
+    <h3>Käyntitiedot / Visiidi andmed</h3>
+
+    <div class="field-row">
+      <span class="field-label">Käyntipäivä:</span>
+      <span class="field-value">{{SERVICE_DATE}}</span>
+    </div>
+    <div class="field-row">
+      <span class="field-label">Hoitomuoto:</span>
+      <span class="field-value">{{TREATMENT_TYPE}}</span>
+    </div>
+    <div class="field-row">
+      <span class="field-label">Hoitava lääkäri:</span>
+      <span class="field-value">{{PHYSICIAN_NAME}}</span>
+    </div>
+    <div class="field-row">
+      <span class="field-label">Erikoisala:</span>
+      <span class="field-value">{{PHYSICIAN_SPECIALTY}}</span>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     DIAGNOSIS
+════════════════════════════════════════════════════════════ -->
+<div class="diagnosis-box">
+  <h3>Diagnoosi / Diagnoos</h3>
+  <div class="diag-fields">
+    <div class="field-row" style="flex:0 0 180px;">
+      <span class="field-label">ICD-10-koodi:</span>
+      <span class="field-value" style="min-width:100px; font-family:monospace; font-size:11pt;">{{ICD10_CODE}}</span>
+    </div>
+    <div class="field-row" style="flex:1;">
+      <span class="field-label">Diagnoosi (suomeksi):</span>
+      <span class="field-value">{{DIAGNOSIS_TEXT_FI}}</span>
+    </div>
+  </div>
+  <div class="field-row" style="margin-top:6px;">
+    <span class="field-label">Hoidon peruste:</span>
+    <span class="field-value">{{TREATMENT_JUSTIFICATION}}</span>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     SERVICES TABLE
+════════════════════════════════════════════════════════════ -->
+<div class="section-title">Suoritteet ja hinnat / Teenused ja hinnad</div>
+<table class="services">
+  <thead>
+    <tr>
+      <th style="width:12%">Koodi<br><small>Kood</small></th>
+      <th style="width:48%">Suorite / Palvelu<br><small>Teenus</small></th>
+      <th class="right" style="width:10%">Määrä<br><small>Kogus</small></th>
+      <th class="right" style="width:15%">À-hinta (€)<br><small>Ühikuhind</small></th>
+      <th class="right" style="width:15%">Yhteensä (€)<br><small>Kokku</small></th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Pre-filled example row — replace/duplicate as needed -->
+    <tr>
+      <td class="code">{{SVC_CODE_1}}</td>
+      <td>{{SVC_DESC_1}}</td>
+      <td class="right">{{SVC_QTY_1}}</td>
+      <td class="right">{{SVC_UNIT_1}}</td>
+      <td class="right">{{SVC_TOTAL_1}}</td>
+    </tr>
+    <tr>
+      <td class="code">{{SVC_CODE_2}}</td>
+      <td>{{SVC_DESC_2}}</td>
+      <td class="right">{{SVC_QTY_2}}</td>
+      <td class="right">{{SVC_UNIT_2}}</td>
+      <td class="right">{{SVC_TOTAL_2}}</td>
+    </tr>
+    <tr>
+      <td class="code">{{SVC_CODE_3}}</td>
+      <td>{{SVC_DESC_3}}</td>
+      <td class="right">{{SVC_QTY_3}}</td>
+      <td class="right">{{SVC_UNIT_3}}</td>
+      <td class="right">{{SVC_TOTAL_3}}</td>
+    </tr>
+    <!-- Add more rows as needed -->
+    <tr class="empty-row"><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr class="empty-row"><td></td><td></td><td></td><td></td><td></td></tr>
+  </tbody>
+</table>
+
+<!-- ════════════════════════════════════════════════════════════
+     TOTALS
+════════════════════════════════════════════════════════════ -->
+<div class="totals-wrap">
+  <div class="totals-table">
+    <table>
+      <tr>
+        <td class="label">Välisumma / Vahesumma</td>
+        <td class="amount">{{SUBTOTAL}} €</td>
+      </tr>
+      <tr>
+        <td class="label">ALV / KM (0 %)</td>
+        <td class="amount">0,00 €</td>
+      </tr>
+      <tr class="total-row">
+        <td class="label">Maksettava yhteensä</td>
+        <td class="amount">{{GRAND_TOTAL}} €</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     VAT NOTE
+════════════════════════════════════════════════════════════ -->
+<div class="vat-note">
+  <strong>ALV-huomio:</strong>
+  Terveyspalvelut ovat arvonlisäverottomia Virossa (Käibemaksuseadus §16 lg 2 p 1).
+  Tämä lasku ei sisällä arvonlisäveroa.
+  &nbsp;|&nbsp;
+  <em>Tervishoiuteenused on Eestis käibemaksuvabad (KMS §16 lg 2 p 1). See arve ei sisalda käibemaksu.</em>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     KELA INSTRUCTIONS
+════════════════════════════════════════════════════════════ -->
+<div class="kela-box">
+  <h3>🏥 Ohjeet Kela-korvauksen hakemiseen / Juhend Kela hüvitise taotlemiseks</h3>
+  <ul>
+    <li>Toimita tämä alkuperäinen lasku Kelalle yhdessä maksukuitin kanssa.</li>
+    <li>Täytä Kelan hakemuslomake <strong>SV 128</strong> (rajat ylittävä terveydenhuolto).</li>
+    <li>Hakemuksen voi tehdä myös verkossa: <strong>kela.fi → OmaKela</strong>.</li>
+    <li>Hakemus on tehtävä 6 kuukauden kuluessa hoidon päättymisestä.</li>
+    <li>Kysy lisätietoja: Kela, puh. <strong>020 692 206</strong></li>
+  </ul>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PHYSICIAN & SIGNATURE
+════════════════════════════════════════════════════════════ -->
+<div class="bottom-section">
+  <!-- Physician -->
+  <div class="physician-box">
+    <h3>Hoitava lääkäri / Raviarst</h3>
+
+    <div class="field-row">
+      <span class="field-label">Nimi / Nimi:</span>
+      <span class="field-value">{{PHYSICIAN_FULL_NAME}}</span>
+    </div>
+    <div class="field-row">
+      <span class="field-label">Pätevyys / Kvalifikatsioon:</span>
+      <span class="field-value">{{PHYSICIAN_QUALIFICATION}}</span>
+    </div>
+    <div class="field-row">
+      <span class="field-label">Lisenssinumero / Litsentsinumber:</span>
+      <span class="field-value">{{PHYSICIAN_LICENSE}}</span>
+    </div>
+    <div class="field-row">
+      <span class="field-label">Allekirjoitus / Allkiri:</span>
+      <span class="field-value" style="min-height:36px;"></span>
+    </div>
+  </div>
+
+  <!-- Stamp -->
+  <div class="stamp-box">
+    <h3>Leima ja allekirjoitus / Tempel ja allkiri</h3>
+    <div class="stamp-circle">Élan<br>Clinic<br>leima</div>
+    <div class="sig-line">Vastaanottojohtaja / Kliiniku juht &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAYMENT INFO (optional block)
+════════════════════════════════════════════════════════════ -->
+<div style="margin-top:14px; font-size:8pt; color:#666; border-top:1px dashed #d0dde1; padding-top:8px;">
+  <strong>Pankkitiedot / Pangaandmed:</strong>
+  Elan Clinic OÜ &nbsp;|&nbsp; IBAN: EE{{IBAN}} &nbsp;|&nbsp; BIC: {{BIC}} &nbsp;|&nbsp;
+  Viite / Viitenumber: {{PAYMENT_REF}}
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<div class="footer">
+  <span>Elan Clinic OÜ &nbsp;|&nbsp; Reg 17338832 &nbsp;|&nbsp; Tegevusluba L07470 &nbsp;|&nbsp; Sepapaja 12/1, Tallinn 11415</span>
+  <span>Sivu 1 / 1 &nbsp;|&nbsp; Tulostettu: {{PRINT_DATE}}</span>
+</div>
+
+</body>
+</html>
