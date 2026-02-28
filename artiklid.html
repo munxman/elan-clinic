@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artiklid — Élan Clinic</title>
+  <meta name="description" content="Tõenduspõhised artiklid kaalujuhtimise, GLP-1 ravimite (Ozempic, Wegovy, Mounjaro) ja pikaajalise kaalus püsimise teemadel. Dr. Ingmar Lindström, Élan Clinic Tallinn." />
+  <link rel="canonical" href="https://elan.clinic/artiklid.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elan.clinic/artiklid.html" />
+  <meta property="og:title" content="Artiklid — Élan Clinic" />
+  <meta property="og:description" content="Tõenduspõhised artiklid kaalujuhtimise ja GLP-1 ravimite teemadel. Élan Clinic, Tallinn." />
+  <meta property="og:locale" content="et_EE" />
+
+  <!-- Schema.org Blog Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Élan Clinic Artiklid",
+    "description": "Tõenduspõhised artiklid kaalujuhtimise, GLP-1 ravimite ja tervise teemadel.",
+    "url": "https://elan.clinic/artiklid.html",
+    "publisher": {
+      "@type": "MedicalClinic",
+      "name": "Élan Clinic",
+      "url": "https://elan.clinic",
+      "logo": "https://elan.clinic/favicon.svg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sepapaja 12/1",
+        "addressLocality": "Tallinn",
+        "postalCode": "11415",
+        "addressCountry": "EE"
+      }
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Ingmar Lindström",
+      "jobTitle": "Arst"
+    },
+    "blogPost": [
+      {
+        "@type": "BlogPosting",
+        "headline": "Ozempic'i järelmõju: miks kaal tuleb tagasi?",
+        "url": "https://elan.clinic/artiklid/ozempici-jarelmoju-miks-kaal-tuleb-tagasi.html",
+        "datePublished": "2026-02-28",
+        "author": {
+          "@type": "Person",
+          "name": "Dr. Ingmar Lindström"
+        },
+        "description": "67% patsientidest, kes lõpetavad GLP-1 ravimi tarvitamise, kaotavad oma saavutused aasta jooksul. Selgitame, miks see juhtub ja mida saab ette võtta."
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── Reset & Base ─────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0D1B2A;
+      color: rgba(232, 228, 222, 0.55);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      color: #E8E4DE;
+      line-height: 1.2;
+      font-weight: 500;
+    }
+
+    h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
+    h2 { font-size: clamp(1.9rem, 3.5vw, 2.8rem); }
+    h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
+
+    a { color: #C5A55A; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ─── Layout ───────────────────────────────────────────────────── */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ─── Gold Utilities ───────────────────────────────────────────── */
+    .label {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #C5A55A;
+      margin-bottom: 20px;
+    }
+
+    .gold-line {
+      width: 48px;
+      height: 2px;
+      background: #C5A55A;
+      margin: 28px 0;
+    }
+
+    /* ─── Nav ──────────────────────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(13, 27, 42, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(197, 165, 90, 0.12);
+    }
+
+    .nav__logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      color: #E8E4DE;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+    }
+
+    .nav__logo span { color: #C5A55A; }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav__links a {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(232, 228, 222, 0.65);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav__links a:hover,
+    .nav__links a.active { color: #C5A55A; }
+
+    /* ─── Page Header ──────────────────────────────────────────────── */
+    .page-header {
+      padding: 160px 0 80px;
+      background-color: #0D1B2A;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: -150px;
+      right: -150px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(197,165,90,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .page-header__subtitle {
+      font-size: 1rem;
+      color: rgba(232, 228, 222, 0.55);
+      max-width: 560px;
+      margin-top: 16px;
+      line-height: 1.6;
+    }
+
+    /* ─── Blog Grid ────────────────────────────────────────────────── */
+    .articles-section {
+      padding: 80px 0 120px;
+      background-color: #0D1B2A;
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    /* ─── Article Card ─────────────────────────────────────────────── */
+    .article-card {
+      background-color: #111D2E;
+      border: 1px solid rgba(197, 165, 90, 0.1);
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .article-card:hover {
+      border-color: rgba(197, 165, 90, 0.35);
+      transform: translateY(-3px);
+    }
+
+    .article-card__body {
+      padding: 36px 32px 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .article-card__date {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #C5A55A;
+      margin-bottom: 16px;
+    }
+
+    .article-card__title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #E8E4DE;
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .article-card__excerpt {
+      font-size: 0.88rem;
+      color: rgba(232, 228, 222, 0.55);
+      line-height: 1.7;
+      flex: 1;
+      margin-bottom: 28px;
+    }
+
+    .article-card__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #C5A55A;
+      text-decoration: none;
+      transition: gap 0.2s;
+    }
+
+    .article-card__link:hover {
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .article-card__divider {
+      height: 2px;
+      background: linear-gradient(to right, #C5A55A, transparent);
+      opacity: 0.35;
+    }
+
+    /* ─── Footer CTA ───────────────────────────────────────────────── */
+    .footer-cta {
+      background-color: #111D2E;
+      border-top: 1px solid rgba(197, 165, 90, 0.12);
+      text-align: center;
+      padding: 100px 24px;
+    }
+
+    .footer-cta h2 {
+      max-width: 620px;
+      margin: 0 auto 24px;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+    }
+
+    .footer-cta__sub {
+      max-width: 480px;
+      margin: 0 auto 40px;
+      font-size: 0.95rem;
+    }
+
+    /* ─── Button ───────────────────────────────────────────────────── */
+    .btn {
+      display: inline-block;
+      padding: 16px 36px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 1.5px solid #C5A55A;
+      color: #C5A55A;
+      background: transparent;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #C5A55A;
+      color: #0D1B2A;
+      text-decoration: none;
+    }
+
+    .btn--filled {
+      background: #C5A55A;
+      color: #0D1B2A;
+    }
+
+    .btn--filled:hover {
+      background: #d4b56a;
+      color: #0D1B2A;
+    }
+
+    /* ─── Footer Legal ─────────────────────────────────────────────── */
+    .footer-legal {
+      background-color: #0D1B2A;
+      border-top: 1px solid rgba(197, 165, 90, 0.08);
+      padding: 40px 24px;
+    }
+
+    .footer-legal__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-legal p {
+      font-size: 0.75rem;
+      color: rgba(232, 228, 222, 0.3);
+      line-height: 1.6;
+    }
+
+    /* ─── Responsive ───────────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .nav__links {
+        gap: 20px;
+      }
+
+      .nav__links a {
+        font-size: 0.72rem;
+      }
+
+      .articles-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .page-header {
+        padding: 130px 0 60px;
+      }
+
+      .articles-section {
+        padding: 60px 0 80px;
+      }
+
+      .article-card__body {
+        padding: 28px 24px 22px;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── Navigation ────────────────────────────────────────────── -->
+  <nav class="nav">
+    <a href="/" class="nav__logo">Élan <span>Clinic</span></a>
+    <ul class="nav__links">
+      <li><a href="/">Avaleht</a></li>
+      <li><a href="/artiklid.html" class="active">Artiklid</a></li>
+      <li><a href="tel:+37252999399" class="btn" style="padding: 10px 20px; font-size: 0.72rem;">Helistage</a></li>
+    </ul>
+  </nav>
+
+  <!-- ─── Page Header ───────────────────────────────────────────── -->
+  <header class="page-header">
+    <div class="container">
+      <span class="label">Teaduspõhine sisu</span>
+      <h1>Artiklid</h1>
+      <p class="page-header__subtitle">Tõenduspõhised artiklid kaalujuhtimise, GLP-1 ravimite ja tervise teemadel</p>
+      <div class="gold-line"></div>
+    </div>
+  </header>
+
+  <!-- ─── Articles Grid ─────────────────────────────────────────── -->
+  <section class="articles-section">
+    <div class="container">
+      <div class="articles-grid">
+
+        <!-- Article Card 1 -->
+        <article class="article-card">
+          <div class="article-card__divider"></div>
+          <div class="article-card__body">
+            <time class="article-card__date" datetime="2026-02-28">28. veebruar 2026</time>
+            <h2 class="article-card__title">Ozempic'i järelmõju: miks kaal tuleb tagasi?</h2>
+            <p class="article-card__excerpt">67% patsientidest, kes lõpetavad GLP-1 ravimi tarvitamise, kaotavad oma saavutused aasta jooksul. Selgitame, miks see juhtub — ja mida saab ette võtta.</p>
+            <a href="/artiklid/ozempici-jarelmoju-miks-kaal-tuleb-tagasi.html" class="article-card__link">Loe edasi →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer CTA ────────────────────────────────────────────── -->
+  <section class="footer-cta">
+    <span class="label">Konsultatsioon</span>
+    <h2>Kui kaal hakkab uuesti tõusma, on esimene samm vestlus.</h2>
+    <p class="footer-cta__sub">
+      Konsultatsioon kestab 45 minutit. Selle lõpuks teate, kas Regain Shield sobib teile — ja kui sobib, siis täpselt, kuidas teie protokoll on üles ehitatud.
+    </p>
+    <a href="tel:+37252999399" class="btn btn--filled">Helistage +372 52 99939</a>
+  </section>
+
+  <!-- ─── Footer Legal ──────────────────────────────────────────── -->
+  <footer class="footer-legal">
+    <div class="footer-legal__inner">
+      <p>© 2026 Élan Clinic · Elan Clinic OÜ · Reg 17338832 · Meditsiinilitsents L07470 · Sepapaja 12/1, Tallinn 11415</p>
+      <p>See veebisait ei ole meditsiiniline nõuanne. Enne ravimi või terviseprogrammi muutmist konsulteerige oma arstiga.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
