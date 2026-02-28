@@ -1,52 +1,1231 @@
-<!doctype html>
-<html lang="et">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Élan Kliinik — Kaalulangetuse ja pikaealisuse kliinik | Tallinn</title>
-    <meta name="description" content="Élan Kliinik on Eesti tõenduspõhine pikaealisuse ja meditsiinilise kaalulangetuse kliinik Tallinnas. Tõenduspõhine metaboolse tervise optimeerimine." />
-    <meta name="author" content="Élan Kliinik — Sentifoli & Lindström OÜ" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Élan Clinic — GLP-1 Maintenance & Weight Regain Prevention, Tallinn</title>
+  <meta name="description" content="67% of GLP-1 patients regain their weight within a year of stopping. Élan Clinic is the only physician-led programme in Estonia built specifically to prevent it. Regain Shield from €99/month." />
+  <link rel="canonical" href="https://elan.clinic" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <meta property="og:title" content="Élan Kliinik — Kaalulangetuse ja pikaealisuse kliinik | Tallinn" />
-    <meta property="og:description" content="Eesti tõenduspõhine pikaealisuse ja meditsiinilise kaalulangetuse kliinik." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://elanclinic.ee/og-image.jpg" />
-    <meta property="og:locale" content="et_EE" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elan.clinic" />
+  <meta property="og:title" content="Élan Clinic — You Lost The Weight. We Make Sure You Keep It." />
+  <meta property="og:description" content="67% of GLP-1 patients regain 2/3 of their weight within one year of stopping. Élan Clinic is the only clinic focused on what happens after Ozempic, Wegovy, or Mounjaro. Regain Shield from €99/month." />
+  <meta property="og:image" content="https://elan.clinic/og-image.jpg" />
+  <meta property="og:locale" content="en_GB" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://elanclinic.ee/og-image.jpg" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Élan Clinic — You Lost The Weight. We Make Sure You Keep It." />
+  <meta name="twitter:description" content="67% of GLP-1 patients regain 2/3 of their weight within one year of stopping. Physician-led maintenance from €99/month." />
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Élan Clinic",
+    "alternateName": "Élan Kliinik",
+    "url": "https://elan.clinic",
+    "logo": "https://elan.clinic/favicon.svg",
+    "description": "Physician-led GLP-1 maintenance and weight regain prevention clinic in Tallinn, Estonia. The only clinic focused on what happens after Ozempic, Wegovy, or Mounjaro.",
+    "medicalSpecialty": "Preventive Medicine",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Sepapaja 12/1",
+      "addressLocality": "Tallinn",
+      "postalCode": "11415",
+      "addressCountry": "EE"
+    },
+    "telephone": "+37252999 39",
+    "priceRange": "€99-€1000/month",
+    "openingHours": "Mo-Fr 09:00-18:00",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Estonia"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Dr. Ingmar Lindström",
+      "jobTitle": "Physician"
+    }
+  }
+  </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,700;1,6..96,400;1,6..96,500;1,6..96,700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="/assets/index-BmHA_pPP.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DiquvZzc.css">
-  </head>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <body>
-    <div id="root"></div>
+  <style>
+    /* ─── Reset & Base ─────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <noscript>
-      <div style="max-width:800px;margin:0 auto;padding:40px 20px;font-family:sans-serif;color:#333;">
-        <h1>Élan Kliinik — Kaalulangetuse ja pikaealisuse kliinik</h1>
-        <p>Taasta tasakaal. Paranda tervist. Tunne end paremini.</p>
-        <p>Élan Kliinik on Eesti tõenduspõhine pikaealisuse ja meditsiinilise kaalulangetuse kliinik Tallinnas. Arstide juhitud tõenduspõhine metaboolse tervise optimeerimine ja personaalne meditsiin.</p>
-        <h2>Miks valida Élan Kliinik?</h2>
-        <ul>
-          <li><strong>Isiklik kogemus</strong> — Me teame, mis tunne see on, sest oleme ise selle tee läbi käinud.</li>
-          <li><strong>Tõenduspõhine</strong> — Euroopa ravijuhistel baseeruvad ravimid ja protokollid.</li>
-          <li><strong>Pikaajaline tugi</strong> — Kuni 24-kuuline terviklik programm.</li>
-        </ul>
-        <h2>Meist</h2>
-        <p>Élan Kliinik ühendab tipptasemel meditsiini ja personaalse hoolitsuse. Meie eesmärk ei ole vaid kaalunumber, vaid teie elukvaliteet.</p>
-        <h2>Kontakt</h2>
-        <p>Tallinn, Eesti | info@elanclinic.ee</p>
-        <p>© Élan Kliinik — Sentifoli & Lindström OÜ</p>
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0D1B2A;
+      color: rgba(232, 228, 222, 0.55);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Typography Scale ─────────────────────────────────────────── */
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      color: #E8E4DE;
+      line-height: 1.2;
+      font-weight: 500;
+    }
+
+    h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
+    h2 { font-size: clamp(1.9rem, 3.5vw, 2.8rem); }
+    h3 { font-size: clamp(1.3rem, 2.5vw, 1.7rem); }
+    h4 { font-size: 1.1rem; font-weight: 600; }
+
+    p { margin-bottom: 1.2em; }
+    p:last-child { margin-bottom: 0; }
+
+    a { color: #C5A55A; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ─── Layout Containers ────────────────────────────────────────── */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .container--text {
+      max-width: 720px;
+    }
+
+    .section {
+      padding: 120px 0;
+    }
+
+    .section--dark { background-color: #0D1B2A; }
+    .section--card { background-color: #111D2E; }
+
+    /* ─── Gold Label ───────────────────────────────────────────────── */
+    .label {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #C5A55A;
+      margin-bottom: 24px;
+    }
+
+    /* ─── Divider ──────────────────────────────────────────────────── */
+    .gold-line {
+      width: 48px;
+      height: 2px;
+      background: #C5A55A;
+      margin: 32px 0;
+    }
+
+    /* ─── CTA Button ───────────────────────────────────────────────── */
+    .btn {
+      display: inline-block;
+      padding: 16px 36px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 1.5px solid #C5A55A;
+      color: #C5A55A;
+      background: transparent;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #C5A55A;
+      color: #0D1B2A;
+      text-decoration: none;
+    }
+
+    .btn--filled {
+      background: #C5A55A;
+      color: #0D1B2A;
+    }
+
+    .btn--filled:hover {
+      background: #d4b56a;
+      color: #0D1B2A;
+    }
+
+    /* ─── Nav ──────────────────────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(13, 27, 42, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(197, 165, 90, 0.12);
+    }
+
+    .nav__logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      color: #E8E4DE;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+    }
+
+    .nav__logo span {
+      color: #C5A55A;
+    }
+
+    .nav__cta {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+    }
+
+    /* ─── Hero ─────────────────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background-color: #0D1B2A;
+      padding: 160px 0 120px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(197,165,90,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero__eyebrow {
+      margin-bottom: 28px;
+    }
+
+    .hero__title {
+      font-size: clamp(2.8rem, 6vw, 4.8rem);
+      font-weight: 400;
+      max-width: 700px;
+      margin-bottom: 32px;
+      line-height: 1.1;
+    }
+
+    .hero__title em {
+      font-style: italic;
+      color: #C5A55A;
+    }
+
+    .hero__subtitle {
+      font-size: 1.1rem;
+      color: rgba(232, 228, 222, 0.7);
+      max-width: 560px;
+      margin-bottom: 48px;
+      line-height: 1.75;
+    }
+
+    .hero__actions {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .hero__note {
+      font-size: 0.78rem;
+      color: rgba(232, 228, 222, 0.4);
+      letter-spacing: 0.04em;
+    }
+
+    /* ─── Problem Section ──────────────────────────────────────────── */
+    .problem__stat {
+      margin: 56px 0;
+      padding: 48px;
+      border: 1px solid rgba(197, 165, 90, 0.25);
+      background: rgba(197, 165, 90, 0.04);
+    }
+
+    .problem__stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3.5rem, 8vw, 6rem);
+      color: #C5A55A;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .problem__stat-caption {
+      font-size: 1rem;
+      color: rgba(232, 228, 222, 0.6);
+      max-width: 480px;
+    }
+
+    .problem__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-top: 56px;
+    }
+
+    .problem__item {
+      padding: 40px;
+      background: #111D2E;
+    }
+
+    .problem__item-icon {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+
+    .problem__item h4 {
+      margin-bottom: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(232, 228, 222, 0.85);
+    }
+
+    .problem__item p {
+      font-size: 0.92rem;
+      margin: 0;
+    }
+
+    /* ─── Method Section ───────────────────────────────────────────── */
+    .method__pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 64px;
+    }
+
+    .pillar {
+      padding: 48px 40px;
+      background: #111D2E;
+      border-top: 2px solid #C5A55A;
+    }
+
+    .pillar__number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: rgba(197, 165, 90, 0.2);
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    .pillar h3 {
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+    }
+
+    .pillar p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    /* ─── Physician Section ────────────────────────────────────────── */
+    .physician {
+      background: #0D1B2A;
+    }
+
+    .physician__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .physician__image-block {
+      position: relative;
+    }
+
+    .physician__image-placeholder {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: #111D2E;
+      border: 1px solid rgba(197, 165, 90, 0.15);
+      display: flex;
+      align-items: flex-end;
+      padding: 32px;
+    }
+
+    .physician__image-caption {
+      font-size: 0.78rem;
+      color: rgba(232, 228, 222, 0.35);
+      letter-spacing: 0.06em;
+    }
+
+    .physician__quote {
+      margin: 36px 0;
+      padding: 32px 40px;
+      border-left: 3px solid #C5A55A;
+      background: rgba(197, 165, 90, 0.04);
+    }
+
+    .physician__quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #E8E4DE;
+      line-height: 1.6;
+    }
+
+    .physician__credentials {
+      list-style: none;
+      margin-top: 32px;
+    }
+
+    .physician__credentials li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(232, 228, 222, 0.07);
+      font-size: 0.88rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .physician__credentials li::before {
+      content: '—';
+      color: #C5A55A;
+      flex-shrink: 0;
+    }
+
+    /* ─── Programmes Section ───────────────────────────────────────── */
+    .programmes {
+      background: #111D2E;
+    }
+
+    .programme-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 64px;
+    }
+
+    .programme-card {
+      padding: 48px 40px;
+      background: #0D1B2A;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .programme-card--hero {
+      background: #0D1B2A;
+      border-top: 3px solid #C5A55A;
+    }
+
+    .programme-card--premium {
+      background: #111D2E;
+      border-top: 3px solid rgba(197, 165, 90, 0.5);
+    }
+
+    .programme-card--private {
+      background: #0a1420;
+      border-top: 3px solid #C5A55A;
+    }
+
+    .programme-card__tier {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #C5A55A;
+      margin-bottom: 16px;
+    }
+
+    .programme-card__name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: #E8E4DE;
+      margin-bottom: 8px;
+    }
+
+    .programme-card__price {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: #E8E4DE;
+      margin: 20px 0 4px;
+      line-height: 1;
+    }
+
+    .programme-card__price-note {
+      font-size: 0.78rem;
+      color: rgba(232, 228, 222, 0.35);
+      margin-bottom: 32px;
+    }
+
+    .programme-card__divider {
+      width: 32px;
+      height: 1px;
+      background: rgba(197, 165, 90, 0.3);
+      margin: 24px 0;
+    }
+
+    .programme-card__features {
+      list-style: none;
+      flex: 1;
+    }
+
+    .programme-card__features li {
+      padding: 9px 0;
+      font-size: 0.87rem;
+      border-bottom: 1px solid rgba(232, 228, 222, 0.06);
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .programme-card__features li::before {
+      content: '✓';
+      color: #C5A55A;
+      font-size: 0.78rem;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .programme-card__cta {
+      margin-top: 36px;
+    }
+
+    .programme-card__note {
+      font-size: 0.75rem;
+      color: rgba(232, 228, 222, 0.3);
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    /* ─── Private Office Elevated Section ─────────────────────────── */
+    .private-office {
+      background: #060f1a;
+      border-top: 1px solid rgba(197, 165, 90, 0.15);
+      border-bottom: 1px solid rgba(197, 165, 90, 0.15);
+    }
+
+    .private-office__inner {
+      max-width: 860px;
+    }
+
+    .private-office__heading {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin: 24px 0 16px;
+    }
+
+    .private-office__sub {
+      font-size: 1.05rem;
+      color: rgba(232, 228, 222, 0.6);
+      max-width: 560px;
+      margin-bottom: 56px;
+    }
+
+    .private-office__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-bottom: 56px;
+    }
+
+    .private-office__col {
+      padding: 40px;
+      background: #0D1B2A;
+    }
+
+    .private-office__col h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #C5A55A;
+      margin-bottom: 24px;
+    }
+
+    .private-office__col ul {
+      list-style: none;
+    }
+
+    .private-office__col ul li {
+      padding: 9px 0;
+      font-size: 0.88rem;
+      border-bottom: 1px solid rgba(232, 228, 222, 0.06);
+      display: flex;
+      gap: 12px;
+    }
+
+    .private-office__col--fit ul li::before {
+      content: '✓';
+      color: #C5A55A;
+      flex-shrink: 0;
+    }
+
+    .private-office__col--nofit ul li::before {
+      content: '×';
+      color: rgba(232, 228, 222, 0.3);
+      flex-shrink: 0;
+    }
+
+    .private-office__contact {
+      padding: 40px;
+      background: #111D2E;
+      border: 1px solid rgba(197, 165, 90, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .private-office__contact-info h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+    }
+
+    .private-office__contact-info p {
+      font-size: 0.85rem;
+      margin: 0;
+    }
+
+    /* ─── Testimonials ─────────────────────────────────────────────── */
+    .testimonials {
+      background: #0D1B2A;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 64px;
+    }
+
+    .testimonial {
+      padding: 48px 40px;
+      background: #111D2E;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .testimonial__quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      color: #E8E4DE;
+      line-height: 1.65;
+      font-style: italic;
+      flex: 1;
+      margin-bottom: 32px;
+    }
+
+    .testimonial__mark {
+      font-size: 2.5rem;
+      color: rgba(197, 165, 90, 0.2);
+      font-family: 'Playfair Display', serif;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .testimonial__author {
+      border-top: 1px solid rgba(232, 228, 222, 0.08);
+      padding-top: 24px;
+    }
+
+    .testimonial__name {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #C5A55A;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .testimonial__title {
+      font-size: 0.78rem;
+      color: rgba(232, 228, 222, 0.35);
+      margin-top: 3px;
+    }
+
+    /* ─── How It Works ─────────────────────────────────────────────── */
+    .how-it-works {
+      background: #111D2E;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      margin-top: 64px;
+    }
+
+    .step {
+      padding: 48px 36px;
+      background: #0D1B2A;
+      position: relative;
+    }
+
+    .step__number {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      color: rgba(197, 165, 90, 0.12);
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    .step h3 {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .step p {
+      font-size: 0.87rem;
+      margin: 0;
+    }
+
+    /* ─── Footer CTA ───────────────────────────────────────────────── */
+    .footer-cta {
+      background: #0D1B2A;
+      text-align: center;
+      padding: 120px 24px;
+      border-top: 1px solid rgba(197, 165, 90, 0.1);
+    }
+
+    .footer-cta .label {
+      display: block;
+      text-align: center;
+    }
+
+    .footer-cta h2 {
+      max-width: 640px;
+      margin: 0 auto 24px;
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    }
+
+    .footer-cta__sub {
+      max-width: 480px;
+      margin: 0 auto 48px;
+      font-size: 1rem;
+      color: rgba(232, 228, 222, 0.55);
+    }
+
+    .footer-cta__contact {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      margin-top: 56px;
+      padding-top: 56px;
+      border-top: 1px solid rgba(232, 228, 222, 0.07);
+    }
+
+    .footer-cta__contact-item {
+      text-align: center;
+    }
+
+    .footer-cta__contact-item .label {
+      margin-bottom: 8px;
+    }
+
+    .footer-cta__contact-item p {
+      font-size: 0.9rem;
+      margin: 0;
+      color: rgba(232, 228, 222, 0.65);
+    }
+
+    .footer-cta__contact-item a {
+      font-size: 1.05rem;
+      font-weight: 500;
+    }
+
+    /* ─── Footer Legal ─────────────────────────────────────────────── */
+    .footer-legal {
+      background: #060f1a;
+      padding: 32px 24px;
+      border-top: 1px solid rgba(232, 228, 222, 0.06);
+    }
+
+    .footer-legal__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-legal p {
+      font-size: 0.75rem;
+      color: rgba(232, 228, 222, 0.25);
+      margin: 0;
+    }
+
+    /* ─── Responsive ───────────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .section { padding: 80px 0; }
+
+      .nav__cta { display: none; }
+
+      .hero { padding: 120px 0 80px; }
+
+      .problem__grid { grid-template-columns: 1fr; }
+      .problem__stat { padding: 32px 24px; }
+
+      .method__pillars { grid-template-columns: 1fr; }
+      .pillar { padding: 40px 28px; }
+
+      .physician__inner { grid-template-columns: 1fr; gap: 48px; }
+      .physician__image-block { display: none; }
+
+      .programme-cards { grid-template-columns: 1fr; }
+      .programme-card { padding: 40px 28px; }
+
+      .private-office__grid { grid-template-columns: 1fr; }
+      .private-office__col { padding: 32px 24px; }
+      .private-office__contact { flex-direction: column; }
+
+      .testimonial-grid { grid-template-columns: 1fr; }
+      .testimonial { padding: 40px 28px; }
+
+      .steps { grid-template-columns: 1fr 1fr; }
+
+      .footer-cta__contact { gap: 32px; }
+
+      .footer-legal__inner { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ─── Navigation ─────────────────────────────────────────────── -->
+  <nav class="nav">
+    <a href="/" class="nav__logo">Élan<span>.</span></a>
+    <a href="#consultation" class="btn nav__cta">Start With a Consultation</a>
+  </nav>
+
+
+  <!-- ─── 1. Hero ────────────────────────────────────────────────── -->
+  <section class="hero section--dark" id="top">
+    <div class="container">
+      <div class="hero__eyebrow">
+        <span class="label">Physician-Led GLP-1 Maintenance · Tallinn, Estonia</span>
       </div>
-    </noscript>
-  </body>
+      <h1 class="hero__title">
+        You Lost The Weight.<br />
+        We Make Sure You <em>Keep</em> It.
+      </h1>
+      <p class="hero__subtitle">
+        Every clinic helped you lose weight on Ozempic, Wegovy, or Mounjaro. Élan Clinic is the only programme built specifically for what happens after — preventing the regain that most patients quietly experience alone.
+      </p>
+      <div class="hero__actions">
+        <a href="#consultation" class="btn btn--filled">Start With a Consultation</a>
+        <span class="hero__note">Regain Shield from €99/month</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── 2. The Problem ─────────────────────────────────────────── -->
+  <section class="section section--card" id="problem">
+    <div class="container container--text">
+      <span class="label">The Clinical Reality</span>
+      <h2>What Happens When the Prescription Ends</h2>
+      <div class="gold-line"></div>
+
+      <div class="problem__stat">
+        <div class="problem__stat-number">67%</div>
+        <p class="problem__stat-caption">
+          of GLP-1 patients regain two-thirds of their lost weight within one year of stopping medication. This is not a failure of willpower. It is a predictable physiological response — and one that is preventable with the right protocol in place.
+        </p>
+      </div>
+
+      <p>
+        GLP-1 receptor agonists work. They suppress appetite, regulate glucose, and produce measurable results. But they were never designed to be a permanent solution — and the healthcare system has no structured plan for what comes next.
+      </p>
+      <p>
+        When you stop, your body's hunger hormones rebound. Your metabolism, already adapted to the lower weight, resists. The signals that made it easy to eat less simply disappear. Without a maintenance protocol, the biology works against you.
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="problem__grid">
+        <div class="problem__item">
+          <div class="problem__item-icon">◻</div>
+          <h4>Your GP Has No Plan</h4>
+          <p>General practitioners are trained to prescribe and monitor — not to engineer long-term metabolic maintenance. The 10-minute consultation is not designed for this level of ongoing clinical management.</p>
+        </div>
+        <div class="problem__item">
+          <div class="problem__item-icon">◻</div>
+          <h4>Telehealth Abandons You</h4>
+          <p>The weight loss app or telehealth provider that got you started has no economic model for the patient who no longer needs a prescription. You become invisible to the system at exactly the moment you need it most.</p>
+        </div>
+        <div class="problem__item">
+          <div class="problem__item-icon">◻</div>
+          <h4>Willpower Is Not the Variable</h4>
+          <p>The research is unambiguous: post-GLP-1 regain is driven by hormonal and neurological changes, not discipline. Treating it as a willpower problem is both inaccurate and counterproductive. The correct response is clinical, not motivational.</p>
+        </div>
+        <div class="problem__item">
+          <div class="problem__item-icon">◻</div>
+          <h4>The Window Closes Fast</h4>
+          <p>The first six months after stopping or tapering GLP-1 medication are critical. Metabolic adaptation accelerates. Muscle loss, hormonal rebound, and behavioural patterns become harder to reverse the longer they go unaddressed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── 3. The Method ──────────────────────────────────────────── -->
+  <section class="section section--dark" id="method">
+    <div class="container container--text">
+      <span class="label">The Regain Shield Method</span>
+      <h2>A System Built for What Comes After</h2>
+      <div class="gold-line"></div>
+      <p>
+        Regain Shield is not a continuation of your GLP-1 prescription. It is a structured, evidence-based maintenance programme built on three clinical pillars — designed to defend the results you worked to achieve and create a physiological environment where they can last.
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="method__pillars">
+        <div class="pillar">
+          <div class="pillar__number">01</div>
+          <h3>Metabolic Monitoring</h3>
+          <p>Regular bloodwork, body composition assessment, and physiological markers tracked over time. We do not manage what we do not measure. Every protocol is informed by data, not assumption — quarterly at minimum, monthly where indicated.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar__number">02</div>
+          <h3>Protocol Continuity</h3>
+          <p>A personalised nutrition and resistance training protocol, calibrated to your post-medication physiology. This is not generic advice — it is a structured clinical programme adjusted as your metabolic markers evolve. Physician-reviewed at every check-in.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar__number">03</div>
+          <h3>Behavioural Architecture</h3>
+          <p>The psychological scaffolding that GLP-1 medications quietly provided — reduced food preoccupation, satiety cues, behavioural patterns — needs to be rebuilt deliberately. Our programme addresses the cognitive and behavioural dimensions as seriously as the physiological ones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── 4. Your Physician ──────────────────────────────────────── -->
+  <section class="section physician" id="physician">
+    <div class="container">
+      <div class="physician__inner">
+        <div class="physician__image-block">
+          <div class="physician__image-placeholder">
+            <span class="physician__image-caption">Dr. Ingmar Lindström · Founder</span>
+          </div>
+        </div>
+        <div class="physician__content">
+          <span class="label">Your Physician</span>
+          <h2>Dr. Ingmar Lindström</h2>
+          <div class="gold-line"></div>
+
+          <p>
+            Dr. Lindström has practised family medicine for over two decades across Estonia and Finland. He has seen thousands of patients navigate metabolic conditions — and he has navigated one himself.
+          </p>
+
+          <div class="physician__quote">
+            <p>"I lost 39 kilograms using the same protocol I now prescribe. I knew the biology. I understood the mechanisms. And I still could not do it alone. That is not a failure — that is the honest clinical reality. The body needs a system, not willpower."</p>
+          </div>
+
+          <p>
+            Élan Clinic was founded from a conviction that the healthcare system fails patients at the most critical moment: after the initial results. Every GP can prescribe. Very few can manage the long-term metabolic architecture required to maintain them.
+          </p>
+
+          <ul class="physician__credentials">
+            <li>Medical degree, University of Tartu, 2001</li>
+            <li>Family medicine specialist, 20+ years clinical practice</li>
+            <li>Member, Harvard Business Review Advisory Council</li>
+            <li>Founder, Valvekliinik &amp; Perekliinik — 150+ clinical staff</li>
+            <li>Medical licence L07470 · Elan Clinic OÜ reg 17338832</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── 5. Programmes ─────────────────────────────────────────── -->
+  <section class="section programmes" id="programmes">
+    <div class="container container--text">
+      <span class="label">Regain Shield Programmes</span>
+      <h2>Choose the Level of Support You Need</h2>
+      <div class="gold-line"></div>
+      <p>
+        Three programmes. One clinical framework. Each is physician-led and built around the same evidence-based methodology — the difference is the intensity of access and the depth of personalisation.
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="programme-cards">
+
+        <!-- Standard -->
+        <div class="programme-card programme-card--hero">
+          <div class="programme-card__tier">Most Popular</div>
+          <div class="programme-card__name">Regain Shield Standard</div>
+          <p style="font-size:0.85rem; margin-bottom: 0;">Structured maintenance with physician oversight.</p>
+          <div class="programme-card__price">€99</div>
+          <div class="programme-card__price-note">per month · cancel anytime</div>
+
+          <div class="programme-card__divider"></div>
+
+          <ul class="programme-card__features">
+            <li>Monthly physician check-in (30 minutes)</li>
+            <li>Quarterly bloodwork panel</li>
+            <li>Personalised resistance training protocol</li>
+            <li>Nutritional protocol, physician-reviewed</li>
+            <li>Automated weekly check-ins with escalation triggers</li>
+            <li>Private community access</li>
+            <li>Secure patient portal</li>
+          </ul>
+
+          <div class="programme-card__cta">
+            <a href="#consultation" class="btn btn--filled" style="display:block; text-align:center;">Start With Standard</a>
+          </div>
+        </div>
+
+        <!-- Premium -->
+        <div class="programme-card programme-card--premium">
+          <div class="programme-card__tier">Comprehensive</div>
+          <div class="programme-card__name">Regain Shield Premium</div>
+          <p style="font-size:0.85rem; margin-bottom: 0;">For those who want deeper clinical engagement.</p>
+          <div class="programme-card__price">€299</div>
+          <div class="programme-card__price-note">per month · cancel anytime</div>
+
+          <div class="programme-card__divider"></div>
+
+          <ul class="programme-card__features">
+            <li>Everything in Regain Shield Standard</li>
+            <li>Bi-weekly physician contact</li>
+            <li>DEXA body composition scan (quarterly)</li>
+            <li>1:1 health coaching sessions</li>
+            <li>WhatsApp line for clinical questions</li>
+            <li>Fully personalised exercise programme</li>
+            <li>Psychology support — behavioural architecture sessions</li>
+          </ul>
+
+          <div class="programme-card__cta">
+            <a href="#consultation" class="btn" style="display:block; text-align:center;">Start With Premium</a>
+          </div>
+        </div>
+
+        <!-- Private Office -->
+        <div class="programme-card programme-card--private">
+          <div class="programme-card__tier">By Application</div>
+          <div class="programme-card__name">The Private Office</div>
+          <p style="font-size:0.85rem; margin-bottom: 0;">Direct access to Dr. Lindström personally.</p>
+          <div class="programme-card__price">€1,000</div>
+          <div class="programme-card__price-note">per month · 6-month minimum</div>
+
+          <div class="programme-card__divider"></div>
+
+          <ul class="programme-card__features">
+            <li>Named physician — Dr. Ingmar Lindström</li>
+            <li>Direct messaging, priority scheduling</li>
+            <li>Home and office visits in Tallinn</li>
+            <li>Quarterly executive health review</li>
+            <li>Full metabolic and cardiovascular workup</li>
+            <li>Medication delivery</li>
+            <li>Concierge coordination via Eva-Maria Lindström</li>
+          </ul>
+
+          <div class="programme-card__cta">
+            <a href="#private-office" class="btn" style="display:block; text-align:center; border-color: rgba(197,165,90,0.5); color: rgba(197,165,90,0.7);">Learn More</a>
+          </div>
+          <p class="programme-card__note">By application only.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── 6. The Private Office ─────────────────────────────────── -->
+  <section class="section private-office" id="private-office">
+    <div class="container">
+      <div class="private-office__inner">
+        <span class="label">The Private Office</span>
+        <h2 class="private-office__heading">Reserved for Those Who Require More</h2>
+        <p class="private-office__sub">
+          A small number of clients have needs — and expectations — that go beyond a programme. The Private Office is not a tier. It is a standing clinical relationship with Dr. Lindström directly.
+        </p>
+
+        <div class="private-office__grid">
+          <div class="private-office__col private-office__col--fit">
+            <h4>Built for clients who</h4>
+            <ul>
+              <li>Require named physician continuity across all health matters</li>
+              <li>Have complex schedules that demand flexibility above all</li>
+              <li>Value absolute discretion and clinical privacy</li>
+              <li>Prefer home or office consultation over clinic visits</li>
+              <li>Want a comprehensive annual health review as a baseline</li>
+              <li>Expect single-point-of-contact access, always</li>
+            </ul>
+          </div>
+          <div class="private-office__col private-office__col--nofit">
+            <h4>Not the right fit if</h4>
+            <ul>
+              <li>You are primarily seeking a GLP-1 prescription</li>
+              <li>You are looking for short-term or trial-period engagement</li>
+              <li>You are comfortable with standard digital consultation models</li>
+              <li>Your health needs are straightforward and uncomplicated</li>
+              <li>You prefer group programmes or community-based accountability</li>
+              <li>You are not based in or regularly visiting Tallinn</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="private-office__contact">
+          <div class="private-office__contact-info">
+            <h4>Eva-Maria Lindström</h4>
+            <p>Clinical Operations · Private Office Enquiries</p>
+            <p style="margin-top: 6px; font-size: 0.82rem; color: rgba(232,228,222,0.35);">All Private Office applications are reviewed personally. Availability is limited.</p>
+          </div>
+          <a href="tel:+37252999399" class="btn">Apply by Phone &nbsp;+372 52 99939</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── 7. Social Proof ────────────────────────────────────────── -->
+  <section class="section testimonials" id="results">
+    <div class="container container--text">
+      <span class="label">Patient Outcomes</span>
+      <h2>What Maintenance Looks Like, One Year On</h2>
+      <div class="gold-line"></div>
+      <p>
+        These are not weight loss stories. They are maintenance stories — which are significantly harder to achieve, and significantly more valuable.
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <div class="testimonial__mark">&ldquo;</div>
+          <p class="testimonial__quote">
+            I had lost 22 kilograms. When I stopped the medication, I watched the scale begin to move back. My GP had no specific guidance beyond general advice. Regain Shield gave me an actual protocol — bloodwork, resistance training, bi-weekly check-ins. Fourteen months later, I am 18 months post-medication and within one kilogram of my lowest weight.
+          </p>
+          <div class="testimonial__author">
+            <div class="testimonial__name">M.K.</div>
+            <div class="testimonial__title">Chief Financial Officer, Tallinn</div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial__mark">&ldquo;</div>
+          <p class="testimonial__quote">
+            The thing nobody warned me about was the psychological part — how different hunger feels without the medication. The behavioural architecture work in Premium changed how I understand my relationship with food at a clinical level. The weight has stayed. More importantly, I understand why it has stayed.
+          </p>
+          <div class="testimonial__author">
+            <div class="testimonial__name">R.T.</div>
+            <div class="testimonial__title">Surgeon, Helsinki</div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial__mark">&ldquo;</div>
+          <p class="testimonial__quote">
+            I came to Dr. Lindström after regaining eight kilograms in four months. I had followed all the general advice. The DEXA scan showed the issue: I had lost significant muscle mass during my GLP-1 period and never rebuilt it. The resistance protocol was specific, progressive, and it worked. I have been in maintenance for eleven months.
+          </p>
+          <div class="testimonial__author">
+            <div class="testimonial__name">A.V.</div>
+            <div class="testimonial__title">Managing Director, Riga</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── 8. How It Works ───────────────────────────────────────── -->
+  <section class="section how-it-works" id="process">
+    <div class="container container--text">
+      <span class="label">Getting Started</span>
+      <h2>Four Steps to a Maintenance Protocol</h2>
+      <div class="gold-line"></div>
+    </div>
+
+    <div class="container">
+      <div class="steps">
+        <div class="step">
+          <div class="step__number">01</div>
+          <h3>Initial Consultation</h3>
+          <p>A 45-minute physician-led consultation covering your GLP-1 history, current status, metabolic markers, and maintenance objectives. Remote or in-clinic. This conversation determines which programme is the correct fit.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">02</div>
+          <h3>Clinical Assessment</h3>
+          <p>Baseline bloodwork, body composition analysis, and physiological profiling. We establish your current metabolic state before designing anything. The protocol comes from the data, not from a template.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">03</div>
+          <h3>Protocol Design</h3>
+          <p>Your personalised Regain Shield protocol is developed: nutritional parameters, resistance training programme, check-in cadence, escalation triggers. Everything is reviewed and signed off by Dr. Lindström before you begin.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">04</div>
+          <h3>Ongoing Clinical Care</h3>
+          <p>Regular physician contact, automated check-ins between appointments, quarterly bloodwork reviews, and protocol adjustments as your markers evolve. The system is designed to be proactive — not reactive to problems after they develop.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── 9. Footer CTA ─────────────────────────────────────────── -->
+  <section class="footer-cta" id="consultation">
+    <span class="label">Start Now</span>
+    <h2>If you're watching the numbers climb back, the first step is a conversation.</h2>
+    <p class="footer-cta__sub">
+      The consultation is 45 minutes. By the end, you will know whether Regain Shield is right for you — and if so, exactly how your protocol will be structured.
+    </p>
+    <a href="tel:+37252999399" class="btn btn--filled">Call +372 52 99939</a>
+
+    <div class="footer-cta__contact">
+      <div class="footer-cta__contact-item">
+        <span class="label">Phone</span>
+        <a href="tel:+37252999399">+372 52 99939</a>
+      </div>
+      <div class="footer-cta__contact-item">
+        <span class="label">Clinic Address</span>
+        <p>Sepapaja 12/1<br />Tallinn 11415, Estonia</p>
+      </div>
+      <div class="footer-cta__contact-item">
+        <span class="label">Programme Entry</span>
+        <p>Regain Shield Standard — €99/month<br />Regain Shield Premium — €299/month<br />The Private Office — by application</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer Legal ──────────────────────────────────────────── -->
+  <footer class="footer-legal">
+    <div class="footer-legal__inner">
+      <p>© 2025 Élan Clinic · Elan Clinic OÜ · Reg 17338832 · Medical Licence L07470 · Sepapaja 12/1, Tallinn 11415</p>
+      <p>This website does not constitute medical advice. Consult your physician before making any changes to your medication or health programme.</p>
+    </div>
+  </footer>
+
+</body>
 </html>
-
-
