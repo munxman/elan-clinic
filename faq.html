@@ -324,6 +324,13 @@
       letter-spacing: 0.06em;
       text-decoration: none;
     }
+
+    .nav__logo-img {
+      height: 26px;
+      width: auto;
+      display: block;
+    }
+
     .nav__logo span { color: #C5A55A; }
     .nav__links {
       display: flex;
@@ -552,7 +559,7 @@
 
   <!-- ─── Navigation ────────────────────────────────────────────── -->
   <nav class="nav">
-    <a href="/" class="nav__logo">Élan<span>.</span></a>
+    <a href="/" class="nav__logo" aria-label="Élan Clinic"><img src="/assets/elan-logo-nav.svg" alt="Élan Clinic" class="nav__logo-img"></a>
     <ul class="nav__links">
       <li><a href="/">Home</a></li>
       <li><a href="/blog.html">Articles</a></li>

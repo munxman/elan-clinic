@@ -32,10 +32,10 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MedicalClinic",
+    "@type": "MedicalBusiness",
     "name": "Élan Clinic",
     "alternateName": "Élan Kliinik",
-    "url": "https://elan.clinic/",
+    "url": "https://elan.clinic",
     "logo": "https://elan.clinic/assets/elan-logo-nav.svg",
     "email": "info@elan.clinic",
     "contactPoint": {
@@ -208,6 +208,12 @@
       color: #E8E4DE;
       letter-spacing: 0.06em;
       text-decoration: none;
+    }
+
+    .nav__logo-img {
+      height: 26px;
+      width: auto;
+      display: block;
     }
 
     .nav__logo span {
@@ -1081,7 +1087,7 @@
 
   <!-- ─── Navigation ─────────────────────────────────────────────── -->
   <nav class="nav">
-    <a href="/et.html" class="nav__logo">Élan<span>.</span></a>
+    <a href="/et.html" class="nav__logo" aria-label="Élan Clinic"><img src="/assets/elan-logo-nav.svg" alt="Élan Clinic" class="nav__logo-img"></a>
     <ul class="nav__links">
       <li><a href="/et.html" class="active">Avaleht</a></li>
       <li><a href="/kaalukaitse.html" style="color:rgba(197,165,90,0.85)">Kaalukaitse</a></li>
@@ -1739,6 +1745,10 @@
       <div class="footer-cta__contact-item">
         <span class="label">Telefon</span>
         <a href="tel:+3725299939">+372 52 99939</a>
+      </div>
+      <div class="footer-cta__contact-item">
+        <span class="label">E-post</span>
+        <a href="mailto:info@elan.clinic">info@elan.clinic</a>
       </div>
       <div class="footer-cta__contact-item">
         <span class="label">Kliiniku aadress</span>
