@@ -208,7 +208,7 @@
     }
 
     .nav__logo-img {
-      height: 96px;
+      height: 110px;
       width: auto;
       display: block;
     }
@@ -447,25 +447,25 @@
     }
 
     /* ─── Responsive ───────────────────────────────────────────────── */
-    @media (max-width: 768px) {\n      .nav {
+    \n      body { padding-top: 220px; }\n      .nav__logo-img { height: 78px; }\n      .nav__logo-text { margin-left: -10px; }\n\n      .nav {
         padding: 10px 16px;
         flex-direction: column;
         align-items: flex-start;
       }
       .nav__logo-img { height: 52px; }
-      .nav__logo-text { font-size: 0.95rem; margin-left: -6px; }
+      .nav__logo-text { font-size: 0.95rem; margin-left: -18px; }
       .btn--nav-cta { padding: 8px 14px; font-size: 0.68rem; }
       .nav__right {
         width: 100%;
         justify-content: space-between;
-        gap: 12px;
+        gap: 2px;
         padding-top: 8px;
       }
       .nav__right a { font-size: 0.68rem !important; }
       .nav__links {
         width: 100%;
         justify-content: space-between;
-        gap: 12px;
+        gap: 2px;
         padding-top: 8px;
       }
       .nav__links a { font-size: 0.68rem !important; }
@@ -511,7 +511,7 @@
       <li><a href="/">Home</a></li>
       <li><a href="/blog.html" class="active">Articles</a></li>
       <li><a href="/faq.html">FAQ</a></li>
-      <li style="margin-left: -10px;border-left:1px solid rgba(197,165,90,0.25);padding-left:16px;display:flex;gap: 2px;"><a href="/et.html" style="font-size:0.7rem;">EST</a> <a href="/ukk.html" style="font-size:0.7rem;">FIN</a> <a href="/voprosy.html" style="font-size:0.7rem;">RUS</a></li>
+      <li style="margin-left: -18px;border-left:1px solid rgba(197,165,90,0.25);padding-left:16px;display:flex;gap: 2px;"><a href="/et.html" style="font-size:0.7rem;">EST</a> <a href="/ukk.html" style="font-size:0.7rem;">FIN</a> <a href="/voprosy.html" style="font-size:0.7rem;">RUS</a></li>
       <li><a href="/#consultation" class="btn btn--nav-cta">Book a Consultation</a></li>
     </ul>
   </nav>
