@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Élan Clinic — Header Proof</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:#0D1B2A; color:#E8E4DE; }
+
+    /* Nav (same rules as production) */
+    .btn {
+      display: inline-block;
+      padding: 16px 36px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1.5px solid #C5A55A;
+      color: #C5A55A;
+      background: transparent;
+      text-decoration: none;
+    }
+
+    .btn--nav-cta {
+      padding: 10px 20px;
+      font-size: 0.72rem;
+      background: #C5A55A !important;
+      border-color: #C5A55A !important;
+      color: #0D1B2A !important;
+    }
+    .btn--nav-cta:hover {
+      background: #d4b56a !important;
+      border-color: #d4b56a !important;
+      color: #0D1B2A !important;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      background: rgba(13, 27, 42, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(197, 165, 90, 0.12);
+    }
+
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      text-decoration: none;
+    }
+    .nav__logo-img { height: 96px; width: auto; display:block; }
+    .nav__logo-text { margin-left: -10px; font-family: Georgia, 'Times New Roman', serif; font-size: 1.05rem; letter-spacing: 0.06em; color:#E8E4DE; white-space: nowrap; }
+
+    .nav__right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav__right a { color: rgba(232,228,222,0.75); text-decoration:none; font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase; }
+
+    @media (max-width: 768px) {
+      .nav { padding: 10px 16px; flex-direction: column; align-items: flex-start; }
+      .nav__logo-img { height: 52px; }
+      .nav__logo-text { font-size: 0.95rem; margin-left: -6px; }
+      .btn--nav-cta { padding: 8px 14px; font-size: 0.68rem; }
+      .nav__right { width: 100%; justify-content: space-between; gap: 12px; padding-top: 8px; }
+      .nav__right a { font-size: 0.68rem !important; }
+    }
+
+    main { padding: 28px 16px 80px; max-width: 820px; margin: 0 auto; }
+    h1 { font-size: 1.2rem; margin: 18px 0 10px; }
+    p { color: rgba(232,228,222,0.65); line-height: 1.7; margin: 0 0 12px; }
+    code { background: rgba(255,255,255,0.06); padding: 2px 6px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="/index.html" class="nav__logo" aria-label="Élan Clinic">
+      <img src="/assets/elan-logo-nav.svg" alt="Élan Clinic" class="nav__logo-img">
+      <span class="nav__logo-text">Élan Clinic</span>
+    </a>
+    <div class="nav__right">
+      <a href="/regain-shield.html">Regain Shield</a>
+      <a href="/blog.html">Articles</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="#consultation" class="btn btn--nav-cta">Book a Consultation</a>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Header proof page (new URL, no cache confusion)</h1>
+    <p>If this header looks correct, the issue is caching/redirect behaviour on the other pages.</p>
+    <p>Test on mobile + desktop. This page is <code>noindex</code>.</p>
+  </main>
+</body>
+</html>
