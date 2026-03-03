@@ -87,7 +87,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
-    /* ─── Reset & Base ─────────────────────────────────────────────── */
+    \n    :root { --nav-h: 140px; --nav-h-mobile: 180px; }\n/* ─── Reset & Base ─────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     html { scroll-behavior: smooth; font-size: 16px; }
@@ -252,7 +252,7 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 24px;
-      padding-top: 24px;
+      padding-top: var(--nav-h);
       border-top: 1px solid rgba(197, 165, 90, 0.15);
     }
 
@@ -361,7 +361,7 @@
     /* ─── Article Sources ──────────────────────────────────────────── */
     .article-sources {
       margin-top: 60px;
-      padding-top: 32px;
+      padding-top: var(--nav-h);
       border-top: 1px solid rgba(197, 165, 90, 0.12);
     }
 
@@ -478,16 +478,16 @@
     }
 
     /* ─── Responsive ───────────────────────────────────────────────── */
-    \n      body { padding-top: 230px; }\n      .nav__logo-img { height: 78px; }\n      .nav__logo-text { margin-left: -10px; }\n
+    \n      body { padding-top: var(--nav-h); }\n      .nav__logo-img { height: 72px; }\n      .nav__logo-text { margin-left: -10px; }\n
       .nav__links { gap: 16px; }
       .nav__links a { font-size: 0.72rem; }
-      .breadcrumb { padding-top: 100px; }
+      .breadcrumb { padding-top: var(--nav-h); }
       .article-header { padding: 32px 0 48px; }
       .article-body p { font-size: 0.98rem; }
       .key-stat__number { font-size: 2.4rem; }
       .pull-quote { padding: 16px 20px; }
     }
-  \n    @media (max-width: 768px) {\n      .nav { position: sticky !important; }\n      body { padding-top: 0 !important; }\n    }\n  </style>
+  \n    \n      body { padding-top: var(--nav-h-mobile); }\n      .nav__logo-img { height: 56px; }\n      .nav__logo-text { font-size: 0.95rem; }\n\n      .nav { position: sticky !important; }\n      body { padding-top: 0 !important; }\n    }\n  </style>
 </head>
 <body>
 
