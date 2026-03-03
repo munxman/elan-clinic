@@ -215,7 +215,7 @@
       padding: 14px 24px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-between;\n      flex-wrap: wrap;
       background: rgba(13, 27, 42, 0.9);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(197, 165, 90, 0.12);
@@ -246,7 +246,7 @@
       white-space: nowrap;
     }
 
-    .nav__logo span {
+    \n\n    .nav__right {\n      display: flex;\n      align-items: center;\n      gap: 24px;\n      flex-wrap: wrap;\n      justify-content: flex-end;\n    }\n.nav__logo span {
       color: #C5A55A;
     }
 
@@ -833,14 +833,35 @@
     }
 
     /* ─── Responsive ───────────────────────────────────────────────── */
-    @media (max-width: 768px) {
+    @media (max-width: 768px) {\n      .nav {
+        padding: 10px 16px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav__logo-img { height: 52px; }
+      .nav__logo-text { font-size: 0.95rem; margin-left: -6px; }
+      .btn--nav-cta { padding: 8px 14px; font-size: 0.68rem; }
+      .nav__right {
+        width: 100%;
+        justify-content: space-between;
+        gap: 12px;
+        padding-top: 8px;
+      }
+      .nav__right a { font-size: 0.68rem !important; }
+      .nav__links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 12px;
+        padding-top: 8px;
+      }
+      .nav__links a { font-size: 0.68rem !important; }
       .section { padding: 80px 0; }
 
       .nav__cta { display: none; }
       .nav__logo-img { height: 72px; }
       \.nav__logo-text {\n      margin-left: -10px; font-size: 0.95rem; }
 
-      .hero { padding: 120px 0 80px; }
+      \n\n    .nav__right {\n      display: flex;\n      align-items: center;\n      gap: 24px;\n      flex-wrap: wrap;\n      justify-content: flex-end;\n    }\n.hero { padding: 120px 0 80px; }
 
       .problem__grid { grid-template-columns: 1fr; }
       .problem__stat { padding: 32px 24px; }
@@ -1351,7 +1372,7 @@
   <!-- ─── Navigation ─────────────────────────────────────────────── -->
   <nav class="nav">
     <a href="/" class="nav__logo" aria-label="Élan Clinic"><img src="/assets/elan-logo-nav.svg" alt="Élan Clinic" class="nav__logo-img"><span class="nav__logo-text">Élan Clinic</span></a>
-    <div style="display:flex;align-items:center;gap:24px;">
+    <div class="nav__right" style="display:flex;align-items:center;gap:24px;">
       <a href="/regain-shield.html" style="font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(197,165,90,0.85);text-decoration:none;">Regain Shield</a>
       <a href="/blog.html" style="font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(232,228,222,0.65);text-decoration:none;">Articles</a>
       <a href="/faq.html" style="font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(232,228,222,0.65);text-decoration:none;">FAQ</a>

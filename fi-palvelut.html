@@ -155,7 +155,7 @@
       z-index: 100;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-between;\n      flex-wrap: wrap;
       padding: 14px 32px;
       height: auto;
       background: rgba(13, 27, 42, 0.95);
@@ -189,7 +189,7 @@
       align-items: center;
       list-style: none;
       gap: 28px;
-    }
+    \n      flex-wrap: wrap;\n    }
     .nav__links a {
       font-size: 0.75rem;
       font-weight: 500;
@@ -427,9 +427,30 @@
     .footer-legal p { font-size: 0.72rem; margin-bottom: 0; }
 
     /* Responsive */
-    @media (max-width: 768px) {
+    @media (max-width: 768px) {\n      .nav {
+        padding: 10px 16px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav__logo-img { height: 52px; }
+      .nav__logo-text { font-size: 0.95rem; margin-left: -6px; }
+      .btn--nav-cta { padding: 8px 14px; font-size: 0.68rem; }
+      .nav__right {
+        width: 100%;
+        justify-content: space-between;
+        gap: 12px;
+        padding-top: 8px;
+      }
+      .nav__right a { font-size: 0.68rem !important; }
+      .nav__links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 12px;
+        padding-top: 8px;
+      }
+      .nav__links a { font-size: 0.68rem !important; }
       .nav { padding: 0 20px; }
-      .nav__links { gap: 16px; }
+      .nav__links { gap: 16px; \n      flex-wrap: wrap;\n    }
       .nav__links a { font-size: 0.68rem; }
       section { padding: 64px 0; }
       .hero { padding: 80px 0 64px; }
