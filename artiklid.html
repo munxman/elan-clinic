@@ -161,12 +161,23 @@
       color: #E8E4DE;
       letter-spacing: 0.06em;
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
     .nav__logo-img {
-      height: 26px;
+      height: 72px;
       width: auto;
       display: block;
+    }
+
+    .nav__logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      letter-spacing: 0.06em;
+      color: #E8E4DE;
+      white-space: nowrap;
     }
 
     .nav__logo span { color: #C5A55A; }
@@ -357,6 +368,15 @@
     .btn--nav-cta {
       padding: 10px 20px;
       font-size: 0.72rem;
+      background: #C5A55A;
+      border-color: #C5A55A;
+      color: #0D1B2A;
+    }
+
+    .btn--nav-cta:hover {
+      background: #d4b56a;
+      border-color: #d4b56a;
+      color: #0D1B2A;
     }
 /* ─── Footer Legal ─────────────────────────────────────────────── */
     .footer-legal {
@@ -418,7 +438,7 @@
 
   <!-- ─── Navigation ────────────────────────────────────────────── -->
   <nav class="nav">
-    <a href="/et.html" class="nav__logo" aria-label="Élan Clinic"><img src="/assets/elan-logo-nav.svg" alt="Élan Clinic" class="nav__logo-img"></a>
+    <a href="/et.html" class="nav__logo" aria-label="Élan Clinic"><img src="/assets/elan-logo-nav.svg" alt="Élan Clinic" class="nav__logo-img"><span class="nav__logo-text">Élan Clinic</span></a>
     <ul class="nav__links">
       <li><a href="/et.html">Avaleht</a></li>
       <li><a href="/artiklid.html" class="active">Artiklid</a></li>
