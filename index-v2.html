@@ -83,6 +83,10 @@
     .nav__right { display:flex; align-items:center; gap: 18px; }
     .nav__right a { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(232,228,222,0.65); }
     .nav__right a:hover { color: rgba(232,228,222,0.9); text-decoration:none; }
+
+    .nav__langs { display:flex; align-items:center; gap: 12px; }
+    .nav__langs a { font-size: 0.7rem; letter-spacing: 0.08em; color: rgba(232,228,222,0.55); }
+
     .nav__cta { padding: 10px 18px; font-size: 0.7rem; }
 
     /* Hero */
@@ -110,11 +114,20 @@
     /* Mobile */
     @media (max-width: 768px) {
       .nav { padding: 10px 16px; flex-direction: column; align-items: flex-start; gap: 10px; }
-      .nav__right { width: 100%; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+      /* Mobile nav = calm, always fits */
+      .nav__right { width: 100%; display: flex; flex-direction: column; align-items: stretch; gap: 10px; }
       .nav__right a { font-size: 0.66rem; }
+      .nav__item--hide-mobile { display: none; }
+
+      .nav__langs { width: 100%; display:flex; justify-content: flex-start; gap: 14px; }
+      .nav__langs a { font-size: 0.66rem; }
+
       .nav__logo-img { height: 48px; }
       .nav__logo-text { font-size: 0.95rem; }
+
       .nav__cta { width: 100%; text-align:center; }
+
       .hero { padding: 124px 0 72px; min-height: auto; }
       .grid { grid-template-columns: 1fr; }
       .section { padding: 72px 0; }
@@ -129,11 +142,13 @@
     </a>
 
     <div class="nav__right">
-      <a href="/blog.html">Articles</a>
-      <a href="/faq.html">FAQ</a>
-      <a href="/et.html">EST</a>
-      <a href="/fi.html">FIN</a>
-      <a href="/ru.html">RUS</a>
+      <a href="/blog.html" class="nav__item--hide-mobile">Articles</a>
+      <a href="/faq.html" class="nav__item--hide-mobile">FAQ</a>
+      <div class="nav__langs" aria-label="Languages">
+        <a href="/et.html">EST</a>
+        <a href="/fi.html">FIN</a>
+        <a href="/ru.html">RUS</a>
+      </div>
       <a href="#consultation" class="btn nav__cta">Book a Consultation</a>
     </div>
   </nav>
