@@ -23,4 +23,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://elan.clinic/sitemap.xml
-LLMsTxt: https://elan.clinic/llm.txt
+LLMsTxt: https://elan.clinic/llms.txt
+LLMtxt: https://elan.clinic/llm.txt
