@@ -1,877 +1,488 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>GLP-1 Medication Patient Guide — Élan Clinic</title>
 <style>
-  /* ===== RESET & BASE ===== */
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    font-size: 11pt;
-    line-height: 1.65;
-    color: #1a1a1a;
-    background: #f5f5f5;
-  }
-
-  /* ===== PAGE LAYOUT ===== */
-  .page {
-    width: 210mm;
-    min-height: 297mm;
-    margin: 20px auto;
-    background: #ffffff;
-    padding: 18mm 20mm 18mm 20mm;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.12);
-  }
-
-  /* ===== HEADER / BRANDING ===== */
-  .clinic-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 2.5px solid #2a5f4f;
-    padding-bottom: 10px;
-    margin-bottom: 22px;
-  }
-
-  .clinic-name {
-    font-family: 'Georgia', serif;
-    font-size: 18pt;
-    font-weight: bold;
-    color: #2a5f4f;
-    letter-spacing: 0.04em;
-  }
-
-  .clinic-name span {
-    font-size: 11pt;
-    font-weight: normal;
-    color: #555;
-    display: block;
-    margin-top: 2px;
-    font-style: italic;
-    letter-spacing: 0;
-  }
-
-  .clinic-contact {
-    text-align: right;
-    font-size: 9pt;
-    color: #444;
-    line-height: 1.7;
-  }
-
-  .clinic-contact a {
-    color: #2a5f4f;
-    text-decoration: none;
-  }
-
-  /* ===== DOCUMENT TITLE ===== */
-  .doc-title {
-    text-align: center;
-    margin-bottom: 24px;
-  }
-
-  .doc-title h1 {
-    font-size: 20pt;
-    color: #2a5f4f;
-    font-weight: bold;
-    letter-spacing: 0.02em;
-    margin-bottom: 4px;
-  }
-
-  .doc-title .subtitle {
-    font-size: 10pt;
-    color: #666;
-    font-style: italic;
-  }
-
-  /* ===== PAGE BREAK MARKER ===== */
-  .section-break {
-    border: none;
-    border-top: 1px dashed #ccc;
-    margin: 26px 0;
-  }
-
-  .page-break {
-    page-break-after: always;
-    break-after: page;
-  }
-
-  /* ===== SUMMARY BOX (Page 1) ===== */
-  .summary-header {
-    background: #2a5f4f;
-    color: #fff;
-    text-align: center;
-    padding: 8px 16px;
-    border-radius: 4px 4px 0 0;
-    font-size: 13pt;
-    font-weight: bold;
-    letter-spacing: 0.04em;
-  }
-
-  .summary-subheader {
-    background: #e8f4f0;
-    border: 1px solid #2a5f4f;
-    border-top: none;
-    text-align: center;
-    padding: 5px;
-    font-size: 9.5pt;
-    color: #2a5f4f;
-    font-style: italic;
-    margin-bottom: 14px;
-    border-radius: 0 0 4px 4px;
-  }
-
-  .intro-box {
-    background: #f0f7f4;
-    border-left: 4px solid #2a5f4f;
-    padding: 12px 14px;
-    margin-bottom: 16px;
-    border-radius: 0 4px 4px 0;
-  }
-
-  .intro-box p {
-    margin-bottom: 8px;
-    font-size: 10.5pt;
-  }
-
-  .intro-box p:last-child { margin-bottom: 0; }
-
-  /* ===== NON-NEGOTIABLES ===== */
-  .non-neg-title {
-    font-size: 12pt;
-    font-weight: bold;
-    color: #2a5f4f;
-    margin: 18px 0 10px;
-    border-bottom: 1px solid #2a5f4f;
-    padding-bottom: 4px;
-  }
-
-  .non-neg-item {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 10px;
-    padding: 10px 12px;
-    background: #fafafa;
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
-  }
-
-  .non-neg-num {
-    font-size: 15pt;
-    font-weight: bold;
-    color: #2a5f4f;
-    min-width: 24px;
-    line-height: 1.3;
-  }
-
-  .non-neg-text {
-    font-size: 10.5pt;
-  }
-
-  .non-neg-text strong { color: #1a1a1a; }
-
-  /* ===== RED FLAGS BOX ===== */
-  .red-flags {
-    border: 2px solid #c0392b;
-    border-radius: 4px;
-    margin: 16px 0;
-    overflow: hidden;
-  }
-
-  .red-flags-title {
-    background: #c0392b;
-    color: #fff;
-    padding: 6px 14px;
-    font-weight: bold;
-    font-size: 11pt;
-    letter-spacing: 0.03em;
-  }
-
-  .red-flags-body {
-    padding: 10px 14px;
-    background: #fff8f8;
-  }
-
-  .red-flags-body ul {
-    margin: 4px 0 8px 18px;
-    font-size: 10.5pt;
-  }
-
-  .red-flags-body ul li {
-    margin-bottom: 4px;
-  }
-
-  .red-flags-contact {
-    background: #c0392b;
-    color: #fff;
-    padding: 6px 14px;
-    font-size: 10pt;
-    text-align: center;
-    font-weight: bold;
-  }
-
-  /* ===== FOLLOW-UP SCHEDULE ===== */
-  .followup-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    margin: 10px 0;
-  }
-
-  .followup-item {
-    background: #e8f4f0;
-    border-left: 3px solid #2a5f4f;
-    padding: 7px 10px;
-    border-radius: 0 4px 4px 0;
-    font-size: 10pt;
-  }
-
-  .followup-item strong {
-    display: block;
-    color: #2a5f4f;
-    font-size: 10.5pt;
-  }
-
-  /* ===== SECTION HEADINGS (Detailed Guide) ===== */
-  h2.section-title {
-    font-size: 15pt;
-    color: #2a5f4f;
-    font-weight: bold;
-    margin: 28px 0 8px;
-    padding-bottom: 5px;
-    border-bottom: 2px solid #2a5f4f;
-  }
-
-  h3.sub-title {
-    font-size: 12pt;
-    color: #2a5f4f;
-    font-weight: bold;
-    margin: 16px 0 6px;
-  }
-
-  h4.sub-sub-title {
-    font-size: 11pt;
-    font-weight: bold;
-    color: #333;
-    margin: 12px 0 4px;
-    font-style: italic;
-  }
-
-  /* ===== BODY CONTENT ===== */
-  .content p {
-    margin-bottom: 10px;
-    font-size: 10.5pt;
-  }
-
-  .content ul, .content ol {
-    margin: 6px 0 10px 20px;
-    font-size: 10.5pt;
-  }
-
-  .content li { margin-bottom: 4px; }
-
-  .content strong { font-weight: bold; }
-  .content em { font-style: italic; }
-
-  /* ===== CALLOUT / HIGHLIGHT BOX ===== */
-  .callout {
-    background: #e8f4f0;
-    border-left: 4px solid #2a5f4f;
-    padding: 10px 14px;
-    margin: 12px 0;
-    border-radius: 0 4px 4px 0;
-    font-size: 10.5pt;
-  }
-
-  .callout.warning {
-    background: #fff8f8;
-    border-left-color: #c0392b;
-  }
-
-  .callout.tip {
-    background: #fffbea;
-    border-left-color: #d4a017;
-  }
-
-  /* ===== PROTEIN TABLE ===== */
-  .protein-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 10px 0 14px;
-    font-size: 10pt;
-  }
-
-  .protein-table th {
-    background: #2a5f4f;
-    color: #fff;
-    padding: 6px 10px;
-    text-align: left;
-    font-weight: bold;
-  }
-
-  .protein-table td {
-    padding: 5px 10px;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .protein-table tr:nth-child(even) td { background: #f5f9f7; }
-
-  /* ===== STEP LIST (Injection Technique) ===== */
-  .step-list {
-    counter-reset: steps;
-    list-style: none;
-    margin: 8px 0 12px 0;
-  }
-
-  .step-list li {
-    counter-increment: steps;
-    display: flex;
-    gap: 10px;
-    margin-bottom: 7px;
-    font-size: 10.5pt;
-    align-items: flex-start;
-  }
-
-  .step-list li::before {
-    content: counter(steps);
-    background: #2a5f4f;
-    color: #fff;
-    font-weight: bold;
-    font-size: 9pt;
-    min-width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
-
-  /* ===== DR NOTE ===== */
-  .dr-note {
-    background: #f0f7f4;
-    border: 1.5px solid #2a5f4f;
-    border-radius: 6px;
-    padding: 16px 18px;
-    margin: 20px 0;
-  }
-
-  .dr-note p { font-size: 10.5pt; margin-bottom: 8px; }
-  .dr-note p:last-child { margin-bottom: 0; }
-  .dr-note .signature {
-    margin-top: 12px;
-    font-style: italic;
-    color: #2a5f4f;
-    font-weight: bold;
-  }
-
-  /* ===== FOOTER ===== */
-  .doc-footer {
-    margin-top: 30px;
-    padding-top: 10px;
-    border-top: 1px solid #ccc;
-    font-size: 8.5pt;
-    color: #777;
-    font-style: italic;
-    line-height: 1.5;
-  }
-
-  /* ===== PRINT STYLES ===== */
-  @media print {
-    body { background: #fff; }
-    .page {
-      width: 100%;
-      margin: 0;
-      padding: 15mm 20mm;
-      box-shadow: none;
-    }
-    .page-break { page-break-after: always; break-after: page; }
-    a { color: inherit; text-decoration: none; }
-    .no-print { display: none; }
-  }
+:root{--text:#111;--muted:#555;--rule:#ddd;--accent:#0b3d91;}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,'Noto Sans',sans-serif;line-height:1.35;}
+.page{max-width:210mm;margin:0 auto;padding:18mm 16mm 18mm 16mm;}
+.header{border-bottom:1px solid var(--rule);padding-bottom:10px;margin-bottom:14px;}
+.header .brand{font-weight:700;font-size:18px;letter-spacing:0.2px;}
+.header .meta{margin-top:4px;color:var(--muted);font-size:12.5px;}
+hr{border:none;border-top:1px solid var(--rule);margin:14px 0;}
+h1{font-size:22px;margin:18px 0 10px;}
+h2{font-size:17px;margin:16px 0 8px;}
+h3{font-size:14px;margin:14px 0 6px;}
+p{margin:8px 0;}
+ul,ol{margin:8px 0 8px 22px;padding:0;}
+li{margin:4px 0;}
+strong{font-weight:700;}
+blockquote{margin:10px 0;padding:8px 12px;border-left:3px solid var(--rule);color:var(--muted);}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:0.95em;}
+@media print{
+  @page{size:A4;margin:14mm;}
+  .page{max-width:none;margin:0;padding:0;}
+  a{color:inherit;text-decoration:none;}
+}
 </style>
 </head>
 <body>
-
-<div class="page">
-
-  <!-- ===== CLINIC HEADER ===== -->
-  <div class="clinic-header">
-    <div class="clinic-name">
-      Élan Clinic
-      <span>Concierge Medicine · Tallinn</span>
+  <div class="page">
+    <div class="header">
+      <div class="brand">Élan Clinic</div>
+      <div class="meta">Élan Clinic | Sepapaja 12/1, Tallinn 11415 | +372 52 99939 | info@elan.clinic</div>
     </div>
-    <div class="clinic-contact">
-      Sepapaja 12/1, Tallinn 11415<br>
-      <strong>+372 52 99939</strong><br>
-      <a href="mailto:info@elan.clinic">info@elan.clinic</a>
-    </div>
+    <main>
+      <h1>GLP-1 Medication Patient Guide</h1>
+<h2>Élan Clinic · Sepapaja 12/1, Tallinn 11415 · +372 52 99939 · info@elan.clinic</h2>
+<hr>
+<h1>PAGE 1 — YOUR ESSENTIAL SUMMARY</h1>
+<h3>Keep this page. Read it today.</h3>
+<p>You have been prescribed a GLP-1 receptor agonist. This is a significant, evidence-based step in your metabolic health journey. Below is everything you need to know to start safely.</p>
+<hr>
+<p><strong>What you’ve been prescribed</strong> is a medication that mimics a natural gut hormone (GLP-1) to reduce appetite, slow digestion, and improve blood sugar regulation. Common medications in this class include semaglutide (Ozempic, Wegovy) and tirzepatide (Mounjaro).</p>
+<p><strong>What to expect in the first weeks:</strong> Nausea is common and usually mild to moderate. It typically peaks in weeks 2–4 and improves on its own. Eat small meals. Avoid fatty or spicy food. Stay hydrated.</p>
+<p><strong>What to expect over time:</strong> Most patients lose 5–15% of body weight over 6–12 months (some studies show up to 20%+ with tirzepatide). Results depend on diet, exercise, and adherence.</p>
+<hr>
+<h3>Your Three Non-Negotiables</h3>
+<p><strong>1. Protein — minimum 1.2–1.6 g per kg of your body weight daily.</strong>
+Your appetite will drop significantly. If you don’t eat enough protein, you will lose muscle, not just fat. Muscle loss is dangerous and difficult to reverse. Prioritise protein at every meal.</p>
+<p><strong>2. Resistance training — minimum 2–3 sessions per week.</strong>
+Without resistance training, up to 25–40% of weight lost on GLP-1 medications may come from muscle mass. Lift weights, use resistance bands, or do bodyweight exercises. This is not optional.</p>
+<p><strong>3. Hydration — minimum 2.0–2.5 litres of water daily.</strong>
+Reduced appetite also means reduced thirst awareness. Nausea, constipation, and fatigue are often made worse by dehydration. Drink water consistently throughout the day.</p>
+<hr>
+<h3>Red Flags — Contact Us Immediately</h3>
+<ul>
+<li>Severe, persistent abdominal pain (especially radiating to the back)</li>
+<li>Vomiting that prevents you from keeping fluids down</li>
+<li>Signs of allergic reaction: swelling, rash, difficulty breathing</li>
+<li>Heart rate above 100 bpm at rest that is new or unexplained</li>
+<li>Vision changes or signs of hypoglycaemia (if also on insulin or sulfonylurea)</li>
+</ul>
+<p><strong>📞 Élan Clinic: +372 52 99939 | info@elan.clinic</strong>
+In a medical emergency, call 112.</p>
+<hr>
+<h3>Your Follow-Up Schedule</h3>
+<ul>
+<li><strong>4 weeks:</strong> First check-in (side effect review, dose adjustment if needed)</li>
+<li><strong>3 months:</strong> Progress assessment, bloodwork</li>
+<li><strong>6 months:</strong> Comprehensive metabolic review</li>
+<li><strong>12 months:</strong> Long-term strategy discussion</li>
+</ul>
+<p>Do not stop this medication without speaking to your physician. Stopping abruptly significantly increases the risk of weight regain.</p>
+<hr>
+<p><em>Detailed guidance on all topics above begins on the following pages.</em></p>
+<hr>
+<hr>
+<h1>DETAILED GUIDE</h1>
+<h2>Pages 2–10</h2>
+<hr>
+<h2>1. What Are GLP-1 Medications?</h2>
+<p>GLP-1 (glucagon-like peptide-1) receptor agonists are a class of medications originally developed to treat type 2 diabetes. Over the past decade, clinical research has demonstrated that they are among the most effective pharmacological tools available for weight management and metabolic health.</p>
+<p>These medications mimic GLP-1, a hormone your gut naturally releases after eating. By activating GLP-1 receptors throughout the body — particularly in the brain, stomach, and pancreas — they produce multiple beneficial effects simultaneously.</p>
+<h3>The Medications in This Class</h3>
+<p><strong>Semaglutide</strong> is a GLP-1 receptor agonist available in two formulations:</p>
+<ul>
+<li><strong>Ozempic</strong> — licensed for type 2 diabetes management; widely used off-label for weight management</li>
+<li><strong>Wegovy</strong> — the higher-dose formulation licensed specifically for chronic weight management</li>
+</ul>
+<p><strong>Tirzepatide</strong> is a dual-action medication that activates both GLP-1 and GIP (glucose-dependent insulinotropic polypeptide) receptors:</p>
+<ul>
+<li><strong>Mounjaro</strong> — licensed for type 2 diabetes; increasingly available for weight management</li>
+<li>The dual mechanism appears to produce somewhat greater weight loss compared to semaglutide in head-to-head trials</li>
+</ul>
+<p>Your physician has selected the specific medication and dose appropriate for your clinical profile. The principles in this guide apply to both.</p>
+<hr>
+<h2>2. How They Work — Plain Language</h2>
+<p>Think of your body’s hunger system as a thermostat that has been set too high. GLP-1 medications work by resetting that thermostat through several simultaneous mechanisms:</p>
+<p><strong>In the brain:</strong> GLP-1 receptors in the hypothalamus and brainstem receive stronger signals of fullness and satiety. You feel satisfied with less food. Food cravings — particularly for high-fat, high-sugar foods — diminish for most patients.</p>
+<p><strong>In the stomach:</strong> These medications slow gastric emptying, meaning food moves more slowly from your stomach into your small intestine. This prolongs the feeling of fullness after eating and flattens blood sugar spikes.</p>
+<p><strong>In the pancreas:</strong> GLP-1 medications stimulate insulin release in a glucose-dependent manner (only when blood sugar is elevated), while suppressing glucagon (the hormone that raises blood sugar). This improves blood sugar regulation without the hypoglycaemia risk seen with some older diabetes medications when GLP-1 therapy is used alone. However, when combined with insulin or sulfonylureas, low blood sugar can still occur.</p>
+<p><strong>In the liver:</strong> Reduced glucagon signalling decreases the liver’s tendency to release stored glucose inappropriately, further supporting metabolic control.</p>
+<p>The result is a lower caloric intake driven by genuine physiological changes — not willpower. This is why GLP-1 medications work when diets alone have not. Obesity is a biological condition with strong hormonal drivers; these medications address those drivers directly.</p>
+<hr>
+<h2>3. Expected Benefits</h2>
+<h3>Weight Loss Timeline</h3>
+<p>Weight loss with GLP-1 medications is gradual and progressive. The following reflects typical clinical outcomes; individual results vary based on diet, exercise, starting weight, and medication dose.</p>
+<ul>
+<li><strong>Weeks 1–4:</strong> Little to no visible weight loss. Your body is adapting to the medication. Side effects are most prominent in this phase.</li>
+<li><strong>Months 1–3:</strong> Most patients begin to see meaningful weight loss, typically 2–5% of starting body weight. Appetite suppression becomes noticeable.</li>
+<li><strong>Months 3–6:</strong> Weight loss accelerates as dose increases. Many patients reach 8–12% body weight reduction.</li>
+<li><strong>Months 6–12:</strong> Continued loss toward plateau. Clinical trials with semaglutide (STEP trials) showed approximately 15% average body weight loss at 68 weeks. Tirzepatide trials (SURMOUNT) demonstrated up to 20–22% in some cohorts.</li>
+<li><strong>Beyond 12 months:</strong> The medication supports weight maintenance. This phase requires attention to lifestyle consolidation.</li>
+</ul>
+<h3>Metabolic Improvements</h3>
+<p>Beyond weight loss, GLP-1 medications produce measurable improvements in:</p>
+<ul>
+<li><strong>Blood sugar regulation:</strong> HbA1c reductions of 1–2% are typical in patients with type 2 diabetes or prediabetes</li>
+<li><strong>Blood pressure:</strong> Modest reductions in systolic blood pressure (average 3–5 mmHg in trials)</li>
+<li><strong>Lipid profile:</strong> Reductions in triglycerides; variable effects on LDL and HDL</li>
+<li><strong>Cardiovascular risk:</strong> Semaglutide has demonstrated statistically significant cardiovascular risk reduction in overweight/obese patients with established cardiovascular disease (SELECT trial, 2023: 20% reduction in major adverse cardiovascular events in this specific high-risk group). Whether this benefit extends to lower-risk patients is under active investigation</li>
+<li><strong>Liver health:</strong> Emerging evidence supports improvement in non-alcoholic fatty liver disease (NAFLD/NASH)</li>
+<li><strong>Inflammatory markers:</strong> CRP and other inflammatory markers tend to decrease with significant weight loss</li>
+</ul>
+<p>These metabolic benefits begin before major weight loss is achieved and are an important part of why this medication has been prescribed.</p>
+<hr>
+<h2>4. Common Side Effects and How to Manage Them</h2>
+<p>The majority of side effects from GLP-1 medications are gastrointestinal, predictable, and manageable. They are most pronounced during dose escalation and typically diminish over time.</p>
+<h3>Nausea</h3>
+<p>Nausea is the most common side effect, affecting approximately 40–50% of patients at some point during treatment.</p>
+<p><strong>Why it happens:</strong> Slowed gastric emptying and central GLP-1 receptor activation in the brainstem.</p>
+<p><strong>Management:</strong></p>
+<ul>
+<li>Eat smaller, more frequent meals</li>
+<li>Avoid fatty, fried, or spicy foods during the adjustment period</li>
+<li>Eat slowly and stop eating before you feel full</li>
+<li>Avoid lying down immediately after eating</li>
+<li>Stay well hydrated — sipping cold water or ginger tea can help</li>
+<li>Time your injection on a day when you can take it easy (many patients prefer Friday evening if weekends are quieter)</li>
+<li>Over-the-counter antiemetics (e.g., dimenhydrinate) can be used short-term — ask your pharmacist</li>
+</ul>
+<p>Nausea that prevents you from eating or drinking requires medical attention. Contact the clinic.</p>
+<h3>Constipation</h3>
+<p>Affects approximately 20–30% of patients. Slowed gut motility is the primary cause.</p>
+<p><strong>Management:</strong></p>
+<ul>
+<li>Increase fluid intake to at least 2.0–2.5 litres of water daily</li>
+<li>Increase dietary fibre gradually (vegetables, legumes, psyllium husk)</li>
+<li>Light physical activity — even walking — supports gut motility</li>
+<li>Over-the-counter osmotic laxatives (e.g., macrogol/PEG) are safe and effective if needed</li>
+<li>Discuss with your physician if constipation is severe or persistent</li>
+</ul>
+<h3>Diarrhoea</h3>
+<p>Less common than constipation but can occur, particularly early in treatment.</p>
+<p><strong>Management:</strong></p>
+<ul>
+<li>Usually self-limiting within days</li>
+<li>Stay hydrated</li>
+<li>Avoid high-fat meals</li>
+<li>Contact the clinic if severe or lasting more than 48 hours</li>
+</ul>
+<h3>Vomiting</h3>
+<p>Occasional vomiting is manageable. Persistent vomiting that prevents fluid intake is a red flag.</p>
+<p><strong>Management:</strong></p>
+<ul>
+<li>Sip fluids slowly and frequently</li>
+<li>Temporarily reduce food intake to bland, easily tolerated items</li>
+<li>If you cannot keep fluids down for more than 12 hours, contact the clinic</li>
+</ul>
+<h3>Heart Rate (Pulse)</h3>
+<p>A small increase in resting heart rate (often around 2–5 beats per minute) is a recognised effect of GLP-1 medications and is not typically cause for concern.</p>
+<p><strong>Contact the clinic</strong> if you have a sustained resting heart rate above 100 bpm that is new for you, or if you have palpitations, chest discomfort, dizziness, or fainting.</p>
+<h3>Fatigue</h3>
+<p>Some patients experience fatigue, particularly during the initial weeks.</p>
+<p><strong>Management:</strong></p>
+<ul>
+<li>Ensure adequate protein and caloric intake — under-eating on GLP-1 medications is common and contributes to fatigue</li>
+<li>Maintain hydration</li>
+<li>Prioritise sleep</li>
+</ul>
+<h3>Injection Site Reactions</h3>
+<p>Mild redness, bruising, or itching at the injection site is normal.</p>
+<p><strong>Management:</strong></p>
+<ul>
+<li>Rotate injection sites consistently (see Section 6)</li>
+<li>Allow the medication to reach room temperature before injecting</li>
+<li>Do not inject into areas with active skin irritation</li>
+</ul>
+<hr>
+<h2>5. Serious Risks and Red Flags</h2>
+<p>GLP-1 medications have a strong safety profile in clinical use. However, certain symptoms require prompt medical evaluation.</p>
+<h3>Contact the Clinic Immediately If You Experience:</h3>
+<p><strong>Severe abdominal pain</strong> — particularly pain that is persistent, severe, or radiates to the back. This may indicate pancreatitis, a rare but serious complication. Do not wait to see if it improves.</p>
+<p><strong>Severe pain in the upper right abdomen</strong> — especially after eating fatty foods, or if accompanied by fever, nausea, or jaundice (yellowing of the skin/eyes). This may indicate gallstones or gallbladder inflammation, a recognised complication during rapid weight loss and GLP-1 treatment.</p>
+<p><strong>Persistent vomiting</strong> — if you cannot keep fluids down for more than 12 hours, you risk dehydration and electrolyte imbalance. Seek medical attention.</p>
+<p><strong>Symptoms of severe allergic reaction</strong> — including swelling of the face, lips, or throat; widespread rash or hives; or difficulty breathing. Call 112 immediately.</p>
+<p><strong>Unexplained rapid heart rate</strong> — a sustained resting heart rate above 100 bpm that is new or unusual for you warrants evaluation.</p>
+<p><strong>Vision changes</strong> — rare cases of worsening diabetic eye disease (retinopathy) have been reported with rapid glucose improvement in diabetic patients. Any new vision changes should be reported.</p>
+<p><strong>Symptoms of low blood sugar (if you are also taking insulin or a sulfonylurea)</strong> — shakiness, sweating, confusion, rapid heartbeat. GLP-1 medications alone do not usually cause hypoglycaemia, but combinations with other glucose-lowering medications can.</p>
+<p><strong>If you are on insulin:</strong> your insulin dose will often need to be reduced when starting a GLP-1 medication. This should be adjusted by your physician before or at initiation — do not wait for hypoglycaemic symptoms to appear.</p>
+<p><strong>Signs of dehydration</strong> — dark urine, minimal urine output, severe dizziness, or confusion. This can develop quickly if nausea and vomiting are present alongside reduced oral intake.</p>
+<h3>Important Contraindications to Discuss With Your Physician</h3>
+<ul>
+<li>Personal or family history of medullary thyroid carcinoma (MTC) or Multiple Endocrine Neoplasia type 2 (MEN2) — GLP-1 medications carry a theoretical risk based on animal data; their use in this population requires careful discussion</li>
+<li>Personal history of pancreatitis (whether active, recent, or recurrent) — the risk-benefit decision in patients with prior pancreatitis should be made explicitly and documented by your physician</li>
+<li>Pregnancy or planned pregnancy — GLP-1 medications should be discontinued <strong>at least 2 months before planned conception</strong>. If you are considering pregnancy, inform your physician immediately.</li>
+<li>Severe gastroparesis (delayed stomach emptying) — may be worsened by GLP-1 medications</li>
+<li>Active or untreated eating disorders — particularly anorexia nervosa, ARFID, or bulimia nervosa. GLP-1 medications can reinforce restrictive eating patterns and are not appropriate without specialist input and close monitoring in these patients</li>
+</ul>
+<h3>Drug Interactions (Important)</h3>
+<p>GLP-1 medications delay gastric emptying, which can affect the absorption of oral medications.</p>
+<ul>
+<li>If you take <strong>oral contraceptives</strong>, <strong>levothyroxine</strong>, <strong>oral antibiotics</strong>, or any other time-sensitive medication, inform your prescribing physician.</li>
+<li>If you rely on oral contraceptives for birth control, discuss whether you need additional contraception during the dose-escalation phase or during significant vomiting/diarrhoea.</li>
+</ul>
+<p><strong>If in doubt, call us before taking any action. We would rather answer a question than manage a complication.</strong></p>
+<hr>
+<h2>6. Injection Technique</h2>
+<p>GLP-1 medications (semaglutide and tirzepatide in their injectable forms) are administered subcutaneously — meaning just beneath the skin, not into muscle or vein.</p>
+<h3>Approved Injection Sites</h3>
+<ul>
+<li><strong>Abdomen</strong> — at least 5 cm away from the navel</li>
+<li><strong>Upper thigh</strong> — outer surface</li>
+<li><strong>Upper arm</strong> — outer surface (may require assistance)</li>
+</ul>
+<h3>Site Rotation</h3>
+<p>Rotate injection sites with each weekly dose. Do not inject repeatedly into the same small area, as this can cause lipohypertrophy (lumpy scar tissue) that impairs absorption.</p>
+<p>A simple rotation pattern: right abdomen → left abdomen → right thigh → left thigh → repeat. Or use whichever system you can remember consistently.</p>
+<h3>Step-by-Step Technique</h3>
+<ol>
+<li>Wash hands thoroughly with soap and water</li>
+<li>Remove the pen from the refrigerator 30 minutes before injection to allow it to reach room temperature — this reduces discomfort</li>
+<li>Check the medication: it should be clear and colourless to slightly yellow; do not use if cloudy, discoloured, or containing particles</li>
+<li>Clean the injection site with an alcohol swab and allow it to dry completely</li>
+<li>Remove the pen cap and attach a new needle (if required by your pen type)</li>
+<li>Prime the pen if instructed in the product leaflet</li>
+<li>Pinch the skin gently between your thumb and index finger</li>
+<li>Insert the needle at a 90-degree angle with a smooth, confident motion</li>
+<li>Press and hold the injection button; maintain pressure for the count recommended in your pen’s instructions (usually 5–10 seconds) to ensure full dose delivery</li>
+<li>Withdraw the needle and apply gentle pressure with a cotton ball — do not rub</li>
+<li>Dispose of the needle safely in a sharps container</li>
+</ol>
+<h3>Storage</h3>
+<ul>
+<li><strong>Unopened pens:</strong> Store in the refrigerator (2–8°C). Do not freeze.</li>
+<li><strong>In-use pens:</strong> May be kept at room temperature (below 30°C) for up to the period specified in the product leaflet (typically 4–6 weeks depending on the medication)</li>
+<li>Keep away from direct sunlight and heat</li>
+<li>Do not use a pen past its expiry date</li>
+</ul>
+<hr>
+<h2>7. Protein — The Non-Negotiable Nutrient</h2>
+<p>This section is critical. Please read it carefully.</p>
+<h3>Why Protein Matters So Much on GLP-1 Medications</h3>
+<p>GLP-1 medications reduce appetite dramatically. This is the mechanism that drives weight loss — but it creates a significant risk that many patients and even some clinicians underestimate: <strong>you may lose substantial muscle mass alongside fat.</strong></p>
+<p>Research consistently shows that when caloric intake is severely restricted without adequate protein and resistance exercise, a significant proportion of weight lost comes from lean mass (muscle). Studies on GLP-1 medication users have found that without intentional effort, 25–40% of total weight lost may be from muscle rather than fat.</p>
+<p><strong>Why this matters:</strong></p>
+<ul>
+<li>Muscle mass is your primary metabolic engine — it determines how many calories you burn at rest</li>
+<li>Loss of muscle makes weight regain after stopping medication more likely and more severe</li>
+<li>Muscle loss in mid-life is associated with increased risk of falls, fractures, metabolic dysfunction, and cardiovascular disease</li>
+<li>Rebuilding lost muscle is significantly harder than preserving it</li>
+</ul>
+<h3>Your Protein Target</h3>
+<p><strong>Aim for 1.2–1.6 grams of protein per kilogram of your current body weight, daily.</strong></p>
+<p>For example:</p>
+<ul>
+<li>If you weigh 90 kg → 108–144 g protein per day</li>
+<li>If you weigh 110 kg → 132–176 g protein per day</li>
+</ul>
+<p>During active weight loss on GLP-1 medications, many clinicians and sports medicine specialists recommend erring toward the higher end of this range (1.5–1.6 g/kg).</p>
+<h3>Practical Protein Sources (per 100g or typical serving)</h3>
+<ul>
+<li>Chicken breast (cooked): ~31g protein</li>
+<li>Salmon (cooked): ~25g protein</li>
+<li>Eggs: ~13g protein (2 large eggs ≈ 12–13g)</li>
+<li>Greek yoghurt (plain, full-fat): ~10g per 100g</li>
+<li>Cottage cheese: ~11g per 100g</li>
+<li>Lentils (cooked): ~9g per 100g</li>
+<li>Tofu (firm): ~8–15g per 100g depending on brand</li>
+<li>Protein powder (whey or plant-based): typically 20–25g per scoop</li>
+</ul>
+<h3>Practical Tips When Appetite Is Suppressed</h3>
+<ul>
+<li><strong>Lead with protein at every meal</strong> — eat protein first, then vegetables, then other foods</li>
+<li>When you can only eat small amounts, make protein the priority</li>
+<li>Liquid protein sources (Greek yoghurt, protein shakes, cottage cheese) are easier to consume when nausea is present</li>
+<li>Do not skip meals entirely — even small, protein-focused meals matter</li>
+<li>If you are consistently unable to meet protein targets due to appetite suppression, discuss this at your next clinic visit</li>
+</ul>
+<hr>
+<h2>8. Resistance Training — Essential, Not Optional</h2>
+<h3>The Evidence Is Clear</h3>
+<p>In the context of GLP-1 medication use, resistance training is the single most important lifestyle intervention for preserving muscle mass and improving body composition outcomes.</p>
+<p>A 2024 study (Isenmann et al.) directly comparing GLP-1 users with and without resistance training found that those who trained consistently preserved significantly more lean mass while achieving equivalent or greater fat loss. The practical implication: the goal is not just a lower number on the scale — it is a healthier, stronger body with better metabolic function.</p>
+<h3>Minimum Effective Dose</h3>
+<p><strong>2–3 resistance training sessions per week, each lasting 30–60 minutes.</strong></p>
+<p>This is the evidence-based minimum. Three sessions per week is preferable if your schedule and recovery allow it.</p>
+<h3>What Counts as Resistance Training</h3>
+<ul>
+<li>Weight machines at a gym</li>
+<li>Free weights (dumbbells, barbells, kettlebells)</li>
+<li>Resistance bands</li>
+<li>Bodyweight exercises (push-ups, squats, lunges, planks)</li>
+<li>Pilates (classical or reformer, with a resistance focus)</li>
+</ul>
+<p>Aerobic exercise (walking, cycling, swimming) is valuable for cardiovascular health and is encouraged in addition to resistance training — but it does not adequately substitute for resistance work when muscle preservation is the goal.</p>
+<h3>How to Get Started</h3>
+<p>If you are new to resistance training or have been inactive:</p>
+<ul>
+<li>Begin with 2 sessions per week of 30 minutes</li>
+<li>Focus on compound movements that work multiple muscle groups: squats, deadlifts (or Romanian deadlifts), rows, presses, and lunges</li>
+<li>Start with light weights and correct form before increasing load</li>
+<li>Consider 2–3 sessions with a qualified personal trainer to learn safe technique — this is a worthwhile investment</li>
+<li>Progress gradually: aim to increase weight or repetitions modestly each week</li>
+</ul>
+<p><strong>If you have joint problems or other physical limitations that make standard resistance training difficult, please discuss this with your physician. There are appropriate modified programmes for almost every situation. If you have a known cardiovascular condition (including heart failure, recent myocardial infarction, arrhythmia, or uncontrolled hypertension), please obtain clearance from your physician before starting a resistance training programme.</strong></p>
+<hr>
+<h2>9. Hydration</h2>
+<h3>Why Hydration Deserves Special Attention on GLP-1 Medications</h3>
+<p>When appetite is suppressed, thirst is often suppressed along with it. Many patients on GLP-1 medications drink significantly less than they realise. Combined with nausea and the possibility of vomiting, dehydration can develop quickly and worsen side effects considerably.</p>
+<p>Dehydration is one of the most common and most preventable reasons patients experience worsened nausea, fatigue, constipation, and headaches during the early weeks of treatment.</p>
+<h3>Daily Targets</h3>
+<ul>
+<li><strong>Minimum: 2.0–2.5 litres of water daily</strong> for most adults</li>
+<li>In warm weather, during exercise, or if you are experiencing vomiting or diarrhoea, increase this further</li>
+<li>Plain water is the best source; herbal teas, diluted electrolyte drinks, and clear broths also count</li>
+<li>Caffeinated beverages (coffee, tea) count toward total fluid intake but have a mild diuretic effect — account for this if consuming large quantities</li>
+</ul>
+<h3>Signs of Dehydration — Act On These</h3>
+<p>Mild to moderate:</p>
+<ul>
+<li>Dark yellow or amber urine (pale yellow is the target)</li>
+<li>Urinating less than 3–4 times per day</li>
+<li>Dry mouth or lips</li>
+<li>Headache</li>
+<li>Fatigue or difficulty concentrating</li>
+</ul>
+<p>Severe — contact the clinic or seek emergency care:</p>
+<ul>
+<li>Minimal or no urine output for more than 8 hours</li>
+<li>Dizziness on standing</li>
+<li>Confusion or disorientation</li>
+<li>Rapid heart rate with dizziness</li>
+</ul>
+<h3>Practical Tips</h3>
+<ul>
+<li>Keep a water bottle visible at all times — out of sight, out of mind applies to hydration</li>
+<li>Set a reminder on your phone if needed — 250ml per hour across 8–10 waking hours is a simple target</li>
+<li>Check your urine colour each morning: pale yellow = good, dark yellow = drink more</li>
+<li>If nausea makes large volumes difficult, sip small amounts frequently rather than drinking in large quantities</li>
+</ul>
+<hr>
+<h2>10. Nutrition Beyond Protein</h2>
+<h3>Total Caloric Intake — Don’t Under-Eat</h3>
+<p>One of the counterintuitive risks of GLP-1 medications is eating too little. While appetite suppression is the mechanism of action, extreme caloric restriction (below approximately 1,000–1,200 kcal/day for most adults) accelerates muscle loss, causes nutrient deficiencies, and is not sustainable.</p>
+<p><strong>Aim for a moderate caloric deficit — typically 500–750 kcal below your maintenance needs — rather than near-starvation intake.</strong> Discuss your specific target with your physician or a registered dietitian.</p>
+<h3>Fibre</h3>
+<p>Aim for 25–35g of dietary fibre daily. Fibre:</p>
+<ul>
+<li>Supports bowel regularity (critical for managing constipation)</li>
+<li>Feeds beneficial gut bacteria</li>
+<li>Slows glucose absorption and supports satiety</li>
+</ul>
+<p>Good sources: vegetables (particularly leafy greens, broccoli, carrots), legumes (lentils, beans, chickpeas), whole grains (oats, quinoa), and seeds (chia, flaxseed).</p>
+<p>Increase fibre gradually — adding large amounts quickly can worsen bloating, particularly in the early weeks.</p>
+<h3>Micronutrients</h3>
+<p>Eating less means consuming fewer micronutrients. Priority nutrients to monitor:</p>
+<ul>
+<li><strong>Vitamin D and calcium:</strong> Important for bone health, especially if dairy intake decreases. Supplement if your diet is insufficient — discuss with your physician.</li>
+<li><strong>B vitamins (particularly B12):</strong> At risk if animal product intake drops significantly</li>
+<li><strong>Iron and zinc:</strong> Important if red meat consumption decreases substantially</li>
+<li><strong>Magnesium:</strong> Often insufficient in modern diets; deficiency can contribute to constipation, muscle cramps, and poor sleep</li>
+<li><strong>Electrolytes (sodium, potassium):</strong> At risk during any period of vomiting or diarrhoea</li>
+</ul>
+<p>A general-purpose multivitamin and vitamin D supplement are reasonable for most patients on GLP-1 medications, particularly during active weight loss. Discuss your specific needs with your physician.</p>
+<h3>Meal Timing and Structure</h3>
+<p>With reduced appetite, meal structure becomes more important — not less. Skipping meals entirely leads to protein deficits and energy crashes.</p>
+<p><strong>Recommended approach:</strong></p>
+<ul>
+<li>3 smaller meals daily, each built around a protein source</li>
+<li>An additional high-protein snack if needed to meet protein targets</li>
+<li>Eat at consistent times — do not wait until you feel hungry, as the hunger signal may not reliably appear</li>
+<li>Stop eating before you feel full — with slowed gastric emptying, fullness arrives significantly after the appropriate stopping point. Overeating leads to discomfort and nausea.</li>
+</ul>
+<h3>Foods to Limit During Adjustment</h3>
+<ul>
+<li><strong>High-fat foods:</strong> Worsen nausea and delay gastric emptying further</li>
+<li><strong>Alcohol:</strong> Use with caution. In addition to worsening GI side effects, alcohol can mask symptoms of low blood sugar in patients on insulin or sulfonylureas and accelerates dehydration. Some patients notice a reduced desire for alcohol while on GLP-1 medications — this is a recognised effect and is not a cause for concern</li>
+<li><strong>Highly processed foods:</strong> Low nutrient density; poor value when total food volume is reduced</li>
+<li><strong>Carbonated beverages:</strong> Can worsen bloating and nausea</li>
+</ul>
+<hr>
+<h2>11. Stopping or Tapering the Medication</h2>
+<h3>Do Not Stop Abruptly Without Physician Guidance</h3>
+<p>GLP-1 medications are not addictive, but they are actively suppressing appetite and supporting metabolic function as long as they are being taken. Stopping abruptly — without adequate lifestyle consolidation and physician oversight — carries a high risk of rapid weight regain.</p>
+<h3>When Stopping May Be Considered</h3>
+<p>Your physician will discuss this with you. Common scenarios include:</p>
+<ul>
+<li>Pregnancy planning (medication should be discontinued before conception; discuss timing)</li>
+<li>Significant adverse effects that cannot be managed</li>
+<li>Achievement of weight and metabolic goals with solid lifestyle foundations established</li>
+<li>Cost or access issues — always discuss alternatives before stopping</li>
+</ul>
+<h3>How Tapering Works</h3>
+<p>Dose reduction (rather than abrupt discontinuation) is generally preferred when stopping is planned. Your physician will guide this process based on your clinical situation. There is no universal tapering schedule — it is individualised.</p>
+<p>During and after stopping, the lifestyle habits you have built — protein intake, resistance training, hydration, meal structure — become your primary tools. This is why those habits must be established during treatment, not deferred until after.</p>
+<hr>
+<h2>12. Weight Regain — The Honest Conversation</h2>
+<p>This section contains information that is uncomfortable but important. You deserve to know it.</p>
+<h3>The Evidence on Weight Regain</h3>
+<p>Multiple studies have examined what happens to patients who stop GLP-1 medications without maintaining lifestyle interventions. The results are consistent:</p>
+<ul>
+<li><strong>The STEP 4 withdrawal trial (semaglutide):</strong> Patients who discontinued semaglutide regained, on average, approximately two-thirds of their lost weight within one year (Wilding et al., <em>NEJM</em> 2022).</li>
+</ul>
+<p>This is not a personal failure — it reflects the biology of obesity. The hormonal drivers of weight gain (reduced GLP-1 sensitivity, elevated hunger hormones, altered reward signalling) reassert themselves when the medication is removed, unless counterbalanced by consolidated lifestyle habits.</p>
+<h3>What This Means for You</h3>
+<p><strong>The medication is a tool, not a cure.</strong> For most patients, long-term treatment — either continuous or in a maintenance protocol — is necessary for sustained weight management, similar to how antihypertensives are used long-term for blood pressure.</p>
+<p>Your physician will discuss the appropriate long-term strategy for your situation. This may include:</p>
+<ul>
+<li>Continued treatment at the therapeutic dose</li>
+<li>A reduced maintenance dose after goals are reached</li>
+<li>A monitored period off medication with structured lifestyle support and clear re-initiation criteria</li>
+<li>Regular monitoring of weight, metabolic markers, and wellbeing regardless of medication status</li>
+</ul>
+<p><strong>The lifestyle habits covered in this guide — protein, resistance training, hydration, meal structure — are your long-term insurance policy.</strong> Patients who consolidate these habits during treatment are significantly more likely to maintain their results.</p>
+<hr>
+<h2>13. Follow-Up Schedule and Contacting Élan Clinic</h2>
+<h3>Standard Follow-Up Timeline</h3>
+<p><strong>4 weeks after starting:</strong></p>
+<ul>
+<li>Review of side effects and tolerability</li>
+<li>Dose adjustment assessment</li>
+<li>Checking protein intake and exercise adherence</li>
+<li>Any early questions or concerns</li>
+</ul>
+<p><strong>3 months:</strong></p>
+<ul>
+<li>Weight and body composition progress review</li>
+<li>Bloodwork (fasting glucose, HbA1c, lipids, liver enzymes, kidney function as indicated)</li>
+<li>Dose optimisation</li>
+<li>Nutrition and exercise review</li>
+</ul>
+<p><strong>6 months:</strong></p>
+<ul>
+<li>Comprehensive metabolic assessment</li>
+<li>Evaluation of long-term strategy</li>
+<li>Discussion of goals and adjustments</li>
+</ul>
+<p><strong>12 months:</strong></p>
+<ul>
+<li>Full review: clinical outcomes, lifestyle consolidation, long-term plan</li>
+<li>Decision on continuation, dose adjustment, or transition to maintenance protocol</li>
+</ul>
+<p>If you are progressing well and have no concerns, do not wait for scheduled appointments to share good news — we are glad to hear it. If you have concerns between appointments, contact us.</p>
+<h3>When to Contact Us Between Appointments</h3>
+<ul>
+<li>Any side effect that is worsening rather than improving after the first 2–4 weeks</li>
+<li>Inability to meet protein targets consistently</li>
+<li>Weight plateau lasting more than 4–6 weeks at a stable dose (may indicate dose adjustment needed)</li>
+<li>New medications prescribed by another physician (some medications interact with GLP-1 agents)</li>
+<li>Pregnancy or planning for pregnancy</li>
+<li>Any of the red flags listed on page 1</li>
+</ul>
+<h3>How to Reach Us</h3>
+<p><strong>Élan Clinic</strong>
+Sepapaja 12/1, Tallinn 11415</p>
+<p>📞 <strong>Phone:</strong> +372 52 99939
+📧 <strong>Email:</strong> info@elan.clinic</p>
+<p>For urgent medical concerns outside clinic hours, call <strong>112</strong> or go to the nearest emergency department.</p>
+<hr>
+<h2>A Note From Dr. Lindström</h2>
+<p>I prescribe GLP-1 medications because the evidence supports them — and because I have lived the experience of significant weight loss myself. I understand both the hope and the complexity that comes with this treatment.</p>
+<p>This medication gives your body a genuine metabolic advantage. What you do with that advantage — in terms of building protein intake habits, committing to resistance training, staying hydrated, and attending follow-ups — will determine whether the results are temporary or lasting.</p>
+<p>You are not in this alone. We will adjust, troubleshoot, and plan alongside you at every step.</p>
+<p><em>Dr. Ingmar Lindström</em>
+<em>Family Medicine Specialist</em>
+<em>Élan Clinic, Tallinn</em></p>
+<hr>
+<p><em>This guide is a clinical educational resource. It does not replace individualised medical advice. Your specific dosing schedule, targets, and monitoring plan have been determined by your prescribing physician based on your personal clinical profile. Always discuss questions about your individual treatment with your physician.</em></p>
+<p><em>Version 1.0 — March 2026 — Élan Clinic</em></p>
+
+    </main>
   </div>
-
-  <!-- ===== DOCUMENT TITLE ===== -->
-  <div class="doc-title">
-    <h1>GLP-1 Medication Patient Guide</h1>
-    <div class="subtitle">Semaglutide (Ozempic / Wegovy) &amp; Tirzepatide (Mounjaro)</div>
-  </div>
-
-  <!-- ===== PAGE 1 — ESSENTIAL SUMMARY ===== -->
-  <div class="summary-header">PAGE 1 — YOUR ESSENTIAL SUMMARY</div>
-  <div class="summary-subheader">Keep this page. Read it today.</div>
-
-  <div class="intro-box">
-    <p>You have been prescribed a <strong>GLP-1 receptor agonist</strong>. This is a significant, evidence-based step in your metabolic health journey. Below is everything you need to know to start safely.</p>
-    <p><strong>What you've been prescribed</strong> is a medication that mimics a natural gut hormone (GLP-1) to reduce appetite, slow digestion, and improve blood sugar regulation. Common medications in this class include semaglutide (Ozempic, Wegovy) and tirzepatide (Mounjaro).</p>
-    <p><strong>What to expect in the first weeks:</strong> Nausea is common and usually mild to moderate. It typically peaks in weeks 2–4 and improves on its own. Eat small meals. Avoid fatty or spicy food. Stay hydrated.</p>
-    <p><strong>What to expect over time:</strong> Most patients lose 5–15% of body weight over 6–12 months (some studies show up to 20%+ with tirzepatide). Results depend on diet, exercise, and adherence.</p>
-  </div>
-
-  <div class="non-neg-title">Your Three Non-Negotiables</div>
-
-  <div class="non-neg-item">
-    <div class="non-neg-num">1</div>
-    <div class="non-neg-text"><strong>Protein — minimum 1.2–1.6 g per kg of your body weight daily.</strong><br>
-    Your appetite will drop significantly. If you don't eat enough protein, you will lose muscle, not just fat. Muscle loss is dangerous and difficult to reverse. Prioritise protein at every meal.</div>
-  </div>
-
-  <div class="non-neg-item">
-    <div class="non-neg-num">2</div>
-    <div class="non-neg-text"><strong>Resistance training — minimum 2–3 sessions per week.</strong><br>
-    Without resistance training, up to 25–40% of weight lost on GLP-1 medications may come from muscle mass. Lift weights, use resistance bands, or do bodyweight exercises. This is not optional.</div>
-  </div>
-
-  <div class="non-neg-item">
-    <div class="non-neg-num">3</div>
-    <div class="non-neg-text"><strong>Hydration — minimum 2.0–2.5 litres of water daily.</strong><br>
-    Reduced appetite also means reduced thirst awareness. Nausea, constipation, and fatigue are often made worse by dehydration. Drink water consistently throughout the day.</div>
-  </div>
-
-  <div class="red-flags">
-    <div class="red-flags-title">⚠ Red Flags — Contact Us Immediately</div>
-    <div class="red-flags-body">
-      <ul>
-        <li>Severe, persistent abdominal pain (especially radiating to the back)</li>
-        <li>Vomiting that prevents you from keeping fluids down</li>
-        <li>Signs of allergic reaction: swelling, rash, difficulty breathing</li>
-        <li>Heart rate above 100 bpm at rest that is new or unexplained</li>
-        <li>Vision changes or signs of hypoglycaemia (if also on insulin or sulfonylurea)</li>
-      </ul>
-    </div>
-    <div class="red-flags-contact">📞 Élan Clinic: +372 52 99939 | info@elan.clinic &nbsp;·&nbsp; Medical emergency: call 112</div>
-  </div>
-
-  <div class="non-neg-title">Your Follow-Up Schedule</div>
-  <div class="followup-grid">
-    <div class="followup-item"><strong>4 weeks</strong>First check-in · side effect review · dose adjustment if needed</div>
-    <div class="followup-item"><strong>3 months</strong>Progress assessment · bloodwork</div>
-    <div class="followup-item"><strong>6 months</strong>Comprehensive metabolic review</div>
-    <div class="followup-item"><strong>12 months</strong>Long-term strategy discussion</div>
-  </div>
-
-  <p style="font-size:9.5pt;color:#555;margin-top:12px;font-style:italic;">Do not stop this medication without speaking to your physician. Stopping abruptly significantly increases the risk of weight regain.</p>
-
-  <p style="font-size:9pt;color:#888;margin-top:14px;border-top:1px solid #ddd;padding-top:8px;font-style:italic;">Detailed guidance on all topics above begins on the following pages.</p>
-
-</div>
-
-<!-- ===== DETAILED GUIDE ===== -->
-<div class="page content">
-
-  <div class="clinic-header">
-    <div class="clinic-name">Élan Clinic <span>GLP-1 Patient Guide — Detailed Reference</span></div>
-    <div class="clinic-contact">+372 52 99939 · info@elan.clinic</div>
-  </div>
-
-  <!-- SECTION 1 -->
-  <h2 class="section-title">1. What Are GLP-1 Medications?</h2>
-  <p>GLP-1 (glucagon-like peptide-1) receptor agonists are a class of medications originally developed to treat type 2 diabetes. Over the past decade, clinical research has demonstrated that they are among the most effective pharmacological tools available for weight management and metabolic health.</p>
-  <p>These medications mimic GLP-1, a hormone your gut naturally releases after eating. By activating GLP-1 receptors throughout the body — particularly in the brain, stomach, and pancreas — they produce multiple beneficial effects simultaneously.</p>
-
-  <h3 class="sub-title">The Medications in This Class</h3>
-  <p><strong>Semaglutide</strong> is available in two formulations:</p>
-  <ul>
-    <li><strong>Ozempic</strong> — licensed for type 2 diabetes management; widely used off-label for weight management</li>
-    <li><strong>Wegovy</strong> — the higher-dose formulation licensed specifically for chronic weight management</li>
-  </ul>
-  <p><strong>Tirzepatide</strong> is a dual-action medication that activates both GLP-1 and GIP receptors:</p>
-  <ul>
-    <li><strong>Mounjaro</strong> — licensed for type 2 diabetes; increasingly available for weight management</li>
-    <li>The dual mechanism appears to produce somewhat greater weight loss compared to semaglutide in head-to-head trials</li>
-  </ul>
-
-  <!-- SECTION 2 -->
-  <h2 class="section-title">2. How They Work — Plain Language</h2>
-  <p>Think of your body's hunger system as a thermostat that has been set too high. GLP-1 medications work by resetting that thermostat through several simultaneous mechanisms:</p>
-  <ul>
-    <li><strong>In the brain:</strong> GLP-1 receptors in the hypothalamus and brainstem receive stronger signals of fullness and satiety. Cravings — particularly for high-fat, high-sugar foods — diminish for most patients.</li>
-    <li><strong>In the stomach:</strong> These medications slow gastric emptying, prolonging fullness after eating and flattening blood sugar spikes.</li>
-    <li><strong>In the pancreas:</strong> Insulin release is stimulated in a glucose-dependent manner (only when blood sugar is elevated), while glucagon is suppressed — improving blood sugar without the hypoglycaemia risk of older medications.</li>
-    <li><strong>In the liver:</strong> Reduced glucagon signalling decreases the liver's tendency to release stored glucose inappropriately.</li>
-  </ul>
-  <div class="callout">
-    The result is a lower caloric intake driven by genuine physiological changes — not willpower. GLP-1 medications address the biological drivers of obesity directly.
-  </div>
-
-  <!-- SECTION 3 -->
-  <h2 class="section-title">3. Expected Benefits</h2>
-  <h3 class="sub-title">Weight Loss Timeline</h3>
-  <ul>
-    <li><strong>Weeks 1–4:</strong> Little to no visible weight loss. Body is adapting. Side effects most prominent.</li>
-    <li><strong>Months 1–3:</strong> Meaningful weight loss begins — typically 2–5% of starting body weight.</li>
-    <li><strong>Months 3–6:</strong> Weight loss accelerates as dose increases; many reach 8–12% reduction.</li>
-    <li><strong>Months 6–12:</strong> STEP trials showed ~15% average body weight loss at 68 weeks for semaglutide; SURMOUNT trials showed up to 20–22% with tirzepatide.</li>
-    <li><strong>Beyond 12 months:</strong> Medication supports weight maintenance with lifestyle consolidation.</li>
-  </ul>
-  <h3 class="sub-title">Metabolic Improvements</h3>
-  <ul>
-    <li><strong>Blood sugar:</strong> HbA1c reductions of 1–2% typical in patients with type 2 diabetes or prediabetes</li>
-    <li><strong>Blood pressure:</strong> Average 3–5 mmHg reduction in systolic BP</li>
-    <li><strong>Cardiovascular risk:</strong> SELECT trial (2023) — 20% reduction in major adverse cardiovascular events with semaglutide in high-risk patients</li>
-    <li><strong>Liver health:</strong> Emerging evidence for improvement in NAFLD/NASH</li>
-    <li><strong>Inflammatory markers:</strong> CRP and other inflammatory markers typically decrease with significant weight loss</li>
-  </ul>
-
-</div>
-
-<div class="page content">
-
-  <div class="clinic-header">
-    <div class="clinic-name">Élan Clinic <span>GLP-1 Patient Guide — Detailed Reference</span></div>
-    <div class="clinic-contact">+372 52 99939 · info@elan.clinic</div>
-  </div>
-
-  <!-- SECTION 4 -->
-  <h2 class="section-title">4. Common Side Effects and Management</h2>
-  <p>The majority of side effects are gastrointestinal, predictable, and manageable. Most are most pronounced during dose escalation and diminish over time.</p>
-
-  <h3 class="sub-title">Nausea</h3>
-  <p>Affects ~40–50% of patients at some point. Caused by slowed gastric emptying and central GLP-1 receptor activation.</p>
-  <div class="callout tip">
-    <strong>Management:</strong> Eat smaller, more frequent meals · Avoid fatty, fried, or spicy foods · Eat slowly and stop before you feel full · Stay well hydrated · Sip cold water or ginger tea · Over-the-counter antiemetics (e.g., dimenhydrinate) can be used short-term. Nausea preventing eating or drinking requires medical attention.
-  </div>
-
-  <h3 class="sub-title">Constipation</h3>
-  <p>Affects ~20–30% of patients. Primary cause is slowed gut motility.</p>
-  <div class="callout tip">
-    <strong>Management:</strong> Increase fluid intake to 2.0–2.5 litres daily · Increase dietary fibre gradually · Light physical activity supports gut motility · Osmotic laxatives (macrogol/PEG) are safe if needed.
-  </div>
-
-  <h3 class="sub-title">Diarrhoea</h3>
-  <p>Less common; usually self-limiting within days. Stay hydrated. Avoid high-fat meals. Contact clinic if severe or lasting more than 48 hours.</p>
-
-  <h3 class="sub-title">Vomiting</h3>
-  <p>Occasional vomiting is manageable. Sip fluids slowly. If you cannot keep fluids down for more than 12 hours, contact the clinic.</p>
-
-  <h3 class="sub-title">Fatigue</h3>
-  <p>Ensure adequate protein and caloric intake — under-eating on GLP-1 medications is common and contributes to fatigue. Maintain hydration. Prioritise sleep.</p>
-
-  <h3 class="sub-title">Injection Site Reactions</h3>
-  <p>Mild redness, bruising, or itching is normal. Rotate injection sites consistently. Allow medication to reach room temperature before injecting.</p>
-
-  <!-- SECTION 5 -->
-  <h2 class="section-title">5. Serious Risks and Red Flags</h2>
-
-  <div class="callout warning">
-    <strong>Contact the clinic immediately if you experience:</strong>
-    <ul style="margin-top:6px;">
-      <li><strong>Severe abdominal pain</strong> — especially persistent or radiating to the back (possible pancreatitis)</li>
-      <li><strong>Persistent vomiting</strong> — unable to keep fluids down for more than 12 hours</li>
-      <li><strong>Severe allergic reaction</strong> — facial swelling, rash, difficulty breathing → call 112 immediately</li>
-      <li><strong>Unexplained rapid heart rate</strong> — sustained resting HR above 100 bpm</li>
-      <li><strong>Vision changes</strong> — rare cases of worsening diabetic retinopathy reported</li>
-      <li><strong>Hypoglycaemia symptoms</strong> — if also taking insulin or sulfonylurea: shakiness, sweating, confusion</li>
-      <li><strong>Severe dehydration</strong> — minimal urine output, severe dizziness, confusion</li>
-    </ul>
-  </div>
-
-  <h3 class="sub-title">Important Contraindications — Discuss With Your Physician</h3>
-  <ul>
-    <li>Personal or family history of medullary thyroid carcinoma (MTC) or MEN2</li>
-    <li>Active or recent pancreatitis</li>
-    <li>Pregnancy or planned pregnancy — discontinue before conception; discuss timing</li>
-    <li>Severe gastroparesis — may be worsened by GLP-1 medications</li>
-  </ul>
-
-</div>
-
-<div class="page content">
-
-  <div class="clinic-header">
-    <div class="clinic-name">Élan Clinic <span>GLP-1 Patient Guide — Detailed Reference</span></div>
-    <div class="clinic-contact">+372 52 99939 · info@elan.clinic</div>
-  </div>
-
-  <!-- SECTION 6 -->
-  <h2 class="section-title">6. Injection Technique</h2>
-  <p>GLP-1 medications are administered <strong>subcutaneously</strong> — just beneath the skin, not into muscle or vein.</p>
-
-  <h3 class="sub-title">Approved Injection Sites</h3>
-  <ul>
-    <li><strong>Abdomen</strong> — at least 5 cm away from the navel</li>
-    <li><strong>Upper thigh</strong> — outer surface</li>
-    <li><strong>Upper arm</strong> — outer surface (may require assistance)</li>
-  </ul>
-  <p><strong>Site rotation:</strong> Rotate with each weekly dose. A simple pattern: right abdomen → left abdomen → right thigh → left thigh → repeat.</p>
-
-  <h3 class="sub-title">Step-by-Step Technique</h3>
-  <ol class="step-list">
-    <li>Wash hands thoroughly with soap and water</li>
-    <li>Remove the pen from refrigerator 30 minutes before injection — room temperature reduces discomfort</li>
-    <li>Check the medication: clear and colourless to slightly yellow; do not use if cloudy or discoloured</li>
-    <li>Clean the injection site with an alcohol swab and allow to dry completely</li>
-    <li>Remove pen cap and attach a new needle (if required by your pen type)</li>
-    <li>Prime the pen if instructed in the product leaflet</li>
-    <li>Pinch the skin gently between thumb and index finger</li>
-    <li>Insert the needle at a 90-degree angle with a smooth, confident motion</li>
-    <li>Press and hold the injection button for the count in your pen's instructions (usually 5–10 seconds)</li>
-    <li>Withdraw the needle and apply gentle pressure with a cotton ball — do not rub</li>
-    <li>Dispose of the needle safely in a sharps container</li>
-  </ol>
-
-  <h3 class="sub-title">Storage</h3>
-  <ul>
-    <li><strong>Unopened pens:</strong> Refrigerator (2–8°C). Do not freeze.</li>
-    <li><strong>In-use pens:</strong> Room temperature (below 30°C) for up to the period in the product leaflet (typically 4–6 weeks)</li>
-    <li>Keep away from direct sunlight and heat. Do not use past expiry date.</li>
-  </ul>
-
-  <!-- SECTION 7 -->
-  <h2 class="section-title">7. Protein — The Non-Negotiable Nutrient</h2>
-
-  <div class="callout warning">
-    <strong>Critical:</strong> GLP-1 medications reduce appetite dramatically. Without adequate protein and resistance exercise, 25–40% of total weight lost may come from <em>muscle mass</em> rather than fat. Muscle loss is dangerous, metabolically harmful, and difficult to reverse.
-  </div>
-
-  <h3 class="sub-title">Your Protein Target</h3>
-  <p><strong>Aim for 1.2–1.6 grams of protein per kilogram of your current body weight, daily.</strong><br>
-  During active weight loss, err toward the higher end (1.5–1.6 g/kg).</p>
-  <ul>
-    <li>If you weigh 90 kg → 108–144 g protein per day</li>
-    <li>If you weigh 110 kg → 132–176 g protein per day</li>
-  </ul>
-
-  <h3 class="sub-title">Practical Protein Sources</h3>
-  <table class="protein-table">
-    <tr><th>Food</th><th>Protein per serving</th></tr>
-    <tr><td>Chicken breast (cooked, 100g)</td><td>~31g</td></tr>
-    <tr><td>Salmon (cooked, 100g)</td><td>~25g</td></tr>
-    <tr><td>Eggs (2 large)</td><td>~12–13g</td></tr>
-    <tr><td>Greek yoghurt, plain (100g)</td><td>~10g</td></tr>
-    <tr><td>Cottage cheese (100g)</td><td>~11g</td></tr>
-    <tr><td>Lentils, cooked (100g)</td><td>~9g</td></tr>
-    <tr><td>Tofu, firm (100g)</td><td>~8–15g</td></tr>
-    <tr><td>Whey/plant protein powder (1 scoop)</td><td>~20–25g</td></tr>
-  </table>
-
-  <h3 class="sub-title">Practical Tips When Appetite Is Suppressed</h3>
-  <ul>
-    <li><strong>Lead with protein at every meal</strong> — eat protein first, then vegetables, then other foods</li>
-    <li>Liquid protein sources (Greek yoghurt, shakes, cottage cheese) are easier when nausea is present</li>
-    <li>Do not skip meals entirely — even small, protein-focused meals matter</li>
-    <li>If consistently unable to meet targets, discuss at your next clinic visit</li>
-  </ul>
-
-</div>
-
-<div class="page content">
-
-  <div class="clinic-header">
-    <div class="clinic-name">Élan Clinic <span>GLP-1 Patient Guide — Detailed Reference</span></div>
-    <div class="clinic-contact">+372 52 99939 · info@elan.clinic</div>
-  </div>
-
-  <!-- SECTION 8 -->
-  <h2 class="section-title">8. Resistance Training — Essential, Not Optional</h2>
-
-  <div class="callout">
-    A 2024 study (Isenmann et al.) found that GLP-1 users who trained consistently preserved significantly more lean mass while achieving equivalent or greater fat loss. The goal is not just a lower number on the scale — it is a healthier, stronger body.
-  </div>
-
-  <h3 class="sub-title">Minimum Effective Dose</h3>
-  <p><strong>2–3 resistance training sessions per week, each lasting 30–60 minutes.</strong> Three sessions per week is preferable if schedule and recovery allow.</p>
-
-  <h3 class="sub-title">What Counts as Resistance Training</h3>
-  <ul>
-    <li>Weight machines at a gym</li>
-    <li>Free weights (dumbbells, barbells, kettlebells)</li>
-    <li>Resistance bands</li>
-    <li>Bodyweight exercises (push-ups, squats, lunges, planks)</li>
-    <li>Pilates (classical or reformer, with a resistance focus)</li>
-  </ul>
-  <p><em>Aerobic exercise is valuable for cardiovascular health and is encouraged — but does not adequately substitute for resistance work when muscle preservation is the goal.</em></p>
-
-  <h3 class="sub-title">How to Get Started</h3>
-  <ul>
-    <li>Begin with 2 sessions per week of 30 minutes</li>
-    <li>Focus on compound movements: squats, deadlifts, rows, presses, lunges</li>
-    <li>Start with light weights and correct form before increasing load</li>
-    <li>Consider 2–3 sessions with a qualified personal trainer to learn safe technique</li>
-    <li>Progress gradually — aim to increase weight or repetitions modestly each week</li>
-  </ul>
-
-  <!-- SECTION 9 -->
-  <h2 class="section-title">9. Hydration</h2>
-
-  <p>When appetite is suppressed, thirst is often suppressed along with it. Dehydration is one of the most common and most preventable reasons patients experience worsened nausea, fatigue, constipation, and headaches.</p>
-
-  <h3 class="sub-title">Daily Targets</h3>
-  <ul>
-    <li><strong>Minimum: 2.0–2.5 litres of water daily</strong> for most adults</li>
-    <li>Increase in warm weather, during exercise, or if experiencing vomiting or diarrhoea</li>
-    <li>Plain water is best; herbal teas, electrolyte drinks, and clear broths also count</li>
-  </ul>
-
-  <h3 class="sub-title">Signs of Dehydration — Act on These</h3>
-  <p><strong>Mild to moderate:</strong> Dark yellow urine · Urinating fewer than 3–4 times per day · Dry mouth · Headache · Fatigue</p>
-  <div class="callout warning">
-    <strong>Severe — contact clinic or seek emergency care:</strong> Minimal or no urine output for more than 8 hours · Dizziness on standing · Confusion or disorientation · Rapid heart rate with dizziness
-  </div>
-
-  <h3 class="sub-title">Practical Tips</h3>
-  <ul>
-    <li>Keep a water bottle visible at all times</li>
-    <li>Set phone reminders — 250ml per hour across 8–10 waking hours is a simple target</li>
-    <li>Check urine colour each morning: pale yellow = good, dark yellow = drink more</li>
-    <li>If nausea makes large volumes difficult, sip small amounts frequently</li>
-  </ul>
-
-  <!-- SECTION 10 -->
-  <h2 class="section-title">10. Nutrition Beyond Protein</h2>
-
-  <h3 class="sub-title">Total Caloric Intake — Don't Under-Eat</h3>
-  <p>Extreme caloric restriction (below ~1,000–1,200 kcal/day) accelerates muscle loss, causes nutrient deficiencies, and is not sustainable. <strong>Aim for a moderate caloric deficit — typically 500–750 kcal below maintenance — rather than near-starvation intake.</strong></p>
-
-  <h3 class="sub-title">Fibre</h3>
-  <p>Aim for 25–35g of dietary fibre daily. Good sources: leafy greens, broccoli, carrots, lentils, beans, oats, quinoa, chia seeds. Increase fibre gradually to avoid worsening bloating.</p>
-
-  <h3 class="sub-title">Micronutrients to Monitor</h3>
-  <ul>
-    <li><strong>Vitamin D and calcium</strong> — bone health; supplement if diet is insufficient</li>
-    <li><strong>B vitamins (B12)</strong> — at risk if animal product intake drops</li>
-    <li><strong>Iron and zinc</strong> — important if red meat consumption decreases</li>
-    <li><strong>Magnesium</strong> — deficiency contributes to constipation, cramps, poor sleep</li>
-    <li><strong>Electrolytes</strong> — at risk during vomiting or diarrhoea</li>
-  </ul>
-  <p><em>A general-purpose multivitamin and vitamin D supplement are reasonable for most patients during active weight loss.</em></p>
-
-  <h3 class="sub-title">Foods to Limit During Adjustment</h3>
-  <ul>
-    <li><strong>High-fat foods</strong> — worsen nausea and delay gastric emptying further</li>
-    <li><strong>Alcohol</strong> — reduces food choice inhibitions, contributes empty calories, worsens GI side effects</li>
-    <li><strong>Highly processed foods</strong> — low nutrient density; poor value when total volume is reduced</li>
-    <li><strong>Carbonated beverages</strong> — can worsen bloating and nausea</li>
-  </ul>
-
-</div>
-
-<div class="page content">
-
-  <div class="clinic-header">
-    <div class="clinic-name">Élan Clinic <span>GLP-1 Patient Guide — Detailed Reference</span></div>
-    <div class="clinic-contact">+372 52 99939 · info@elan.clinic</div>
-  </div>
-
-  <!-- SECTION 11 -->
-  <h2 class="section-title">11. Stopping or Tapering the Medication</h2>
-
-  <div class="callout warning">
-    <strong>Do not stop abruptly without physician guidance.</strong> GLP-1 medications are actively suppressing appetite and supporting metabolic function. Stopping without adequate lifestyle consolidation carries a high risk of rapid weight regain.
-  </div>
-
-  <h3 class="sub-title">When Stopping May Be Considered</h3>
-  <ul>
-    <li>Pregnancy planning (discontinue before conception; discuss timing with physician)</li>
-    <li>Significant adverse effects that cannot be managed</li>
-    <li>Achievement of weight and metabolic goals with solid lifestyle foundations established</li>
-    <li>Cost or access issues — always discuss alternatives before stopping</li>
-  </ul>
-
-  <p>Dose reduction (rather than abrupt discontinuation) is generally preferred. Your physician will guide this process. The lifestyle habits you have built — protein intake, resistance training, hydration, meal structure — become your primary tools after stopping. This is why those habits must be established during treatment.</p>
-
-  <!-- SECTION 12 -->
-  <h2 class="section-title">12. Weight Regain — The Honest Conversation</h2>
-
-  <h3 class="sub-title">The Evidence</h3>
-  <ul>
-    <li><strong>STEP 4 trial (semaglutide):</strong> Patients who discontinued regained, on average, two-thirds of lost weight within one year.</li>
-    <li><strong>2022 analysis:</strong> ~67% of weight lost during treatment is regained within 12 months of stopping in patients without significant lifestyle changes.</li>
-  </ul>
-
-  <div class="callout">
-    This is not a personal failure — it reflects the biology of obesity. The hormonal drivers of weight gain reassert themselves when medication is removed, unless counterbalanced by consolidated lifestyle habits.
-  </div>
-
-  <p><strong>The medication is a tool, not a cure.</strong> For most patients, long-term treatment — continuous or in a maintenance protocol — is necessary for sustained weight management, similar to how antihypertensives are used long-term for blood pressure.</p>
-
-  <p>Your physician will discuss the appropriate long-term strategy: continued treatment, a reduced maintenance dose, or a monitored period off medication with clear re-initiation criteria.</p>
-
-  <!-- SECTION 13 -->
-  <h2 class="section-title">13. Follow-Up Schedule and Contact</h2>
-
-  <table class="protein-table">
-    <tr>
-      <th>Timepoint</th>
-      <th>What Happens</th>
-    </tr>
-    <tr>
-      <td><strong>4 weeks</strong></td>
-      <td>Side effect review · dose adjustment assessment · protein and exercise check</td>
-    </tr>
-    <tr>
-      <td><strong>3 months</strong></td>
-      <td>Progress review · bloodwork (glucose, HbA1c, lipids, liver enzymes, kidney function) · dose optimisation</td>
-    </tr>
-    <tr>
-      <td><strong>6 months</strong></td>
-      <td>Comprehensive metabolic assessment · long-term strategy evaluation</td>
-    </tr>
-    <tr>
-      <td><strong>12 months</strong></td>
-      <td>Full review: outcomes, lifestyle consolidation, long-term plan decision</td>
-    </tr>
-  </table>
-
-  <h3 class="sub-title">Contact Us Between Appointments If You Have</h3>
-  <ul>
-    <li>Side effects worsening after the first 2–4 weeks</li>
-    <li>Inability to consistently meet protein targets</li>
-    <li>Weight plateau lasting more than 4–6 weeks at a stable dose</li>
-    <li>New medications prescribed by another physician</li>
-    <li>Pregnancy or planning for pregnancy</li>
-    <li>Any of the red flags listed on page 1</li>
-  </ul>
-
-  <div class="red-flags" style="margin-top:20px;">
-    <div class="red-flags-title">📋 Contact Élan Clinic</div>
-    <div class="red-flags-body" style="background:#f0f7f4;">
-      <p style="margin:0;font-size:10.5pt;"><strong>Élan Clinic</strong><br>
-      Sepapaja 12/1, Tallinn 11415<br>
-      📞 <strong>+372 52 99939</strong><br>
-      📧 <a href="mailto:info@elan.clinic">info@elan.clinic</a><br><br>
-      <em>For urgent medical concerns outside clinic hours, call <strong>112</strong> or go to the nearest emergency department.</em></p>
-    </div>
-  </div>
-
-  <!-- DR NOTE -->
-  <div class="dr-note" style="margin-top:24px;">
-    <p>I prescribe GLP-1 medications because the evidence supports them — and because I have lived the experience of significant weight loss myself. I understand both the hope and the complexity that comes with this treatment.</p>
-    <p>This medication gives your body a genuine metabolic advantage. What you do with that advantage — in terms of building protein intake habits, committing to resistance training, staying hydrated, and attending follow-ups — will determine whether the results are temporary or lasting.</p>
-    <p>You are not in this alone. We will adjust, troubleshoot, and plan alongside you at every step.</p>
-    <div class="signature">
-      Dr. Ingmar Lindström<br>
-      <span style="font-weight:normal;font-size:9.5pt;color:#555;">Family Medicine Specialist · Élan Clinic, Tallinn</span>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <div class="doc-footer">
-    This guide is a clinical educational resource. It does not replace individualised medical advice. Your specific dosing schedule, targets, and monitoring plan have been determined by your prescribing physician based on your personal clinical profile. Always discuss questions about your individual treatment with your physician.<br><br>
-    <strong>Version 1.0 — March 2026 — Élan Clinic</strong>
-  </div>
-
-</div>
-
 </body>
 </html>
