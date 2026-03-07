@@ -956,6 +956,168 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     @media (max-width: 480px) {
       .steps { grid-template-columns: 1fr; }
     }
+
+    /* --- Trust Badges Strip ----------------------------------------- */
+    .trust-strip {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(197, 165, 90, 0.15);
+    }
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.78rem;
+      color: rgba(232, 228, 222, 0.55);
+    }
+    .trust-badge__icon {
+      font-size: 1.1rem;
+      color: #C5A55A;
+    }
+    .trust-badge strong {
+      color: rgba(232, 228, 222, 0.8);
+    }
+
+    /* --- Why Tallinn Section ---------------------------------------- */
+    .why-tallinn {
+      background: #111D2E;
+    }
+    .why-tallinn__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 48px;
+    }
+    .why-card {
+      padding: 40px 36px;
+      background: #0D1B2A;
+      border-top: 2px solid rgba(197, 165, 90, 0.3);
+    }
+    .why-card__icon { font-size: 1.8rem; margin-bottom: 16px; }
+    .why-card h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #E8E4DE;
+      margin-bottom: 10px;
+    }
+    .why-card p { font-size: 0.87rem; margin: 0; }
+    .travel-info {
+      margin-top: 48px;
+      padding: 40px;
+      background: rgba(197, 165, 90, 0.05);
+      border: 1px solid rgba(197, 165, 90, 0.2);
+    }
+    .travel-info h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #C5A55A;
+      margin-bottom: 20px;
+    }
+    .travel-info__list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 40px;
+    }
+    .travel-info__list li {
+      font-size: 0.87rem;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(232, 228, 222, 0.06);
+      display: flex;
+      gap: 8px;
+    }
+    .travel-info__list li::before {
+      content: '→';
+      color: #C5A55A;
+      flex-shrink: 0;
+    }
+    @media (max-width: 768px) {
+      .why-tallinn__grid { grid-template-columns: 1fr; }
+      .travel-info__list { grid-template-columns: 1fr; }
+      .travel-info { padding: 28px 24px; }
+      .trust-strip { gap: 16px; }
+    }
+
+    /* --- FAQ Section ------------------------------------------------- */
+    .faq {
+      background: #0D1B2A;
+    }
+    .faq__list {
+      margin-top: 48px;
+      max-width: 800px;
+    }
+    .faq__item {
+      border-bottom: 1px solid rgba(232, 228, 222, 0.08);
+    }
+    .faq__question {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 24px 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .faq__question span {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #E8E4DE;
+      line-height: 1.4;
+    }
+    .faq__chevron {
+      font-size: 1rem;
+      color: #C5A55A;
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+    .faq__item.open .faq__chevron {
+      transform: rotate(180deg);
+    }
+    .faq__answer {
+      display: none;
+      padding-bottom: 24px;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: rgba(232, 228, 222, 0.65);
+    }
+    .faq__item.open .faq__answer { display: block; }
+
+    /* --- Mid-page CTA strip ----------------------------------------- */
+    .cta-strip {
+      background: rgba(197, 165, 90, 0.06);
+      border-top: 1px solid rgba(197, 165, 90, 0.15);
+      border-bottom: 1px solid rgba(197, 165, 90, 0.15);
+      padding: 56px 24px;
+      text-align: center;
+    }
+    .cta-strip h3 {
+      font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+      margin-bottom: 8px;
+    }
+    .cta-strip p {
+      font-size: 0.9rem;
+      color: rgba(232, 228, 222, 0.55);
+      margin-bottom: 28px;
+    }
+    .cta-strip__actions {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
   </style>
 
   
@@ -1001,6 +1163,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="hero__actions">
         <a href="#ajanvaraus" class="btn btn--filled">Varaa alkukonsultaatio</a>
         <span class="hero__note">Painonhallinta 99 â‚¬/kk alkaen</span>
+      </div>
+      <div class="trust-strip">
+        <div class="trust-badge"><span class="trust-badge__icon">&#127467;&#127470;</span><span><strong>Suomenkielinen palvelu</strong> &mdash; konsultaatio suomeksi</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#9877;&#65039;</span><span>L&auml;&auml;ketieteellinen toimilupa <strong>L07470</strong> &middot; Elan Clinic O&Uuml; reg 17338832</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#128205;</span><span>Sepapaja 12/1, <strong>Tallinna</strong> &mdash; laivalla ~2 h Helsingist&auml;</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#128187;</span><span><strong>Et&auml;vastaanotto</strong> mahdollinen &mdash; ei matkan tarvetta</span></div>
       </div>
     </div>
   </section>
@@ -1051,6 +1219,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p>EnsimmÃ¤iset kuusi kuukautta GLP-1-lÃ¤Ã¤kityksen lopettamisen tai vÃ¤hentÃ¤misen jÃ¤lkeen ovat kriittisiÃ¤. Aineenvaihdunnan sopeutuminen kiihtyy. Lihasmassan menetys, hormonaalinen takaisku ja kÃ¤yttÃ¤ytymismallit muuttuvat joka pÃ¤ivÃ¤ vaikeammin palautettaviksi.</p>
         </div>
       </div>
+      <div class="trust-strip">
+        <div class="trust-badge"><span class="trust-badge__icon">&#127467;&#127470;</span><span><strong>Suomenkielinen palvelu</strong> &mdash; konsultaatio suomeksi</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#9877;&#65039;</span><span>L&auml;&auml;ketieteellinen toimilupa <strong>L07470</strong> &middot; Elan Clinic O&Uuml; reg 17338832</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#128205;</span><span>Sepapaja 12/1, <strong>Tallinna</strong> &mdash; laivalla ~2 h Helsingist&auml;</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#128187;</span><span><strong>Et&auml;vastaanotto</strong> mahdollinen &mdash; ei matkan tarvetta</span></div>
+      </div>
     </div>
   </section>
 
@@ -1083,6 +1257,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h3>KÃ¤yttÃ¤ytymisarkkitehtuuri</h3>
           <p>Psykologinen tukiverkosto, jonka GLP-1-lÃ¤Ã¤kkeet hiljaisesti tarjosivat â€” vÃ¤hentynyt ruokaan liittyvÃ¤ ajattelu, kyllÃ¤isyyssignaalit, kÃ¤yttÃ¤ytymismallit â€” tÃ¤ytyy rakentaa tietoisesti. Ohjelmamme kÃ¤sittelee kognitiivisia ja kÃ¤yttÃ¤ytymiseen liittyviÃ¤ puolia yhtÃ¤ vakavasti kuin fysiologisia.</p>
         </div>
+      </div>
+      <div class="trust-strip">
+        <div class="trust-badge"><span class="trust-badge__icon">&#127467;&#127470;</span><span><strong>Suomenkielinen palvelu</strong> &mdash; konsultaatio suomeksi</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#9877;&#65039;</span><span>L&auml;&auml;ketieteellinen toimilupa <strong>L07470</strong> &middot; Elan Clinic O&Uuml; reg 17338832</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#128205;</span><span>Sepapaja 12/1, <strong>Tallinna</strong> &mdash; laivalla ~2 h Helsingist&auml;</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#128187;</span><span><strong>Et&auml;vastaanotto</strong> mahdollinen &mdash; ei matkan tarvetta</span></div>
       </div>
     </div>
   </section>
@@ -1148,6 +1328,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </p>
         </div>
 
+      </div>
+      <div class="trust-strip">
+        <div class="trust-badge"><span class="trust-badge__icon">&#127467;&#127470;</span><span><strong>Suomenkielinen palvelu</strong> &mdash; konsultaatio suomeksi</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#9877;&#65039;</span><span>L&auml;&auml;ketieteellinen toimilupa <strong>L07470</strong> &middot; Elan Clinic O&Uuml; reg 17338832</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#128205;</span><span>Sepapaja 12/1, <strong>Tallinna</strong> &mdash; laivalla ~2 h Helsingist&auml;</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#128187;</span><span><strong>Et&auml;vastaanotto</strong> mahdollinen &mdash; ei matkan tarvetta</span></div>
       </div>
     </div>
   </section>
@@ -1245,6 +1431,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
       </div>
+      <div class="trust-strip">
+        <div class="trust-badge"><span class="trust-badge__icon">&#127467;&#127470;</span><span><strong>Suomenkielinen palvelu</strong> &mdash; konsultaatio suomeksi</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#9877;&#65039;</span><span>L&auml;&auml;ketieteellinen toimilupa <strong>L07470</strong> &middot; Elan Clinic O&Uuml; reg 17338832</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#128205;</span><span>Sepapaja 12/1, <strong>Tallinna</strong> &mdash; laivalla ~2 h Helsingist&auml;</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#128187;</span><span><strong>Et&auml;vastaanotto</strong> mahdollinen &mdash; ei matkan tarvetta</span></div>
+      </div>
     </div>
   </section>
 
@@ -1297,11 +1489,57 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a href="tel:+3725299939" class="btn">Soita &nbsp;+372 52 99939</a>
         </div>
       </div>
+      <div class="trust-strip">
+        <div class="trust-badge"><span class="trust-badge__icon">&#127467;&#127470;</span><span><strong>Suomenkielinen palvelu</strong> &mdash; konsultaatio suomeksi</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#9877;&#65039;</span><span>L&auml;&auml;ketieteellinen toimilupa <strong>L07470</strong> &middot; Elan Clinic O&Uuml; reg 17338832</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#128205;</span><span>Sepapaja 12/1, <strong>Tallinna</strong> &mdash; laivalla ~2 h Helsingist&auml;</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#128187;</span><span><strong>Et&auml;vastaanotto</strong> mahdollinen &mdash; ei matkan tarvetta</span></div>
+      </div>
     </div>
   </section>
 
 
   <!-- â”€â”€â”€ 7. Kokemuksia â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+  <!-- Why Tallinn section -->
+  <section class="section why-tallinn" id="miksi-tallinna">
+    <div class="container container--text">
+      <span class="label">Suomalaisille potilaille</span>
+      <h2>Miksi Tallinna? Kolme syyt&auml;.</h2>
+      <div class="gold-line"></div>
+      <p>Tuhansilla suomalaisilla on jo kokemusta Tallinnan yksityisterveydenhoidosta. &Eacute;lan Clinic tarjoaa j&auml;rjestelm&auml;llisen kliinisen ohjelman, jota ei yksinkertaisesti ole saatavilla vastaavaan hintaan Suomessa.</p>
+    </div>
+    <div class="container">
+      <div class="why-tallinn__grid">
+        <div class="why-card">
+          <div class="why-card__icon">&#128181;</div>
+          <h4>S&auml;&auml;st&ouml;t ovat merkitt&auml;v&auml;t</h4>
+          <p>Vastaava kliininen laadukkuus Suomessa maksaisi moninkertaisesti. Kaalukaitse Standard 99 &euro;/kk kattaa kuukausittaisen l&auml;&auml;k&auml;rik&auml;ynnin, verianalyysit ja henkil&ouml;kohtaisen protokollan.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card__icon">&#128674;</div>
+          <h4>L&auml;hell&auml; kuin luulet</h4>
+          <p>Helsinki&ndash;Tallinna laivalla noin 2&ndash;2,5 tuntia. Aamulla l&auml;hdet, k&auml;yt vastaanotolla, illalla kotona. Tai valitse et&auml;vastaanotto &mdash; ei matkan tarvetta lainkaan.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card__icon">&#9877;&#65039;</div>
+          <h4>Kliininen laatu, ei turistihoitola</h4>
+          <p>Dr. Lindstr&ouml;m on harjoittanut l&auml;&auml;ketiedett&auml; sek&auml; Virossa ett&auml; Suomessa yli 20 vuotta. T&auml;m&auml; ei ole halpaversio &mdash; se on sama kliininen standardi eri hintarakenteessa.</p>
+        </div>
+      </div>
+      <div class="travel-info">
+        <h4>K&auml;yt&auml;nn&ouml;n matkaohjeet Suomesta</h4>
+        <ul class="travel-info__list">
+          <li>Klinikan osoite: Sepapaja 12/1, Tallinna 11415, Viro</li>
+          <li>Taksi satamasta klinikalle: ~10&ndash;15 min</li>
+          <li>Helsinki&ndash;Tallinna laiva (Tallink/Viking): ~2&ndash;2,5 h</li>
+          <li>Parkki: saatavilla klinikan l&auml;hell&auml;</li>
+          <li>Alkukonsultaatio my&ouml;s et&auml;n&auml; &mdash; vain ensiarviointi tarvitsee k&auml;ynnin</li>
+          <li>Puhelin / WhatsApp: +372 52 99939</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section class="section testimonials" id="kokemuksia">
     <div class="container container--text">
       <span class="label">Potilaiden kokemuksia</span>
@@ -1345,6 +1583,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
+      <div class="trust-strip">
+        <div class="trust-badge"><span class="trust-badge__icon">&#127467;&#127470;</span><span><strong>Suomenkielinen palvelu</strong> &mdash; konsultaatio suomeksi</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#9877;&#65039;</span><span>L&auml;&auml;ketieteellinen toimilupa <strong>L07470</strong> &middot; Elan Clinic O&Uuml; reg 17338832</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#128205;</span><span>Sepapaja 12/1, <strong>Tallinna</strong> &mdash; laivalla ~2 h Helsingist&auml;</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#128187;</span><span><strong>Et&auml;vastaanotto</strong> mahdollinen &mdash; ei matkan tarvetta</span></div>
+      </div>
     </div>
   </section>
 
@@ -1380,11 +1624,99 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p>SÃ¤Ã¤nnÃ¶llinen lÃ¤Ã¤kÃ¤rikontakti, automaattiset seurannat kÃ¤yntien vÃ¤lillÃ¤, neljÃ¤nnesvuosittaiset verianalyysien katsaukset ja protokollan muutokset markkereiden kehityksen mukaan. JÃ¤rjestelmÃ¤ on rakennettu proaktiiviseksi â€” ei reagoimaan ongelmiin niiden ilmaantuessa.</p>
         </div>
       </div>
+      <div class="trust-strip">
+        <div class="trust-badge"><span class="trust-badge__icon">&#127467;&#127470;</span><span><strong>Suomenkielinen palvelu</strong> &mdash; konsultaatio suomeksi</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#9877;&#65039;</span><span>L&auml;&auml;ketieteellinen toimilupa <strong>L07470</strong> &middot; Elan Clinic O&Uuml; reg 17338832</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#128205;</span><span>Sepapaja 12/1, <strong>Tallinna</strong> &mdash; laivalla ~2 h Helsingist&auml;</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#128187;</span><span><strong>Et&auml;vastaanotto</strong> mahdollinen &mdash; ei matkan tarvetta</span></div>
+      </div>
     </div>
   </section>
 
 
   <!-- â”€â”€â”€ 9. Vasta laihduttamista suunnitteleville â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+  <!-- FAQ section for Finnish visitors -->
+  <section class="section faq" id="ukk-suomi">
+    <div class="container">
+      <span class="label">Usein kysytyt kysymykset</span>
+      <h2>Suomalaisten yleisimm&auml;t kysymykset</h2>
+      <div class="gold-line"></div>
+      <div class="faq__list">
+
+        <div class="faq__item open">
+          <button class="faq__question" onclick="this.parentElement.classList.toggle('open')">
+            <span>Palvellaanko minua suomeksi?</span>
+            <span class="faq__chevron">&#9660;</span>
+          </button>
+          <div class="faq__answer">
+            <p>Kyll&auml;. Dr. Lindstr&ouml;m on harjoittanut l&auml;&auml;ketiedett&auml; my&ouml;s Suomessa ja puhuu suomea sujuvasti. Konsultaatio voidaan pit&auml;&auml; kokonaan suomeksi.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" onclick="this.parentElement.classList.toggle('open')">
+            <span>Voiko k&auml;yntej&auml; tehd&auml; et&auml;n&auml;, vai pit&auml;&auml;k&ouml; tulla Tallinnaan?</span>
+            <span class="faq__chevron">&#9660;</span>
+          </button>
+          <div class="faq__answer">
+            <p>Et&auml;vastaanotto on mahdollinen suurimmalle osalle seurantak&auml;ynneist&auml;. Alkukonsultaatio (45 min, 95 &euro;) voidaan my&ouml;s pit&auml;&auml; et&auml;n&auml;. Kliininen arviointi &mdash; verianalyysit ja kehonkoostumusmittaus &mdash; vaatii fyysisen k&auml;ynnin. Useimmille riitt&auml;&auml; 1&ndash;2 k&auml;ynti&auml; vuodessa Tallinnassa.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" onclick="this.parentElement.classList.toggle('open')">
+            <span>Pit&auml;&auml;k&ouml; minulla olla GLP-1-l&auml;&auml;kitystausta?</span>
+            <span class="faq__chevron">&#9660;</span>
+          </button>
+          <div class="faq__answer">
+            <p>Ei v&auml;ltt&auml;m&auml;tt&auml;. Ohjelma sopii henkil&ouml;lle, joka on laihtunut merkitt&auml;v&auml;sti &mdash; l&auml;&auml;kityksell&auml; tai ilman &mdash; ja haluaa pitkj&auml;aikaisen tuen painon yll&auml;pit&auml;miseksi. Alkukonsultaatiossa kartoitetaan tilanteesi ja selvitet&auml;&auml;n sopivin ohjelma.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" onclick="this.parentElement.classList.toggle('open')">
+            <span>Paljonko alkukonsultaatio maksaa ja mit&auml; siin&auml; tapahtuu?</span>
+            <span class="faq__chevron">&#9660;</span>
+          </button>
+          <div class="faq__answer">
+            <p>Alkukonsultaatio on 45 minuuttia ja maksaa <strong>95 &euro;</strong>. K&auml;ymme l&auml;pi painohistoriasi, GLP-1-taustan (jos on), metaboliset tavoitteet ja soveltuvuuden ohjelmaan. Konsultaation lopussa tied&auml;t tarkalleen, mik&auml; ohjelma sopii sinulle ja miten protokollasi rakennetaan.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" onclick="this.parentElement.classList.toggle('open')">
+            <span>Kuinka nopeasti saan ajan?</span>
+            <span class="faq__chevron">&#9660;</span>
+          </button>
+          <div class="faq__answer">
+            <p>Yleens&auml; 1&ndash;2 viikon sis&auml;ll&auml;. Soita (+372 52 99939) tai l&auml;het&auml; s&auml;hk&ouml;postia (info@elan.clinic), ja koordinaattori Eva-Maria j&auml;rjest&auml;&auml; ajan.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" onclick="this.parentElement.classList.toggle('open')">
+            <span>Korvataanko hoito Suomen sairasvakuutuksesta?</span>
+            <span class="faq__chevron">&#9660;</span>
+          </button>
+          <div class="faq__answer">
+            <p>Kela-korvaus EU-maiden yksityisl&auml;&auml;k&auml;ripalveluista on mahdollinen, mutta k&auml;yt&auml;nn&ouml;ss&auml; rajallinen. Suosittelemme tarkistamaan tilanteen Kelasta etuk&auml;teen. Annamme asianmukaiset hoitoasiakirjat korvausanomusta varten.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" onclick="this.parentElement.classList.toggle('open')">
+            <span>Mit&auml; verikokeita ja mittauksia teette?</span>
+            <span class="faq__chevron">&#9660;</span>
+          </button>
+          <div class="faq__answer">
+            <p>Standardiohjelmaan kuuluu neljj&auml;nnesvuosittain: paasto-verensokeri, HbA1c, insuliini, maksa-arvot, kilpirauhanen, rasva-arvot sek&auml; kehonkoostumusmittaus. Premium-ohjelmassa lis&auml;ksi DEXA-skannaus. Kaikki protokollaratkaisut perustuvat n&auml;ihin arvoihin.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <section class="section weight-loss-seekers" id="laihdutus">
     <div class="container">
       <div class="weight-loss-seekers__inner">
@@ -1401,6 +1733,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           Ja kun olet saavuttanut tavoitteesi? Silloin me olemme tÃ¤Ã¤llÃ¤ auttamassa pitÃ¤mÃ¤Ã¤n tuloksen. SillÃ¤ todellinen haaste ei ole laihtuminen â€” se on painon pitÃ¤minen alhaalla. Odotamme sinua.
         </p>
       </div>
+      <div class="trust-strip">
+        <div class="trust-badge"><span class="trust-badge__icon">&#127467;&#127470;</span><span><strong>Suomenkielinen palvelu</strong> &mdash; konsultaatio suomeksi</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#9877;&#65039;</span><span>L&auml;&auml;ketieteellinen toimilupa <strong>L07470</strong> &middot; Elan Clinic O&Uuml; reg 17338832</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#128205;</span><span>Sepapaja 12/1, <strong>Tallinna</strong> &mdash; laivalla ~2 h Helsingist&auml;</span></div>
+        <div class="trust-badge"><span class="trust-badge__icon">&#128187;</span><span><strong>Et&auml;vastaanotto</strong> mahdollinen &mdash; ei matkan tarvetta</span></div>
+      </div>
     </div>
   </section>
 
@@ -1413,6 +1751,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       Konsultaatio kestÃ¤Ã¤ 45 minuuttia. Sen lopussa tiedÃ¤t, sopiiko Kaalukaitse sinulle â€” ja jos sopii, tarkalleen miten protokollasi rakennetaan. Hinta 95 â‚¬.
     </p>
     <a href="tel:+3725299939" class="btn btn--filled">Soita +372 52 99939</a>
+    <a href="https://wa.me/3725299939" class="btn" style="margin-top:12px;">WhatsApp</a>
 
     <div class="footer-cta__contact">
       <div class="footer-cta__contact-item">
