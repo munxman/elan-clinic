@@ -1,58 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="ÉLAN CLINIC — The GLP-1 Nutrition Gap cover">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="ÉLAN CLINIC — The GLP-1 Nutrition Gap">
   <defs>
-    <style>
-      :root{--navy:#1a2332;--gold:#c9a96e;--white:#ffffff;}
-      .bg{fill:var(--navy);} 
-      .gold{fill:var(--gold);} 
-      .stroke-gold{stroke:var(--gold);stroke-width:12;stroke-linecap:round;stroke-linejoin:round;fill:none;}
-      .stroke-white{stroke:var(--white);stroke-width:10;stroke-linecap:round;stroke-linejoin:round;fill:none;opacity:.95;}
-      .kicker{font: 600 28px/1.1 system-ui, -apple-system, Segoe UI, Inter, Roboto, Arial, sans-serif; letter-spacing: .22em;}
-      .title{font: 800 76px/1.05 system-ui, -apple-system, Segoe UI, Inter, Roboto, Arial, sans-serif; letter-spacing: .01em;}
-      .author{font: 600 30px/1.1 system-ui, -apple-system, Segoe UI, Inter, Roboto, Arial, sans-serif; opacity:.92;}
-      .badgeText{font: 800 28px/1 system-ui, -apple-system, Segoe UI, Inter, Roboto, Arial, sans-serif; letter-spacing:.08em;}
-      .subtle{opacity:.18;}
-    </style>
-    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#c9a96e" stop-opacity=".30"/>
-      <stop offset="1" stop-color="#c9a96e" stop-opacity="0"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a2332"/>
+      <stop offset="1" stop-color="#0f1622"/>
     </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
   </defs>
 
-  <rect class="bg" x="0" y="0" width="1280" height="720"/>
-  <circle cx="1020" cy="140" r="360" fill="url(#glow)"/>
-  <path class="subtle" d="M0,600 C240,520 420,670 650,590 C880,510 1040,630 1280,545 L1280,720 L0,720 Z" fill="#ffffff"/>
+  <rect width="1280" height="720" fill="url(#bg)"/>
 
-  <text x="80" y="96" class="kicker" fill="#ffffff">ÉLAN CLINIC</text>
+  <rect x="56" y="56" width="1168" height="608" fill="none" stroke="#c9a96e" stroke-width="3" opacity="0.75"/>
+  <rect x="78" y="78" width="1124" height="564" fill="none" stroke="#c9a96e" stroke-width="1.5" opacity="0.35"/>
 
-  <!-- Icon: plate + nutrients -->
-  <g transform="translate(830 240)">
-    <circle cx="170" cy="170" r="150" class="stroke-gold"/>
-    <circle cx="170" cy="170" r="95" class="stroke-white"/>
-    <!-- nutrients dots -->
-    <g fill="#c9a96e" opacity=".9">
-      <circle cx="105" cy="145" r="10"/>
-      <circle cx="155" cy="120" r="10"/>
-      <circle cx="210" cy="150" r="10"/>
-      <circle cx="130" cy="200" r="10"/>
-      <circle cx="190" cy="210" r="10"/>
-    </g>
-    <!-- fork (left) -->
-    <path d="M-10 70 L-10 250" class="stroke-gold"/>
-    <path d="M-35 70 L15 70" class="stroke-gold"/>
-    <path d="M-28 95 L-28 70" class="stroke-gold"/>
-    <path d="M-10 95 L-10 70" class="stroke-gold"/>
-    <path d="M8 95 L8 70" class="stroke-gold"/>
-    <!-- knife (right) -->
-    <path d="M350 70 C320 120 320 200 350 250" class="stroke-gold"/>
+  <text x="96" y="120" fill="#ffffff" font-family="ui-sans-serif, -apple-system, Segoe UI, Inter, Arial" font-size="34" font-weight="700" letter-spacing="6">ÉLAN CLINIC</text>
+  <line x1="96" y1="140" x2="420" y2="140" stroke="#c9a96e" stroke-width="3" opacity="0.9"/>
+
+  <!-- Price badge -->
+  <g transform="translate(1040 72)" filter="url(#softShadow)">
+    <rect x="0" y="0" rx="18" ry="18" width="168" height="64" fill="#c9a96e"/>
+    <text x="84" y="43" text-anchor="middle" fill="#1a2332" font-family="ui-sans-serif, -apple-system, Segoe UI, Inter, Arial" font-size="30" font-weight="800">€29</text>
   </g>
 
-  <text x="80" y="318" class="title" fill="#ffffff">The GLP-1</text>
-  <text x="80" y="402" class="title" fill="#ffffff">Nutrition Gap</text>
-
-  <text x="80" y="650" class="author" fill="#ffffff">Dr. Ingmar Lindström, MD</text>
-
-  <g transform="translate(1030 560)">
-    <rect x="0" y="0" width="190" height="74" rx="16" class="gold"/>
-    <text x="95" y="48" text-anchor="middle" class="badgeText" fill="#1a2332">PRICE</text>
+  <!-- Icon: Plate + leaf -->
+  <g transform="translate(160 240)" filter="url(#softShadow)">
+    <!-- plate -->
+    <circle cx="120" cy="120" r="108" fill="none" stroke="#c9a96e" stroke-width="6"/>
+    <circle cx="120" cy="120" r="74" fill="#ffffff" opacity="0.06" stroke="#c9a96e" stroke-width="4"/>
+    <!-- fork/knife hint -->
+    <line x1="28" y1="70" x2="28" y2="170" stroke="#c9a96e" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+    <line x1="212" y1="70" x2="212" y2="170" stroke="#c9a96e" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+    <!-- leaf -->
+    <path d="M140 70 C190 75, 206 118, 176 154 C150 186, 106 178, 102 132 C98 90, 120 72, 140 70 Z" fill="#c9a96e" opacity="0.55"/>
+    <path d="M116 152 C140 136, 166 112, 184 88" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.7" stroke-linecap="round"/>
   </g>
+
+  <!-- Title -->
+  <text x="640" y="350" text-anchor="middle" fill="#ffffff" font-family="ui-sans-serif, -apple-system, Segoe UI, Inter, Arial" font-size="72" font-weight="800">The GLP-1 Nutrition Gap</text>
+  <text x="640" y="400" text-anchor="middle" fill="#c9a96e" font-family="ui-sans-serif, -apple-system, Segoe UI, Inter, Arial" font-size="22" font-weight="600" letter-spacing="2">WHAT MOST PLANS MISS</text>
+
+  <line x1="96" y1="596" x2="1184" y2="596" stroke="#c9a96e" stroke-width="2" opacity="0.45"/>
+  <text x="96" y="644" fill="#ffffff" font-family="ui-sans-serif, -apple-system, Segoe UI, Inter, Arial" font-size="26" font-weight="600" opacity="0.92">Dr. Ingmar Lindström, MD</text>
 </svg>
