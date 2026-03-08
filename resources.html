@@ -171,6 +171,21 @@
       color: #C5A55A;
     }
 
+    .nav__link {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: rgba(232, 228, 222, 0.75);
+      margin-left: auto;
+      margin-right: 18px;
+    }
+
+    .nav__link:hover {
+      color: #C5A55A;
+      text-decoration: none;
+    }
+
     .nav__cta {
       font-size: 0.75rem;
       letter-spacing: 0.12em;
@@ -472,6 +487,7 @@
     /* ─── Responsive ───────────────────────────────────────────────── */
     @media (max-width: 768px) {
       .section { padding: 80px 0; }
+      .nav__link { display: none; }
       .nav__cta { display: none; }
       .page-hero { padding: 120px 0 60px; }
       .free-tools__grid { grid-template-columns: 1fr; }
@@ -498,6 +514,7 @@
   <!-- ─── Navigation ─────────────────────────────────────────────── -->
   <nav class="nav">
     <a href="/" class="nav__logo">Élan<span>.</span></a>
+    <a href="/resources.html" class="nav__link">Resources</a>
     <a href="/#consultation" class="btn nav__cta">Start With a Consultation</a>
   </nav>
 
