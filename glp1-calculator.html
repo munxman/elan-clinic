@@ -428,6 +428,99 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       margin-bottom: 28px;
     }
 
+    /* ── Email capture ── */
+    .lead-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(197, 165, 90, 0.2);
+      padding: 32px;
+      margin: 22px 0 28px;
+      text-align: left;
+    }
+
+    .lead-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      color: rgba(232, 228, 222, 0.95);
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .lead-box p.subtitle {
+      font-size: 0.92rem;
+      color: rgba(232, 228, 222, 0.6);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .lead-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 540px) {
+      .lead-box { padding: 24px 18px; }
+      .lead-form { grid-template-columns: 1fr; }
+    }
+
+    .lead-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .lead-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(232, 228, 222, 0.45);
+    }
+
+    .lead-input {
+      width: 100%;
+      padding: 14px 14px;
+      border: 1.5px solid rgba(197, 165, 90, 0.22);
+      background: rgba(13, 27, 42, 0.35);
+      color: rgba(232, 228, 222, 0.9);
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+    }
+
+    .lead-input:focus {
+      border-color: rgba(197, 165, 90, 0.7);
+      background: rgba(13, 27, 42, 0.55);
+    }
+
+    .lead-actions {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .lead-note {
+      grid-column: 1 / -1;
+      margin-top: 10px;
+      font-size: 0.75rem;
+      color: rgba(232, 228, 222, 0.45);
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .lead-success {
+      display: none;
+      border: 1px solid rgba(197, 165, 90, 0.35);
+      background: rgba(197, 165, 90, 0.08);
+      padding: 14px 16px;
+      margin-top: 14px;
+      text-align: center;
+      color: rgba(232, 228, 222, 0.85);
+      letter-spacing: 0.04em;
+    }
+
     .cta-box h3 {
       font-family: 'Playfair Display', serif;
       font-size: 1.2rem;
@@ -545,6 +638,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <p class="results-body" id="results-body"></p>
 
       <div class="indicators" id="indicators"></div>
+
+      <!-- Email capture (shown after results) -->
+      <div class="lead-box" id="lead-box">
+        <h3>Get Your Personalized GLP-1 Action Plan</h3>
+        <p class="subtitle">We'll send you a free guide based on your results</p>
+
+        <form class="lead-form" id="lead-form">
+          <div class="lead-field">
+            <label class="lead-label" for="lead-name">Name (optional)</label>
+            <input class="lead-input" id="lead-name" name="name" type="text" autocomplete="name" />
+          </div>
+
+          <div class="lead-field">
+            <label class="lead-label" for="lead-email">Email</label>
+            <input class="lead-input" id="lead-email" name="email" type="email" autocomplete="email" required />
+          </div>
+
+          <div class="lead-actions">
+            <button class="btn btn--large" type="submit">Send My Free Guide</button>
+          </div>
+
+          <div class="lead-note">No spam. Unsubscribe anytime. Your data stays private.</div>
+          <div class="lead-success" id="lead-success">Check your inbox!</div>
+        </form>
+      </div>
 
       <div class="cta-box">
         <h3>Ready to take the next step?</h3>
@@ -927,6 +1045,9 @@ function showResults() {
   }, 400);
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  // Initialise lead capture (after results are visible)
+  initLeadCapture({ score, tier });
 }
 
 function trackCTA() {
@@ -936,6 +1057,60 @@ function trackCTA() {
       location: 'results_page'
     });
   }
+}
+
+// ── Lead capture ───────────────────────────────────────────────────────────
+function initLeadCapture(context) {
+  const form = $('lead-form');
+  const success = $('lead-success');
+
+  if (!form || !success) return;
+
+  // Prevent double-binding if showResults is triggered again
+  if (form.dataset.bound === 'true') return;
+  form.dataset.bound = 'true';
+
+  // If already submitted, show success state
+  try {
+    const existing = localStorage.getItem('elan_glp1_lead');
+    if (existing) {
+      success.style.display = 'block';
+      form.querySelectorAll('input, button').forEach(el => el.disabled = true);
+      return;
+    }
+  } catch (e) {}
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = ($('lead-name')?.value || '').trim();
+    const email = ($('lead-email')?.value || '').trim();
+    if (!email) return;
+
+    const payload = {
+      name,
+      email,
+      context,
+      answers,
+      submittedAt: new Date().toISOString(),
+      source: 'glp1-calculator'
+    };
+
+    try {
+      localStorage.setItem('elan_glp1_lead', JSON.stringify(payload));
+    } catch (err) {}
+
+    if (window.dataLayer) {
+      window.dataLayer.push({
+        event: 'glp1_lead_submit',
+        score: context?.score,
+        tier: context?.tier
+      });
+    }
+
+    success.style.display = 'block';
+    form.querySelectorAll('input, button').forEach(el => el.disabled = true);
+  });
 }
 
 // ── Init ───────────────────────────────────────────────────────────────────
