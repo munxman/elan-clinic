@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="ÉLAN CLINIC — The GLP-1 Nutrition Gap cover">
+  <defs>
+    <style>
+      :root{--navy:#1a2332;--gold:#c9a96e;--white:#ffffff;}
+      .bg{fill:var(--navy);} 
+      .gold{fill:var(--gold);} 
+      .stroke-gold{stroke:var(--gold);stroke-width:12;stroke-linecap:round;stroke-linejoin:round;fill:none;}
+      .stroke-white{stroke:var(--white);stroke-width:10;stroke-linecap:round;stroke-linejoin:round;fill:none;opacity:.95;}
+      .kicker{font: 600 28px/1.1 system-ui, -apple-system, Segoe UI, Inter, Roboto, Arial, sans-serif; letter-spacing: .22em;}
+      .title{font: 800 76px/1.05 system-ui, -apple-system, Segoe UI, Inter, Roboto, Arial, sans-serif; letter-spacing: .01em;}
+      .author{font: 600 30px/1.1 system-ui, -apple-system, Segoe UI, Inter, Roboto, Arial, sans-serif; opacity:.92;}
+      .badgeText{font: 800 28px/1 system-ui, -apple-system, Segoe UI, Inter, Roboto, Arial, sans-serif; letter-spacing:.08em;}
+      .subtle{opacity:.18;}
+    </style>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c9a96e" stop-opacity=".30"/>
+      <stop offset="1" stop-color="#c9a96e" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1280" height="720"/>
+  <circle cx="1020" cy="140" r="360" fill="url(#glow)"/>
+  <path class="subtle" d="M0,600 C240,520 420,670 650,590 C880,510 1040,630 1280,545 L1280,720 L0,720 Z" fill="#ffffff"/>
+
+  <text x="80" y="96" class="kicker" fill="#ffffff">ÉLAN CLINIC</text>
+
+  <!-- Icon: plate + nutrients -->
+  <g transform="translate(830 240)">
+    <circle cx="170" cy="170" r="150" class="stroke-gold"/>
+    <circle cx="170" cy="170" r="95" class="stroke-white"/>
+    <!-- nutrients dots -->
+    <g fill="#c9a96e" opacity=".9">
+      <circle cx="105" cy="145" r="10"/>
+      <circle cx="155" cy="120" r="10"/>
+      <circle cx="210" cy="150" r="10"/>
+      <circle cx="130" cy="200" r="10"/>
+      <circle cx="190" cy="210" r="10"/>
+    </g>
+    <!-- fork (left) -->
+    <path d="M-10 70 L-10 250" class="stroke-gold"/>
+    <path d="M-35 70 L15 70" class="stroke-gold"/>
+    <path d="M-28 95 L-28 70" class="stroke-gold"/>
+    <path d="M-10 95 L-10 70" class="stroke-gold"/>
+    <path d="M8 95 L8 70" class="stroke-gold"/>
+    <!-- knife (right) -->
+    <path d="M350 70 C320 120 320 200 350 250" class="stroke-gold"/>
+  </g>
+
+  <text x="80" y="318" class="title" fill="#ffffff">The GLP-1</text>
+  <text x="80" y="402" class="title" fill="#ffffff">Nutrition Gap</text>
+
+  <text x="80" y="650" class="author" fill="#ffffff">Dr. Ingmar Lindström, MD</text>
+
+  <g transform="translate(1030 560)">
+    <rect x="0" y="0" width="190" height="74" rx="16" class="gold"/>
+    <text x="95" y="48" text-anchor="middle" class="badgeText" fill="#1a2332">PRICE</text>
+  </g>
+</svg>

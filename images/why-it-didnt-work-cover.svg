@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="ÉLAN CLINIC — Why It Didn't Work cover">
+  <defs>
+    <style>
+      :root{--navy:#1a2332;--gold:#c9a96e;--white:#ffffff;}
+      .bg{fill:var(--navy);} 
+      .gold{fill:var(--gold);} 
+      .stroke-gold{stroke:var(--gold);stroke-width:12;stroke-linecap:round;stroke-linejoin:round;fill:none;}
+      .stroke-white{stroke:var(--white);stroke-width:10;stroke-linecap:round;stroke-linejoin:round;fill:none;opacity:.95;}
+      .kicker{font: 600 28px/1.1 system-ui, -apple-system, Segoe UI, Inter, Roboto, Arial, sans-serif; letter-spacing: .22em;}
+      .title{font: 800 82px/1.05 system-ui, -apple-system, Segoe UI, Inter, Roboto, Arial, sans-serif; letter-spacing: .01em;}
+      .author{font: 600 30px/1.1 system-ui, -apple-system, Segoe UI, Inter, Roboto, Arial, sans-serif; opacity:.92;}
+      .badgeText{font: 800 28px/1 system-ui, -apple-system, Segoe UI, Inter, Roboto, Arial, sans-serif; letter-spacing:.08em;}
+      .subtle{opacity:.18;}
+    </style>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c9a96e" stop-opacity=".30"/>
+      <stop offset="1" stop-color="#c9a96e" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1280" height="720"/>
+  <circle cx="1050" cy="150" r="380" fill="url(#glow)"/>
+  <path class="subtle" d="M0,605 C260,520 420,690 660,600 C900,510 1040,650 1280,560 L1280,720 L0,720 Z" fill="#ffffff"/>
+
+  <text x="80" y="96" class="kicker" fill="#ffffff">ÉLAN CLINIC</text>
+
+  <!-- Icon: lightbulb -->
+  <g transform="translate(860 225)">
+    <path d="M140 30 C70 30 20 85 20 150 C20 205 50 230 75 255 C95 275 105 295 105 320 L175 320 C175 295 185 275 205 255 C230 230 260 205 260 150 C260 85 210 30 140 30 Z" class="stroke-gold"/>
+    <path d="M105 340 L175 340" class="stroke-white"/>
+    <path d="M110 370 L170 370" class="stroke-white"/>
+    <path d="M120 400 L160 400" class="stroke-white"/>
+    <!-- filament -->
+    <path d="M105 180 C120 160 160 160 175 180" class="stroke-white"/>
+  </g>
+
+  <text x="80" y="330" class="title" fill="#ffffff">Why It</text>
+  <text x="80" y="420" class="title" fill="#ffffff">Didn't Work</text>
+
+  <text x="80" y="650" class="author" fill="#ffffff">Dr. Ingmar Lindström, MD</text>
+
+  <g transform="translate(1030 560)">
+    <rect x="0" y="0" width="190" height="74" rx="16" class="gold"/>
+    <text x="95" y="48" text-anchor="middle" class="badgeText" fill="#1a2332">PRICE</text>
+  </g>
+</svg>
