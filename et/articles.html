@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artiklid — Élan Clinic</title>
+  <meta name="description" content="Élan Clinicu tõenduspõhised artiklid GLP-1 kaaluravist." />
+  <link rel="canonical" href="https://elan.clinic/et/articles.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elan.clinic/et/articles.html" />
+  <meta property="og:title" content="Artiklid — Élan Clinic" />
+  <meta property="og:description" content="Élan Clinicu tõenduspõhised artiklid GLP-1 kaaluravist." />
+  <meta property="og:image" content="https://elan.clinic/og-image.jpg" />
+  <meta property="og:locale" content="et_EE" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Artiklid — Élan Clinic" />
+  <meta name="twitter:description" content="Élan Clinicu tõenduspõhised artiklid GLP-1 kaaluravist." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5459MHF3');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <!-- GA4 (direct, alongside GTM) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RG0NYXV6M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'G-2RG0NYXV6M');
+  </script>
+
+  <style>
+    /* ─── Reset & Base ─────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0D1B2A;
+      color: rgba(232, 228, 222, 0.55);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      color: #E8E4DE;
+      line-height: 1.2;
+      font-weight: 500;
+    }
+
+    h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); }
+    h2 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); }
+    h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
+
+    p { margin-bottom: 1.2em; }
+    p:last-child { margin-bottom: 0; }
+
+    a { color: #C5A55A; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ─── Header ──────────────────────────────────────────────────── */
+    header {
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(232, 228, 222, 0.12);
+      background: rgba(13, 27, 42, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: #E8E4DE;
+      letter-spacing: 0.02em;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+
+    nav a { color: rgba(232, 228, 222, 0.75); }
+    nav a:hover { color: #E8E4DE; text-decoration: none; }
+
+    .cta {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #C5A55A, #A7893F);
+      color: #0D1B2A;
+      font-weight: 600;
+    }
+
+    .cta:hover { text-decoration: none; filter: brightness(1.03); }
+
+    /* ─── Hero ───────────────────────────────────────────────────── */
+    .hero {
+      padding: 70px 0 24px;
+    }
+
+    .hero h1 { margin-bottom: 10px; }
+
+    .hero p {
+      max-width: 740px;
+      font-size: 1.05rem;
+      color: rgba(232, 228, 222, 0.62);
+    }
+
+    /* ─── Article List ───────────────────────────────────────────── */
+    .list {
+      padding: 26px 0 90px;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      grid-column: span 12;
+      border: 1px solid rgba(232, 228, 222, 0.12);
+      background: rgba(255,255,255,0.03);
+      border-radius: 18px;
+      padding: 22px;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(197, 165, 90, 0.45);
+    }
+
+    .card h3 { margin-bottom: 8px; }
+
+    .meta {
+      margin-bottom: 12px;
+      font-size: 0.92rem;
+      color: rgba(232, 228, 222, 0.50);
+    }
+
+    .card p { color: rgba(232, 228, 222, 0.58); }
+
+    .readmore {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      margin-top: 14px;
+      font-weight: 600;
+    }
+
+    /* ─── Footer ─────────────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid rgba(232, 228, 222, 0.12);
+      padding: 26px 0;
+      color: rgba(232, 228, 222, 0.50);
+      font-size: 0.95rem;
+    }
+
+    footer a { color: rgba(232, 228, 222, 0.70); }
+    footer a:hover { color: #E8E4DE; }
+
+    /* ─── Responsive ─────────────────────────────────────────────── */
+    @media (min-width: 760px) {
+      .card { grid-column: span 6; }
+    }
+    @media (min-width: 1020px) {
+      .card { grid-column: span 4; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5459MHF3"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header>
+    <div class="container header-inner">
+      <a class="logo" href="/et/">Élan Clinic</a>
+      <nav>
+        <a href="/et/">Avaleht</a>
+        <a href="/et/articles.html">Artiklid</a>
+        <a class="cta" href="https://ellum.lovable.app/" rel="noopener">Broneeri</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Artiklid</h1>
+        <p>
+          Siit leiad Élan Clinicu artiklid GLP‑1 kaaluravi kohta. Artiklid on hetkel inglise keeles (ET lehed on struktuuri jaoks).
+        </p>
+      </div>
+    </section>
+
+    <section class="list">
+      <article class="card">
+        <h3>Kuidas GLP‑1 ravi ohutult alustada</h3>
+        <div class="meta">Loe inglise keeles</div>
+        <p>Praktiline ja tõenduspõhine ülevaade, kuidas GLP‑1 ravi turvaliselt alustada ja mida silmas pidada.</p>
+        <a class="readmore" href="/articles/how-to-access-glp1-safely.html">Ava artikkel →</a>
+      </article>
+
+      <article class="card">
+        <h3>GLP‑1 ja liigsöömishäire: mida näitab teadus?</h3>
+        <div class="meta">Loe inglise keeles</div>
+        <p>Mida ütlevad uuringud GLP‑1 ravimite ja liigsöömishäire sümptomite kohta.</p>
+        <a class="readmore" href="/articles/glp1-binge-eating-disorder-evidence.html">Ava artikkel →</a>
+      </article>
+
+      <article class="card">
+        <h3>Mounjaro platoo: mida teha, kui kaal ei lange?</h3>
+        <div class="meta">Loe inglise keeles</div>
+        <p>Diagnostika ja praktilised sammud, kui kaalulangus on peetunud.</p>
+        <a class="readmore" href="/articles/mounjaro-plateau-troubleshooting.html">Ava artikkel →</a>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:space-between;">
+        <div>© Élan Clinic</div>
+        <div>
+          <a href="/">EN</a> · <a href="/et/">ET</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
