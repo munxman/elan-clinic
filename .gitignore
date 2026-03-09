@@ -1,0 +1,7 @@
+﻿
+
+# temp artifacts
+_tmp/
+tmp_*
+tmp_extract*.js
+
