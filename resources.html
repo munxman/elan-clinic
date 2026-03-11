@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Digital Resources — Élan Clinic</title>
-  <meta name="description" content="Physician-designed GLP-1 guides, meal plans, and programmes to support your weight management journey — from first week to long-term maintenance. Designed by Dr. Ingmar Lindström, MD." />
-  <link rel="canonical" href="https://elan.clinic/resources" />
-  <link rel="alternate" hreflang="en" href="https://elan.clinic/resources" />
-  <link rel="alternate" hreflang="et" href="https://elan.clinic/ressursid" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://elan.clinic/resources" />
-  <meta property="og:title" content="Digital Resources — Élan Clinic GLP-1 Toolkit" />
-  <meta property="og:description" content="Physician-designed guides, meal plans, and programmes for GLP-1 patients. From first week to long-term maintenance." />
-  <meta property="og:image" content="https://elan.clinic/og-image.jpg" />
-  <meta property="og:locale" content="en_GB" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Digital Resources — Élan Clinic GLP-1 Toolkit" />
-  <meta name="twitter:description" content="Physician-designed guides, meal plans, and programmes for GLP-1 patients." />
-
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-5459MHF3');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinical Resources — Élan Clinic</title>
+  <meta name="description" content="Evidence-based tools and guides for GLP-1 weight management. Created by Dr. Ingmar Lindström." />
+  <link rel="canonical" href="https://elan.clinic/resources.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elan.clinic/resources.html" />
+  <meta property="og:title" content="Clinical Resources — Élan Clinic" />
+  <meta property="og:description" content="Evidence-based tools and guides for GLP-1 weight management. Created by Dr. Ingmar Lindström." />
+  <meta property="og:image" content="https://elan.clinic/og-image.jpg" />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Clinical Resources — Élan Clinic" />
+  <meta name="twitter:description" content="Evidence-based tools and guides for GLP-1 weight management. Created by Dr. Ingmar Lindström." />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,10 +38,7 @@
     /* ─── Reset & Base ─────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-    }
+    html { scroll-behavior: smooth; font-size: 16px; }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -52,7 +48,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ─── Typography Scale ─────────────────────────────────────────── */
+    /* ─── Typography ──────────────────────────────────────────────── */
     h1, h2, h3, h4 {
       font-family: 'Playfair Display', serif;
       color: #E8E4DE;
@@ -62,8 +58,8 @@
 
     h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
     h2 { font-size: clamp(1.9rem, 3.5vw, 2.8rem); }
-    h3 { font-size: clamp(1.3rem, 2.5vw, 1.7rem); }
-    h4 { font-size: 1.1rem; font-weight: 600; }
+    h3 { font-size: clamp(1.25rem, 2.3vw, 1.6rem); }
+    h4 { font-size: 1.05rem; font-weight: 600; }
 
     p { margin-bottom: 1.2em; }
     p:last-child { margin-bottom: 0; }
@@ -71,7 +67,7 @@
     a { color: #C5A55A; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* ─── Layout Containers ────────────────────────────────────────── */
+    /* ─── Layout Containers ───────────────────────────────────────── */
     .container {
       width: 100%;
       max-width: 1200px;
@@ -79,18 +75,13 @@
       padding: 0 24px;
     }
 
-    .container--text {
-      max-width: 720px;
-    }
+    .container--text { max-width: 760px; }
 
-    .section {
-      padding: 120px 0;
-    }
-
+    .section { padding: 110px 0; }
     .section--dark { background-color: #0D1B2A; }
     .section--card { background-color: #111D2E; }
 
-    /* ─── Gold Label ───────────────────────────────────────────────── */
+    /* ─── Gold Label ──────────────────────────────────────────────── */
     .label {
       display: inline-block;
       font-family: 'Inter', sans-serif;
@@ -102,15 +93,14 @@
       margin-bottom: 24px;
     }
 
-    /* ─── Divider ──────────────────────────────────────────────────── */
     .gold-line {
       width: 48px;
       height: 2px;
       background: #C5A55A;
-      margin: 32px 0;
+      margin: 28px 0 34px;
     }
 
-    /* ─── CTA Button ───────────────────────────────────────────────── */
+    /* ─── Buttons ─────────────────────────────────────────────────── */
     .btn {
       display: inline-block;
       padding: 16px 36px;
@@ -123,7 +113,7 @@
       color: #C5A55A;
       background: transparent;
       cursor: pointer;
-      transition: background 0.2s, color 0.2s;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
       text-decoration: none;
     }
 
@@ -133,17 +123,10 @@
       text-decoration: none;
     }
 
-    .btn--filled {
-      background: #C5A55A;
-      color: #0D1B2A;
-    }
+    .btn--filled { background: #C5A55A; color: #0D1B2A; }
+    .btn--filled:hover { background: #d4b56a; color: #0D1B2A; }
 
-    .btn--filled:hover {
-      background: #d4b56a;
-      color: #0D1B2A;
-    }
-
-    /* ─── Nav ──────────────────────────────────────────────────────── */
+    /* ─── Nav (matches index.html) ────────────────────────────────── */
     .nav {
       position: fixed;
       top: 0;
@@ -167,8 +150,14 @@
       text-decoration: none;
     }
 
-    .nav__logo span {
-      color: #C5A55A;
+    .nav__logo span { color: #C5A55A; }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-left: auto;
+      margin-right: 18px;
     }
 
     .nav__link {
@@ -177,291 +166,238 @@
       text-transform: uppercase;
       font-weight: 600;
       color: rgba(232, 228, 222, 0.75);
-      margin-left: auto;
-      margin-right: 18px;
     }
 
-    .nav__link:hover {
-      color: #C5A55A;
-      text-decoration: none;
+    .nav__link:hover { color: #C5A55A; text-decoration: none; }
+
+    .nav__cta { font-size: 0.75rem; letter-spacing: 0.12em; }
+
+    /* ─── Sticky Mobile CTA ───────────────────────────────────────── */
+    .mobile-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 101;
+      padding: 12px 16px;
+      background: rgba(13, 27, 42, 0.95);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(197, 165, 90, 0.25);
     }
 
-    .nav__cta {
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
+    .mobile-cta .btn {
+      display: block;
+      text-align: center;
+      width: 100%;
+      padding: 14px 24px;
     }
 
-    /* ─── Page Hero ────────────────────────────────────────────────── */
-    .page-hero {
-      padding: 160px 0 80px;
-      background-color: #0D1B2A;
+    /* ─── Hero ────────────────────────────────────────────────────── */
+    .hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      padding: 160px 0 100px;
       position: relative;
       overflow: hidden;
     }
 
-    .page-hero::before {
+    .hero::before {
       content: '';
       position: absolute;
-      top: -200px;
-      right: -200px;
-      width: 600px;
-      height: 600px;
+      top: -220px;
+      right: -220px;
+      width: 640px;
+      height: 640px;
       background: radial-gradient(circle, rgba(197,165,90,0.06) 0%, transparent 70%);
       pointer-events: none;
     }
 
-    .page-hero__subtitle {
-      font-size: 1.1rem;
+    .hero__title {
+      font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+      font-weight: 400;
+      max-width: 900px;
+      margin-bottom: 26px;
+      line-height: 1.08;
+    }
+
+    .hero__subtitle {
+      font-size: 1.08rem;
       color: rgba(232, 228, 222, 0.7);
-      max-width: 600px;
-      margin-top: 24px;
+      max-width: 680px;
       line-height: 1.75;
     }
 
-    /* ─── Free Tools Section ───────────────────────────────────────── */
-    .free-tools {
-      background: #111D2E;
-    }
-
-    .free-tools__grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2px;
-      margin-top: 48px;
-    }
-
-    .free-tool-card {
-      padding: 40px;
-      background: #0D1B2A;
-      display: flex;
-      flex-direction: column;
-      border-top: 2px solid rgba(197, 165, 90, 0.3);
-      transition: border-color 0.2s;
-    }
-
-    .free-tool-card:hover {
-      border-color: #C5A55A;
-    }
-
-    .free-tool-card__badge {
-      display: inline-block;
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #0D1B2A;
-      background: #C5A55A;
-      padding: 4px 10px;
-      margin-bottom: 20px;
-      align-self: flex-start;
-    }
-
-    .free-tool-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-    }
-
-    .free-tool-card p {
-      font-size: 0.88rem;
-      flex: 1;
-      margin-bottom: 28px;
-    }
-
-    /* ─── Products Grid ────────────────────────────────────────────── */
-    .products {
-      background: #0D1B2A;
-    }
-
-    .products__grid {
+    /* ─── Card System ─────────────────────────────────────────────── */
+    .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 2px;
       margin-top: 64px;
     }
 
-    .product-card {
-      padding: 40px;
-      background: #111D2E;
+    .card {
+      padding: 48px 40px;
+      background: #0D1B2A;
+      border-top: 2px solid rgba(197, 165, 90, 0.25);
       display: flex;
       flex-direction: column;
-      border-top: 2px solid rgba(197, 165, 90, 0.2);
-      transition: border-color 0.2s, background 0.2s;
+      min-height: 320px;
     }
 
-    .product-card:hover {
-      border-color: #C5A55A;
-      background: #152030;
-    }
-
-    .product-card--featured {
-      background: #111D2E;
+    .card--elevated {
+      background: #0a1420;
       border-top: 3px solid #C5A55A;
-      position: relative;
     }
 
-    .product-card--featured::before {
-      content: 'Best Value';
-      position: absolute;
-      top: -1px;
-      right: 24px;
-      font-size: 0.6rem;
+    .card__tag {
+      font-size: 0.65rem;
       font-weight: 600;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: #0D1B2A;
-      background: #C5A55A;
-      padding: 4px 10px;
-    }
-
-    .product-card--subscription {
-      border-top: 2px solid rgba(197, 165, 90, 0.5);
-    }
-
-    .product-card__name {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem;
-      color: #E8E4DE;
-      margin-bottom: 8px;
-    }
-
-    .product-card__price {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
       color: #C5A55A;
-      line-height: 1;
-      margin: 16px 0 4px;
+      margin-bottom: 14px;
     }
 
-    .product-card__price-note {
-      font-size: 0.72rem;
-      color: rgba(232, 228, 222, 0.3);
-      letter-spacing: 0.05em;
-      margin-bottom: 24px;
-    }
+    .card__title { margin-bottom: 10px; }
 
-    .product-card__divider {
-      width: 32px;
-      height: 1px;
-      background: rgba(197, 165, 90, 0.25);
-      margin: 20px 0;
-    }
-
-    .product-card__desc {
-      font-size: 0.88rem;
-      line-height: 1.65;
+    .card__desc {
+      font-size: 0.9rem;
+      color: rgba(232, 228, 222, 0.58);
+      line-height: 1.75;
       flex: 1;
-      margin-bottom: 32px;
     }
 
-    .product-card__cta {
-      margin-top: auto;
-    }
-
-    /* ─── Savings Banner ───────────────────────────────────────────── */
-    .savings-banner {
-      margin-top: 2px;
-      padding: 32px 40px;
-      background: rgba(197, 165, 90, 0.07);
-      border: 1px solid rgba(197, 165, 90, 0.2);
+    .card__meta {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(232, 228, 222, 0.08);
       display: flex;
-      align-items: center;
+      align-items: baseline;
       justify-content: space-between;
-      gap: 24px;
+      gap: 16px;
       flex-wrap: wrap;
     }
 
-    .savings-banner p {
-      font-size: 0.88rem;
-      color: rgba(232, 228, 222, 0.6);
-      margin: 0;
-      max-width: 560px;
-    }
-
-    .savings-banner p strong {
+    .card__price {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
       color: #E8E4DE;
+      line-height: 1;
     }
 
-    /* ─── Attribution ──────────────────────────────────────────────── */
-    .attribution {
-      background: #111D2E;
-      padding: 48px 0;
-      border-top: 1px solid rgba(197, 165, 90, 0.1);
-    }
-
-    .attribution__inner {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 0 24px;
-      text-align: center;
-    }
-
-    .attribution__inner p {
-      font-size: 0.82rem;
+    .card__price-note {
+      font-size: 0.78rem;
       color: rgba(232, 228, 222, 0.35);
-      margin: 0;
-      line-height: 1.65;
+      margin-top: 3px;
     }
 
-    .attribution__inner p strong {
-      color: rgba(232, 228, 222, 0.55);
+    .card__cta { margin-top: 20px; }
+
+    .btn--small {
+      padding: 14px 26px;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
     }
 
-    /* ─── Footer CTA (shared) ─────────────────────────────────────── */
-    .footer-cta {
+    /* ─── Featured bundles section ────────────────────────────────── */
+    .featured {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2px;
+      margin-top: 56px;
+    }
+
+    .featured__main {
       background: #0D1B2A;
+      padding: 56px 48px;
+      border: 1px solid rgba(197, 165, 90, 0.18);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .featured__main::before {
+      content: '';
+      position: absolute;
+      inset: -40px -40px auto auto;
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(197,165,90,0.10) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .featured__aside {
+      background: #111D2E;
+      padding: 56px 48px;
+      border: 1px solid rgba(232, 228, 222, 0.06);
+    }
+
+    .featured h3 { margin-bottom: 12px; }
+
+    .featured p {
+      font-size: 0.95rem;
+      color: rgba(232, 228, 222, 0.6);
+      max-width: 640px;
+    }
+
+    .featured__price {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: #E8E4DE;
+      margin: 18px 0 6px;
+      line-height: 1;
+    }
+
+    .featured__note {
+      font-size: 0.8rem;
+      color: rgba(232, 228, 222, 0.35);
+      margin-bottom: 22px;
+    }
+
+    .bullet-list {
+      list-style: none;
+      margin-top: 18px;
+    }
+
+    .bullet-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(232, 228, 222, 0.06);
+      font-size: 0.9rem;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .bullet-list li::before {
+      content: '✓';
+      color: #C5A55A;
+      flex-shrink: 0;
+      margin-top: 2px;
+      font-size: 0.8rem;
+    }
+
+    /* ─── CTA Section ─────────────────────────────────────────────── */
+    .cta {
       text-align: center;
-      padding: 120px 24px;
+      padding: 110px 0;
       border-top: 1px solid rgba(197, 165, 90, 0.1);
     }
 
-    .footer-cta .label {
-      display: block;
-      text-align: center;
-    }
-
-    .footer-cta h2 {
-      max-width: 640px;
-      margin: 0 auto 24px;
+    .cta h2 {
+      max-width: 760px;
+      margin: 0 auto 18px;
       font-size: clamp(1.8rem, 3.5vw, 2.5rem);
     }
 
-    .footer-cta__sub {
-      max-width: 480px;
-      margin: 0 auto 48px;
+    .cta p {
+      max-width: 560px;
+      margin: 0 auto 34px;
       font-size: 1rem;
       color: rgba(232, 228, 222, 0.55);
     }
 
-    .footer-cta__contact {
-      display: flex;
-      justify-content: center;
-      gap: 48px;
-      flex-wrap: wrap;
-      margin-top: 56px;
-      padding-top: 56px;
-      border-top: 1px solid rgba(232, 228, 222, 0.07);
-    }
-
-    .footer-cta__contact-item {
-      text-align: center;
-    }
-
-    .footer-cta__contact-item .label {
-      margin-bottom: 8px;
-    }
-
-    .footer-cta__contact-item p {
-      font-size: 0.9rem;
-      margin: 0;
-      color: rgba(232, 228, 222, 0.65);
-    }
-
-    .footer-cta__contact-item a {
-      font-size: 1.05rem;
-      font-weight: 500;
-    }
-
-    /* ─── Footer Legal ─────────────────────────────────────────────── */
+    /* ─── Footer Legal (matches index.html) ───────────────────────── */
     .footer-legal {
       background: #060f1a;
       padding: 32px 24px;
@@ -484,23 +420,23 @@
       margin: 0;
     }
 
-    /* ─── Responsive ───────────────────────────────────────────────── */
-    @media (max-width: 768px) {
-      .section { padding: 80px 0; }
-      .nav__link { display: none; }
-      .nav__cta { display: none; }
-      .page-hero { padding: 120px 0 60px; }
-      .free-tools__grid { grid-template-columns: 1fr; }
-      .products__grid { grid-template-columns: 1fr; }
-      .product-card { padding: 32px 24px; }
-      .free-tool-card { padding: 32px 24px; }
-      .savings-banner { flex-direction: column; }
-      .footer-cta__contact { gap: 32px; }
-      .footer-legal__inner { flex-direction: column; text-align: center; }
+    /* ─── Responsive ──────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+      .card { min-height: unset; }
+      .featured { grid-template-columns: 1fr; }
+      .featured__main, .featured__aside { padding: 44px 32px; }
     }
 
-    @media (max-width: 480px) {
-      .product-card__price { font-size: 1.7rem; }
+    @media (max-width: 768px) {
+      .section { padding: 80px 0; }
+      .hero { padding: 120px 0 70px; }
+      .nav__links { display: none; }
+      .nav__cta { display: none; }
+      .mobile-cta { display: block; }
+      body { padding-bottom: 64px; }
+      .card { padding: 40px 28px; }
+      .footer-legal__inner { flex-direction: column; text-align: center; }
     }
   </style>
 </head>
@@ -510,236 +446,245 @@
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5459MHF3"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <!-- ─── Navigation ─────────────────────────────────────────────── -->
   <nav class="nav">
     <a href="/" class="nav__logo">Élan<span>.</span></a>
-    <a href="/resources.html" class="nav__link">Resources</a>
-    <a href="/#consultation" class="btn nav__cta">Start With a Consultation</a>
-    <div class="lang-switch" style="display:inline-flex;gap:0.5rem;font-size:0.85rem;margin-left:auto;"> <a href="/" style="color:#c9a84c;text-decoration:none;font-weight:bold;">EN</a> <span style="color:#8899aa;">|</span> <a href="/et/" style="color:#c9a84c;text-decoration:none;">EST</a> <span style="color:#8899aa;">|</span> <a href="/fi/" style="color:#c9a84c;text-decoration:none;">FIN</a> <span style="color:#8899aa;">|</span> <a href="/ru/" style="color:#c9a84c;text-decoration:none;">RUS</a> </div>
+    <div class="nav__links">
+      <a href="/#method" class="nav__link">How It Works</a>
+      <a href="/#programmes" class="nav__link">Programmes</a>
+      <a href="/articles.html" class="nav__link">Articles</a>
+      <a href="/resources.html" class="nav__link" style="color:#C5A55A;">Resources</a>
+    </div>
+    <a href="/book.html" class="btn nav__cta">Book a Consultation</a>
+    <div class="lang-switch" style="display:inline-flex;gap:0.5rem;font-size:0.75rem;margin-left:12px;">
+      <a href="/resources.html" style="color:#C5A55A;text-decoration:none;font-weight:bold;">EN</a>
+      <span style="color:rgba(232,228,222,0.3);">|</span>
+      <a href="/et.html" style="color:rgba(232,228,222,0.5);text-decoration:none;">ET</a>
+      <span style="color:rgba(232,228,222,0.3);">|</span>
+      <a href="/fi.html" style="color:rgba(232,228,222,0.5);text-decoration:none;">FI</a>
+      <span style="color:rgba(232,228,222,0.3);">|</span>
+      <a href="/ru.html" style="color:rgba(232,228,222,0.5);text-decoration:none;">RU</a>
+    </div>
   </nav>
 
-
-  <!-- ─── Page Hero ─────────────────────────────────────────────── -->
-  <section class="page-hero">
-    <div class="container">
-      <span class="label">Digital Resources · Élan Clinic</span>
-      <h1>Your GLP-1 Weight Management Toolkit</h1>
-      <p class="page-hero__subtitle">
-        Physician-designed guides, meal plans, and programmes to support your journey — from first week to long-term maintenance.
-      </p>
-    </div>
-  </section>
-
-
-  <!-- ─── Free Tools ────────────────────────────────────────────── -->
-  <section class="section free-tools" id="free-tools">
-    <div class="container container--text">
-      <span class="label">Free Tools</span>
-      <h2>Start Here — No Cost</h2>
-      <div class="gold-line"></div>
-      <p>
-        Two free clinical tools to help you understand where you are in your GLP-1 journey before investing in a programme.
-      </p>
-    </div>
-
-    <div class="container">
-      <div class="free-tools__grid">
-
-        <div class="free-tool-card">
-          <span class="free-tool-card__badge">Free</span>
-          <h3>GLP-1 Readiness Calculator</h3>
-          <p>
-            Assess your readiness before starting GLP-1 medication. Understand the clinical factors that affect your outcome and what to prepare before your first injection.
-          </p>
-          <a href="/glp1-calculator.html" class="btn btn--filled">Open Calculator</a>
-        </div>
-
-        <div class="free-tool-card">
-          <span class="free-tool-card__badge">Free</span>
-          <h3>GLP-1 Patient Guide</h3>
-          <p>
-            A comprehensive physician-written guide covering everything you need to know about GLP-1 medications — side effects, expectations, diet, and what to do when the medication stops.
-          </p>
-          <a href="/glp1-guide.html" class="btn">Read the Guide</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ─── Paid Products ─────────────────────────────────────────── -->
-  <section class="section products section--dark" id="products">
-    <div class="container container--text">
-      <span class="label">Clinical Resources</span>
-      <h2>Physician-Designed Programmes &amp; Guides</h2>
-      <div class="gold-line"></div>
-      <p>
-        Every resource below was written and reviewed by Dr. Ingmar Lindström, MD. These are practical clinical tools — not generic wellness content.
-      </p>
-    </div>
-
-    <div class="container">
-      <div class="products__grid">
-
-        <!-- 1. The First 30 Days — €19 -->
-        <div class="product-card">
-          <div class="product-card__name">The First 30 Days</div>
-          <div class="product-card__price">€19</div>
-          <div class="product-card__price-note">One-time · Instant download</div>
-          <div class="product-card__divider"></div>
-          <p class="product-card__desc">
-            Your critical first month on GLP-1 medication. Meal plan, action checklist, hunger signal guide.
-          </p>
-          <div class="product-card__cta">
-            <a href="https://ingmarassistant.gumroad.com/l/rmgqcf" target="_blank" rel="noopener" class="btn btn--filled" style="display:block; text-align:center;">Get This Guide</a>
-          </div>
-        </div>
-
-        <!-- 2. GLP-1 Exercise Protocol — €29 -->
-        <div class="product-card">
-          <div class="product-card__name">GLP-1 Exercise Protocol</div>
-          <div class="product-card__price">€29</div>
-          <div class="product-card__price-note">One-time · Instant download</div>
-          <div class="product-card__divider"></div>
-          <p class="product-card__desc">
-            12-week progressive resistance training. Preserve lean muscle while losing fat. Gym + home versions.
-          </p>
-          <div class="product-card__cta">
-            <a href="https://ingmarassistant.gumroad.com/l/crxhus" target="_blank" rel="noopener" class="btn btn--filled" style="display:block; text-align:center;">Get This Protocol</a>
-          </div>
-        </div>
-
-        <!-- 3. The GLP-1 Nutrition Gap — €29 -->
-        <div class="product-card">
-          <div class="product-card__name">The GLP-1 Nutrition Gap</div>
-          <div class="product-card__price">€29</div>
-          <div class="product-card__price-note">One-time · Instant download</div>
-          <div class="product-card__divider"></div>
-          <p class="product-card__desc">
-            Essential nutrition guide for protein, vitamins, and eating well on GLP-1 medication.
-          </p>
-          <div class="product-card__cta">
-            <a href="https://ingmarassistant.gumroad.com/l/knikka" target="_blank" rel="noopener" class="btn btn--filled" style="display:block; text-align:center;">Get This Guide</a>
-          </div>
-        </div>
-
-        <!-- 4. Why It Didn't Work — €39 -->
-        <div class="product-card">
-          <div class="product-card__name">Why It Didn't Work</div>
-          <div class="product-card__price">€39</div>
-          <div class="product-card__price-note">One-time · Instant download</div>
-          <div class="product-card__divider"></div>
-          <p class="product-card__desc">
-            The science behind failed diets. Understand what went wrong and choose the right approach this time.
-          </p>
-          <div class="product-card__cta">
-            <a href="https://ingmarassistant.gumroad.com/l/mpcwml" target="_blank" rel="noopener" class="btn btn--filled" style="display:block; text-align:center;">Get This Guide</a>
-          </div>
-        </div>
-
-        <!-- 5. Beyond the Medication — €49 -->
-        <div class="product-card">
-          <div class="product-card__name">Beyond the Medication</div>
-          <div class="product-card__price">€49</div>
-          <div class="product-card__price-note">One-time · Instant download</div>
-          <div class="product-card__divider"></div>
-          <p class="product-card__desc">
-            Post-weight-loss maintenance. Muscle preservation, medication transition, lab monitoring guidance.
-          </p>
-          <div class="product-card__cta">
-            <a href="https://ingmarassistant.gumroad.com/l/ifztdn" target="_blank" rel="noopener" class="btn btn--filled" style="display:block; text-align:center;">Get This Guide</a>
-          </div>
-        </div>
-
-        <!-- 6. Regain Shield — €49/month -->
-        <div class="product-card product-card--subscription">
-          <div class="product-card__name">Regain Shield</div>
-          <div class="product-card__price">€49<span style="font-size:1rem; color: rgba(232,228,222,0.4);">/mo</span></div>
-          <div class="product-card__price-note">Monthly subscription · Cancel anytime</div>
-          <div class="product-card__divider"></div>
-          <p class="product-card__desc">
-            Ongoing maintenance programme. Monthly check-ins, protocol updates, community support.
-          </p>
-          <div class="product-card__cta">
-            <a href="https://ingmarassistant.gumroad.com/l/epbsyz" target="_blank" rel="noopener" class="btn btn--filled" style="display:block; text-align:center;">Join the Programme</a>
-          </div>
-        </div>
-
-        <!-- 7. The Complete System — €99 (featured, spans full row on desktop) -->
-        <div class="product-card product-card--featured" style="grid-column: 1 / -1; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; border-top-width: 3px;">
-          <div>
-            <div class="product-card__name" style="font-size: 1.5rem;">The Complete System</div>
-            <div style="display: flex; align-items: baseline; gap: 16px; margin: 16px 0 4px;">
-              <div class="product-card__price" style="margin: 0;">€99</div>
-              <span style="font-size: 0.78rem; color: rgba(232,228,222,0.4); text-decoration: line-through;">€117</span>
-              <span style="font-size: 0.75rem; color: #C5A55A; font-weight: 600;">Save €18</span>
-            </div>
-            <div class="product-card__price-note">One-time · Instant download · All 5 guides included</div>
-            <div class="product-card__divider"></div>
-            <p class="product-card__desc" style="margin-bottom: 0;">
-              Everything above in one package. The full clinical journey from first steps to long-term maintenance.
-            </p>
-          </div>
-          <div style="min-width: 220px;">
-            <a href="https://ingmarassistant.gumroad.com/l/mazgf" target="_blank" rel="noopener" class="btn btn--filled" style="display:block; text-align:center; white-space: nowrap;">Get the Complete System</a>
-            <p style="font-size: 0.72rem; color: rgba(232,228,222,0.3); text-align: center; margin-top: 10px;">Best value · Includes all 5 downloadable guides</p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="savings-banner">
-        <p>
-          <strong>Not sure where to start?</strong> If you are currently on GLP-1 medication, begin with <em>The First 30 Days</em>. If you are approaching the end of your course, <em>Beyond the Medication</em> + <em>Regain Shield</em> is the most clinically relevant combination.
-        </p>
-        <a href="/#consultation" class="btn">Ask the Clinic</a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ─── Attribution ──────────────────────────────────────────── -->
-  <div class="attribution">
-    <div class="attribution__inner">
-      <p>
-        All resources designed by <strong>Dr. Ingmar Lindström, MD</strong> — family medicine specialist, 20+ years clinical practice.<br />
-        Not a substitute for medical advice. Consult your physician before making changes to your medication or health programme.
-      </p>
-    </div>
+  <!-- Mobile sticky CTA -->
+  <div class="mobile-cta">
+    <a href="/book.html" class="btn btn--filled">Book a Consultation</a>
   </div>
 
+  <!-- ─── Hero ───────────────────────────────────────────────────── -->
+  <section class="hero section--dark" id="top">
+    <div class="container container--text">
+      <span class="label">Clinical Resources</span>
+      <h1 class="hero__title">Evidence-based tools and guides for GLP-1 weight management.</h1>
+      <p class="hero__subtitle">Created by Dr. Ingmar Lindström.</p>
+    </div>
+  </section>
 
-  <!-- ─── Footer CTA ─────────────────────────────────────────────── -->
-  <section class="footer-cta" id="consultation">
-    <span class="label">Clinical Programme</span>
-    <h2>Want physician-led support, not just a guide?</h2>
-    <p class="footer-cta__sub">
-      The Regain Shield programme includes direct physician oversight, personalised protocols, and ongoing bloodwork monitoring — from €99/month.
-    </p>
-    <a href="tel:+37252999399" class="btn btn--filled">Call +372 52 99939</a>
+  <!-- ─── Free Tool ──────────────────────────────────────────────── -->
+  <section class="section section--card" id="free-tool">
+    <div class="container">
+      <div class="featured">
+        <div class="featured__main">
+          <span class="label">Free Tool</span>
+          <h2 style="margin-bottom: 12px;">GLP-1 Calculator</h2>
+          <p>Estimate key GLP-1 maintenance parameters and identify common risk points (sleep, protein, resistance training, adherence). Designed as a practical starting point — not a diagnosis.</p>
+          <div class="gold-line" style="margin: 26px 0 22px;"></div>
+          <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:center;">
+            <a class="btn btn--filled" href="/glp1-calculator.html">Open Calculator</a>
+            <span style="font-size:0.85rem; color: rgba(232,228,222,0.38);">Free · Instant access</span>
+          </div>
+        </div>
 
-    <div class="footer-cta__contact">
-      <div class="footer-cta__contact-item">
-        <span class="label">Phone</span>
-        <a href="tel:+37252999399">+372 52 99939</a>
-      </div>
-      <div class="footer-cta__contact-item">
-        <span class="label">Clinic Address</span>
-        <p>Sepapaja 12/1<br />Tallinn 11415, Estonia</p>
-      </div>
-      <div class="footer-cta__contact-item">
-        <span class="label">Programme Entry</span>
-        <p>Regain Shield Standard — €99/month<br />Regain Shield Premium — €299/month<br />The Private Office — by application</p>
+        <div class="featured__aside">
+          <span class="label">What you’ll get</span>
+          <ul class="bullet-list">
+            <li>Quick inputs, clear outputs</li>
+            <li>Maintenance-focused recommendations</li>
+            <li>Built for GLP-1 tapering / stopping</li>
+            <li>Designed for real-world use</li>
+          </ul>
+          <p style="margin-top: 18px; font-size: 0.85rem; color: rgba(232,228,222,0.45);">If you want a physician-reviewed plan, use the tool and then book a consultation.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── Footer Legal ──────────────────────────────────────────── -->
+  <!-- ─── Featured Bundles ───────────────────────────────────────── -->
+  <section class="section section--dark" id="featured">
+    <div class="container container--text">
+      <span class="label">Recommended</span>
+      <h2>Start With the Complete Toolkit (or the Premium Bundle)</h2>
+      <div class="gold-line"></div>
+      <p>Most people don’t need more information — they need a structured protocol. These two bundles combine the key clinical pieces into a clear system.</p>
+    </div>
+
+    <div class="container">
+      <div class="featured">
+        <div class="featured__main">
+          <span class="card__tag">Best Value</span>
+          <h3>Complete GLP-1 Maintenance Toolkit</h3>
+          <p>A structured end-to-end toolkit for post-GLP-1 maintenance: safety markers, exercise protocol, and nutrition guidance — in one package.</p>
+          <div class="featured__price">€39</div>
+          <div class="featured__note">One-time purchase</div>
+          <a class="btn btn--filled" href="https://ingmarassistant.gumroad.com/l/mpcwml" target="_blank" rel="noopener noreferrer">Get Toolkit</a>
+          <ul class="bullet-list" style="margin-top: 26px;">
+            <li>Safety checklist + monitoring markers</li>
+            <li>Exercise protocol tailored to GLP-1 users</li>
+            <li>Maintenance nutrition guide</li>
+          </ul>
+        </div>
+
+        <div class="featured__aside">
+          <span class="card__tag">Most Comprehensive</span>
+          <h3>Premium Weight Management Bundle</h3>
+          <p>For those who want the widest coverage — including practical guides + bundle savings.</p>
+          <div class="featured__price">€49</div>
+          <div class="featured__note">One-time purchase</div>
+          <a class="btn" href="https://ingmarassistant.gumroad.com/l/ifztdn" target="_blank" rel="noopener noreferrer">Get Premium Bundle</a>
+          <p style="margin-top: 18px; font-size: 0.85rem; color: rgba(232,228,222,0.45);">If you’re unsure which resource to start with, this is the simplest default.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Product Grid ───────────────────────────────────────────── -->
+  <section class="section section--card" id="products">
+    <div class="container container--text">
+      <span class="label">Digital Guides</span>
+      <h2>Clinical Guides & Protocols</h2>
+      <div class="gold-line"></div>
+      <p>Actionable, physician-created resources designed for GLP-1 users — with an emphasis on maintenance, muscle preservation, and regain prevention.</p>
+    </div>
+
+    <div class="container">
+      <div class="grid">
+
+        <div class="card">
+          <div class="card__tag">Safety</div>
+          <h3 class="card__title">GLP-1 Safety Checklist</h3>
+          <p class="card__desc">The key red flags, monitoring markers, and practical safety steps for GLP-1 use — especially during tapering and maintenance.</p>
+          <div class="card__meta">
+            <div>
+              <div class="card__price">€19</div>
+              <div class="card__price-note">One-time purchase</div>
+            </div>
+          </div>
+          <div class="card__cta">
+            <a class="btn btn--small btn--filled" href="https://ingmarassistant.gumroad.com/l/rmgqcf" target="_blank" rel="noopener noreferrer">Get Guide</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__tag">Exercise</div>
+          <h3 class="card__title">Exercise Protocol for GLP-1 Users</h3>
+          <p class="card__desc">A progressive, practical resistance-training framework to preserve muscle and improve metabolic stability during and after GLP-1 therapy.</p>
+          <div class="card__meta">
+            <div>
+              <div class="card__price">€29</div>
+              <div class="card__price-note">One-time purchase</div>
+            </div>
+          </div>
+          <div class="card__cta">
+            <a class="btn btn--small" href="https://ingmarassistant.gumroad.com/l/crxhus" target="_blank" rel="noopener noreferrer">Get Guide</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__tag">Nutrition</div>
+          <h3 class="card__title">Nutrition Guide for GLP-1 Maintenance</h3>
+          <p class="card__desc">A maintenance-first nutrition framework: protein targets, meal structure, and practical strategies for appetite rebound after tapering.</p>
+          <div class="card__meta">
+            <div>
+              <div class="card__price">€29</div>
+              <div class="card__price-note">One-time purchase</div>
+            </div>
+          </div>
+          <div class="card__cta">
+            <a class="btn btn--small" href="https://ingmarassistant.gumroad.com/l/knikka" target="_blank" rel="noopener noreferrer">Get Guide</a>
+          </div>
+        </div>
+
+        <div class="card card--elevated">
+          <div class="card__tag">Featured Toolkit</div>
+          <h3 class="card__title">Complete GLP-1 Maintenance Toolkit</h3>
+          <p class="card__desc">The full protocol in one package: safety checklist + exercise protocol + nutrition maintenance guide. Built to be used together.</p>
+          <div class="card__meta">
+            <div>
+              <div class="card__price">€39</div>
+              <div class="card__price-note">One-time purchase</div>
+            </div>
+          </div>
+          <div class="card__cta">
+            <a class="btn btn--small btn--filled" href="https://ingmarassistant.gumroad.com/l/mpcwml" target="_blank" rel="noopener noreferrer">Get Toolkit</a>
+          </div>
+        </div>
+
+        <div class="card card--elevated">
+          <div class="card__tag">Featured Bundle</div>
+          <h3 class="card__title">Premium Weight Management Bundle</h3>
+          <p class="card__desc">A comprehensive bundle for those who want broad coverage and the simplest “buy once” solution to get started.</p>
+          <div class="card__meta">
+            <div>
+              <div class="card__price">€49</div>
+              <div class="card__price-note">One-time purchase</div>
+            </div>
+          </div>
+          <div class="card__cta">
+            <a class="btn btn--small btn--filled" href="https://ingmarassistant.gumroad.com/l/ifztdn" target="_blank" rel="noopener noreferrer">Get Bundle</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__tag">Ongoing Support</div>
+          <h3 class="card__title">Monthly Coaching Subscription</h3>
+          <p class="card__desc">Ongoing structured accountability and iteration. Ideal if you want continuous support as your protocol evolves month to month.</p>
+          <div class="card__meta">
+            <div>
+              <div class="card__price">€49</div>
+              <div class="card__price-note">Per month</div>
+            </div>
+          </div>
+          <div class="card__cta">
+            <a class="btn btn--small" href="https://ingmarassistant.gumroad.com/l/epbsyz" target="_blank" rel="noopener noreferrer">Get Guide</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__tag">Clinical Assessment</div>
+          <h3 class="card__title">Executive Health Assessment</h3>
+          <p class="card__desc">A premium, structured clinical overview designed to identify risks early and build a high-leverage plan for performance and longevity.</p>
+          <div class="card__meta">
+            <div>
+              <div class="card__price">€99</div>
+              <div class="card__price-note">One-time purchase</div>
+            </div>
+          </div>
+          <div class="card__cta">
+            <a class="btn btn--small" href="https://ingmarassistant.gumroad.com/l/mazgf" target="_blank" rel="noopener noreferrer">Get Guide</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Consultation CTA ───────────────────────────────────────── -->
+  <section class="cta section--dark" id="consultation">
+    <div class="container">
+      <span class="label">Next Step</span>
+      <h2>Need personalized guidance? Book a consultation.</h2>
+      <p>Resources are useful. A physician-reviewed protocol is better — especially during tapering, stopping, or the first signs of regain.</p>
+      <a href="/book.html" class="btn btn--filled">Book a Consultation</a>
+    </div>
+  </section>
+
+  <!-- ─── Footer ─────────────────────────────────────────────────── -->
   <footer class="footer-legal">
     <div class="footer-legal__inner">
-      <p>© 2025 Élan Clinic · Elan Clinic OÜ · Reg 17338832 · Medical Licence L07470 · Sepapaja 12/1, Tallinn 11415</p>
+      <p>© 2026 Élan Clinic · Elan Clinic OÜ · Reg 17338832 · Medical Licence L07470 · Sepapaja 12/1, Tallinn 11415</p>
       <p>This website does not constitute medical advice. Consult your physician before making any changes to your medication or health programme.</p>
     </div>
   </footer>
