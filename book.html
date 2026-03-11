@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5459MHF3');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Consultation — Élan Clinic</title>
+  <meta name="description" content="Request a 45-minute consultation with Dr. Lindström. By the end, you'll know your GLP-1 maintenance plan — remote video call or in-clinic Tallinn." />
+
+  <link rel="canonical" href="https://elan.clinic/book.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="en" href="https://elan.clinic/book.html" />
+  <link rel="alternate" hreflang="et" href="https://elan.clinic/et/book.html" />
+  <link rel="alternate" hreflang="fi" href="https://elan.clinic/fi/book.html" />
+  <link rel="alternate" hreflang="ru" href="https://elan.clinic/ru/book.html" />
+  <link rel="alternate" hreflang="x-default" href="https://elan.clinic/book.html" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── Reset & Base ─────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0D1B2A;
+      color: rgba(232, 228, 222, 0.55);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Typography ──────────────────────────────────────────────── */
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      color: #E8E4DE;
+      line-height: 1.2;
+      font-weight: 500;
+    }
+
+    h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); }
+    h2 { font-size: clamp(1.7rem, 3.5vw, 2.4rem); }
+    h3 { font-size: clamp(1.2rem, 2.5vw, 1.55rem); }
+
+    p { margin-bottom: 1.2em; }
+    p:last-child { margin-bottom: 0; }
+
+    a { color: #C5A55A; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ─── Layout Containers ───────────────────────────────────────── */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .container--text { max-width: 720px; }
+
+    .section { padding: 120px 0; }
+
+    /* ─── Label ───────────────────────────────────────────────────── */
+    .label {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #C5A55A;
+      margin-bottom: 24px;
+    }
+
+    .gold-line {
+      width: 48px;
+      height: 2px;
+      background: #C5A55A;
+      margin: 28px 0;
+    }
+
+    /* ─── Buttons ─────────────────────────────────────────────────── */
+    .btn {
+      display: inline-block;
+      padding: 16px 36px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 1.5px solid #C5A55A;
+      color: #C5A55A;
+      background: transparent;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #C5A55A;
+      color: #0D1B2A;
+      text-decoration: none;
+    }
+
+    .btn--filled { background: #C5A55A; color: #0D1B2A; }
+    .btn--filled:hover { background: #d4b56a; color: #0D1B2A; }
+
+    .btn--full { width: 100%; text-align: center; }
+
+    /* ─── Nav (fixed; same style as index) ─────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(13, 27, 42, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(197, 165, 90, 0.12);
+    }
+
+    .nav__logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      color: #E8E4DE;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+    }
+
+    .nav__logo span { color: #C5A55A; }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-left: auto;
+      margin-right: 18px;
+    }
+
+    .nav__link {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: rgba(232, 228, 222, 0.75);
+    }
+
+    .nav__link:hover { color: #C5A55A; text-decoration: none; }
+
+    .nav__cta { font-size: 0.75rem; letter-spacing: 0.12em; }
+
+    /* ─── Sticky Mobile CTA bar ────────────────────────────────────── */
+    .mobile-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 101;
+      padding: 12px 16px;
+      background: rgba(13, 27, 42, 0.95);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(197, 165, 90, 0.25);
+    }
+
+    .mobile-cta .btn { display: block; width: 100%; padding: 14px 24px; }
+
+    /* ─── Page hero ───────────────────────────────────────────────── */
+    .hero {
+      padding: 160px 0 56px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -220px;
+      right: -220px;
+      width: 640px;
+      height: 640px;
+      background: radial-gradient(circle, rgba(197,165,90,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero__title { max-width: 760px; font-weight: 400; line-height: 1.1; }
+
+    .hero__subtitle {
+      margin-top: 22px;
+      max-width: 680px;
+      color: rgba(232, 228, 222, 0.7);
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    /* ─── Next steps ──────────────────────────────────────────────── */
+    .next {
+      padding: 56px 0 0;
+    }
+
+    .next__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 32px;
+    }
+
+    .next__card {
+      background: #111D2E;
+      padding: 40px 32px;
+      border-top: 2px solid rgba(197, 165, 90, 0.45);
+    }
+
+    .next__num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      line-height: 1;
+      color: rgba(197,165,90,0.22);
+      margin-bottom: 16px;
+    }
+
+    .next__card h3 { margin-bottom: 10px; }
+
+    .next__card p { font-size: 0.92rem; margin: 0; }
+
+    /* ─── Booking layout ──────────────────────────────────────────── */
+    .booking {
+      padding: 80px 0 120px;
+    }
+
+    .booking__grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 2px;
+      margin-top: 48px;
+      background: rgba(232, 228, 222, 0.06);
+    }
+
+    .card {
+      background: #111D2E;
+      padding: 48px 40px;
+    }
+
+    .card--aside { background: #0D1B2A; border: 1px solid rgba(197,165,90,0.14); }
+
+    /* ─── Form ────────────────────────────────────────────────────── */
+    form { margin-top: 28px; }
+
+    .form__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .field { display: flex; flex-direction: column; gap: 8px; }
+
+    label {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: rgba(232, 228, 222, 0.75);
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 0;
+      border: 1px solid rgba(197, 165, 90, 0.18);
+      background: #0D1B2A;
+      color: #E8E4DE;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    input::placeholder, textarea::placeholder { color: rgba(232, 228, 222, 0.28); }
+
+    input:focus, select:focus, textarea:focus { border-color: #C5A55A; }
+
+    textarea { min-height: 120px; resize: vertical; }
+
+    .field--full { grid-column: 1 / -1; }
+
+    .radio-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    .radio {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 14px 14px;
+      border: 1px solid rgba(232, 228, 222, 0.08);
+      background: rgba(232, 228, 222, 0.03);
+    }
+
+    .radio input { width: 18px; height: 18px; accent-color: #C5A55A; }
+
+    .radio span { color: rgba(232, 228, 222, 0.75); font-size: 0.92rem; }
+
+    .consent {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 18px 16px;
+      border: 1px solid rgba(197,165,90,0.16);
+      background: rgba(197,165,90,0.04);
+    }
+
+    .consent input { width: 18px; height: 18px; margin-top: 2px; accent-color: #C5A55A; }
+
+    .consent p { margin: 0; font-size: 0.9rem; color: rgba(232, 228, 222, 0.6); }
+
+    .note {
+      margin-top: 18px;
+      font-size: 0.8rem;
+      color: rgba(232, 228, 222, 0.35);
+      letter-spacing: 0.02em;
+    }
+
+    .form-actions { margin-top: 22px; }
+
+    /* ─── Trust section ───────────────────────────────────────────── */
+    .trust {
+      margin-top: 28px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(232, 228, 222, 0.08);
+      font-size: 0.85rem;
+      color: rgba(232, 228, 222, 0.45);
+      line-height: 1.8;
+    }
+
+    .trust strong { color: rgba(232, 228, 222, 0.72); font-weight: 600; }
+
+    .trust__row { margin-top: 14px; display: grid; gap: 8px; }
+
+    .callout {
+      margin-top: 24px;
+      padding: 18px 16px;
+      border: 1px solid rgba(232,228,222,0.08);
+      background: rgba(232, 228, 222, 0.03);
+      font-size: 0.92rem;
+      color: rgba(232, 228, 222, 0.6);
+    }
+
+    .callout a { font-weight: 600; }
+
+    /* ─── Footer legal ─────────────────────────────────────────────── */
+    .footer-legal {
+      background: #060f1a;
+      padding: 32px 24px;
+      border-top: 1px solid rgba(232, 228, 222, 0.06);
+    }
+
+    .footer-legal__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-legal p {
+      font-size: 0.75rem;
+      color: rgba(232, 228, 222, 0.25);
+      margin: 0;
+    }
+
+    /* ─── Responsive ─────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .booking__grid { grid-template-columns: 1fr; background: transparent; gap: 18px; }
+      .card { padding: 40px 28px; }
+    }
+
+    @media (max-width: 768px) {
+      .nav__links { display: none; }
+      .nav__cta { display: none; }
+      .mobile-cta { display: block; }
+      body { padding-bottom: 64px; }
+
+      .hero { padding: 120px 0 40px; }
+      .section { padding: 80px 0; }
+
+      .next__grid { grid-template-columns: 1fr; }
+
+      .form__grid { grid-template-columns: 1fr; }
+      .radio-group { grid-template-columns: 1fr; }
+
+      .footer-legal__inner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5459MHF3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ─── Navigation ─────────────────────────────────────────────── -->
+  <nav class="nav">
+    <a href="/" class="nav__logo">Élan<span>.</span></a>
+    <div class="nav__links">
+      <a href="/#method" class="nav__link">How It Works</a>
+      <a href="/#programmes" class="nav__link">Programmes</a>
+      <a href="/articles.html" class="nav__link">Articles</a>
+      <a href="/resources.html" class="nav__link">Resources</a>
+    </div>
+    <a href="/book.html" class="btn nav__cta">Book a Consultation</a>
+    <div class="lang-switch" style="display:inline-flex;gap:0.5rem;font-size:0.75rem;margin-left:12px;">
+      <a href="/book.html" style="color:#C5A55A;text-decoration:none;font-weight:bold;">EN</a>
+      <span style="color:rgba(232,228,222,0.3);">|</span>
+      <a href="/et/book.html" style="color:rgba(232,228,222,0.5);text-decoration:none;">ET</a>
+      <span style="color:rgba(232,228,222,0.3);">|</span>
+      <a href="/fi/book.html" style="color:rgba(232,228,222,0.5);text-decoration:none;">FI</a>
+      <span style="color:rgba(232,228,222,0.3);">|</span>
+      <a href="/ru/book.html" style="color:rgba(232,228,222,0.5);text-decoration:none;">RU</a>
+    </div>
+  </nav>
+
+  <!-- Mobile sticky CTA -->
+  <div class="mobile-cta">
+    <a href="#intake" class="btn btn--filled">Request Consultation</a>
+  </div>
+
+  <!-- ─── Hero ──────────────────────────────────────────────────── -->
+  <header class="hero">
+    <div class="container container--text">
+      <span class="label">Booking</span>
+      <h1 class="hero__title">Book Your Consultation</h1>
+      <p class="hero__subtitle">45 minutes with Dr. Lindström. By the end, you'll know your maintenance plan.</p>
+      <div class="gold-line"></div>
+    </div>
+
+    <div class="container next">
+      <h2 style="font-size: clamp(1.3rem, 2.6vw, 1.9rem);">What Happens Next</h2>
+      <div class="next__grid">
+        <div class="next__card">
+          <div class="next__num">01</div>
+          <h3>Fill out the form below</h3>
+          <p>Tell us your GLP-1 status, primary concern, and preferred consultation type.</p>
+        </div>
+        <div class="next__card">
+          <div class="next__num">02</div>
+          <h3>We review and confirm within 24h</h3>
+          <p>We’ll reply by email (and call if needed) to confirm time, format, and next steps.</p>
+        </div>
+        <div class="next__card">
+          <div class="next__num">03</div>
+          <h3>45-minute consultation</h3>
+          <p>Remote video call or in-clinic Tallinn. Clear plan, no ambiguity.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ─── Booking + Form ─────────────────────────────────────────── -->
+  <main class="booking" id="intake">
+    <div class="container">
+      <div class="booking__grid">
+
+        <!-- Form card -->
+        <section class="card" aria-labelledby="intake-title">
+          <span class="label">Intake Form</span>
+          <h2 id="intake-title">Request Consultation</h2>
+          <p style="color: rgba(232,228,222,0.6); max-width: 640px;">
+            This is a medical booking request. We use your answers only to schedule and prepare the consultation.
+          </p>
+
+          <form id="consultationForm" method="POST" action="#">
+            <div class="form__grid">
+              <div class="field">
+                <label for="fullName">Full name</label>
+                <input id="fullName" name="full_name" type="text" autocomplete="name" required />
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+              </div>
+
+              <div class="field">
+                <label for="language">Preferred language</label>
+                <select id="language" name="preferred_language" required>
+                  <option value="" disabled selected>Select…</option>
+                  <option>English</option>
+                  <option>Estonian</option>
+                  <option>Finnish</option>
+                  <option>Russian</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="glp1Status">Current GLP-1 status</label>
+                <select id="glp1Status" name="glp1_status" required>
+                  <option value="" disabled selected>Select…</option>
+                  <option>Currently taking</option>
+                  <option>Planning to stop</option>
+                  <option>Already stopped</option>
+                  <option>Never taken</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="glp1Duration">How long on GLP-1</label>
+                <select id="glp1Duration" name="glp1_duration" required>
+                  <option value="" disabled selected>Select…</option>
+                  <option>Less than 3 months</option>
+                  <option>3-6 months</option>
+                  <option>6-12 months</option>
+                  <option>Over 12 months</option>
+                  <option>N/A</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="weightLost">Weight lost on GLP-1 (optional)</label>
+                <input id="weightLost" name="weight_lost" type="text" placeholder="e.g., 14 kg" />
+              </div>
+
+              <div class="field field--full">
+                <label for="concern">Primary concern</label>
+                <textarea id="concern" name="primary_concern" required placeholder="Tell us briefly what you'd like help with"></textarea>
+              </div>
+
+              <div class="field field--full">
+                <label>Preferred consultation type</label>
+                <div class="radio-group" role="radiogroup" aria-label="Preferred consultation type">
+                  <label class="radio">
+                    <input type="radio" name="consultation_type" value="Remote video call" required />
+                    <span>Remote video call</span>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="consultation_type" value="In-clinic Tallinn" required />
+                    <span>In-clinic Tallinn</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="referral">How did you hear about us?</label>
+                <select id="referral" name="referral_source" required>
+                  <option value="" disabled selected>Select…</option>
+                  <option>Google</option>
+                  <option>Social media</option>
+                  <option>Friend/colleague</option>
+                  <option>Healthcare provider</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="field" aria-hidden="true" style="opacity:0; height:0; overflow:hidden;">
+                <label for="company">Company</label>
+                <input id="company" name="company" type="text" tabindex="-1" autocomplete="off" />
+              </div>
+
+              <div class="field field--full">
+                <div class="consent">
+                  <input id="consent" name="consent" type="checkbox" required />
+                  <p>
+                    I consent to Élan Clinic processing my data for the purpose of scheduling and conducting a medical consultation.
+                    <a href="/privacy.html">Privacy policy</a>.
+                  </p>
+                </div>
+                <p class="note">Integration note: online submission is being connected. Your request will be stored locally in your browser for now and shown on-screen after you click submit.</p>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn--filled btn--full">Request Consultation</button>
+              <p id="formStatus" class="note" role="status" aria-live="polite" style="margin-top: 14px;"></p>
+            </div>
+          </form>
+        </section>
+
+        <!-- Aside card -->
+        <aside class="card card--aside">
+          <span class="label">Trust & Contact</span>
+          <h3 style="margin-bottom: 14px;">Élan Clinic</h3>
+          <p style="color: rgba(232,228,222,0.6);">
+            Licensed medical clinic in Tallinn. Discreet, physician-led care.
+          </p>
+
+          <div class="trust">
+            <div class="trust__row">
+              <div><strong>Medical licence:</strong> L07470</div>
+              <div><strong>Company:</strong> Elan Clinic OÜ (Reg 17338832)</div>
+              <div><strong>Address:</strong> Sepapaja 12/1, Tallinn</div>
+              <div><strong>Phone:</strong> <a href="tel:+37252999399">+372 52 99939</a></div>
+              <div><strong>Email:</strong> <a href="mailto:info@elan.clinic">info@elan.clinic</a></div>
+            </div>
+          </div>
+
+          <div class="callout">
+            Prefer to call? <a href="tel:+37252999399">+372 52 99939</a>
+          </div>
+
+          <p class="note" style="margin-top: 18px;">
+            If you're in acute distress or need emergency care, call 112 (Estonia) or your local emergency number.
+          </p>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ─── Footer Legal (same as index) ───────────────────────────── -->
+  <footer class="footer-legal">
+    <div class="footer-legal__inner">
+      <p>© 2026 Élan Clinic · Elan Clinic OÜ · Reg 17338832 · Medical Licence L07470 · Sepapaja 12/1, Tallinn 11415</p>
+      <p>This website does not constitute medical advice. Consult your physician before making any changes to your medication or health programme.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const form = document.getElementById('consultationForm');
+      const statusEl = document.getElementById('formStatus');
+
+      function safePushEvent(eventName, payload){
+        try {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push(Object.assign({ event: eventName }, payload || {}));
+        } catch (e) {}
+      }
+
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        // Basic bot trap
+        const company = (form.querySelector('input[name="company"]') || {}).value;
+        if (company && company.trim().length > 0) {
+          statusEl.textContent = 'Thank you. We will be in touch.';
+          return;
+        }
+
+        // Push analytics event
+        safePushEvent('consultation_request', {
+          page: 'book.html',
+          language: (document.getElementById('language') || {}).value || 'unknown',
+          consultation_type: (form.querySelector('input[name="consultation_type"]:checked') || {}).value || 'unknown'
+        });
+
+        // Store locally (temporary integration)
+        try {
+          const fd = new FormData(form);
+          const obj = {};
+          fd.forEach((v,k) => { obj[k] = v; });
+          obj._submitted_at = new Date().toISOString();
+          localStorage.setItem('elan_consultation_request', JSON.stringify(obj));
+        } catch (e) {}
+
+        statusEl.textContent = 'Request received. We will review and confirm within 24 hours.';
+        form.reset();
+        // Keep consent unchecked on reset; reset already handles.
+      });
+    })();
+  </script>
+</body>
+</html>
