@@ -1,52 +1,650 @@
-�<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5459MHF3');</script>
-<!-- End Google Tag Manager -->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5459MHF3');</script>
+  <!-- End Google Tag Manager -->
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Testimonial Consent | �0lan Clinic</title>
-  <meta name="description" content="How �0lan Clinic collects and publishes patient testimonials with explicit informed consent under GDPR." />
+  <title>Consultation Terms & Informed Consent — Élan Clinic</title>
+  <meta name="description" content="Terms of service, consultation terms, and informed consent for remote medical consultations at Élan Clinic (Elan Clinic OÜ, Estonia)." />
   <link rel="canonical" href="https://elan.clinic/consent.html" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="en" href="https://elan.clinic/consent.html" />
+  <link rel="alternate" hreflang="x-default" href="https://elan.clinic/consent.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elan.clinic/consent.html" />
+  <meta property="og:title" content="Consultation Terms & Informed Consent — Élan Clinic" />
+  <meta property="og:description" content="Terms of service, consultation terms, and informed consent for telemedicine/remote consultations at Élan Clinic." />
+  <meta property="og:image" content="https://elan.clinic/og-image.jpg" />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Consultation Terms & Informed Consent — Élan Clinic" />
+  <meta name="twitter:description" content="Terms of service and informed consent for telemedicine/remote consultations at Élan Clinic." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── Reset & Base ─────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0D1B2A;
+      color: rgba(232, 228, 222, 0.55);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 0;
+    }
+
+    /* ─── Typography ──────────────────────────────────────────────── */
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      color: #E8E4DE;
+      line-height: 1.2;
+      font-weight: 500;
+    }
+
+    h1 { font-size: clamp(2.1rem, 4.5vw, 3.2rem); }
+    h2 { font-size: clamp(1.6rem, 3.2vw, 2.2rem); }
+    h3 { font-size: clamp(1.2rem, 2.4vw, 1.5rem); }
+    h4 { font-size: 1.05rem; font-weight: 600; }
+
+    p { margin-bottom: 1.2em; }
+    p:last-child { margin-bottom: 0; }
+
+    a { color: #C5A55A; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    ul { margin: 0 0 1.2em 1.2em; }
+    li { margin: 0.45em 0; }
+
+    /* ─── Layout ─────────────────────────────────────────────────── */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .container--text {
+      max-width: 820px;
+    }
+
+    .section {
+      padding: 110px 0;
+    }
+
+    .section--dark { background-color: #0D1B2A; }
+    .section--card { background-color: #111D2E; }
+
+    /* ─── Gold Label ─────────────────────────────────────────────── */
+    .label {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #C5A55A;
+      margin-bottom: 18px;
+    }
+
+    /* ─── Divider ─────────────────────────────────────────────────── */
+    .gold-line {
+      width: 48px;
+      height: 2px;
+      background: #C5A55A;
+      margin: 28px 0;
+    }
+
+    /* ─── Button ─────────────────────────────────────────────────── */
+    .btn {
+      display: inline-block;
+      padding: 16px 36px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 1.5px solid #C5A55A;
+      color: #C5A55A;
+      background: transparent;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #C5A55A;
+      color: #0D1B2A;
+      text-decoration: none;
+    }
+
+    .btn--filled {
+      background: #C5A55A;
+      color: #0D1B2A;
+    }
+
+    .btn--filled:hover {
+      background: #d4b56a;
+      color: #0D1B2A;
+    }
+
+    /* ─── Nav ────────────────────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(13, 27, 42, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(197, 165, 90, 0.12);
+    }
+
+    .nav__logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      color: #E8E4DE;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+    }
+
+    .nav__logo span { color: #C5A55A; }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-left: auto;
+      margin-right: 18px;
+    }
+
+    .nav__link {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: rgba(232, 228, 222, 0.75);
+    }
+
+    .nav__link:hover {
+      color: #C5A55A;
+      text-decoration: none;
+    }
+
+    .nav__cta {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+    }
+
+    /* ─── Page Header ─────────────────────────────────────────────── */
+    .page-hero {
+      padding: 160px 0 70px;
+      background: #0D1B2A;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: -220px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(197,165,90,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .page-hero__title {
+      max-width: 900px;
+      margin-bottom: 14px;
+    }
+
+    .page-hero__sub {
+      max-width: 820px;
+      font-size: 1.02rem;
+      color: rgba(232, 228, 222, 0.65);
+    }
+
+    .page-hero__meta {
+      margin-top: 26px;
+      font-size: 0.82rem;
+      color: rgba(232,228,222,0.35);
+      letter-spacing: 0.03em;
+    }
+
+    /* ─── Cards / Sections ───────────────────────────────────────── */
+    .card {
+      background: #111D2E;
+      border: 1px solid rgba(197, 165, 90, 0.12);
+      padding: 44px 40px;
+    }
+
+    .card + .card { margin-top: 22px; }
+
+    .card h2 { margin-bottom: 8px; }
+
+    .card h3 {
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    .card p, .card li { font-size: 0.95rem; }
+
+    .note {
+      margin-top: 18px;
+      padding: 18px 18px;
+      background: rgba(197, 165, 90, 0.06);
+      border-left: 3px solid #C5A55A;
+      color: rgba(232,228,222,0.7);
+      font-size: 0.92rem;
+    }
+
+    .toc {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 26px;
+      margin-top: 18px;
+    }
+
+    .toc a {
+      display: block;
+      padding: 12px 14px;
+      background: #0D1B2A;
+      border: 1px solid rgba(232, 228, 222, 0.06);
+      color: rgba(232, 228, 222, 0.7);
+      font-size: 0.83rem;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+    }
+
+    .toc a:hover {
+      border-color: rgba(197, 165, 90, 0.35);
+      color: #C5A55A;
+    }
+
+    /* ─── Footer Legal ───────────────────────────────────────────── */
+    .footer-legal {
+      background: #060f1a;
+      padding: 32px 24px;
+      border-top: 1px solid rgba(232, 228, 222, 0.06);
+    }
+
+    .footer-legal__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-legal p {
+      font-size: 0.75rem;
+      color: rgba(232, 228, 222, 0.25);
+      margin: 0;
+    }
+
+    /* ─── Responsive ─────────────────────────────────────────────── */
+    @media (max-width: 820px) {
+      .toc { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav__links { display: none; }
+      .nav__cta { display: none; }
+
+      .section { padding: 80px 0; }
+      .page-hero { padding: 120px 0 50px; }
+      .card { padding: 34px 24px; }
+      .footer-legal__inner { flex-direction: column; text-align: center; }
+    }
+  </style>
 </head>
-<body style="font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6;margin:0;background:#0D1B2A;color:#E8E4DE;">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5459MHF3"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  <main style="max-width:920px;margin:0 auto;padding:48px 20px;">
-    <h1 style="margin:0 0 12px 0;font-weight:700;">Testimonial consent (GDPR)</h1>
-    <p style="margin:0 0 28px 0;opacity:0.85;">Last updated: 2026-03-03</p>
 
-    <section style="background:rgba(255,255,255,0.04);border:1px solid rgba(197,165,90,0.18);border-radius:12px;padding:18px 18px;margin:0 0 18px 0;">
-      <p style="margin:0;">�0lan Clinic publishes patient testimonials only with explicit written informed consent. Health data is special category data under GDPR Article 9.</p>
-    </section>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5459MHF3"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-    <h2>What this means</h2>
-    <ul>
-      <li>We will not publish a testimonial without documented consent on file.</li>
-      <li>You can choose how you are identified (first name only, initials, or anonymised).</li>
-      <li>You can withdraw consent at any time. We will remove the testimonial promptly (target: within 72 hours).</li>
-    </ul>
+  <!-- ─── Navigation ─────────────────────────────────────────────── -->
+  <nav class="nav">
+    <a href="/" class="nav__logo">Élan<span>.</span></a>
+    <div class="nav__links">
+      <a href="/" class="nav__link">Home</a>
+      <a href="/book.html" class="nav__link">Book</a>
+      <a href="/articles.html" class="nav__link">Articles</a>
+      <a href="/resources.html" class="nav__link">Resources</a>
+    </div>
+    <a href="/book.html" class="btn nav__cta">Book a Consultation</a>
+    <div class="lang-switch" style="display:inline-flex;gap:0.5rem;font-size:0.75rem;margin-left:12px;">
+      <a href="/" style="color:rgba(232,228,222,0.5);text-decoration:none;">EN</a>
+      <span style="color:rgba(232,228,222,0.3);">|</span>
+      <a href="/et.html" style="color:rgba(232,228,222,0.5);text-decoration:none;">ET</a>
+      <span style="color:rgba(232,228,222,0.3);">|</span>
+      <a href="/fi.html" style="color:rgba(232,228,222,0.5);text-decoration:none;">FI</a>
+      <span style="color:rgba(232,228,222,0.3);">|</span>
+      <a href="/ru.html" style="color:rgba(232,228,222,0.5);text-decoration:none;">RU</a>
+    </div>
+  </nav>
 
-    <h2>How to give or withdraw consent</h2>
-    <p>Please contact us at <a href="mailto:info@elan.clinic" style="color:#C5A55A;">info@elan.clinic</a> and we will provide the consent form and instructions.</p>
+  <!-- ─── Page Hero ──────────────────────────────────────────────── -->
+  <header class="page-hero">
+    <div class="container container--text">
+      <span class="label">Legal & Patient Information</span>
+      <h1 class="page-hero__title">Consultation Terms &amp; Informed Consent</h1>
+      <p class="page-hero__sub">
+        This page explains (1) the terms for using the <strong>elan.clinic</strong> website and (2) the terms and informed consent applicable to consultations provided by Élan Clinic, including remote (telemedicine) consultations.
+      </p>
+      <div class="page-hero__meta">Effective date: 2026-03-11 · Last updated: 2026-03-11</div>
+    </div>
+  </header>
 
-    <hr style="border:none;border-top:1px solid rgba(197,165,90,0.2);margin:32px 0;" />
+  <main class="section section--dark">
+    <div class="container container--text">
 
-    <h2 style="margin-top:0;">Nõusolek tagasiside avaldamiseks (ET)</h2>
-    <p>Avaldame inimeste tagasisidet ainult kirjaliku informeeritud nõusoleku alusel (GDPR art 9). Nõusoleku saab igal ajal tagasi võtta; eemaldame tagasiside esimesel võimalusel (eesmärk: 72 tunni jooksul). Küsi nõusoleku vormi: <a href="mailto:info@elan.clinic" style="color:#C5A55A;">info@elan.clinic</a>.</p>
+      <div class="card" id="overview">
+        <span class="label">Overview</span>
+        <h2>Read this before booking</h2>
+        <div class="gold-line"></div>
 
-    <p style="margin-top:28px;opacity:0.85;"><a href="/" style="color:#C5A55A;">� � Back to elan.clinic</a></p>
+        <p>
+          By accessing or using this website, booking an appointment, paying for a programme, or participating in a consultation, you confirm that you have read and understood these terms.
+        </p>
+
+        <div class="note">
+          <strong>Medical disclaimer (important):</strong> Information on this website is for general educational purposes only and does not constitute medical advice. Medical decisions must be made in a consultation with a licensed clinician.
+        </div>
+
+        <h3>Table of contents</h3>
+        <div class="toc">
+          <a href="#website-terms">1. Website Terms of Service</a>
+          <a href="#medical-disclaimer">2. Medical Disclaimer</a>
+          <a href="#consultation-terms">3. Consultation Terms</a>
+          <a href="#telemedicine-consent">4. Informed Consent for Telemedicine</a>
+          <a href="#remote-limitations">5. Limitations of Remote Consultations</a>
+          <a href="#payment-terms">6. Payment & Cancellation</a>
+          <a href="#ip">7. Intellectual Property</a>
+          <a href="#law">8. Governing Law (Estonia)</a>
+          <a href="#contact">9. Contact & Provider Details</a>
+        </div>
+      </div>
+
+      <div class="card" id="website-terms">
+        <span class="label">1</span>
+        <h2>Website Terms of Service</h2>
+        <div class="gold-line"></div>
+
+        <h3>1.1 Acceptance of terms</h3>
+        <p>
+          These terms govern your use of the <strong>elan.clinic</strong> website (the “Website”). By accessing the Website, you agree to comply with these terms. If you do not agree, please do not use the Website.
+        </p>
+
+        <h3>1.2 Intended audience and permitted use</h3>
+        <p>
+          The Website is intended for individuals seeking information about Élan Clinic’s services. You agree to use the Website lawfully and not to:
+        </p>
+        <ul>
+          <li>attempt to gain unauthorised access to systems, accounts, or data;</li>
+          <li>interfere with the Website’s operation, security, or availability;</li>
+          <li>use the Website in a manner that is misleading, fraudulent, or unlawful;</li>
+          <li>copy, scrape, or reproduce substantial portions of content for commercial purposes without written permission.</li>
+        </ul>
+
+        <h3>1.3 Availability and changes</h3>
+        <p>
+          We may change, suspend, or discontinue any part of the Website at any time. We may update these terms from time to time; the effective date at the top indicates the current version.
+        </p>
+
+        <h3>1.4 Third-party links and services</h3>
+        <p>
+          The Website may include links to third-party sites or tools (for example, booking, payment, or educational resources). We are not responsible for third-party content, terms, or privacy practices. Use them at your own discretion.
+        </p>
+
+        <h3>1.5 Privacy and cookies</h3>
+        <p>
+          The Website may use analytics and cookies (including Google Tag Manager) to understand Website usage and improve performance. Where required by law, consent mechanisms may apply.
+        </p>
+      </div>
+
+      <div class="card" id="medical-disclaimer">
+        <span class="label">2</span>
+        <h2>Medical Disclaimer</h2>
+        <div class="gold-line"></div>
+
+        <h3>2.1 Educational information only</h3>
+        <p>
+          Content published on the Website (including articles, guides, and resources) is provided for general educational information only. It is not intended as medical advice, diagnosis, or treatment and should not be relied upon as a substitute for professional medical consultation.
+        </p>
+
+        <h3>2.2 No doctor-patient relationship through the Website</h3>
+        <p>
+          Accessing the Website, submitting a contact form, or emailing us does <strong>not</strong> by itself create a doctor–patient relationship. A clinical relationship is established only after an appointment is booked and accepted, appropriate identification/verification is completed where applicable, and a clinician agrees to provide care.
+        </p>
+
+        <h3>2.3 Emergencies</h3>
+        <p>
+          The Website and remote communication channels are not suitable for emergencies. If you believe you have an emergency, call the local emergency number (in Estonia: <strong>112</strong>) or seek urgent in-person medical care.
+        </p>
+      </div>
+
+      <div class="card" id="consultation-terms">
+        <span class="label">3</span>
+        <h2>Consultation Terms (What to Expect)</h2>
+        <div class="gold-line"></div>
+
+        <h3>3.1 Nature of consultations</h3>
+        <p>
+          Consultations may be provided in-clinic and/or remotely (telemedicine) depending on your needs and what is clinically appropriate. A consultation typically includes history taking, review of relevant records and measurements, clinical assessment within the limits of the chosen format, discussion of options, and an agreed plan.
+        </p>
+
+        <h3>3.2 Patient responsibilities</h3>
+        <p>
+          To provide safe care, you agree to:
+        </p>
+        <ul>
+          <li>provide complete and accurate information about symptoms, medical history, medications, allergies, and relevant lifestyle factors;</li>
+          <li>inform us about changes in your condition and follow agreed-up monitoring and follow-up plans;</li>
+          <li>use the consultation for your own health needs only (not for third parties unless explicitly agreed and legally permitted);</li>
+          <li>treat clinic staff with respect; abusive behaviour may result in termination of services.</li>
+        </ul>
+
+        <h3>3.3 Scheduling, cancellation and rescheduling</h3>
+        <p>
+          If you need to reschedule or cancel an appointment, please do so as early as possible to allow the slot to be offered to other patients.
+        </p>
+
+        <h3>3.4 No-show policy</h3>
+        <p>
+          If you do not attend your appointment without notice (“no-show”), we may charge a no-show fee and/or require prepayment for future bookings. This is to protect clinician time and maintain access for other patients.
+        </p>
+
+        <p class="note">
+          <strong>Practical rule of thumb:</strong> if you cannot attend, notify us as soon as possible. If you are unsure what fees apply to your booking, contact us before the appointment.
+        </p>
+
+        <h3>3.5 Clinical decisions and referrals</h3>
+        <p>
+          Clinical decisions are made based on information available at the time. We may recommend tests, follow-ups, or in-person assessment. Where appropriate, we may recommend referral to another clinician or service.
+        </p>
+      </div>
+
+      <div class="card" id="telemedicine-consent">
+        <span class="label">4</span>
+        <h2>Informed Consent for Telemedicine / Remote Consultations</h2>
+        <div class="gold-line"></div>
+
+        <p>
+          Telemedicine means providing clinical services remotely using audio/video communication and digital tools. By choosing a remote consultation, you confirm that you understand and accept the following.
+        </p>
+
+        <h3>4.1 What telemedicine can include</h3>
+        <ul>
+          <li>review of your medical history, symptoms, and goals;</li>
+          <li>review of test results and health data you provide;</li>
+          <li>discussion of treatment options, lifestyle protocols, and follow-up;</li>
+          <li>where legally and clinically appropriate, issuing prescriptions or documentation.</li>
+        </ul>
+
+        <h3>4.2 Identity, location, and contact details</h3>
+        <p>
+          For safety and legal compliance, we may need to verify your identity and confirm your physical location at the time of the consultation (for example, to determine what emergency services are available if needed).
+        </p>
+
+        <h3>4.3 Confidentiality and technical risks</h3>
+        <p>
+          We take reasonable steps to protect confidentiality. However, electronic communication involves risks, including potential technical failures, unauthorised access, or data transmission errors.
+        </p>
+
+        <h3>4.4 Recording</h3>
+        <p>
+          Remote consultations are not recorded unless we obtain explicit consent in advance and provide a clear purpose for recording.
+        </p>
+
+        <h3>4.5 Right to withdraw consent</h3>
+        <p>
+          You may withdraw consent for telemedicine at any time. If remote care is no longer appropriate, we may recommend in-person assessment or referral.
+        </p>
+      </div>
+
+      <div class="card" id="remote-limitations">
+        <span class="label">5</span>
+        <h2>Limitations of Remote Medical Consultations</h2>
+        <div class="gold-line"></div>
+
+        <h3>5.1 No physical examination (or limited exam)</h3>
+        <p>
+          Remote consultations may limit our ability to perform a physical examination and to observe clinical signs. This may affect diagnostic certainty.
+        </p>
+
+        <h3>5.2 Incomplete information</h3>
+        <p>
+          The quality of remote care depends on the completeness and accuracy of information you provide, and the availability of relevant measurements and test results.
+        </p>
+
+        <h3>5.3 When an in-person assessment is required</h3>
+        <p>
+          We may determine that an in-person consultation, urgent evaluation, or emergency care is required. If so, you agree to seek in-person care promptly.
+        </p>
+
+        <h3>5.4 Not suitable for emergencies</h3>
+        <p>
+          Telemedicine is not intended for emergencies or rapidly deteriorating conditions.
+        </p>
+      </div>
+
+      <div class="card" id="payment-terms">
+        <span class="label">6</span>
+        <h2>Payment Terms (Programmes, Fees, and Cancellations)</h2>
+        <div class="gold-line"></div>
+
+        <h3>6.1 Programme pricing</h3>
+        <p>
+          Programme prices are displayed on the Website or provided in writing. Prices may change over time; changes apply prospectively (for example, from a future billing cycle) unless otherwise stated.
+        </p>
+
+        <h3>6.2 Payment methods and timing</h3>
+        <p>
+          Where applicable, payment may be required in advance to confirm an appointment or to begin a programme. If a payment fails, access to services may be paused until payment is resolved.
+        </p>
+
+        <h3>6.3 Cancellation of programmes</h3>
+        <ul>
+          <li><strong>Month-to-month plans:</strong> where stated as cancellable, you can cancel before the next billing date to avoid the next charge.</li>
+          <li><strong>Minimum-term plans:</strong> where a minimum commitment is stated (for example, 6 months), early termination may be subject to remaining fees unless otherwise agreed in writing.</li>
+        </ul>
+
+        <h3>6.4 Refunds</h3>
+        <p>
+          Refund eligibility depends on the service delivered, timing, and any third-party processing fees. Where a refund is granted, payment processing fees may be non-refundable.
+        </p>
+
+        <h3>6.5 Missed appointments and late cancellations</h3>
+        <p>
+          We may charge for missed appointments or late cancellations. Any applicable fees will be communicated during booking and/or in the booking confirmation.
+        </p>
+
+        <p class="note">
+          If you believe you were charged incorrectly, contact us promptly at <a href="mailto:info@elan.clinic">info@elan.clinic</a> so we can review the case.
+        </p>
+      </div>
+
+      <div class="card" id="ip">
+        <span class="label">7</span>
+        <h2>Intellectual Property</h2>
+        <div class="gold-line"></div>
+
+        <p>
+          The Website and its content (including text, design, logos, and materials) are owned by or licensed to Élan Clinic (Elan Clinic OÜ) and are protected by applicable intellectual property laws.
+        </p>
+        <p>
+          You may view and print pages for personal, non-commercial use. You may not reproduce, distribute, modify, or create derivative works from Website content for commercial purposes without prior written permission.
+        </p>
+      </div>
+
+      <div class="card" id="law">
+        <span class="label">8</span>
+        <h2>Governing Law</h2>
+        <div class="gold-line"></div>
+
+        <p>
+          These terms are governed by the laws of the <strong>Republic of Estonia</strong>. Disputes shall be resolved according to Estonian law and, where applicable, in the competent courts of Estonia.
+        </p>
+      </div>
+
+      <div class="card" id="contact">
+        <span class="label">9</span>
+        <h2>Contact &amp; Provider Details</h2>
+        <div class="gold-line"></div>
+
+        <p><strong>Provider:</strong> Elan Clinic OÜ</p>
+        <p><strong>Registry code:</strong> 17338832</p>
+        <p><strong>Medical licence:</strong> L07470</p>
+        <p><strong>Address:</strong> Sepapaja 12/1, Tallinn 11415, Republic of Estonia</p>
+        <p><strong>Email:</strong> <a href="mailto:info@elan.clinic">info@elan.clinic</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+37252999399">+372 52 99939</a></p>
+
+        <div class="note">
+          If you have questions about these terms, or you need a copy in another format, contact us and we will help.
+        </div>
+      </div>
+
+    </div>
   </main>
+
+  <footer class="footer-legal">
+    <div class="footer-legal__inner">
+      <p>© 2026 Élan Clinic · Elan Clinic OÜ · Reg 17338832 · Medical Licence L07470 · Sepapaja 12/1, Tallinn 11415</p>
+      <p>This website does not constitute medical advice. Consult your physician before making any changes to your medication or health programme.</p>
+    </div>
+  </footer>
 </body>
 </html>
-
