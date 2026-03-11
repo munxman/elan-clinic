@@ -1,13 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5459MHF3');</script>
+<!-- End Google Tag Manager -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Élan Clinic — GLP-1 Maintenance & Weight Regain Prevention, Tallinn</title>
   <meta name="description" content="67% of GLP-1 patients regain their weight within a year of stopping. Élan Clinic is the only physician-led programme in Estonia built specifically to prevent it. Regain Shield from €99/month." />
   <meta name="google-site-verification" content="_tYIhq9iKwBeSZGe_Sie22DQ30jpkZ-uTwKOxTJFjLQ" />
-  <link rel="canonical" href="https://elan.clinic/index.html" />
+  <link rel="canonical" href="https://elan.clinic/" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="en" href="https://elan.clinic/" />
+  <link rel="alternate" hreflang="et" href="https://elan.clinic/et.html" />
+  <link rel="alternate" hreflang="fi" href="https://elan.clinic/fi.html" />
+  <link rel="alternate" hreflang="ru" href="https://elan.clinic/ru.html" />
+  <link rel="alternate" hreflang="x-default" href="https://elan.clinic/" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Élan Clinic",
+    "url": "https://elan.clinic/",
+    "logo": "https://elan.clinic/assets/elan-logo-nav.svg",
+    "email": "info@elan.clinic",
+    "telephone": "+3725299939",
+    "description": "Physician-led GLP-1 maintenance and weight regain prevention clinic in Tallinn, Estonia.",
+    "medicalSpecialty": "Preventive Medicine",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Sepapaja 12/1",
+      "addressLocality": "Tallinn",
+      "postalCode": "11415",
+      "addressCountry": "EE"
+    },
+    "priceRange": "€99-€1000/month",
+    "founder": {
+      "@type": "Person",
+      "name": "Dr. Ingmar Lindström",
+      "jobTitle": "Physician"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+3725299939",
+      "contactType": "customer support",
+      "email": "info@elan.clinic",
+      "availableLanguage": ["en", "et", "fi", "ru"]
+    }
+  }
+  </script>
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -163,14 +212,20 @@
       color: #C5A55A;
     }
 
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-left: auto;
+      margin-right: 18px;
+    }
+
     .nav__link {
       font-size: 0.75rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       font-weight: 600;
       color: rgba(232, 228, 222, 0.75);
-      margin-left: auto;
-      margin-right: 18px;
     }
 
     .nav__link:hover {
@@ -181,6 +236,144 @@
     .nav__cta {
       font-size: 0.75rem;
       letter-spacing: 0.12em;
+    }
+
+    /* ─── Sticky Mobile CTA ────────────────────────────────────────── */
+    .mobile-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 101;
+      padding: 12px 16px;
+      background: rgba(13, 27, 42, 0.95);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(197, 165, 90, 0.25);
+    }
+
+    .mobile-cta .btn {
+      display: block;
+      text-align: center;
+      width: 100%;
+      padding: 14px 24px;
+    }
+
+    /* ─── Trust Row ────────────────────────────────────────────────── */
+    .trust-row {
+      display: flex;
+      gap: 32px;
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(232, 228, 222, 0.08);
+      flex-wrap: wrap;
+    }
+
+    .trust-row__item {
+      font-size: 0.78rem;
+      color: rgba(232, 228, 222, 0.45);
+      letter-spacing: 0.04em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .trust-row__item::before {
+      content: '✓';
+      color: #C5A55A;
+      font-size: 0.7rem;
+    }
+
+    /* ─── FAQ ──────────────────────────────────────────────────────── */
+    .faq {
+      background: #111D2E;
+    }
+
+    .faq__list {
+      max-width: 720px;
+      margin: 48px auto 0;
+    }
+
+    .faq__item {
+      border-bottom: 1px solid rgba(232, 228, 222, 0.08);
+    }
+
+    .faq__question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 24px 0;
+      text-align: left;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #E8E4DE;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .faq__question::after {
+      content: '+';
+      font-size: 1.3rem;
+      color: #C5A55A;
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+
+    .faq__question[aria-expanded="true"]::after {
+      content: '−';
+    }
+
+    .faq__answer {
+      display: none;
+      padding: 0 0 24px;
+      font-size: 0.9rem;
+      color: rgba(232, 228, 222, 0.6);
+      line-height: 1.7;
+    }
+
+    .faq__answer.open {
+      display: block;
+    }
+
+    /* ─── Email Capture ────────────────────────────────────────────── */
+    .email-capture {
+      background: #0D1B2A;
+      border-top: 1px solid rgba(197, 165, 90, 0.1);
+      border-bottom: 1px solid rgba(197, 165, 90, 0.1);
+      text-align: center;
+    }
+
+    .email-capture__form {
+      display: flex;
+      gap: 12px;
+      max-width: 480px;
+      margin: 32px auto 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .email-capture__input {
+      flex: 1;
+      min-width: 240px;
+      padding: 14px 20px;
+      background: #111D2E;
+      border: 1px solid rgba(197, 165, 90, 0.2);
+      color: #E8E4DE;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    .email-capture__input::placeholder {
+      color: rgba(232, 228, 222, 0.3);
+    }
+
+    .email-capture__input:focus {
+      border-color: #C5A55A;
     }
 
     /* ─── Hero ─────────────────────────────────────────────────────── */
@@ -764,8 +957,10 @@
     @media (max-width: 768px) {
       .section { padding: 80px 0; }
 
-      .nav__link { display: none; }
+      .nav__links { display: none; }
       .nav__cta { display: none; }
+      .mobile-cta { display: block; }
+      body { padding-bottom: 64px; }
 
       .hero { padding: 120px 0 80px; }
 
@@ -806,11 +1001,28 @@
   <!-- ─── Navigation ─────────────────────────────────────────────── -->
   <nav class="nav">
     <a href="/" class="nav__logo">Élan<span>.</span></a>
-    <a href="/resources.html" class="nav__link">Resources</a>
-    <a href="/articles.html" class="nav__link">Articles</a>
-    <a href="#consultation" class="btn nav__cta">Start With a Consultation</a>
-    <div class="lang-switch" style="display:inline-flex;gap:0.5rem;font-size:0.85rem;margin-left:auto;"> <a href="/" style="color:#c9a84c;text-decoration:none;font-weight:bold;">EN</a> <span style="color:#8899aa;">|</span> <a href="/et.html" style="color:#c9a84c;text-decoration:none;">EST</a> <span style="color:#8899aa;">|</span> <a href="/fi.html" style="color:#c9a84c;text-decoration:none;">FIN</a> <span style="color:#8899aa;">|</span> <a href="/ru.html" style="color:#c9a84c;text-decoration:none;">RUS</a> </div>
+    <div class="nav__links">
+      <a href="#method" class="nav__link">How It Works</a>
+      <a href="#programmes" class="nav__link">Programmes</a>
+      <a href="/articles.html" class="nav__link">Articles</a>
+      <a href="/resources.html" class="nav__link">Resources</a>
+    </div>
+    <a href="/book.html" class="btn nav__cta">Book a Consultation</a>
+    <div class="lang-switch" style="display:inline-flex;gap:0.5rem;font-size:0.75rem;margin-left:12px;">
+      <a href="/" style="color:#C5A55A;text-decoration:none;font-weight:bold;">EN</a>
+      <span style="color:rgba(232,228,222,0.3);">|</span>
+      <a href="/et.html" style="color:rgba(232,228,222,0.5);text-decoration:none;">ET</a>
+      <span style="color:rgba(232,228,222,0.3);">|</span>
+      <a href="/fi.html" style="color:rgba(232,228,222,0.5);text-decoration:none;">FI</a>
+      <span style="color:rgba(232,228,222,0.3);">|</span>
+      <a href="/ru.html" style="color:rgba(232,228,222,0.5);text-decoration:none;">RU</a>
+    </div>
   </nav>
+
+  <!-- Mobile sticky CTA -->
+  <div class="mobile-cta">
+    <a href="/book.html" class="btn btn--filled">Book a Consultation</a>
+  </div>
 
 
   <!-- ─── 1. Hero ────────────────────────────────────────────────── -->
@@ -827,8 +1039,14 @@
         Every clinic helped you lose weight on Ozempic, Wegovy, or Mounjaro. Élan Clinic is the only programme built specifically for what happens after — preventing the regain that most patients quietly experience alone.
       </p>
       <div class="hero__actions">
-        <a href="#consultation" class="btn btn--filled">Start With a Consultation</a>
+        <a href="/book.html" class="btn btn--filled">Book a Consultation</a>
         <span class="hero__note">Regain Shield from €99/month</span>
+      </div>
+      <div class="trust-row">
+        <span class="trust-row__item">Licensed clinic (L07470)</span>
+        <span class="trust-row__item">Tallinn, Estonia</span>
+        <span class="trust-row__item">Physician-led, not AI-driven</span>
+        <span class="trust-row__item">Remote + in-clinic</span>
       </div>
     </div>
   </section>
@@ -990,7 +1208,7 @@
           </ul>
 
           <div class="programme-card__cta">
-            <a href="#consultation" class="btn btn--filled" style="display:block; text-align:center;">Start With Standard</a>
+            <a href="/book.html" class="btn btn--filled" style="display:block; text-align:center;">Start With Standard</a>
           </div>
         </div>
 
@@ -1015,7 +1233,7 @@
           </ul>
 
           <div class="programme-card__cta">
-            <a href="#consultation" class="btn" style="display:block; text-align:center;">Start With Premium</a>
+            <a href="/book.html" class="btn" style="display:block; text-align:center;">Start With Premium</a>
           </div>
         </div>
 
@@ -1181,6 +1399,110 @@
   </section>
 
 
+  <!-- ─── Mid-page CTA ────────────────────────────────────────────── -->
+  <section class="section section--dark" style="text-align:center; padding: 80px 0;">
+    <div class="container">
+      <h2 style="font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 16px;">Ready to protect your results?</h2>
+      <p style="color: rgba(232,228,222,0.55); max-width: 480px; margin: 0 auto 32px; font-size: 1rem;">The consultation is 45 minutes. By the end, you'll know whether Regain Shield is right for you.</p>
+      <a href="/book.html" class="btn btn--filled">Book a Consultation</a>
+    </div>
+  </section>
+
+
+  <!-- ─── FAQ ────────────────────────────────────────────────────── -->
+  <section class="section faq" id="faq">
+    <div class="container container--text">
+      <span class="label">Common Questions</span>
+      <h2>Frequently Asked Questions</h2>
+      <div class="gold-line"></div>
+    </div>
+
+    <div class="container">
+      <div class="faq__list">
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true'); this.nextElementSibling.classList.toggle('open');">
+            Do I need to be currently taking GLP-1 medication?
+          </button>
+          <div class="faq__answer">
+            No. Regain Shield is designed for three groups: those currently tapering off GLP-1s, those who have already stopped, and those who have begun to experience regain. If you're still on medication but planning to stop, starting the programme early gives us the best window for prevention.
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true'); this.nextElementSibling.classList.toggle('open');">
+            Can I do this remotely or do I need to visit Tallinn?
+          </button>
+          <div class="faq__answer">
+            All programmes support remote consultations via secure video. The initial consultation, regular check-ins, and protocol adjustments can all be done remotely. In-clinic visits are available in Tallinn for those who prefer them, and are required for DEXA scans (Premium and Private Office).
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true'); this.nextElementSibling.classList.toggle('open');">
+            What bloodwork is included?
+          </button>
+          <div class="faq__answer">
+            The standard panel includes metabolic markers (fasting glucose, HbA1c, insulin), lipid profile, thyroid function, liver and kidney function, vitamin D, and inflammatory markers. Additional tests are added based on your clinical history and protocol needs. Quarterly for Standard, more frequent for Premium.
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true'); this.nextElementSibling.classList.toggle('open');">
+            How is this different from just going back to my GP?
+          </button>
+          <div class="faq__answer">
+            Your GP manages general health across hundreds of patients. Regain Shield is a specialist programme focused exclusively on post-GLP-1 maintenance — with structured protocols, regular metabolic monitoring, resistance training guidance, and behavioural architecture. It's the difference between general care and a dedicated maintenance system.
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true'); this.nextElementSibling.classList.toggle('open');">
+            Can I cancel anytime?
+          </button>
+          <div class="faq__answer">
+            Standard and Premium programmes are month-to-month with no long-term commitment. You can cancel at any time. The Private Office requires a 6-month minimum commitment due to the depth of the clinical relationship involved.
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true'); this.nextElementSibling.classList.toggle('open');">
+            I haven't started GLP-1 yet. Is this relevant to me?
+          </button>
+          <div class="faq__answer">
+            If you're considering GLP-1 medication, an initial consultation can help you understand the full trajectory — including what happens when you eventually taper or stop. Starting with a maintenance mindset from day one gives significantly better long-term outcomes.
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true'); this.nextElementSibling.classList.toggle('open');">
+            Do you prescribe GLP-1 medications?
+          </button>
+          <div class="faq__answer">
+            Yes, where clinically indicated and legally permitted. However, Élan Clinic's core focus is maintenance — not prescription. If GLP-1 medication is appropriate as part of your ongoing protocol, Dr. Lindström can prescribe or manage it within the programme. We do not operate as a prescription-first telehealth service.
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true'); this.nextElementSibling.classList.toggle('open');">
+            What does the initial consultation cost?
+          </button>
+          <div class="faq__answer">
+            The initial consultation is included when you enroll in any Regain Shield programme. If you'd like a standalone assessment before committing, the consultation fee is €150 and is credited toward your first month if you proceed.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── Email Capture ──────────────────────────────────────────── -->
+  <section class="section email-capture" style="padding: 80px 0;">
+    <div class="container container--text">
+      <span class="label">Free Guide</span>
+      <h2 style="font-size: clamp(1.6rem, 3vw, 2.2rem);">Get the GLP-1 Maintenance Checklist</h2>
+      <p style="color: rgba(232,228,222,0.55); margin-top: 12px;">The 12 clinical markers to track after stopping GLP-1 medication. Evidence-based. Free.</p>
+      <div class="email-capture__form">
+        <input type="email" class="email-capture__input" placeholder="Your email address" aria-label="Email address" />
+        <a href="https://ingmarassistant.gumroad.com/l/rmgqcf" target="_blank" class="btn btn--filled" style="white-space: nowrap;">Get Free Checklist</a>
+      </div>
+      <p style="font-size: 0.75rem; color: rgba(232,228,222,0.25); margin-top: 16px;">No spam. Unsubscribe anytime. Or explore all <a href="/resources.html" style="color: rgba(197,165,90,0.6);">clinical resources →</a></p>
+    </div>
+  </section>
+
+
   <!-- ─── 9. Footer CTA ─────────────────────────────────────────── -->
   <section class="footer-cta" id="consultation">
     <span class="label">Start Now</span>
@@ -1188,7 +1510,10 @@
     <p class="footer-cta__sub">
       The consultation is 45 minutes. By the end, you will know whether Regain Shield is right for you — and if so, exactly how your protocol will be structured.
     </p>
-    <a href="tel:+37252999399" class="btn btn--filled">Call +372 52 99939</a>
+    <div style="display:flex; gap:24px; flex-wrap:wrap; justify-content:center;">
+      <a href="/book.html" class="btn btn--filled">Book a Consultation</a>
+      <a href="tel:+37252999399" class="btn">Call +372 52 99939</a>
+    </div>
 
     <div class="footer-cta__contact">
       <div class="footer-cta__contact-item">
@@ -1196,12 +1521,16 @@
         <a href="tel:+37252999399">+372 52 99939</a>
       </div>
       <div class="footer-cta__contact-item">
+        <span class="label">Email</span>
+        <a href="mailto:info@elan.clinic">info@elan.clinic</a>
+      </div>
+      <div class="footer-cta__contact-item">
         <span class="label">Clinic Address</span>
-        <p>Sepapaja 12/1<br />Tallinn 11415, Estonia</p>
+        <p>Sepapaja 12/1, 3rd floor<br />Tallinn 11415, Estonia</p>
       </div>
       <div class="footer-cta__contact-item">
         <span class="label">Programme Entry</span>
-        <p>Regain Shield Standard — €99/month<br />Regain Shield Premium — €299/month<br />The Private Office — by application</p>
+        <p>Standard — €99/month<br />Premium — €299/month<br />Private Office — by application</p>
       </div>
     </div>
   </section>
@@ -1209,7 +1538,7 @@
   <!-- ─── Footer Legal ──────────────────────────────────────────── -->
   <footer class="footer-legal">
     <div class="footer-legal__inner">
-      <p>© 2025 Élan Clinic · Elan Clinic OÜ · Reg 17338832 · Medical Licence L07470 · Sepapaja 12/1, Tallinn 11415</p>
+      <p>© 2026 Élan Clinic · Elan Clinic OÜ · Reg 17338832 · Medical Licence L07470 · Sepapaja 12/1, Tallinn 11415</p>
       <p>This website does not constitute medical advice. Consult your physician before making any changes to your medication or health programme.</p>
     </div>
   </footer>
