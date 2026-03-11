@@ -1,43 +1,344 @@
-﻿<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="description" content="Printable GLP-1 medication patient guide: dosing basics, side effects, safety tips and follow-up. Evidence-based, physician-led. Élan Clinic Tallinn." />
-<link rel="canonical" href="https://elan.clinic/glp1-guide.html" />
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5459MHF3');</script>
+  <!-- End Google Tag Manager -->
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5459MHF3');</script>
-<!-- End Google Tag Manager -->
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>GLP-1 Medication Patient Guide - Élan Clinic</title>
-<style>
-:root{--text:#111;--muted:#555;--rule:#ddd;--accent:#0b3d91;}
-*{box-sizing:border-box;}
-html,body{margin:0;padding:0;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,'Noto Sans',sans-serif;line-height:1.35;}
-.page{max-width:210mm;margin:0 auto;padding:18mm 16mm 18mm 16mm;}
-.header{border-bottom:1px solid var(--rule);padding-bottom:10px;margin-bottom:14px;}
-.header .brand{font-weight:700;font-size:18px;letter-spacing:0.2px;}
-.header .meta{margin-top:4px;color:var(--muted);font-size:12.5px;}
-hr{border:none;border-top:1px solid var(--rule);margin:14px 0;}
-h1{font-size:22px;margin:18px 0 10px;}
-h2{font-size:17px;margin:16px 0 8px;}
-h3{font-size:14px;margin:14px 0 6px;}
-p{margin:8px 0;}
-ul,ol{margin:8px 0 8px 22px;padding:0;}
-li{margin:4px 0;}
-strong{font-weight:700;}
-blockquote{margin:10px 0;padding:8px 12px;border-left:3px solid var(--rule);color:var(--muted);}
-code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:0.95em;}
-@media print{
-  @page{size:A4;margin:14mm;}
-  .page{max-width:none;margin:0;padding:0;}
-  a{color:inherit;text-decoration:none;}
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GLP-1 Medication Patient Guide - Élan Clinic</title>
+  <meta name="description" content="Printable GLP-1 medication patient guide: dosing basics, side effects, safety tips and follow-up. Evidence-based, physician-led. Élan Clinic Tallinn." />
+  <link rel="canonical" href="https://elan.clinic/glp1-guide.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+/* ─── Reset & Base ─────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0D1B2A;
+      color: rgba(232, 228, 222, 0.55);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Typography Scale ─────────────────────────────────────────── */
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      color: #E8E4DE;
+      line-height: 1.2;
+      font-weight: 500;
+    }
+
+    h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
+    h2 { font-size: clamp(1.9rem, 3.5vw, 2.8rem); }
+    h3 { font-size: clamp(1.3rem, 2.5vw, 1.7rem); }
+    h4 { font-size: 1.1rem; font-weight: 600; }
+
+    p { margin-bottom: 1.2em; }
+    p:last-child { margin-bottom: 0; }
+
+    a { color: #C5A55A; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ─── Layout Containers ────────────────────────────────────────── */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .container--text {
+      max-width: 860px;
+    }
+
+    .section {
+      padding: 96px 0;
+    }
+
+    .section--dark { background-color: #0D1B2A; }
+    .section--card { background-color: #111D2E; }
+
+    /* ─── Gold Label ───────────────────────────────────────────────── */
+    .label {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(197, 165, 90, 0.9);
+      margin-bottom: 18px;
+    }
+
+    .gold-line {
+      width: 80px;
+      height: 2px;
+      background: #C5A55A;
+      margin: 24px 0 32px;
+      opacity: 0.85;
+    }
+
+    /* ─── Buttons ─────────────────────────────────────────────────── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: 1px solid rgba(197, 165, 90, 0.35);
+      color: #E8E4DE;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.25s ease;
+      background: rgba(13, 27, 42, 0.35);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn:hover {
+      border-color: rgba(197, 165, 90, 0.6);
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
+    .btn--filled {
+      background: #C5A55A;
+      border-color: #C5A55A;
+      color: #0D1B2A;
+      box-shadow: 0 10px 30px rgba(197, 165, 90, 0.25);
+    }
+
+    .btn--filled:hover {
+      background: #d1b268;
+      border-color: #d1b268;
+    }
+
+    /* ─── Navigation ─────────────────────────────────────────────── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      background: rgba(13, 27, 42, 0.85);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(197, 165, 90, 0.12);
+    }
+
+    .nav__logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: #E8E4DE;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+
+    .nav__logo span { color: #C5A55A; }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-left: 24px;
+      flex: 1;
+    }
+
+    .nav__link {
+      font-size: 0.95rem;
+      color: rgba(232, 228, 222, 0.7);
+      font-weight: 500;
+    }
+
+    .nav__link:hover {
+      color: #E8E4DE;
+      text-decoration: none;
+    }
+
+    .nav__right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      white-space: nowrap;
+    }
+
+    /* ─── Mobile sticky CTA ───────────────────────────────────────── */
+    .mobile-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 60;
+      padding: 12px;
+      background: rgba(13, 27, 42, 0.92);
+      border-top: 1px solid rgba(197, 165, 90, 0.15);
+      backdrop-filter: blur(14px);
+      display: none;
+    }
+
+    .mobile-cta .btn { width: 100%; }
+
+    /* ─── Guide Card ─────────────────────────────────────────────── */
+    .guide-card {
+      background: rgba(17, 29, 46, 0.9);
+      border: 1px solid rgba(197, 165, 90, 0.14);
+      border-radius: 18px;
+      padding: 44px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.35);
+    }
+
+    .guide-card hr {
+      border: none;
+      border-top: 1px solid rgba(197, 165, 90, 0.14);
+      margin: 22px 0;
+    }
+
+    .guide-card h1 { margin: 26px 0 14px; }
+    .guide-card h2 { margin: 22px 0 10px; }
+    .guide-card h3 { margin: 18px 0 8px; }
+
+    .guide-card p { color: rgba(232, 228, 222, 0.65); }
+    .guide-card ul, .guide-card ol { margin: 10px 0 18px 22px; }
+    .guide-card li { margin: 6px 0; color: rgba(232, 228, 222, 0.65); }
+    .guide-card strong { color: #E8E4DE; }
+
+    .guide-meta {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(197, 165, 90, 0.14);
+    }
+
+    .guide-meta p { margin: 0; font-size: 0.95rem; }
+    .guide-meta a { font-weight: 600; }
+
+    /* ─── Cross-sell cards ───────────────────────────────────────── */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .product-card {
+      background: rgba(13, 27, 42, 0.55);
+      border: 1px solid rgba(197, 165, 90, 0.16);
+      border-radius: 16px;
+      padding: 22px;
+    }
+
+    .product-card h4 { margin-bottom: 8px; }
+    .product-card p { font-size: 0.95rem; }
+
+    /* ─── Footer CTA + legal ─────────────────────────────────────── */
+    .footer-cta {
+      padding: 96px 0 72px;
+      background: #111D2E;
+      border-top: 1px solid rgba(197, 165, 90, 0.12);
+    }
+
+    .footer-cta__inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 24px;
+      text-align: center;
+    }
+
+    .footer-cta__inner h2 { margin-bottom: 14px; }
+
+    .footer-cta__sub {
+      color: rgba(232, 228, 222, 0.6);
+      margin: 0 auto 28px;
+      max-width: 680px;
+    }
+
+    .footer-cta__contact {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+      text-align: left;
+    }
+
+    .footer-cta__contact-item p { margin: 0; }
+
+    .footer-legal {
+      padding: 26px 0;
+      background: #0D1B2A;
+    }
+
+    .footer-legal__inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-legal p {
+      font-size: 0.75rem;
+      color: rgba(232, 228, 222, 0.25);
+      margin: 0;
+    }
+
+    /* ─── Responsive ───────────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .product-grid { grid-template-columns: 1fr; }
+      .footer-cta__contact { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: 80px 0; }
+
+      .nav__links { display: none; }
+      .nav__cta { display: none; }
+      .mobile-cta { display: block; }
+      body { padding-bottom: 64px; }
+
+      .guide-card { padding: 30px 22px; }
+      .footer-cta__contact { grid-template-columns: 1fr; }
+      .footer-legal__inner { flex-direction: column; text-align: center; }
+    }
+
+    @media print {
+      .nav, .mobile-cta, .footer-cta, .footer-legal { display: none !important; }
+      body { background: #fff; color: #111; padding-bottom: 0; }
+      h1, h2, h3, h4 { color: #111; }
+      a { color: inherit; text-decoration: none; }
+      .section { padding: 0; }
+      .guide-card {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+      }
+      .guide-card p, .guide-card li { color: #111; }
+      .guide-card hr { border-top: 1px solid #ddd; }
+      @page { size: A4; margin: 14mm; }
+    }
+  </style>
 
   <!-- Schema.org MedicalWebPage -->
   <script type="application/ld+json">
@@ -91,20 +392,53 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:
   </script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5459MHF3"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  <div class="page">
-    <nav class="nav" style="display:flex;align-items:center;gap:16px;border-bottom:1px solid var(--rule);padding-bottom:10px;margin-bottom:14px;">
-      <a href="/" class="nav-logo" style="font-weight:700;font-size:18px;letter-spacing:0.2px;color:inherit;text-decoration:none;">Élan<span style="color:#C5A55A;">.</span></a>
-      <div class="lang-switch" style="display:inline-flex;gap:0.5rem;font-size:0.85rem;margin-left:auto;"> <a href="/" style="color:#c9a84c;text-decoration:none;font-weight:bold;">EN</a> <span style="color:#8899aa;">|</span> <a href="/et/" style="color:#c9a84c;text-decoration:none;">EST</a> <span style="color:#8899aa;">|</span> <a href="/fi/" style="color:#c9a84c;text-decoration:none;">FIN</a> <span style="color:#8899aa;">|</span> <a href="/ru/" style="color:#c9a84c;text-decoration:none;">RUS</a> </div>
-    </nav>
-    <div class="header" style="border-bottom:none;padding-bottom:0;margin-bottom:0;">
-      <div class="brand">Élan Clinic</div>
-      <div class="meta">Élan Clinic | Sepapaja 12/1, Tallinn 11415 | info@elan.clinic</div>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5459MHF3"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ─── Navigation ─────────────────────────────────────────────── -->
+  <nav class="nav">
+    <a href="/" class="nav__logo">Élan<span>.</span></a>
+    <div class="nav__links">
+      <a href="#method" class="nav__link">How It Works</a>
+      <a href="#programmes" class="nav__link">Programmes</a>
+      <a href="/articles.html" class="nav__link">Articles</a>
+      <a href="/resources.html" class="nav__link">Resources</a>
     </div>
-    <main>
+    <div class="nav__right">
+      <a href="/book.html" class="btn nav__cta">Book a Consultation</a>
+      <div class="lang-switch" style="display:inline-flex;gap:0.5rem;font-size:0.75rem;margin-left:12px;">
+        <a href="/" style="color:#C5A55A;text-decoration:none;font-weight:bold;">EN</a>
+        <span style="color:rgba(232,228,222,0.3);">|</span>
+        <a href="/et.html" style="color:rgba(232,228,222,0.5);text-decoration:none;">ET</a>
+        <span style="color:rgba(232,228,222,0.3);">|</span>
+        <a href="/fi.html" style="color:rgba(232,228,222,0.5);text-decoration:none;">FI</a>
+        <span style="color:rgba(232,228,222,0.3);">|</span>
+        <a href="/ru.html" style="color:rgba(232,228,222,0.5);text-decoration:none;">RU</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile sticky CTA -->
+  <div class="mobile-cta">
+    <a href="/book.html" class="btn btn--filled">Book a Consultation</a>
+  </div>
+
+  <section class="section section--dark">
+    <div class="container container--text">
+      <span class="label">Patient Resource</span>
+      <h1>GLP-1 Medication Patient Guide</h1>
+      <div class="gold-line"></div>
+
+      <div class="guide-card">
+        <div class="guide-meta">
+          <p><strong>Élan Clinic</strong> · Sepapaja 12/1, Tallinn 11415 · <a href="mailto:info@elan.clinic">info@elan.clinic</a></p>
+          <p>Prefer a structured plan and physician follow-up? <a href="/book.html">Book a consultation</a>.</p>
+        </div>
+
+        <main>
+
       <h1>GLP-1 Medication Patient Guide</h1>
 <h2>Élan Clinic · Sepapaja 12/1, Tallinn 11415 · info@elan.clinic</h2>
 <hr>
@@ -571,7 +905,81 @@ Sepapaja 12/1, Tallinn 11415</p>
   </div>
 </div>
 
-    </main>
-  </div>
+    
+</main>
+
+        <hr />
+        <h2>Next step: physician-led maintenance</h2>
+        <p>If you're serious about keeping the result, the maintenance plan matters as much as the medication.</p>
+        <p><a class="btn btn--filled" href="/book.html">Book a Consultation</a></p>
+
+        <hr />
+        <h2>Related resources</h2>
+        <p>Prefer a structured protocol you can follow at home? These are related digital products used by patients in our ecosystem:</p>
+
+        <div class="product-grid">
+          <div class="product-card">
+            <h4>GLP-1 Calculator</h4>
+            <p>Estimate weight-loss runway, risk of regain, and what to monitor during maintenance.</p>
+            <p><a href="/glp1-calculator.html">Open calculator</a></p>
+          </div>
+          <div class="product-card">
+            <h4>Regain Shield Programme</h4>
+            <p>Our physician-led maintenance programme designed specifically for the post-GLP-1 phase.</p>
+            <p><a href="/regain-shield-programme.html">View programme</a></p>
+          </div>
+          <div class="product-card">
+            <h4>Gumroad products</h4>
+            <p>Printable guides, meal templates, and maintenance playbooks (when available).</p>
+            <p><a href="https://gumroad.com" target="_blank" rel="noopener">Browse on Gumroad</a></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer CTA ────────────────────────────────────────────── -->
+  <section class="footer-cta" id="book">
+    <div class="footer-cta__inner">
+      <span class="label">Book</span>
+      <h2>Book a Consultation</h2>
+      <p class="footer-cta__sub">
+        The consultation is 45 minutes. By the end, you will know whether Regain Shield is right for you — and if so, exactly how your protocol will be structured.
+      </p>
+      <div style="display:flex; gap:24px; flex-wrap:wrap; justify-content:center;">
+        <a href="/book.html" class="btn btn--filled">Book a Consultation</a>
+        <a href="tel:+37252999399" class="btn">Call +372 52 99939</a>
+      </div>
+
+      <div class="footer-cta__contact">
+        <div class="footer-cta__contact-item">
+          <span class="label">Phone</span>
+          <a href="tel:+37252999399">+372 52 99939</a>
+        </div>
+        <div class="footer-cta__contact-item">
+          <span class="label">Email</span>
+          <a href="mailto:info@elan.clinic">info@elan.clinic</a>
+        </div>
+        <div class="footer-cta__contact-item">
+          <span class="label">Clinic Address</span>
+          <p>Sepapaja 12/1, 3rd floor<br />Tallinn 11415, Estonia</p>
+        </div>
+        <div class="footer-cta__contact-item">
+          <span class="label">Programme Entry</span>
+          <p>Standard — €99/month<br />Premium — €299/month<br />Private Office — by application</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer Legal ──────────────────────────────────────────── -->
+  <footer class="footer-legal">
+    <div class="footer-legal__inner">
+      <p>© 2026 Élan Clinic · Elan Clinic OÜ · Reg 17338832 · Medical Licence L07470 · Sepapaja 12/1, Tallinn 11415</p>
+      <p>This website does not constitute medical advice. Consult your physician before making any changes to your medication or health programme.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
