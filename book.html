@@ -194,6 +194,92 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       color: #999;
     }
 
+    .booking__divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 36px;
+      color: #999;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .booking__divider::before,
+    .booking__divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(139, 113, 64, 0.2);
+    }
+
+    .booking__form {
+      max-width: 100%;
+      margin-bottom: 36px;
+      text-align: left;
+    }
+    .form__row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .form__group {
+      display: flex;
+      flex-direction: column;
+    }
+    .form__group:last-child:not(.form__row .form__group) {
+      margin-bottom: 20px;
+    }
+    .form__group label {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #8B7140;
+      margin-bottom: 6px;
+    }
+    .form__group input,
+    .form__group textarea {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.92rem;
+      padding: 14px 16px;
+      border: 1px solid rgba(26, 44, 46, 0.12);
+      border-radius: 8px;
+      background: #fff;
+      color: #1A2C2E;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    .form__group input:focus,
+    .form__group textarea:focus {
+      border-color: #8B7140;
+    }
+    .form__group input::placeholder,
+    .form__group textarea::placeholder {
+      color: #bbb;
+    }
+    .form__group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    .form__submit {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      padding: 14px 40px;
+      background: #1A2C2E;
+      color: #F2F5F5;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .form__submit:hover {
+      background: #8B7140;
+      transform: translateY(-1px);
+    }
+
     .booking__note {
       font-size: 0.85rem;
       color: #999;
@@ -224,6 +310,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .booking__title { font-size: 1.8rem; }
       .nav__right { display: none; }
       .booking__options { grid-template-columns: 1fr; }
+      .form__row { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -275,6 +362,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </a>
       </div>
+
+      <div class="booking__divider">
+        <span>or write to us directly</span>
+      </div>
+
+      <form class="booking__form" action="https://formsubmit.co/ingmar@valvekliinik.ee" method="POST">
+        <input type="hidden" name="_subject" value="Élan Clinic — new enquiry from website">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://elan.clinic/book.html?sent=1">
+        <input type="hidden" name="_template" value="table">
+        <div class="form__row">
+          <div class="form__group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="Name" required placeholder="Your name">
+          </div>
+          <div class="form__group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email" required placeholder="name@example.com">
+          </div>
+        </div>
+        <div class="form__group">
+          <label for="message">Message</label>
+          <textarea id="message" name="Message" rows="4" placeholder="How can we help?"></textarea>
+        </div>
+        <button type="submit" class="form__submit">Send message</button>
+      </form>
 
       <p class="booking__note">
         We'll respond within one working day.<br />
