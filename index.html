@@ -580,6 +580,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     .programme-card--featured {
       background: #2c2c2c;
+      transform: scale(1.03);
+      box-shadow: 0 12px 48px rgba(0,0,0,0.12);
+    }
+
+    .programme-card--featured:hover {
+      transform: scale(1.03) translateY(-4px);
     }
 
     .programme-card--featured .programme-card__tier,
@@ -658,6 +664,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       font-size: 0.72rem;
       color: #aaa;
       letter-spacing: 0.06em;
+      margin-bottom: 28px;
+    }
+
+    .programme-card__cta {
+      display: block;
+      text-align: center;
+      margin-top: auto;
+      font-size: 0.72rem;
+    }
+
+    .programme-card--featured .programme-card__cta {
+      background: #7c9082;
+      color: #fff;
+    }
+
+    .programme-card--featured .programme-card__cta:hover {
+      background: #faf8f5;
+      color: #2c2c2c;
     }
 
     .programme-card--private .programme-card__cancel {
@@ -823,7 +847,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
 
     @media (max-width: 768px) {
+      .nav { padding: 14px 16px; }
       .nav__right .nav__link { display: none; }
+      .nav__right .lang-toggle { display: none; }
+      .nav__right .btn { padding: 10px 18px; font-size: 0.68rem; }
+      .nav__logo img { height: 40px !important; }
       .mobile-cta-bar { display: block; }
       body { padding-bottom: 68px; }
 
@@ -1050,6 +1078,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             check-ins, quarterly bloodwork, personalised protocols.
           </p>
           <div class="programme-card__cancel">3-month minimum. Cancel anytime after.</div>
+          <a href="/book.html" class="programme-card__cta btn">Book a Consultation</a>
         </div>
 
         <!-- Premium -->
@@ -1064,6 +1093,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             composition tracking, behavioural coaching.
           </p>
           <div class="programme-card__cancel">Cancel anytime.</div>
+          <a href="/book.html" class="programme-card__cta btn">Book a Consultation</a>
         </div>
 
         <!-- Private -->
@@ -1078,6 +1108,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             scheduling, house calls.
           </p>
           <div class="programme-card__cancel">By application. 6-month minimum.</div>
+          <a href="/book.html" class="programme-card__cta btn">Book a Consultation</a>
         </div>
 
       </div>
