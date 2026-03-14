@@ -32,4 +32,4 @@ Disallow: /ru.html
 Disallow: /ukk.html
 Disallow: /voprosy.html
 
-Sitemap: https://elan.clinic/sitemap.xml
+Sitemap: https://elanclinic.ee/sitemap.xml
