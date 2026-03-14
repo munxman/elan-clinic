@@ -758,39 +758,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
 
     .team__quote {
-      position: relative;
-      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin: 8px 0 20px;
       padding: 0;
-    }
-    .team__quote-mark {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 4rem;
-      line-height: 1;
-      color: rgba(139, 113, 64, 0.25);
-      display: block;
-      margin-bottom: -12px;
     }
     .team__quote-text {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.35rem;
+      font-size: 1.25rem;
       font-style: italic;
       font-weight: 400;
       color: #1A2C2E;
       letter-spacing: 0.02em;
-      margin-bottom: 8px;
     }
-    .team__quote-cite {
+    .team__quote-divider {
+      width: 1px;
+      height: 36px;
+      background: rgba(139, 113, 64, 0.35);
+      flex-shrink: 0;
+    }
+    .team__quote-attribution {
+      text-align: left;
+    }
+    .team__quote-name {
       font-family: 'Inter', sans-serif;
       font-size: 0.72rem;
-      font-style: normal;
-      letter-spacing: 0.12em;
+      font-weight: 500;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
+      color: #1A2C2E;
+      line-height: 1.4;
+    }
+    .team__quote-role {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.06em;
       color: #8B7140;
+      text-transform: uppercase;
     }
     .team__philosophy {
       font-size: 0.92rem !important;
       color: #999 !important;
-      margin-top: 20px;
+      margin-top: 0;
     }
 
     .team__cards {
@@ -1194,6 +1205,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .hero__trust-item {
         font-size: 0.7rem;
       }
+
+      .team__quote {
+        flex-direction: row;
+        gap: 16px;
+      }
+      .team__quote-text {
+        font-size: 1.1rem;
+      }
     }
 
     @media (max-width: 480px) {
@@ -1330,11 +1349,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2>The people<br />behind your care</h2>
         <div class="rule"></div>
         <blockquote class="team__quote">
-          <span class="team__quote-mark">"</span>
-          <p class="team__quote-text">Small is beautiful</p>
-          <cite class="team__quote-cite">Dr. Sven Lindström, MD</cite>
+          <p class="team__quote-text">"Small is beautiful"</p>
+          <div class="team__quote-divider"></div>
+          <div class="team__quote-attribution">
+            <div class="team__quote-name">Dr. Sven Lindström</div>
+            <div class="team__quote-role">Founder</div>
+          </div>
         </blockquote>
-        <p class="team__philosophy">Every patient is known personally.</p>
+        <p class="team__philosophy">Small by design. Every patient is known personally.</p>
       </div>
 
       <div class="team__cards">
