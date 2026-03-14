@@ -757,6 +757,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       color: #777;
     }
 
+    .team__quote {
+      position: relative;
+      margin: 0;
+      padding: 0;
+    }
+    .team__quote-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem;
+      line-height: 1;
+      color: rgba(139, 113, 64, 0.25);
+      display: block;
+      margin-bottom: -12px;
+    }
+    .team__quote-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-style: italic;
+      font-weight: 400;
+      color: #1A2C2E;
+      letter-spacing: 0.02em;
+      margin-bottom: 8px;
+    }
+    .team__quote-cite {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      font-style: normal;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #8B7140;
+    }
+    .team__philosophy {
+      font-size: 0.92rem !important;
+      color: #999 !important;
+      margin-top: 20px;
+    }
+
     .team__cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -1293,7 +1329,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="section-label">The Team</span>
         <h2>The people<br />behind your care</h2>
         <div class="rule"></div>
-        <p>Small by design. Every patient is known personally.</p>
+        <blockquote class="team__quote">
+          <span class="team__quote-mark">"</span>
+          <p class="team__quote-text">Small is beautiful</p>
+          <cite class="team__quote-cite">Dr. Sven Lindström, MD</cite>
+        </blockquote>
+        <p class="team__philosophy">Every patient is known personally.</p>
       </div>
 
       <div class="team__cards">
