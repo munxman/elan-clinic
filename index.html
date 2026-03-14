@@ -17,6 +17,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="canonical" href="https://elan.clinic/" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
+  <!-- Geo / Local SEO -->
+  <meta name="geo.region" content="EE-37" />
+  <meta name="geo.placename" content="Tallinn" />
+  <meta name="geo.position" content="59.4327;24.7651" />
+  <meta name="ICBM" content="59.4327, 24.7651" />
+
   <!-- Hreflang -->
   <link rel="alternate" hreflang="en" href="https://elan.clinic/" />
   <link rel="alternate" hreflang="et" href="https://elan.clinic/et.html" />
@@ -52,7 +58,58 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "telephone": "+3725299939",
       "contactType": "customer support",
       "email": "info@elan.clinic",
-      "availableLanguage": ["en", "et"]
+      "availableLanguage": ["en", "et", "fi"]
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "areaServed": [
+      { "@type": "Country", "name": "Estonia" },
+      { "@type": "Country", "name": "Finland" }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Weight Maintenance Programmes",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Initial Consultation",
+          "price": "120",
+          "priceCurrency": "EUR",
+          "description": "45-minute consultation with a physician. In clinic or video call."
+        },
+        {
+          "@type": "Offer",
+          "name": "Regain Shield Standard",
+          "price": "149",
+          "priceCurrency": "EUR",
+          "description": "Monthly physician check-ins, quarterly bloodwork, personalised protocols."
+        },
+        {
+          "@type": "Offer",
+          "name": "Regain Shield Premium",
+          "price": "349",
+          "priceCurrency": "EUR",
+          "description": "Bi-weekly contact, body composition tracking, behavioural coaching."
+        },
+        {
+          "@type": "Offer",
+          "name": "The Private Office",
+          "price": "1200",
+          "priceCurrency": "EUR",
+          "description": "Direct access to Dr. Lindström. Named physician, priority scheduling, house calls."
+        }
+      ]
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "59.4327",
+      "longitude": "24.7651"
     }
   }
   </script>
@@ -899,13 +956,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <video class="hero__video hero__video--active" data-hero="0" autoplay muted playsinline>
       <source src="/assets/video/hero.mp4" type="video/mp4" />
     </video>
-    <video class="hero__video" data-hero="1" muted playsinline>
+    <video class="hero__video" data-hero="1" muted playsinline preload="none">
       <source src="/assets/video/hero-2.mp4" type="video/mp4" />
     </video>
-    <video class="hero__video" data-hero="2" muted playsinline>
+    <video class="hero__video" data-hero="2" muted playsinline preload="none">
       <source src="/assets/video/hero-3.mp4" type="video/mp4" />
     </video>
-    <video class="hero__video" data-hero="3" muted playsinline>
+    <video class="hero__video" data-hero="3" muted playsinline preload="none">
       <source src="/assets/video/hero-4.mp4" type="video/mp4" />
     </video>
     <div class="hero__overlay"></div>
@@ -997,7 +1054,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="team__cards">
 
         <div class="team-card reveal reveal-delay-1">
-          <div class="team-card__photo"><img src="/assets/photos/ingmar-web.jpg" alt="Dr. Ingmar Lindström" /></div>
+          <div class="team-card__photo"><img loading="lazy" src="/assets/photos/ingmar-web.jpg" alt="Dr. Ingmar Lindström" /></div>
           <div class="team-card__name">Dr. Ingmar Lindström</div>
           <div class="team-card__title">Medical Director</div>
           <p class="team-card__desc">
@@ -1009,7 +1066,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="team-card reveal reveal-delay-2">
-          <div class="team-card__photo"><img src="/assets/photos/eva-maria-web.jpg" alt="Eva-Maria Sentifoli" /></div>
+          <div class="team-card__photo"><img loading="lazy" src="/assets/photos/eva-maria-web.jpg" alt="Eva-Maria Sentifoli" /></div>
           <div class="team-card__name">Eva-Maria Sentifoli</div>
           <div class="team-card__title">Co-Founder &amp; Clinical Operations</div>
           <p class="team-card__desc">
@@ -1019,7 +1076,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="team-card reveal reveal-delay-3">
-          <div class="team-card__photo"><img src="/assets/photos/merili-web.jpg" alt="Dr. Merili Pärn" /></div>
+          <div class="team-card__photo"><img loading="lazy" src="/assets/photos/merili-web.jpg" alt="Dr. Merili Pärn" /></div>
           <div class="team-card__name">Dr. Merili Pärn</div>
           <div class="team-card__title">Co-Founder &amp; Physician</div>
           <p class="team-card__desc">
@@ -1136,6 +1193,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="footer-links">
           <a href="#promise">About</a>
           <a href="#programmes">Programmes</a>
+          <a href="/privacy.html">Privacy</a>
         </div>
         <div class="footer-lang">
           <a href="/" class="active">EN</a>

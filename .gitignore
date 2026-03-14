@@ -5,3 +5,9 @@ _tmp/
 tmp_*
 tmp_extract*.js
 
+assets/photos/hak-full.zip
+assets/photos/hak-kliendiga.zip
+assets/photos/*-hires.jpg
+assets/photos/*-warm.jpg
+assets/photos/*-crop*.jpg
+assets/photos/team-group.jpg
