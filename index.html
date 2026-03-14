@@ -886,11 +886,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- 1. HERO                                                         -->
   <!-- ─────────────────────────────────────────────────────────────── -->
   <section class="hero" id="top">
-    <video class="hero__video hero__video--active" id="heroVid1" autoplay muted playsinline>
+    <video class="hero__video hero__video--active" data-hero="0" autoplay muted playsinline>
       <source src="/assets/video/hero.mp4" type="video/mp4" />
     </video>
-    <video class="hero__video" id="heroVid2" muted playsinline>
+    <video class="hero__video" data-hero="1" muted playsinline>
       <source src="/assets/video/hero-2.mp4" type="video/mp4" />
+    </video>
+    <video class="hero__video" data-hero="2" muted playsinline>
+      <source src="/assets/video/hero-3.mp4" type="video/mp4" />
+    </video>
+    <video class="hero__video" data-hero="3" muted playsinline>
+      <source src="/assets/video/hero-4.mp4" type="video/mp4" />
     </video>
     <div class="hero__overlay"></div>
     <div class="container">
@@ -1153,17 +1159,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <script>
   (function(){
-    var v1=document.getElementById('heroVid1'),v2=document.getElementById('heroVid2');
-    if(!v1||!v2)return;
-    v1.addEventListener('ended',function(){
-      v2.play();
-      v2.classList.add('hero__video--active');
-      v1.classList.remove('hero__video--active');
-    });
-    v2.addEventListener('ended',function(){
-      v1.play();
-      v1.classList.add('hero__video--active');
-      v2.classList.remove('hero__video--active');
+    var vids=document.querySelectorAll('.hero__video');
+    if(vids.length<2)return;
+    var current=0;
+    vids.forEach(function(v,i){
+      v.addEventListener('ended',function(){
+        v.classList.remove('hero__video--active');
+        current=(current+1)%vids.length;
+        vids[current].currentTime=0;
+        vids[current].play();
+        vids[current].classList.add('hero__video--active');
+      });
     });
   })();
   </script>
