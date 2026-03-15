@@ -413,6 +413,8 @@ if (window.location.search.includes('sent=1')) {
     var form = document.querySelector('.booking__form');
     if (ty) { ty.style.display = 'block'; }
     if (form) { form.style.display = 'none'; }
+    var note = document.querySelector('.booking__note');
+    if (note) { note.style.display = 'none'; }
     // Smooth scroll to thank-you
     if (ty) { ty.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
     // Clean URL
