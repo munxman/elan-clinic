@@ -1,4 +1,4 @@
-# Élan Clinic — elan.clinic
+# Élan Clinic — elanclinic.ee
 
 ## About
 Élan Clinic is a physician-led weight management clinic in Tallinn, Estonia (licensed medical practice). We specialise in long-term weight maintenance and weight regain prevention, including for patients who have used GLP‑1 medications.
@@ -12,16 +12,16 @@
 ## Key facts
 - Location: Sepapaja 12/1, Tallinn 11415, Estonia
 - Phone: +372 52 99939
-- Email: info@elan.clinic
-- Website: https://elan.clinic/
+- Email: info@elanclinic.ee
+- Website: https://elanclinic.ee/
 - Medical licence: L07470
 - Company: Elan Clinic OÜ (reg 17338832)
 
 ## Languages
-- Estonian: https://elan.clinic/et.html
-- English: https://elan.clinic/
-- Finnish: https://elan.clinic/fi.html
-- Russian: https://elan.clinic/ru.html
+- Estonian: https://elanclinic.ee/et.html
+- English: https://elanclinic.ee/
+- Finnish: https://elanclinic.ee/fi.html
+- Russian: https://elanclinic.ee/ru.html
 
 ## Notes
 - By appointment only.

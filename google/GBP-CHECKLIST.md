@@ -10,7 +10,7 @@ Purpose: manual steps to strengthen the clinic’s Google authority/Knowledge Pa
 - [ ] **Name:** Élan Clinic (Elan Clinic OÜ)
 - [ ] **Address:** Sepapaja 12/1, Tallinn 11415, Estonia
 - [ ] **Phone:** +372 52 99939
-- [ ] **Website:** https://elan.clinic
+- [ ] **Website:** https://elanclinic.ee
 
 ## 3) Categories
 - [ ] Primary category: choose the closest allowed option (e.g. *Medical clinic* / *Weight loss service* / *Health consultant* — pick the best match available)

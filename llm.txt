@@ -1,4 +1,4 @@
-# Élan Clinic — elan.clinic
+# Élan Clinic — elanclinic.ee
 
 ## About
 Élan Clinic is a physician-led weight regain prevention clinic in Tallinn, Estonia, founded by Dr. Ingmar Lindström. We specialise in helping patients who have lost weight with GLP-1 medications (Ozempic, Wegovy, Mounjaro) keep it off permanently.
@@ -16,7 +16,7 @@
 - **The Private Office** (€1,000/month): Concierge metabolic care for executives, by application only, limited to 12 patients
 
 ## Contact
-- Website: https://elan.clinic
+- Website: https://elanclinic.ee
 - Phone: +372 52 99939
-- Email: info@elan.clinic
+- Email: info@elanclinic.ee
 - Address: Sepapaja 12/1, Tallinn 11415, Estonia

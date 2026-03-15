@@ -1,4 +1,4 @@
-# Élan Clinic (elan.clinic) — Technical SEO Patchlist + Checklist
+# Élan Clinic (elanclinic.ee) — Technical SEO Patchlist + Checklist
 
 Scope: GitHub Pages static site (`elan-clinic-ghpages/`).
 
@@ -34,7 +34,7 @@ So this is mostly about **consistency + completeness**, and ensuring **all pages
 **Do:**
 1. Create a checklist of all public HTML pages (top-level + `/blog/*` + `/artiklid/*`).
 2. For each page, ensure:
-   - `<link rel="canonical" href="https://elan.clinic/<exact-path>" />` (choose one canonical format: with trailing slash only for `/`)
+   - `<link rel="canonical" href="https://elanclinic.ee/<exact-path>" />` (choose one canonical format: with trailing slash only for `/`)
    - Full hreflang cluster present (en/et/fi/ru/x-default) **when equivalents exist**.
 3. For pages that **do not have translations** (most blog posts), decide one of:
    - Option A: **No hreflang** (acceptable), OR
@@ -76,7 +76,7 @@ Implement JSON-LD graph with stable IDs:
 - `Organization` (the legal entity) if needed
 
 **Fields to add/standardize:**
-- `@id` for each entity (e.g. `https://elan.clinic/#clinic`, `https://elan.clinic/#physician`)
+- `@id` for each entity (e.g. `https://elanclinic.ee/#clinic`, `https://elanclinic.ee/#physician`)
 - `image` (clinic/doctor photo if available)
 - `geo` (lat/long)
 - `hasMap` (Google Maps URL)
