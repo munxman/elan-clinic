@@ -378,8 +378,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <label for="message">Sõnum</label>
           <textarea id="message" name="Sõnum" rows="4" placeholder="Mida sooviksid teada?"></textarea>
         </div>
+        <div class="form__cc">
+          <label><input type="checkbox" id="cc-self" style="margin-right: 8px; accent-color: #8B7140;">Saada koopia mulle</label>
+        </div>
         <button type="submit" class="form__submit">Saada kiri</button>
       </form>
+
+      <!-- Thank you message (shown after form submission) -->
+      <div id="thank-you" style="display:none; background: #f0ebe3; border-left: 3px solid #8B7140; padding: 24px 28px; border-radius: 8px; margin-top: 24px;">
+        <h3 style="font-family: 'Cormorant Garamond', serif; color: #1A2C2E; margin: 0 0 8px 0; font-size: 1.4rem;">Täname, et võtsite ühendust!</h3>
+        <p style="color: #4a5859; margin: 0; line-height: 1.6;">Teie sõnum on edukalt saadetud. Vastame ühe tööpäeva jooksul.</p>
+      </div>
 
       <p class="booking__note">
         Vastame ühe tööpäeva jooksul.<br />
@@ -392,6 +401,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </section>
 
+<!-- Thank you message + CC logic -->
+<script>
+// Show thank-you message if redirected after form submission
+if (window.location.search.includes('sent=1')) {
+  document.addEventListener('DOMContentLoaded', function() {
+    var ty = document.getElementById('thank-you');
+    var form = document.querySelector('.booking__form');
+    if (ty) { ty.style.display = 'block'; }
+    if (form) { form.style.display = 'none'; }
+    // Smooth scroll to thank-you
+    if (ty) { ty.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+    // Clean URL
+    window.history.replaceState({}, '', window.location.pathname);
+  });
+}
+// Handle CC checkbox — add _cc hidden field dynamically
+document.addEventListener('DOMContentLoaded', function() {
+  var form = document.querySelector('.booking__form');
+  var cc = document.getElementById('cc-self');
+  if (form && cc) {
+    form.addEventListener('submit', function() {
+      if (cc.checked) {
+        var emailField = document.getElementById('email');
+        if (emailField && emailField.value) {
+          var input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = '_cc';
+          input.value = emailField.value;
+          form.appendChild(input);
+        }
+      }
+    });
+  }
+});
+</script>
 <!-- SalonLife Booking Widget -->
 <script>
 !function(e,n,t){var i=document,o="script",a=i.createElement(o),d=i.getElementsByTagName(o)[0];a.async=!0,a.defer=!0,a.src="//widget.salon.life/static/js/widget.js?t=" + (new Date()).getTime(),n&&a.addEventListener("load",function(){t.SalonLifeCb=n},!1),d.parentNode.insertBefore(a,d)}(0,function(){window.SalonLifeWidget.mount({
