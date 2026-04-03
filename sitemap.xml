@@ -1,33 +1,395 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage -->
   <url>
     <loc>https://elanclinic.ee/</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-04-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="et" href="https://elanclinic.ee/et.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://elanclinic.ee/en.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://elanclinic.ee/fi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://elanclinic.ee/"/>
   </url>
+
+  <!-- Language landing pages -->
   <url>
     <loc>https://elanclinic.ee/en.html</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-04-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="et" href="https://elanclinic.ee/et.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://elanclinic.ee/en.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://elanclinic.ee/fi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://elanclinic.ee/"/>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/et.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="et" href="https://elanclinic.ee/et.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://elanclinic.ee/en.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://elanclinic.ee/fi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://elanclinic.ee/"/>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/fi.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="et" href="https://elanclinic.ee/et.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://elanclinic.ee/en.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://elanclinic.ee/fi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://elanclinic.ee/"/>
+  </url>
+
+  <!-- Blog listing pages -->
+  <url>
+    <loc>https://elanclinic.ee/blog.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/artiklid.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/articles.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Booking pages -->
+  <url>
+    <loc>https://elanclinic.ee/book.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://elanclinic.ee/broneeri-new.html</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-04-04</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Service pages -->
+  <url>
+    <loc>https://elanclinic.ee/kaalukaitse.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elanclinic.ee/book.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://elanclinic.ee/regain-shield.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/regain-shield-programme.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/private-office.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/pricing.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/how-it-works.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- GLP-1 guides -->
+  <url>
+    <loc>https://elanclinic.ee/glp1-guide.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://elanclinic.ee/glp1-calculator.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/glp1-kalkulaator.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- FAQ pages -->
+  <url>
+    <loc>https://elanclinic.ee/kkk.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/ukk.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/faq.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/quiz.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Finnish pages -->
+  <url>
+    <loc>https://elanclinic.ee/fi-laakarit.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/fi-palvelut.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Russian page -->
+  <url>
+    <loc>https://elanclinic.ee/ru.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/voprosy.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- About & resources -->
+  <url>
+    <loc>https://elanclinic.ee/about.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/resources.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/ressursid.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Privacy -->
   <url>
     <loc>https://elanclinic.ee/privacy.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
+  <!-- English blog articles -->
+  <url>
+    <loc>https://elanclinic.ee/blog/after-stopping-ozempic.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/blog/do-i-need-ozempic-forever.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/blog/glp1-binge-eating-disorder-evidence.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/blog/glp1-heart-health-select-trial.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/blog/how-to-access-glp1-safely.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/blog/how-to-keep-weight-off-after-glp1.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/blog/how-to-stop-semaglutide-safely.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/blog/how-to-taper-off-glp1-safely.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/blog/hunger-rebound-after-stopping-glp1.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/blog/mounjaro-plateau-troubleshooting.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/blog/muscle-loss-on-semaglutide.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/blog/oral-glp1-medications-future.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/blog/oral-wegovy-semaglutide-pill.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/blog/ozempic-aftermath-why-weight-comes-back-67-percent.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/blog/ozempic-aftermath-why-weight-comes-back.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/blog/ozempic-face-why-glp1-changes-your-face.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/blog/ozempic-wegovy-mounjaro-whats-the-difference.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/blog/resistance-training-on-glp1.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/blog/semaglutide-weight-loss-plateau.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/blog/weight-regain-after-stopping-glp1.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/blog/you-are-not-lazy-you-need-a-different-approach.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Estonian articles -->
+  <url>
+    <loc>https://elanclinic.ee/artiklid/glp1-ja-lihasmass.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/artiklid/kaalutous-parast-glp1-lopetamist.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/artiklid/kuidas-lopetada-semaglutiidravi-oigesti.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/artiklid/kuidas-sailita-kaal-parast-glp1-lopetamist.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/artiklid/lihaskadu-semaglutiidil.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/artiklid/ozempici-jarelmoju-miks-kaal-tuleb-tagasi.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elanclinic.ee/artiklid/semaglutiidi-kaalulanguse-platoo.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

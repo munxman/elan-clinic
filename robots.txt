@@ -1,35 +1,11 @@
 User-agent: *
 Allow: /
-Allow: /et.html
-Allow: /book.html
-Allow: /privacy.html
 
-# Block legacy pages (noindexed, pending removal)
-Disallow: /about.html
-Disallow: /articles.html
-Disallow: /artiklid.html
-Disallow: /blog.html
-Disallow: /broneeri.html
+# Block only truly dead/internal files
 Disallow: /consent.html
-Disallow: /faq.html
-Disallow: /fi-laakarit.html
-Disallow: /fi-palvelut.html
-Disallow: /fi.html
-Disallow: /glp1-calculator.html
-Disallow: /glp1-guide.html
-Disallow: /glp1-kalkulaator.html
-Disallow: /how-it-works.html
-Disallow: /kaalukaitse.html
-Disallow: /kkk.html
-Disallow: /pricing.html
-Disallow: /private-office.html
-Disallow: /quiz.html
-Disallow: /regain-shield-programme.html
-Disallow: /regain-shield.html
-Disallow: /resources.html
-Disallow: /ressursid.html
-Disallow: /ru.html
-Disallow: /ukk.html
-Disallow: /voprosy.html
+Disallow: /debug.log
+Disallow: /header-proof
+Disallow: /_audit
+Disallow: /_drafts/
 
 Sitemap: https://elanclinic.ee/sitemap.xml
