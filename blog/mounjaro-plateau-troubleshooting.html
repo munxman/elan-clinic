@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- Google Tag Manager -->
@@ -17,6 +17,7 @@
   <meta name="description" content="Stalled on Mounjaro (tirzepatide/Zepbound)? Learn what a real plateau is, why it happens (physiology, TDEE changes, water/constipation), and a step-by-step troubleshooting checklist—without unsafe dose hacks." />
   <meta name="author" content="Dr. Ingmar Lindström, MD" />
   <link rel="canonical" href="https://elanclinic.ee/blog/mounjaro-plateau-troubleshooting.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="article" />
@@ -25,6 +26,7 @@
   <meta property="og:url" content="https://elanclinic.ee/blog/mounjaro-plateau-troubleshooting.html" />
   <meta property="og:site_name" content="Élan Clinic" />
   <meta property="og:image" content="https://elanclinic.ee/og-image.jpg" />
+  <meta property="og:locale" content="en_GB" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- GA4 (direct) -->
@@ -137,13 +139,12 @@
   }
   </script>
 
-    <!-- Google Fonts -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
-    /* ═══ Reset & Base ═══════════════════════════════════════════════════════ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; font-size: 16px; }
     body {
@@ -161,19 +162,9 @@
     }
     a { color: #C5A55A; text-decoration: none; }
     a:hover { text-decoration: underline; }
-
-    /* ═══ Layout ════════════════════════════════════════════════════════════ */
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* ═══ Gold Utilities ════════════════════════════════════════════════════ */
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
     .label {
       display: inline-block;
-      font-family: 'Inter', sans-serif;
       font-size: 0.7rem;
       font-weight: 600;
       letter-spacing: 0.18em;
@@ -181,16 +172,10 @@
       color: #C5A55A;
       margin-bottom: 20px;
     }
-
-    /* ═══ Nav ════════════════════════════════════════════════════════════════ */
     .nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       padding: 20px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      display: flex; align-items: center; justify-content: space-between;
       background: rgba(13, 27, 42, 0.92);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(197, 165, 90, 0.12);
@@ -203,12 +188,7 @@
       text-decoration: none;
     }
     .nav__logo span { color: #C5A55A; }
-    .nav__links {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      list-style: none;
-    }
+    .nav__links { display: flex; align-items: center; gap: 32px; list-style: none; }
     .nav__links a {
       font-size: 0.78rem;
       font-weight: 500;
@@ -218,20 +198,9 @@
       text-decoration: none;
       transition: color 0.2s;
     }
-    .nav__links a:hover,
-    .nav__links a.active { color: #C5A55A; }
-
-    /* ═══ Breadcrumb ════════════════════════════════════════════════════════ */
-    .breadcrumb {
-      padding: 120px 0 0;
-      background-color: #0D1B2A;
-    }
-    .breadcrumb__inner {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
+    .nav__links a:hover, .nav__links a.active { color: #C5A55A; }
+    .breadcrumb { padding: 120px 0 0; background-color: #0D1B2A; }
+    .breadcrumb__inner { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
     .breadcrumb__item {
       font-size: 0.75rem;
       font-weight: 500;
@@ -239,16 +208,10 @@
       color: rgba(232, 228, 222, 0.4);
       text-transform: uppercase;
     }
-    .breadcrumb__item a {
-      color: rgba(232, 228, 222, 0.4);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
+    .breadcrumb__item a { color: rgba(232, 228, 222, 0.4); text-decoration: none; transition: color 0.2s; }
     .breadcrumb__item a:hover { color: #C5A55A; text-decoration: none; }
     .breadcrumb__sep { font-size: 0.7rem; color: rgba(197, 165, 90, 0.4); }
     .breadcrumb__item--current { color: #C5A55A; }
-
-    /* ═══ Article Header ════════════════════════════════════════════════════ */
     .article-header {
       padding: 48px 0 64px;
       background-color: #0D1B2A;
@@ -284,21 +247,11 @@
       font-size: 0.8rem;
       color: rgba(232, 228, 222, 0.5);
     }
-    .article-meta__item strong {
-      color: rgba(232, 228, 222, 0.75);
-      font-weight: 500;
-    }
+    .article-meta__item strong { color: rgba(232, 228, 222, 0.75); font-weight: 500; }
     .article-meta__dot {
-      width: 3px; height: 3px;
-      border-radius: 50%;
-      background: rgba(197, 165, 90, 0.4);
+      width: 3px; height: 3px; border-radius: 50%; background: rgba(197, 165, 90, 0.4);
     }
-
-    /* ═══ Article Body ══════════════════════════════════════════════════════ */
-    .article-body {
-      padding: 0 0 100px;
-      background-color: #0D1B2A;
-    }
+    .article-body { padding: 0 0 100px; background-color: #0D1B2A; }
     .article-body__inner { max-width: 780px; }
     .article-body p {
       font-size: 1.05rem;
@@ -318,15 +271,12 @@
     }
     .article-body strong { color: rgba(232, 228, 222, 0.9); font-weight: 600; }
     .article-body em { color: rgba(232, 228, 222, 0.65); font-style: italic; }
-    .article-body ul, .article-body ol {
-      margin: 0 0 24px 24px;
-      padding: 0;
-    }
+    .article-body ul, .article-body ol { margin: 12px 0 24px 24px; padding: 0; }
     .article-body li {
-      color: rgba(232, 228, 222, 0.72);
       font-size: 1.05rem;
-      line-height: 1.8;
-      margin-bottom: 6px;
+      color: rgba(232, 228, 222, 0.72);
+      line-height: 1.75;
+      margin-bottom: 8px;
     }
     .article-body hr {
       border: none;
@@ -334,8 +284,6 @@
       background: rgba(197, 165, 90, 0.15);
       margin: 48px 0;
     }
-
-    /* ═══ Pull Quote ════════════════════════════════════════════════════════ */
     .pull-quote {
       border-left: 3px solid #C5A55A;
       padding: 20px 32px;
@@ -350,174 +298,76 @@
       line-height: 1.6 !important;
       margin: 0 !important;
     }
-
-    /* ═══ Key Stat ══════════════════════════════════════════════════════════ */
-    .key-stat {
-      background: #111D2E;
-      border: 1px solid rgba(197, 165, 90, 0.18);
-      padding: 32px 36px;
-      margin: 40px 0;
-    }
-    .key-stat__number {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      color: #C5A55A;
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-    .key-stat__label {
-      font-size: 0.88rem;
-      color: rgba(232, 228, 222, 0.6);
-      line-height: 1.5;
-    }
-
-    /* ═══ Callout Boxes ═════════════════════════════════════════════════════ */
     .callout {
-      padding: 16px 20px;
-      margin: 28px 0;
-      font-size: 0.97rem;
-      line-height: 1.7;
-    }
-    .callout-danger { background: rgba(192,57,43,0.1); border-left: 3px solid #e57373; }
-    .callout-amber  { background: rgba(230,126,34,0.08); border-left: 3px solid #e67e22; }
-    .callout-info   { background: rgba(197,165,90,0.07); border-left: 3px solid #C5A55A; }
-    .callout-success{ background: rgba(39,174,96,0.08); border-left: 3px solid #27ae60; }
-    .callout-label {
-      font-family: 'Inter', sans-serif;
-      font-weight: 700;
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 8px;
-      display: block;
-      color: #C5A55A;
-    }
-    .callout-danger .callout-label { color: #e57373; }
-    .callout-amber  .callout-label { color: #e67e22; }
-    .callout-success .callout-label { color: #27ae60; }
-    .callout p { margin-bottom: 0 !important; font-size: 0.97rem !important; color: rgba(232,228,222,0.72) !important; }
-    .callout ul, .callout ol { margin-bottom: 0; }
-    .callout li { font-size: 0.97rem !important; color: rgba(232,228,222,0.72) !important; }
-
-    /* ═══ Disclaimer ════════════════════════════════════════════════════════ */
-    .disclaimer {
-      background: rgba(230,126,34,0.08);
-      border-left: 3px solid #e67e22;
-      padding: 16px 20px;
+      padding: 18px 24px;
       margin: 32px 0;
-      font-size: 0.95rem;
-      line-height: 1.7;
-      color: rgba(232,228,222,0.65);
+      border-left: 3px solid;
     }
-    .disclaimer-label {
-      font-family: 'Inter', sans-serif;
+    .callout-label {
+      font-size: 0.7rem;
       font-weight: 700;
-      font-size: 0.72rem;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #e67e22;
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
-
-    /* ═══ Tables ════════════════════════════════════════════════════════════ */
-    .table-wrap { overflow-x: auto; margin: 24px 0; }
-    table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
-    thead th {
-      background: #111D2E;
-      color: #E8E4DE;
-      text-align: left;
-      padding: 10px 14px;
-      font-weight: 600;
-      border-bottom: 1px solid rgba(197,165,90,0.2);
-      font-family: 'Inter', sans-serif;
-    }
-    tbody td {
-      padding: 9px 14px;
-      border-bottom: 1px solid rgba(197,165,90,0.08);
-      color: rgba(232,228,222,0.65);
-      vertical-align: top;
-      font-size: 0.92rem;
-    }
-    tbody tr:nth-child(even) td { background: rgba(17,29,46,0.4); }
-    tbody tr:last-child td { border-bottom: none; }
-
-    /* ═══ CTA Block ═════════════════════════════════════════════════════════ */
-    .cta-block {
-      background: #111D2E;
-      border: 1px solid rgba(197,165,90,0.15);
-      padding: 40px 36px;
-      margin: 56px 0 32px;
-      text-align: center;
-    }
-    .cta-block h2 {
-      color: #E8E4DE !important;
-      font-size: clamp(1.3rem, 2.5vw, 1.7rem) !important;
-      margin: 0 0 16px !important;
-    }
-    .cta-block p {
-      color: rgba(232,228,222,0.6) !important;
+    .callout p, .callout li {
       font-size: 0.95rem !important;
-      margin: 0 0 24px !important;
-      max-width: 600px;
-      margin-left: auto !important;
-      margin-right: auto !important;
+      line-height: 1.7 !important;
+      margin-bottom: 6px !important;
     }
-    .cta-row {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 10px;
-    }
-    .cta-btn {
-      display: inline-block;
-      background: #C5A55A;
-      color: #0D1B2A;
-      font-weight: 700;
-      font-size: 0.78rem;
-      padding: 14px 20px;
-      text-decoration: none;
+    .callout ul, .callout ol { margin: 8px 0 0 20px; }
+    .callout-info { background: rgba(197, 165, 90, 0.06); border-color: #C5A55A; }
+    .callout-info .callout-label { color: #C5A55A; }
+    .callout-amber { background: rgba(230, 126, 34, 0.07); border-color: #e67e22; }
+    .callout-amber .callout-label { color: #e6a020; }
+    .callout-danger { background: rgba(192, 57, 43, 0.07); border-color: #c0392b; }
+    .callout-danger .callout-label { color: #e05c4c; }
+    .callout-success { background: rgba(39, 174, 96, 0.07); border-color: #27ae60; }
+    .callout-success .callout-label { color: #4eca7e; }
+    .table-wrap { overflow-x: auto; margin: 28px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    thead th {
+      background: rgba(197, 165, 90, 0.12);
+      color: #C5A55A;
+      font-size: 0.75rem;
+      font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      transition: background 0.2s, color 0.2s;
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid rgba(197, 165, 90, 0.2);
     }
-    .cta-btn:hover { background: #d4b56a; color: #0D1B2A; text-decoration: none; }
-    .cta-btn.secondary {
-      background: transparent;
-      color: rgba(232,228,222,0.7);
-      border: 1.5px solid rgba(197,165,90,0.4);
+    tbody td {
+      padding: 12px 16px;
+      border-bottom: 1px solid rgba(197, 165, 90, 0.08);
+      color: rgba(232, 228, 222, 0.7);
+      vertical-align: top;
+      line-height: 1.6;
     }
-    .cta-btn.secondary:hover { background: rgba(197,165,90,0.1); text-decoration: none; }
-    .cta-sub { display: block; margin-top: 16px; font-size: 0.8rem; color: rgba(232,228,222,0.3); }
-
-    /* ═══ References ════════════════════════════════════════════════════════ */
-    .references {
-      margin-top: 48px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(197,165,90,0.12);
+    tbody tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+    tbody td:first-child { color: rgba(232, 228, 222, 0.85); font-weight: 500; }
+    tbody tr:last-child td { border-bottom: none; }
+    .article-sources {
+      margin-top: 60px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(197, 165, 90, 0.12);
     }
-    .references h2 {
-      font-size: 0.88rem !important;
-      color: rgba(232,228,222,0.4) !important;
-      margin-top: 0 !important;
-      margin-bottom: 16px !important;
-      font-family: 'Inter', sans-serif !important;
-      font-weight: 600 !important;
-      letter-spacing: 0.1em !important;
-      text-transform: uppercase !important;
-    }
-    .references ol, .references ul { margin: 0; padding-left: 20px; }
-    .references li {
-      margin: 6px 0;
+    .article-sources p, .article-sources li {
       font-size: 0.82rem !important;
-      color: rgba(232,228,222,0.38) !important;
-      line-height: 1.5 !important;
+      color: rgba(232, 228, 222, 0.38) !important;
+      line-height: 1.6 !important;
+      margin-bottom: 8px !important;
     }
-    .references p { font-size: 0.82rem !important; color: rgba(232,228,222,0.38) !important; margin-top: 10px !important; }
-    .references a { color: rgba(197,165,90,0.6); }
-
-    /* ═══ Back Link ═════════════════════════════════════════════════════════ */
+    .article-sources .sources-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #C5A55A;
+      margin-bottom: 16px;
+      display: block;
+    }
     .back-link {
       display: inline-flex;
       align-items: center;
@@ -529,12 +379,9 @@
       color: rgba(232, 228, 222, 0.5);
       text-decoration: none;
       transition: color 0.2s, gap 0.2s;
-      margin-top: 40px;
       margin-bottom: 60px;
     }
     .back-link:hover { color: #C5A55A; gap: 12px; text-decoration: none; }
-
-    /* ═══ Footer CTA ════════════════════════════════════════════════════════ */
     .footer-cta {
       background-color: #111D2E;
       border-top: 1px solid rgba(197, 165, 90, 0.12);
@@ -547,12 +394,17 @@
       font-size: clamp(1.6rem, 3vw, 2.2rem);
     }
     .footer-cta__sub {
-      max-width: 480px;
-      margin: 0 auto 40px;
+      max-width: 640px;
+      margin: 0 auto 24px;
       font-size: 0.95rem;
     }
-
-    /* ═══ Button ════════════════════════════════════════════════════════════ */
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
     .btn {
       display: inline-block;
       padding: 16px 36px;
@@ -571,8 +423,6 @@
     .btn:hover { background: #C5A55A; color: #0D1B2A; text-decoration: none; }
     .btn--filled { background: #C5A55A; color: #0D1B2A; }
     .btn--filled:hover { background: #d4b56a; color: #0D1B2A; }
-
-    /* ═══ Footer Legal ══════════════════════════════════════════════════════ */
     .footer-legal {
       background-color: #0D1B2A;
       border-top: 1px solid rgba(197, 165, 90, 0.08);
@@ -584,30 +434,28 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
+      text-align: center;
     }
     .footer-legal p {
       font-size: 0.75rem;
       color: rgba(232, 228, 222, 0.3);
       line-height: 1.6;
     }
-    .footer-legal a { color: rgba(197,165,90,0.5); }
-
-    /* ═══ Responsive ════════════════════════════════════════════════════════ */
     @media (max-width: 768px) {
       .nav__links { gap: 16px; }
       .nav__links a { font-size: 0.72rem; }
       .breadcrumb { padding-top: 100px; }
       .article-header { padding: 32px 0 48px; }
-      .article-body p, .article-body li { font-size: 0.98rem; }
+      .article-body p { font-size: 0.98rem; }
       .pull-quote { padding: 16px 20px; }
-      .cta-block { padding: 28px 20px; }
     }
   </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5459MHF3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5459MHF3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <nav class="nav">
     <a href="/en.html" class="nav__logo">élan <span>clinic</span></a>
     <ul class="nav__links">
@@ -618,356 +466,300 @@
     </ul>
   </nav>
 
-  <div class="breadcrumb"><div class="container"><nav class="breadcrumb__inner" aria-label="Breadcrumb"><span class="breadcrumb__item"><a href="/">Home</a></span><span class="breadcrumb__sep">›</span><span class="breadcrumb__item"><a href="/blog.html">Articles</a></span><span class="breadcrumb__sep">›</span><span class="breadcrumb__item breadcrumb__item--current">Mounjaro Plateau Troubleshooting</span></nav></div></div>
-  <header class="article-header"><div class="container"><div class="article-header__content"><span class="label">Tirzepatide · Plateau Troubleshooting</span><h1>Mounjaro Plateau: Why Your Weight Loss Stalled and What to Do About It</h1><div class="article-meta"><div class="article-meta__item"><strong>Dr. Ingmar Lindström, MD</strong></div><div class="article-meta__dot"></div><div class="article-meta__item"><time datetime="2026-03-08">March 2026</time></div><div class="article-meta__dot"></div><div class="article-meta__item">10 min read</div></div></div></div></header>
-  <main class="article-body"><div class="container"><div class="article-body__inner"><div class="pull-quote"><p>If you’re on <strong>tirzepatide</strong> (Mounjaro / Zepbound) and the scale hasn’t moved for weeks, it’s easy to assume the medication “stopped working.”
-        In reality, plateaus are common—and many stalls are not even true fat-loss plateaus.
-        This article explains the physiology behind plateaus and gives you a conservative, clinician-style troubleshooting plan.</p></div><div class="disclaimer">
-      <span class="disclaimer-label">Medical Disclaimer</span>
-      This article is for education only and does not provide individual medical advice.
-      Tirzepatide (Mounjaro/Zepbound) is a prescription medication and should be started, adjusted, or stopped only with a licensed prescriber who knows your medical history.
-      If you have severe abdominal pain, persistent vomiting, dehydration, fainting, or signs of an allergic reaction, seek urgent medical care.
-    </div><div class="toc">
-      <strong>In this article</strong>
-      <ul>
-        <li><a href="#what-counts-as-a-plateau">What counts as a true plateau (and what doesn’t)</a></li>
-        <li><a href="#why-plateaus-happen">Why plateaus happen on tirzepatide</a></li>
-        <li><a href="#hidden-causes">The most common hidden causes of a “stall”</a></li>
-        <li><a href="#troubleshooting-checklist">A step-by-step troubleshooting checklist</a></li>
-        <li><a href="#top-dose">What if you’re on 15 mg and still stuck?</a></li>
-        <li><a href="#when-to-call">When to talk to your clinician</a></li>
-      </ul>
+  <div class="breadcrumb">
+    <div class="container">
+      <nav class="breadcrumb__inner" aria-label="Breadcrumb">
+        <span class="breadcrumb__item"><a href="/en.html">Home</a></span>
+        <span class="breadcrumb__sep">›</span>
+        <span class="breadcrumb__item"><a href="/blog.html">Articles</a></span>
+        <span class="breadcrumb__sep">›</span>
+        <span class="breadcrumb__item breadcrumb__item--current">Mounjaro Plateau Troubleshooting</span>
+      </nav>
     </div>
-      <h2 id="what-counts-as-a-plateau">What counts as a true plateau (and what doesn’t)</h2>
+  </div>
 
-      <p>
-        A “plateau” is not a bad week. It’s not a salty dinner. It’s not a constipated week.
-        And it’s definitely not “I didn’t lose for 10 days so the medication failed.”
-      </p>
-
-      <div class="callout callout-info">
-        <span class="callout-label">A practical working definition</span>
-        Consider a <strong>true weight-loss plateau</strong> as: <strong>no meaningful downward trend for ~4+ weeks</strong> despite consistent medication use and consistent lifestyle adherence.
-        (Not just one weigh-in—but your weekly average.)
-      </div>
-
-      <p>
-        Many people describe a stepwise pattern:
-        <em>flat for 3–4 weeks, then a drop</em>. This shows up frequently in patient communities and matches what we see clinically:
-        fat loss can be smooth, but the <strong>scale</strong> is noisy.
-      </p>
-
-      <h3>Why the scale is noisy (even when fat loss is happening)</h3>
-      <ul>
-        <li><strong>Water and glycogen shifts</strong> (exercise changes, higher carbs, lower carbs, stress hormones)</li>
-        <li><strong>Constipation</strong> (common on GLP-1/GIP therapies)</li>
-        <li><strong>Menstrual-cycle related fluid retention</strong> (for many women)</li>
-        <li><strong>Inflammation after new training</strong> (temporary water retention when you start lifting)</li>
-        <li><strong>Lean mass changes</strong>: if you gain some muscle while losing fat, the scale can stall while your waist shrinks</li>
-      </ul>
-
-      <div class="callout callout-success">
-        <span class="callout-label">Better progress metrics during a stall</span>
-        Use at least one non-scale metric: <strong>waist measurement</strong>, progress photos, clothing fit, resting heart rate, step count consistency, and strength performance.
-      </div>
-
-      <hr>
-
-      <h2 id="why-plateaus-happen">Why plateaus happen on tirzepatide</h2>
-
-      <p>
-        Plateaus are expected because the body is not a calorie calculator—it’s a feedback system.
-        As you lose weight, your <strong>energy expenditure drops</strong> and your appetite signals shift.
-        Eventually, your calorie deficit shrinks, and weight loss slows.
-      </p>
-
-      <p>
-        In other words: the system tends to find a new equilibrium.
-        Modeling and physiology work on weight-loss plateaus supports this basic mechanism across multiple interventions, including diet restriction and GLP-1 receptor agonism.
-      </p>
-
-      <div class="callout callout-amber">
-        <span class="callout-label">Important reframe</span>
-        A plateau does <strong>not</strong> automatically mean you’re doing something wrong.
-        It often means your body is now smaller—and the strategy that created a deficit at your starting weight may now be maintenance.
-      </div>
-
-      <h3>What clinical trials suggest about “time to plateau”</h3>
-      <p>
-        In large tirzepatide obesity trials, average weight loss continued for many months.
-        The rate of loss generally slows over time, and some participants approach a plateau later in treatment.
-        The practical takeaway: if you’re stalled at month 2–4, it may be too early to call it a true plateau; if you’re stalled later, it’s even more important to focus on the high-leverage basics.
-      </p>
-
-      <p>
-        There is ongoing research into metabolic adaptation (the drop in energy expenditure beyond what body size alone would predict).
-        Some mechanistic findings are not yet definitive for tirzepatide specifically, so it’s safest to assume that <strong>metabolic adaptation can still happen</strong> and plan accordingly rather than expecting the medication to “override physiology” indefinitely.
-      </p>
-
-      <hr>
-
-      <h2 id="hidden-causes">The most common hidden causes of a “stall”</h2>
-
-      <p>
-        Most plateaus are caused by a small number of boring issues.
-        If we troubleshoot methodically, we can usually find the bottleneck.
-      </p>
-
-      <h3>1) Your calorie deficit quietly disappeared</h3>
-      <p>
-        After 10–20% weight loss, your daily energy needs are meaningfully lower.
-        What used to be a deficit becomes maintenance.
-      </p>
-
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>What you think is happening</th>
-              <th>What is often happening instead</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>“I’m eating the same and stopped losing.”</td>
-              <td>Your body is smaller; your maintenance calories dropped; your activity may also drift down as you feel lighter/less driven.</td>
-            </tr>
-            <tr>
-              <td>“I barely eat.”</td>
-              <td>Calories are coming from drinks, snacks, weekends, restaurant portions, or inaccurate tracking.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h3>2) Protein is too low, so you lose muscle (and burn fewer calories)</h3>
-      <p>
-        With any weight loss, some lean mass loss can occur.
-        The goal is to <strong>minimize</strong> it.
-        A practical target used in bariatric and obesity-medicine programs is about <strong>1.0–1.5 g/kg of IDEAL body weight/day</strong> (adjusted individually, especially in kidney disease).
-      </p>
-      <p>
-        Pair protein with resistance training to preserve lean mass.
-        This matters for your resting energy expenditure, your function, and how you look and feel at goal weight.
-      </p>
-
-      <h3>3) You’re under-recovered: sleep and stress are sabotaging your trend</h3>
-      <p>
-        Poor sleep and high stress can increase hunger, reduce spontaneous activity, and increase water retention.
-        Many stalls resolve when sleep improves—even without changing calories.
-      </p>
-
-      <h3>4) Constipation is masking fat loss on the scale</h3>
-      <p>
-        Tirzepatide commonly slows gastric emptying and can worsen constipation.
-        If bowel movements are infrequent, the scale can stall even if fat loss continues.
-      </p>
-
-      <div class="callout callout-info">
-        <span class="callout-label">Rule of thumb</span>
-        If your scale hasn’t changed and you’re constipated, treat constipation first (with clinician guidance as appropriate) before deciding the medication “failed.”
-      </div>
-
-      <h3>5) You changed training—and got temporary water retention</h3>
-      <p>
-        Starting resistance training (or increasing volume) causes muscle micro-damage and inflammation.
-        That’s normal—and it temporarily increases water weight.
-        Many people interpret this as “plateau,” then quit the very thing that would help long-term.
-      </p>
-
-      <hr>
-
-      <h2 id="troubleshooting-checklist">A step-by-step troubleshooting checklist (clinician-style, no hacks)</h2>
-
-      <p>
-        Work through this checklist in order. Don’t change ten variables at once.
-        You want a clean signal.
-      </p>
-
-      <h3>Step 1: Confirm it’s not just normal variability</h3>
-      <ul>
-        <li>Weigh daily (optional), but use a <strong>7-day average</strong>.</li>
-        <li>Track waist weekly at the navel.</li>
-        <li>Record bowel movements for 2 weeks if constipation is possible.</li>
-      </ul>
-
-      <h3>Step 2: Audit adherence (without shame)</h3>
-      <ul>
-        <li>Are injections taken consistently, on schedule?</li>
-        <li>Any missed doses, travel disruptions, or supply gaps?</li>
-        <li>Any new medications (e.g., steroids) or life changes affecting appetite/sleep?</li>
-      </ul>
-
-      <h3>Step 3: Tighten tracking for 10–14 days</h3>
-      <p>
-        You don’t need to track forever.
-        But during a stall, a short “tracking sprint” often reveals the issue.
-      </p>
-      <ul>
-        <li>Weigh/measure calorie-dense foods (oils, nuts, cheese, sauces).</li>
-        <li>Track drinks (alcohol, specialty coffee, juice).</li>
-        <li>Track weekends and eating out honestly.</li>
-      </ul>
-
-      <div class="callout callout-amber">
-        <span class="callout-label">Common plateau pattern</span>
-        Monday–Friday is in a deficit; weekend wipes it out.
-        That still feels like “I’m doing everything right,” but the weekly math says otherwise.
-      </div>
-
-      <h3>Step 4: Make protein and strength non-negotiable</h3>
-      <ul>
-        <li>Protein target: <strong>1.0–1.5 g/kg IDEAL body weight/day</strong> (adjust individually).</li>
-        <li>Lift 2–4x/week with progressive overload (full body works well).</li>
-        <li>Keep it simple: squat/hinge/push/pull/carry patterns.</li>
-      </ul>
-
-      <p>
-        If you want a structured plan, here are two resources used by our patients:
-      </p>
-      <ul>
-        <li><a href="https://ingmarassistant.gumroad.com/l/crxhus" target="_blank" rel="noopener">Exercise Protocol</a> (Gumroad)</li>
-        <li><a href="https://ingmarassistant.gumroad.com/l/mazgf" target="_blank" rel="noopener">Complete System</a> (Gumroad)</li>
-      </ul>
-
-      <h3>Step 5: Increase low-intensity activity (the plateau-breaker most people ignore)</h3>
-      <p>
-        When weight drops, people often move less without noticing.
-        The fix is not “more HIIT.” It’s usually <strong>more steps</strong>.
-      </p>
-      <ul>
-        <li>Aim to increase steps by 2,000/day for 2 weeks, then reassess.</li>
-        <li>Add a 10–15 minute walk after meals if digestion allows.</li>
-      </ul>
-
-      <h3>Step 6: Fix the boring recovery variables</h3>
-      <ul>
-        <li>Sleep 7–9 hours (or improve consistency if total hours are hard).</li>
-        <li>Reduce late-night eating triggers (screens, alcohol, stress spirals).</li>
-        <li>Plan protein earlier in the day if appetite is lowest in the morning.</li>
-      </ul>
-
-      <hr>
-
-      <h2 id="top-dose">What if you’re on 15 mg and still stuck?</h2>
-
-      <p>
-        This is a common fear: “I’m on the maximum dose—there’s nowhere to go.”
-        Dose is only one lever.
-      </p>
-
-      <div class="callout callout-info">
-        <span class="callout-label">Top dose does not mean top results</span>
-        If nutrition, protein, and activity are inconsistent, increasing dose can’t compensate forever.
-        And if side effects reduce your protein intake or activity, the dose may even backfire.
-      </div>
-
-      <p>
-        At 15 mg, your best plateau levers are:
-      </p>
-      <ol>
-        <li><strong>Confirm intake</strong> with a 10–14 day tracking sprint.</li>
-        <li><strong>Protein + resistance training</strong> to preserve lean mass.</li>
-        <li><strong>Steps</strong> (low-intensity activity is highly scalable).</li>
-        <li><strong>Address constipation</strong> (often the hidden variable).</li>
-        <li><strong>Review alcohol</strong> (both calories and sleep disruption).</li>
-      </ol>
-
-      <p>
-        If you feel like you’ve “done everything” and nothing changes, this is exactly when you want clinical supervision.
-        There may be medical factors (e.g., thyroid disease, medication interactions) or a tolerance issue that needs proper evaluation.
-      </p>
-
-      <hr>
-
-      <h2 id="when-to-call">When to talk to your clinician (red flags and decision points)</h2>
-
-      <p>
-        Plateaus are common.
-        But certain situations deserve medical review.
-      </p>
-
-      <h3>Contact your clinician promptly if you have:</h3>
-      <ul>
-        <li>Severe or persistent abdominal pain</li>
-        <li>Persistent vomiting or inability to keep fluids down</li>
-        <li>Signs of dehydration (dizziness, fainting, very dark urine)</li>
-        <li>Symptoms suggestive of gallbladder issues (right upper abdominal pain, fever, jaundice)</li>
-        <li>Weight regain that continues for multiple weeks</li>
-      </ul>
-
-      <h3>Consider a strategy review if:</h3>
-      <ul>
-        <li>You have a stall lasting <strong>6–8+ weeks</strong> despite consistent adherence</li>
-        <li>Side effects are preventing protein intake or activity</li>
-        <li>You’re approaching goal weight and the loss rate slows (this is expected but still needs planning)</li>
-      </ul>
-
-      <div class="callout callout-danger">
-        <span class="callout-label">Safety note</span>
-        Avoid “internet protocols” like splitting doses, changing frequency, or improvising titration.
-        Any dosing changes should be made with your prescriber.
-      </div>
-
-      <hr>
-
-      <h2>Related Élan Clinic resources</h2>
-
-      <ul>
-        <li><a href="https://elanclinic.ee/glp1-calculator.html">GLP-1 Calculator</a></li>
-        <li><a href="https://elanclinic.ee/blog/how-to-access-glp1-safely.html">Starting GLP-1 Therapy: What Your Doctor Evaluates First: A Physician’s Guide</a></li>
-        <li><a href="https://elanclinic.ee/blog/how-to-taper-off-glp1-safely.html">How to taper off GLP-1 medications safely</a></li>
-        <li><a href="https://elanclinic.ee/blog/ozempic-wegovy-mounjaro-whats-the-difference.html">Ozempic vs Wegovy vs Mounjaro: What’s the difference?</a></li>
-        <li><a href="https://elanclinic.ee/blog/oral-glp1-medications-future.html">Oral GLP-1 medications: what’s coming</a></li>
-      </ul>
-
-      <div class="cta-block">
-        <h2>Want a structured, physician-built plateau plan?</h2>
-        <p>
-          If you’re stuck (or scared you’ll get stuck), use a system that covers nutrition targets, training, adherence, and maintenance—without false promises.
-          These are the resources most patients use to turn “stall panic” into a plan.
-        </p>
-        <div class="cta-row">
-          <a class="cta-btn" href="https://ingmarassistant.gumroad.com/l/mpcwml" target="_blank" rel="noopener">Why It Didn’t Work</a>
-          <a class="cta-btn" href="https://ingmarassistant.gumroad.com/l/crxhus" target="_blank" rel="noopener">Exercise Protocol</a>
-          <a class="cta-btn" href="https://ingmarassistant.gumroad.com/l/mazgf" target="_blank" rel="noopener">Complete System</a>
-          <a class="cta-btn secondary" href="https://elanclinic.ee/#book">Book Consultation</a>
+  <header class="article-header">
+    <div class="container">
+      <div class="article-header__content">
+        <span class="label">GLP-1 Medications · Plateaus</span>
+        <h1>Mounjaro Plateau: Why Your Weight Loss Stalled and What to Do About It</h1>
+        <div class="article-meta">
+          <div class="article-meta__item"><strong>Dr. Ingmar Lindström, MD</strong></div>
+          <div class="article-meta__dot"></div>
+          <div class="article-meta__item">Élan Clinic · Tallinn</div>
+          <div class="article-meta__dot"></div>
+          <div class="article-meta__item"><time datetime="2026-03-08">March 2026</time></div>
         </div>
-        <span class="cta-sub">Élan Clinic · Sepapaja 12/1, Tallinn · info@elanclinic.ee</span>
       </div>
+    </div>
+  </header>
 
-      <div class="references">
-        <h2>References (selected)</h2>
+  <main class="article-body">
+    <div class="container">
+      <div class="article-body__inner">
+
+        <p>If you’re on <strong>tirzepatide</strong> (Mounjaro / Zepbound) and the scale hasn’t moved for weeks, it’s easy to assume the medication “stopped working.” In reality, plateaus are common—and many stalls are not even true fat-loss plateaus. This article explains the physiology behind plateaus and gives you a conservative, clinician-style troubleshooting plan.</p>
+
+        <div class="callout callout-amber">
+          <span class="callout-label">Medical Disclaimer</span>
+          <p>This article is for education only and does not provide individual medical advice. Tirzepatide (Mounjaro/Zepbound) is a prescription medication and should be started, adjusted, or stopped only with a licensed prescriber who knows your medical history. If you have severe abdominal pain, persistent vomiting, dehydration, fainting, or signs of an allergic reaction, seek urgent medical care.</p>
+        </div>
+
+        <hr />
+
+        <h2 id="what-counts-as-a-plateau">What counts as a true plateau (and what doesn’t)</h2>
+
+        <p>A “plateau” is not a bad week. It’s not a salty dinner. It’s not a constipated week. And it’s definitely not “I didn’t lose for 10 days so the medication failed.”</p>
+
+        <div class="callout callout-info">
+          <span class="callout-label">A practical working definition</span>
+          <p>Consider a <strong>true weight-loss plateau</strong> as: <strong>no meaningful downward trend for ~4+ weeks</strong> despite consistent medication use and consistent lifestyle adherence. (Not just one weigh-in—but your weekly average.)</p>
+        </div>
+
+        <p>Many people describe a stepwise pattern: <em>flat for 3–4 weeks, then a drop</em>. This shows up frequently in patient communities and matches what we see clinically: fat loss can be smooth, but the <strong>scale</strong> is noisy.</p>
+
+        <h3>Why the scale is noisy (even when fat loss is happening)</h3>
+        <ul>
+          <li><strong>Water and glycogen shifts</strong> (exercise changes, higher carbs, lower carbs, stress hormones)</li>
+          <li><strong>Constipation</strong> (common on GLP-1/GIP therapies)</li>
+          <li><strong>Menstrual-cycle related fluid retention</strong> (for many women)</li>
+          <li><strong>Inflammation after new training</strong> (temporary water retention when you start lifting)</li>
+          <li><strong>Lean mass changes</strong>: if you gain some muscle while losing fat, the scale can stall while your waist shrinks</li>
+        </ul>
+
+        <div class="callout callout-success">
+          <span class="callout-label">Better progress metrics during a stall</span>
+          <p>Use at least one non-scale metric: <strong>waist measurement</strong>, progress photos, clothing fit, resting heart rate, step count consistency, and strength performance.</p>
+        </div>
+
+        <hr />
+
+        <h2 id="why-plateaus-happen">Why plateaus happen on tirzepatide</h2>
+
+        <p>Plateaus are expected because the body is not a calorie calculator—it’s a feedback system. As you lose weight, your <strong>energy expenditure drops</strong> and your appetite signals shift. Eventually, your calorie deficit shrinks, and weight loss slows.</p>
+
+        <p>In other words: the system tends to find a new equilibrium. Modeling and physiology work on weight-loss plateaus supports this basic mechanism across multiple interventions, including diet restriction and GLP-1 receptor agonism.</p>
+
+        <div class="callout callout-amber">
+          <span class="callout-label">Important reframe</span>
+          <p>A plateau does <strong>not</strong> automatically mean you’re doing something wrong. It often means your body is now smaller—and the strategy that created a deficit at your starting weight may now be maintenance.</p>
+        </div>
+
+        <h3>What clinical trials suggest about “time to plateau”</h3>
+        <p>In large tirzepatide obesity trials, average weight loss continued for many months. The rate of loss generally slows over time, and some participants approach a plateau later in treatment. The practical takeaway: if you’re stalled at month 2–4, it may be too early to call it a true plateau; if you’re stalled later, it’s even more important to focus on the high-leverage basics.</p>
+
+        <p>There is ongoing research into metabolic adaptation (the drop in energy expenditure beyond what body size alone would predict). Some mechanistic findings are not yet definitive for tirzepatide specifically, so it’s safest to assume that <strong>metabolic adaptation can still happen</strong> and plan accordingly rather than expecting the medication to “override physiology” indefinitely.</p>
+
+        <hr />
+
+        <h2 id="hidden-causes">The most common hidden causes of a “stall”</h2>
+
+        <p>Most plateaus are caused by a small number of boring issues. If we troubleshoot methodically, we can usually find the bottleneck.</p>
+
+        <h3>1) Your calorie deficit quietly disappeared</h3>
+        <p>After 10–20% weight loss, your daily energy needs are meaningfully lower. What used to be a deficit becomes maintenance.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>What you think is happening</th>
+                <th>What is often happening instead</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>“I’m eating the same and stopped losing.”</td>
+                <td>Your body is smaller; your maintenance calories dropped; your activity may also drift down as you feel lighter/less driven.</td>
+              </tr>
+              <tr>
+                <td>“I barely eat.”</td>
+                <td>Calories are coming from drinks, snacks, weekends, restaurant portions, or inaccurate tracking.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>2) Protein is too low, so you lose muscle (and burn fewer calories)</h3>
+        <p>With any weight loss, some lean mass loss can occur. The goal is to <strong>minimize</strong> it. A practical target used in bariatric and obesity-medicine programs is about <strong>1.0–1.5 g/kg of IDEAL body weight/day</strong> (adjusted individually, especially in kidney disease).</p>
+        <p>Pair protein with resistance training to preserve lean mass. This matters for your resting energy expenditure, your function, and how you look and feel at goal weight.</p>
+
+        <h3>3) You’re under-recovered: sleep and stress are sabotaging your trend</h3>
+        <p>Poor sleep and high stress can increase hunger, reduce spontaneous activity, and increase water retention. Many stalls resolve when sleep improves—even without changing calories.</p>
+
+        <h3>4) Constipation is masking fat loss on the scale</h3>
+        <p>Tirzepatide commonly slows gastric emptying and can worsen constipation. If bowel movements are infrequent, the scale can stall even if fat loss continues.</p>
+
+        <div class="callout callout-info">
+          <span class="callout-label">Rule of thumb</span>
+          <p>If your scale hasn’t changed and you’re constipated, treat constipation first (with clinician guidance as appropriate) before deciding the medication “failed.”</p>
+        </div>
+
+        <h3>5) You changed training—and got temporary water retention</h3>
+        <p>Starting resistance training (or increasing volume) causes muscle micro-damage and inflammation. That’s normal—and it temporarily increases water weight. Many people interpret this as “plateau,” then quit the very thing that would help long-term.</p>
+
+        <hr />
+
+        <h2 id="troubleshooting-checklist">A step-by-step troubleshooting checklist (clinician-style, no hacks)</h2>
+
+        <p>Work through this checklist in order. Don’t change ten variables at once. You want a clean signal.</p>
+
+        <h3>Step 1: Confirm it’s not just normal variability</h3>
+        <ul>
+          <li>Weigh daily (optional), but use a <strong>7-day average</strong>.</li>
+          <li>Track waist weekly at the navel.</li>
+          <li>Record bowel movements for 2 weeks if constipation is possible.</li>
+        </ul>
+
+        <h3>Step 2: Audit adherence (without shame)</h3>
+        <ul>
+          <li>Are injections taken consistently, on schedule?</li>
+          <li>Any missed doses, travel disruptions, or supply gaps?</li>
+          <li>Any new medications (e.g., steroids) or life changes affecting appetite/sleep?</li>
+        </ul>
+
+        <h3>Step 3: Tighten tracking for 10–14 days</h3>
+        <p>You don’t need to track forever. But during a stall, a short “tracking sprint” often reveals the issue.</p>
+        <ul>
+          <li>Weigh/measure calorie-dense foods (oils, nuts, cheese, sauces).</li>
+          <li>Track drinks (alcohol, specialty coffee, juice).</li>
+          <li>Track weekends and eating out honestly.</li>
+        </ul>
+
+        <div class="callout callout-amber">
+          <span class="callout-label">Common plateau pattern</span>
+          <p>Monday–Friday is in a deficit; weekend wipes it out. That still feels like “I’m doing everything right,” but the weekly math says otherwise.</p>
+        </div>
+
+        <h3>Step 4: Make protein and strength non-negotiable</h3>
+        <ul>
+          <li>Protein target: <strong>1.0–1.5 g/kg IDEAL body weight/day</strong> (adjust individually).</li>
+          <li>Lift 2–4x/week with progressive overload (full body works well).</li>
+          <li>Keep it simple: squat/hinge/push/pull/carry patterns.</li>
+        </ul>
+
+        <p>If you want a structured plan, here are two resources used by our patients:</p>
+        <ul>
+          <li><a href="https://ingmarassistant.gumroad.com/l/crxhus" target="_blank" rel="noopener">Exercise Protocol</a> (Gumroad)</li>
+          <li><a href="https://ingmarassistant.gumroad.com/l/mazgf" target="_blank" rel="noopener">Complete System</a> (Gumroad)</li>
+        </ul>
+
+        <h3>Step 5: Increase low-intensity activity (the plateau-breaker most people ignore)</h3>
+        <p>When weight drops, people often move less without noticing. The fix is not “more HIIT.” It’s usually <strong>more steps</strong>.</p>
+        <ul>
+          <li>Aim to increase steps by 2,000/day for 2 weeks, then reassess.</li>
+          <li>Add a 10–15 minute walk after meals if digestion allows.</li>
+        </ul>
+
+        <h3>Step 6: Fix the boring recovery variables</h3>
+        <ul>
+          <li>Sleep 7–9 hours (or improve consistency if total hours are hard).</li>
+          <li>Reduce late-night eating triggers (screens, alcohol, stress spirals).</li>
+          <li>Plan protein earlier in the day if appetite is lowest in the morning.</li>
+        </ul>
+
+        <hr />
+
+        <h2 id="top-dose">What if you’re on 15 mg and still stuck?</h2>
+
+        <p>This is a common fear: “I’m on the maximum dose—there’s nowhere to go.” Dose is only one lever.</p>
+
+        <div class="callout callout-info">
+          <span class="callout-label">Top dose does not mean top results</span>
+          <p>If nutrition, protein, and activity are inconsistent, increasing dose can’t compensate forever. And if side effects reduce your protein intake or activity, the dose may even backfire.</p>
+        </div>
+
+        <p>At 15 mg, your best plateau levers are:</p>
         <ol>
-          <li>Jastreboff AM, et al. Tirzepatide once weekly for the treatment of obesity. <em>N Engl J Med</em>. 2022. https://www.nejm.org/doi/full/10.1056/NEJMoa2206038</li>
-          <li>Hall KD, et al. Physiology of the weight-loss plateau in response to diet restriction, GLP-1 receptor agonism, and bariatric surgery. <em>Obesity (Silver Spring)</em>. 2024. https://pubmed.ncbi.nlm.nih.gov/38644683/</li>
-          <li>Aronne LJ, et al. Continued treatment with tirzepatide for maintenance of weight reduction in adults with obesity: a randomized withdrawal trial (SURMOUNT-4). <em>JAMA</em>. 2024. https://pubmed.ncbi.nlm.nih.gov/38078870/</li>
-          <li>Neeland IJ, et al. Changes in lean body mass with glucagon-like peptide-1-based therapies and mitigation strategies. <em>Diabetes Obes Metab</em>. 2024. https://pubmed.ncbi.nlm.nih.gov/38937282/</li>
+          <li><strong>Confirm intake</strong> with a 10–14 day tracking sprint.</li>
+          <li><strong>Protein + resistance training</strong> to preserve lean mass.</li>
+          <li><strong>Steps</strong> (low-intensity activity is highly scalable).</li>
+          <li><strong>Address constipation</strong> (often the hidden variable).</li>
+          <li><strong>Review alcohol</strong> (both calories and sleep disruption).</li>
         </ol>
-        <p style="margin-top:10px;">
-          Note: The medical literature on plateaus is evolving. We avoid overstating mechanistic claims when tirzepatide-specific human data are limited.
-        </p>
+
+        <p>If you feel like you’ve “done everything” and nothing changes, this is exactly when you want clinical supervision. There may be medical factors (e.g., thyroid disease, medication interactions) or a tolerance issue that needs proper evaluation.</p>
+
+        <hr />
+
+        <h2 id="when-to-call">When to talk to your clinician (red flags and decision points)</h2>
+
+        <p>Plateaus are common. But certain situations deserve medical review.</p>
+
+        <h3>Contact your clinician promptly if you have:</h3>
+        <ul>
+          <li>Severe or persistent abdominal pain</li>
+          <li>Persistent vomiting or inability to keep fluids down</li>
+          <li>Signs of dehydration (dizziness, fainting, very dark urine)</li>
+          <li>Symptoms suggestive of gallbladder issues (right upper abdominal pain, fever, jaundice)</li>
+          <li>Weight regain that continues for multiple weeks</li>
+        </ul>
+
+        <h3>Consider a strategy review if:</h3>
+        <ul>
+          <li>You have a stall lasting <strong>6–8+ weeks</strong> despite consistent adherence</li>
+          <li>Side effects are preventing protein intake or activity</li>
+          <li>You’re approaching goal weight and the loss rate slows (this is expected but still needs planning)</li>
+        </ul>
+
+        <div class="callout callout-danger">
+          <span class="callout-label">Safety note</span>
+          <p>Avoid “internet protocols” like splitting doses, changing frequency, or improvising titration. Any dosing changes should be made with your prescriber.</p>
+        </div>
+
+        <hr />
+
+        <h2>Related Élan Clinic resources</h2>
+
+        <ul>
+          <li><a href="https://elanclinic.ee/glp1-calculator.html">GLP-1 Calculator</a></li>
+          <li><a href="https://elanclinic.ee/blog/how-to-access-glp1-safely.html">Starting GLP-1 Therapy: What Your Doctor Evaluates First: A Physician’s Guide</a></li>
+          <li><a href="https://elanclinic.ee/blog/how-to-taper-off-glp1-safely.html">How to taper off GLP-1 medications safely</a></li>
+          <li><a href="https://elanclinic.ee/blog/ozempic-wegovy-mounjaro-whats-the-difference.html">Ozempic vs Wegovy vs Mounjaro: What’s the difference?</a></li>
+          <li><a href="https://elanclinic.ee/blog/oral-glp1-medications-future.html">Oral GLP-1 medications: what’s coming</a></li>
+        </ul>
+
+        <hr />
+
+        <h2>Final word</h2>
+        <p>If you’re plateaued on Mounjaro, your next step isn’t panic—it’s precision. Confirm the trend, remove the common confounders, then pull the highest-leverage levers: protein, strength training, steps, sleep, and side-effect management. And if the stall persists, bring the data to your clinician and make a plan.</p>
+        <p><em>— Dr. Ingmar Lindström, MD</em></p>
+
+        <div class="article-sources">
+          <span class="sources-label">References (selected)</span>
+          <ol>
+            <li>Jastreboff AM, et al. Tirzepatide once weekly for the treatment of obesity. <em>N Engl J Med</em>. 2022. https://www.nejm.org/doi/full/10.1056/NEJMoa2206038</li>
+            <li>Hall KD, et al. Physiology of the weight-loss plateau in response to diet restriction, GLP-1 receptor agonism, and bariatric surgery. <em>Obesity (Silver Spring)</em>. 2024. https://pubmed.ncbi.nlm.nih.gov/38644683/</li>
+            <li>Aronne LJ, et al. Continued treatment with tirzepatide for maintenance of weight reduction in adults with obesity: a randomized withdrawal trial (SURMOUNT-4). <em>JAMA</em>. 2024. https://pubmed.ncbi.nlm.nih.gov/38078870/</li>
+            <li>Neeland IJ, et al. Changes in lean body mass with glucagon-like peptide-1-based therapies and mitigation strategies. <em>Diabetes Obes Metab</em>. 2024. https://pubmed.ncbi.nlm.nih.gov/38937282/</li>
+          </ol>
+          <p>Note: The medical literature on plateaus is evolving. We avoid overstating mechanistic claims when tirzepatide-specific human data are limited.</p>
+        </div>
+
+        <a href="/blog.html" class="back-link">← Back to Articles</a>
+
       </div>
+    </div>
+  </main>
 
-      <hr>
+  <section class="footer-cta">
+    <span class="label">Physician-Built Plateau Plan</span>
+    <h2>Want a structured, physician-built plateau plan?</h2>
+    <p class="footer-cta__sub">If you’re stuck—or scared you’ll get stuck—use a system that covers nutrition targets, training, adherence, and maintenance without false promises.</p>
+    <div class="cta-row">
+      <a class="btn btn--filled" href="https://ingmarassistant.gumroad.com/l/mpcwml" target="_blank" rel="noopener">Why It Didn’t Work</a>
+      <a class="btn" href="https://ingmarassistant.gumroad.com/l/crxhus" target="_blank" rel="noopener">Exercise Protocol</a>
+      <a class="btn" href="https://ingmarassistant.gumroad.com/l/mazgf" target="_blank" rel="noopener">Complete System</a>
+      <a class="btn" href="https://elanclinic.ee/#book">Book Consultation</a>
+    </div>
+  </section>
 
-      <h2>Final word</h2>
-      <p>
-        If you’re plateaued on Mounjaro, your next step isn’t panic—it’s precision.
-        Confirm the trend, remove the common confounders, then pull the highest-leverage levers: protein, strength training, steps, sleep, and side-effect management.
-        And if the stall persists, bring the data to your clinician and make a plan.
-      </p>
-      <p style="margin-top:24px;"><em>— Dr. Ingmar Lindström, MD</em></p>
-
-    <a href="/blog.html" class="back-link">← Back to Articles</a></div></div></main>
-  <section class="footer-cta"><span class="label">Consultation</span><h2>Plateaued on Tirzepatide? Troubleshoot It Properly.</h2><p class="footer-cta__sub">A physician-led review of your plateau: dose tolerance, protein, training, sleep, side effects, and the hidden variables that stall progress.</p><a href="tel:+37252999399" class="btn btn--filled">Call +372 52 99939</a></section>
   <footer class="footer-legal">
     <div class="footer-legal__inner">
-      <p>© 2026 Élan Clinic · Elan Clinic OÜ · Reg 17338832 · Medical licence L07470 · Sepapaja 12/1, Tallinn 11415</p>
-      <p>This article is for informational purposes only and does not constitute medical advice. Consult your physician before changing any medication or health programme.</p>
-      <p><a href="/privacy.html">Privacy Policy</a> · <a href="/blog.html">Blog</a> · <a href="/resources.html">Resources</a></p>
+      <p>© 2026 Élan Clinic OÜ · Sepapaja 12/1, Tallinn 11415 · <a href="mailto:info@elanclinic.ee">info@elanclinic.ee</a> · License L07470</p>
+      <p>This page is reviewed periodically. Evidence evolves. Always follow your local medical guidance and prescribing information.</p>
+      <p><a href="https://elanclinic.ee/privacy.html">Privacy Policy</a> · <a href="https://elanclinic.ee/blog.html">Blog</a> · <a href="https://elanclinic.ee/resources.html">Resources</a></p>
     </div>
   </footer>
-
 </body>
 </html>
