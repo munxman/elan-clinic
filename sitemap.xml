@@ -8,25 +8,15 @@
     <lastmod>2026-04-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="et" href="https://elanclinic.ee/et.html"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://elanclinic.ee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://elanclinic.ee/en.html"/>
     <xhtml:link rel="alternate" hreflang="fi" href="https://elanclinic.ee/fi.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://elanclinic.ee/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://elanclinic.ee/en.html"/>
   </url>
 
   <!-- Language landing pages -->
   <url>
     <loc>https://elanclinic.ee/en.html</loc>
-    <lastmod>2026-04-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="et" href="https://elanclinic.ee/et.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://elanclinic.ee/en.html"/>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://elanclinic.ee/fi.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://elanclinic.ee/"/>
-  </url>
-  <url>
-    <loc>https://elanclinic.ee/et.html</loc>
     <lastmod>2026-04-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
