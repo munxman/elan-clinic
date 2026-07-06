@@ -1,28 +1,48 @@
 # Élan Clinic — elanclinic.ee
 
 ## About
-Élan Clinic is a physician-led weight management clinic in Tallinn, Estonia (licensed medical practice). We specialise in long-term weight maintenance and weight regain prevention, including for patients who have used GLP‑1 medications.
+Élan Clinic is a physician-led weight management clinic in Tallinn, Estonia (licensed medical practice, licence L07470). We specialise in long-term weight maintenance and weight regain prevention — in particular for patients who have used GLP‑1 medications such as semaglutide (Ozempic, Wegovy) or tirzepatide (Mounjaro).
 
-## What we do (high level)
-- Physician-led initial consultation
-- Metabolic health assessment and monitoring (labs and body composition where appropriate)
+## Primary differentiator
+We are the only clinic in the Baltic and Nordic region focused specifically on what happens *after* GLP-1 therapy — preventing weight regain. 67% of patients regain two-thirds of lost weight within 12 months of stopping GLP-1 medication. Our Regain Shield programme is designed to prevent this.
+
+## What we do
+- Physician-led initial consultation (in clinic or video call)
+- Metabolic health assessment and monitoring (labs and body composition)
 - Personalised nutrition and resistance-training protocol (maintenance-focused)
 - Structured follow-up and behavioural support
+- GLP-1 aftercare and tapering guidance
+- Weight regain prevention (Kaalukaitse / Regain Shield programme)
+
+## Programmes and pricing
+- Initial Consultation: €120 (45 minutes, in clinic or video)
+- Regain Shield Standard: from €99/month — monthly physician check-ins, personalised protocol
+- Regain Shield Premium: from €299/month — bi-weekly contact, body composition tracking, behavioural coaching
+- The Private Office: from €1,000/month — direct access to Dr. Lindström, named physician, priority scheduling
 
 ## Key facts
-- Location: Sepapaja 12/1, Tallinn 11415, Estonia
+- Location: Sepapaja 12/1, Tallinn 11415, Estonia (3rd floor, co-located with Perekliinik Ülemiste and Valvekliinik)
 - Phone: +372 52 99939
 - Email: info@elanclinic.ee
 - Website: https://elanclinic.ee/
 - Medical licence: L07470
 - Company: Elan Clinic OÜ (reg 17338832)
+- By appointment only. Treatment decisions are individual and clinician-led.
 
-## Languages
-- Estonian: https://elanclinic.ee/et.html
-- English: https://elanclinic.ee/
+## Medical director
+Dr. Ingmar Lindström — physician with 20+ years of cross-border clinical practice (Estonia and Finland), family medicine specialist, medical degree from University of Tartu (2001).
+
+## Languages served
+- Estonian: https://elanclinic.ee/
+- English: https://elanclinic.ee/en.html
 - Finnish: https://elanclinic.ee/fi.html
 - Russian: https://elanclinic.ee/ru.html
 
-## Notes
-- By appointment only.
-- We do not provide guarantees; treatment decisions are individual and clinician-led.
+## Content library
+- English blog (weight management, GLP-1 evidence, regain prevention): https://elanclinic.ee/blog.html
+- Estonian articles: https://elanclinic.ee/artiklid.html
+- FAQ (Estonian): https://elanclinic.ee/kkk.html
+- FAQ (English): https://elanclinic.ee/faq.html
+- FAQ (Finnish): https://elanclinic.ee/ukk.html
+- GLP-1 guide: https://elanclinic.ee/glp1-guide.html
+- GLP-1 calculator: https://elanclinic.ee/glp1-calculator.html
