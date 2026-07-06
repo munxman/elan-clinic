@@ -34,7 +34,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
+    "@type": "MedicalClinic",
+    "@id": "https://elanclinic.ee/#clinic",
     "name": "Élan Clinic",
     "url": "https://elanclinic.ee/",
     "logo": "https://elanclinic.ee/assets/elan-logo-nav-cropped.svg",
@@ -51,9 +52,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     },
     "priceRange": "€149-€1200/month",
     "founder": {
-      "@type": "Person",
+      "@type": "Physician",
+      "@id": "https://elanclinic.ee/#physician",
       "name": "Dr. Ingmar Lindström",
-      "jobTitle": "Medical Director"
+      "jobTitle": "Medical Director",
+      "worksFor": {"@id": "https://elanclinic.ee/#clinic"}
     },
     "contactPoint": {
       "@type": "ContactPoint",
