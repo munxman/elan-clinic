@@ -20,9 +20,6 @@
 
   <!-- Hreflang -->
   <link rel="alternate" hreflang="en" href="https://elanclinic.ee/pricing.html" />
-  <link rel="alternate" hreflang="et" href="https://elanclinic.ee/et/pricing.html" />
-  <link rel="alternate" hreflang="fi" href="https://elanclinic.ee/fi/pricing.html" />
-  <link rel="alternate" hreflang="ru" href="https://elanclinic.ee/ru/pricing.html" />
   <link rel="alternate" hreflang="x-default" href="https://elanclinic.ee/pricing.html" />
 
   <!-- Open Graph -->
@@ -36,6 +33,70 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Programmes &amp; Pricing — Élan Clinic" />
   <meta name="twitter:description" content="Transparent pricing. No hidden fees. Cancel anytime (Standard and Premium)." />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "@id": "https://elanclinic.ee/#clinic",
+    "name": "Élan Clinic",
+    "url": "https://elanclinic.ee/",
+    "description": "Physician-led weight maintenance programmes in Tallinn. Transparent pricing, no hidden fees.",
+    "medicalSpecialty": "Preventive Medicine",
+    "telephone": "+3725299939",
+    "email": "info@elanclinic.ee",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Sepapaja 12/1",
+      "addressLocality": "Tallinn",
+      "postalCode": "11415",
+      "addressCountry": "EE"
+    },
+    "priceRange": "€99-€1000/month",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Regain Shield Programmes",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Initial Consultation",
+          "price": "120",
+          "priceCurrency": "EUR",
+          "description": "45-minute consultation with a physician. In clinic or video call."
+        },
+        {
+          "@type": "Offer",
+          "name": "Regain Shield Standard",
+          "price": "99",
+          "priceCurrency": "EUR",
+          "description": "Monthly physician oversight for weight maintenance after GLP-1."
+        },
+        {
+          "@type": "Offer",
+          "name": "Regain Shield Premium",
+          "price": "299",
+          "priceCurrency": "EUR",
+          "description": "Bi-weekly contact, body composition tracking, behavioural coaching."
+        },
+        {
+          "@type": "Offer",
+          "name": "The Private Office",
+          "price": "1000",
+          "priceCurrency": "EUR",
+          "description": "Concierge physician relationship. Direct access to Dr. Lindström. By application, limited to 12 patients."
+        }
+      ]
+    },
+    "founder": {
+      "@type": "Physician",
+      "@id": "https://elanclinic.ee/#physician",
+      "name": "Dr. Ingmar Lindström",
+      "jobTitle": "Medical Director",
+      "worksFor": {"@id": "https://elanclinic.ee/#clinic"}
+    }
+  }
+  </script>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />

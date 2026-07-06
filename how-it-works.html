@@ -35,6 +35,35 @@
   <meta name="twitter:title" content="How Élan Clinic Works" />
   <meta name="twitter:description" content="A structured, physician-led process from assessment to maintenance." />
 
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "@id": "https://elanclinic.ee/#clinic",
+    "name": "Élan Clinic",
+    "url": "https://elanclinic.ee/",
+    "description": "Physician-led weight maintenance programme in Tallinn. Structured process from initial assessment through long-term GLP-1 aftercare and regain prevention.",
+    "medicalSpecialty": "Preventive Medicine",
+    "telephone": "+3725299939",
+    "email": "info@elanclinic.ee",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Sepapaja 12/1",
+      "addressLocality": "Tallinn",
+      "postalCode": "11415",
+      "addressCountry": "EE"
+    },
+    "founder": {
+      "@type": "Physician",
+      "@id": "https://elanclinic.ee/#physician",
+      "name": "Dr. Ingmar Lindström",
+      "jobTitle": "Medical Director",
+      "worksFor": {"@id": "https://elanclinic.ee/#clinic"}
+    }
+  }
+  </script>
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
