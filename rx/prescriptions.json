@@ -1,0 +1,13 @@
+{
+  "RX-2026-C3TC4Z": {
+    "patient_initials": "—",
+    "medicine": "GLP-1 (TBD)",
+    "issued_date": "2026-08-15",
+    "valid_until": "2026-08-29",
+    "status": "valid",
+    "prescriber": "Dr. Ingmar Lindström",
+    "clinic": "Élan Clinic",
+    "clinic_phone": "+372 52 99939",
+    "created_at": "2026-08-15T06:05:00+03:00"
+  }
+}

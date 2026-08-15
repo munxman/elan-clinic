@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Reseptin tarkistus / Prescription Verification — Élan Clinic</title>
+  <style>
+    :root {
+      --green: #1a7a4a;
+      --green-light: #e8f5ef;
+      --green-border: #a8d8bf;
+      --red: #c0392b;
+      --red-light: #fdf0ef;
+      --red-border: #e8b4b0;
+      --orange: #d35400;
+      --orange-light: #fef5ec;
+      --orange-border: #f5c89a;
+      --gray: #6b7280;
+      --gray-light: #f3f4f6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f8fafc;
+      color: #1a202c;
+      min-height: 100vh;
+      padding: 16px;
+    }
+    .container { max-width: 480px; margin: 0 auto; padding-top: 16px; }
+    .clinic-header { text-align: center; margin-bottom: 24px; }
+    .clinic-name { font-size: 22px; font-weight: 700; color: #1a202c; }
+    .clinic-sub { font-size: 12px; color: var(--gray); margin-top: 2px; }
+    .status-card {
+      border-radius: 16px; padding: 28px 20px; text-align: center;
+      margin-bottom: 20px; border: 2px solid transparent;
+    }
+    .status-card.valid { background: var(--green-light); border-color: var(--green-border); }
+    .status-card.dispensed { background: var(--red-light); border-color: var(--red-border); }
+    .status-card.expired { background: var(--orange-light); border-color: var(--orange-border); }
+    .status-card.revoked { background: var(--red-light); border-color: var(--red-border); }
+    .status-card.loading, .status-card.error { background: var(--gray-light); border-color: #d1d5db; }
+    .status-icon { font-size: 52px; line-height: 1; margin-bottom: 12px; }
+    .status-fi { font-size: 24px; font-weight: 800; line-height: 1.1; margin-bottom: 4px; }
+    .status-en { font-size: 16px; font-weight: 600; opacity: 0.8; margin-bottom: 8px; }
+    .status-desc { font-size: 14px; opacity: 0.75; line-height: 1.4; }
+    .valid .status-fi, .valid .status-en { color: var(--green); }
+    .dispensed .status-fi, .dispensed .status-en { color: var(--red); }
+    .expired .status-fi, .expired .status-en { color: var(--orange); }
+    .revoked .status-fi, .revoked .status-en { color: var(--red); }
+    .details-card {
+      background: white; border-radius: 12px; border: 1px solid #e5e7eb;
+      overflow: hidden; margin-bottom: 16px;
+    }
+    .details-title {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.8px; color: var(--gray); background: var(--gray-light);
+      padding: 10px 16px; border-bottom: 1px solid #e5e7eb;
+    }
+    .detail-row {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      padding: 12px 16px; border-bottom: 1px solid #f3f4f6; gap: 12px;
+    }
+    .detail-row:last-child { border-bottom: none; }
+    .detail-label { font-size: 12px; color: var(--gray); flex-shrink: 0; line-height: 1.4; }
+    .detail-label .fi { display: block; }
+    .detail-label .en { display: block; font-size: 11px; opacity: 0.7; }
+    .detail-value { font-size: 14px; font-weight: 600; color: #1a202c; text-align: right; line-height: 1.4; }
+    .rx-id {
+      font-family: 'Courier New', monospace; font-size: 13px;
+      background: var(--gray-light); padding: 2px 6px; border-radius: 4px;
+      font-weight: 700; letter-spacing: 0.5px;
+    }
+    .pharmacist-note {
+      background: #fffbeb; border: 1px solid #fde68a;
+      border-radius: 10px; padding: 14px 16px; margin-bottom: 16px;
+    }
+    .pharmacist-note-title {
+      font-size: 12px; font-weight: 700; color: #92400e;
+      text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;
+    }
+    .pharmacist-note p { font-size: 13px; color: #78350f; line-height: 1.5; margin-bottom: 4px; }
+    .pharmacist-note p:last-child { margin-bottom: 0; }
+    .phone-link { color: #1d4ed8; font-weight: 700; text-decoration: none; }
+    .footer {
+      text-align: center; font-size: 11px; color: var(--gray);
+      padding: 8px 0 24px; line-height: 1.5;
+    }
+    .spinner {
+      display: inline-block; width: 40px; height: 40px;
+      border: 4px solid #e5e7eb; border-top-color: #6b7280;
+      border-radius: 50%; animation: spin 0.8s linear infinite; margin: 8px auto;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="clinic-header">
+    <div class="clinic-name">Élan Clinic</div>
+    <div class="clinic-sub">Sepapaja 12/1, Tallinn, Estonia &nbsp;·&nbsp; elanclinic.ee</div>
+  </div>
+
+  <div id="status-card" class="status-card loading">
+    <div class="spinner"></div>
+    <div class="status-fi" style="color:#6b7280;margin-top:8px;">Tarkistetaan…</div>
+    <div class="status-en" style="color:#6b7280;">Checking…</div>
+  </div>
+
+  <div id="details-card" class="details-card hidden">
+    <div class="details-title">Reseptin tiedot / Prescription details</div>
+    <div class="detail-row">
+      <div class="detail-label"><span class="fi">Reseptin tunnus</span><span class="en">Prescription ID</span></div>
+      <div class="detail-value"><span id="rx-id" class="rx-id">—</span></div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-label"><span class="fi">Potilas (nimikirjaimet)</span><span class="en">Patient (initials)</span></div>
+      <div class="detail-value" id="rx-initials">—</div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-label"><span class="fi">Lääke / INN</span><span class="en">Medicine / INN</span></div>
+      <div class="detail-value" id="rx-medicine">—</div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-label"><span class="fi">Myöntämispäivä</span><span class="en">Issue date</span></div>
+      <div class="detail-value" id="rx-issued">—</div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-label"><span class="fi">Voimassa saakka</span><span class="en">Valid until</span></div>
+      <div class="detail-value" id="rx-valid-until">—</div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-label"><span class="fi">Lääkäri</span><span class="en">Prescriber</span></div>
+      <div class="detail-value">Dr. Ingmar Lindström</div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-label"><span class="fi">Klinikka / Tiedustelut</span><span class="en">Clinic / Enquiries</span></div>
+      <div class="detail-value">Élan Clinic, Tallinn<br><a href="tel:+37252999399" class="phone-link">+372 52 99939</a></div>
+    </div>
+  </div>
+
+  <div id="pharmacist-note" class="pharmacist-note hidden">
+    <div class="pharmacist-note-title">🔎 Apteekkari / Pharmacist</div>
+    <p><strong>FI:</strong> Epävarma? Soita klinikalle: <a href="tel:+37252999399" class="phone-link">+372 52 99939</a></p>
+    <p><strong>EN:</strong> In doubt? Call the clinic: <a href="tel:+37252999399" class="phone-link">+372 52 99939</a></p>
+    <p style="margin-top:8px;font-size:12px;opacity:0.8">This prescription is issued under EU Directive 2011/24/EU, Art. 11 and Commission Implementing Directive 2012/52/EU.</p>
+  </div>
+
+  <div class="footer">
+    Élan Clinic OÜ · Reg. 17338832 · Medical licence L07470<br>
+    Sepapaja 12/1, 11415 Tallinn, Estonia<br>
+    <a href="https://elanclinic.ee" class="phone-link" style="font-size:11px">elanclinic.ee</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var rxId = params.get('id') || '';
+  var statusCard = document.getElementById('status-card');
+  var detailsCard = document.getElementById('details-card');
+  var pharmacistNote = document.getElementById('pharmacist-note');
+
+  function pad(n) { return String(n).padStart(2,'0'); }
+  function fmtDate(iso) {
+    if (!iso) return '—';
+    var d = new Date(iso + 'T00:00:00');
+    return pad(d.getDate()) + '.' + pad(d.getMonth()+1) + '.' + d.getFullYear();
+  }
+
+  function setStatus(type, icon, fi, en, desc) {
+    statusCard.className = 'status-card ' + type;
+    statusCard.innerHTML =
+      '<div class="status-icon">' + icon + '</div>' +
+      '<div class="status-fi">' + fi + '</div>' +
+      '<div class="status-en">' + en + '</div>' +
+      (desc ? '<div class="status-desc">' + desc + '</div>' : '');
+  }
+
+  function showDetails(rx, id) {
+    document.getElementById('rx-id').textContent = id;
+    document.getElementById('rx-initials').textContent = rx.patient_initials || '—';
+    document.getElementById('rx-medicine').textContent = rx.medicine || '—';
+    document.getElementById('rx-issued').textContent = fmtDate(rx.issued_date);
+    document.getElementById('rx-valid-until').textContent = fmtDate(rx.valid_until);
+    detailsCard.classList.remove('hidden');
+    pharmacistNote.classList.remove('hidden');
+  }
+
+  function isExpired(validUntil) {
+    if (!validUntil) return false;
+    return new Date() > new Date(validUntil + 'T23:59:59');
+  }
+
+  if (!rxId) {
+    setStatus('error', '❓', 'Tuntematon resepti', 'Unknown prescription',
+      'Reseptin tunnusta ei ole URL-osoitteessa. / No prescription ID in the URL.');
+    pharmacistNote.classList.remove('hidden');
+    return;
+  }
+
+  var dataUrl = '/rx/prescriptions.json?v=' + Date.now();
+  fetch(dataUrl)
+    .then(function(r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(function(data) {
+      var rx = data[rxId];
+      if (!rx) {
+        setStatus('error', '❓', 'Reseptiä ei löydy', 'Prescription not found',
+          'Tällä tunnuksella ei löydy reseptiä. Soita klinikalle. / No prescription found for this ID. Call the clinic: +372 52 99939');
+        pharmacistNote.classList.remove('hidden');
+        return;
+      }
+      showDetails(rx, rxId);
+      var status = (rx.status || 'valid').toLowerCase();
+      if (status === 'dispensed') {
+        setStatus('dispensed', '🔴', 'TOIMITETTU', 'ALREADY DISPENSED',
+          'Tämä resepti on jo toimitettu. Toimittaminen uudelleen on kielletty. / This prescription has already been dispensed. Do not dispense again.');
+      } else if (status === 'revoked') {
+        setStatus('revoked', '⛔', 'PERUUTETTU', 'REVOKED',
+          'Tämä resepti on peruutettu. Ei saa toimittaa. / This prescription has been revoked. Do not dispense.');
+      } else if (status === 'valid' && isExpired(rx.valid_until)) {
+        setStatus('expired', '⏰', 'VANHENTUNUT', 'EXPIRED',
+          'Tämä resepti on vanhentunut (' + fmtDate(rx.valid_until) + '). / This prescription expired on ' + fmtDate(rx.valid_until) + '.');
+      } else if (status === 'valid') {
+        setStatus('valid', '✅', 'VOIMASSA', 'VALID — not yet dispensed',
+          'Tätä reseptiä ei ole vielä toimitettu. / This prescription has not yet been dispensed.');
+      } else {
+        setStatus('error', '❓', 'Tuntematon tila', 'Unknown status',
+          'Soita klinikalle / Call the clinic: +372 52 99939');
+      }
+    })
+    .catch(function(err) {
+      setStatus('error', '⚠️', 'Tarkistusvirhe', 'Verification error',
+        'Tietokantaan ei saatu yhteyttä. Soita klinikalle: +372 52 99939 / Database unreachable. Call clinic: +372 52 99939');
+      pharmacistNote.classList.remove('hidden');
+    });
+})();
+</script>
+</body>
+</html>
